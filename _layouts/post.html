@@ -13,7 +13,7 @@ layout: default
   {% if page.update_date %}
     <span class="post-meta">{{ site.text.post.updated | default: "Updated" }}: {{ page.update_date | date: site.date_format }}</span><br>
   {% endif %}
-  <span class="post-meta small">
+  <span class="post-meta small read-time">
   {% if page.minutes %}
     {{ page.minutes }} {{ site.text.post.minute_read | default: "minute read" }}
   {% else %}

@@ -25,7 +25,6 @@ google_tag_manager: G-689SEV7MTT
 # Social
 github_username: jazcarate
 gitlab_username: jazcarate
-twitter_username: FloriusWasTaken
 linkedin_username: joaquin-azcarate
 devto_username: florius
 
@@ -34,4 +33,5 @@ exclude:
   - Gemfile.lock
   - Rakefile
   - README.md
+  - ATTRIBUTION.md
   - vendor
