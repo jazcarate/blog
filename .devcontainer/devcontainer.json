@@ -1,0 +1,4 @@
+{
+	"name": "jekyll-blog",
+	"image": "jekyll/jekyll:4.2.0"
+}
