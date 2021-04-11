@@ -15,6 +15,7 @@ plugins:
 show_social_icons: true
 animated: true
 show_related_posts: true
+max_related: 3
 enable_anchorjs: true
 permalink:    pretty
 paginate:     5
