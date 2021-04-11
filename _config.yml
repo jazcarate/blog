@@ -18,7 +18,7 @@ show_related_posts: true
 max_related: 3
 enable_anchorjs: true
 permalink:    pretty
-paginate:     5
+paginate:     3
 date_format: "%b %-d, %Y"
 
 google_tag_manager: G-689SEV7MTT

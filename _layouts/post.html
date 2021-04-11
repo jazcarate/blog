@@ -77,7 +77,7 @@ layout: default
           <h4 class="post-title">{{ post.title }}</h4>
         </a>
         <p class="post-summary">
-          {% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt }}{% endif %}
+          {{ post.summary }}
           <span class="related-categories">{{ commonCategories }}</span>
         </p>
       </div>
@@ -93,7 +93,7 @@ layout: default
     <div class="post ml2">
       <a href="{{ post.url | relative_url }}" class="post-link">
         <h4 class="post-title">{{ post.title }}</h4>
-        <p class="post-summary">{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt }}{% endif %}</p>
+        <p class="post-summary">{{ post.summary }}</p>
       </a>
     </div>
     {% endfor %}
