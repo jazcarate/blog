@@ -20,8 +20,15 @@ jobs:
       - name: Install imagemagick 📚
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-      - name: Build & Deploy to GitHub Pages 🚀
-        uses: DavidS/jekyll-deploy@main
-        env:
-          JEKYLL_ENV: production
-          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+      - name: Build Jekyll 🔨
+        run: bundle exec jekyll build
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
