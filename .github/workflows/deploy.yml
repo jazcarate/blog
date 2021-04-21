@@ -19,7 +19,7 @@ jobs:
             ${{ runner.os }}-gems-
       - name: Install imagemagick 📚
         run: |
-          apt-get update && sudo apt-get install -y imagemagick
+          sudo apt-get update && sudo apt-get install -y imagemagick
       - name: Build & Deploy to GitHub Pages 🚀
         uses: DavidS/jekyll-deploy@main
         env:
