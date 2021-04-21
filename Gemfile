@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "jekyll", "~> 4.2"
+
 gem "minima", "~> 2.5" # TODO: can remove?
 gem "mini_magick", "~> 4.11"
 gem "image_optim", "~> 0.28.0"

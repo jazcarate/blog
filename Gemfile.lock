@@ -134,6 +134,7 @@ PLATFORMS
 DEPENDENCIES
   image_optim (~> 0.28.0)
   image_optim_pack (~> 0.7.0.20210206)
+  jekyll (~> 4.2)
   jekyll-assets!
   jekyll-feed (~> 0.15.1)
   jekyll-paginate (~> 1.1)
