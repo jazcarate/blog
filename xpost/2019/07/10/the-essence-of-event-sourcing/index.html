@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-689SEV7MTT"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-689SEV7MTT', { cookie_domain: 'blog.florius.com.ar', cookie_flags: 'SameSite=None;Secure' });</script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The essence of Event Sourcing &#8211; Florius’ Blog</title>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.">
+    <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/site.webmanifest" />
+    <meta name="robots" content="all">
+    <meta name="author" content="">
+    
+    <meta name="keywords" content="xpost">
+    <link rel="canonical" href="https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202104212236" type="text/css">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
+    
+    <script src="//kit.fontawesome.com/88434a0a24.js" crossorigin="anonymous"></script>
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The essence of Event Sourcing">
+    <meta property="og:description" content="Joaquin &quot;Flroius&quot; Azcarate’s personal blog">
+    <meta property="og:url" content="https://blog.florius.com.ar/xpost/2019/07/10/the-essence-of-event-sourcing/">
+    <meta property="og:site_name" content="Florius’ Blog">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="The essence of Event Sourcing" />
+    <meta name="twitter:description" content="Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”." />
+    <meta name="twitter:url" content="https://blog.florius.com.ar/xpost/2019/07/10/the-essence-of-event-sourcing/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="manifest" href="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    
+</head>
+
+<body class="site">
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Florius’ Blog</a>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">About</a>
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/categories/">Categories</a>
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/jazcarate"></a>
+    
+    
+      <a class="fa fa-gitlab" href="https://gitlab.com/jazcarate"></a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:j@florius.com.ar"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/joaquin-azcarate"></a>
+    
+    
+    <a class="fab fa-dev" href="https://dev.to/florius"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap animated fade-in-down" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>The essence of Event Sourcing</h1>
+  <span class="post-meta">Jul 10, 2019</span><br>
+  
+  <span class="post-meta small read-time">
+  
+    5 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p><em>Original post can be found in the <a href="https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/">10Pines blog</a>.</em></p>
+
+<p>Event Sourcing is a somewhat trending topic, but by no accounts a new one. Right now you can find a lot of stories on how to event Source in Rust, Kafka or PostgreSQL, but I’ve found a lack of high concept blog posts on what <strong>is</strong> event sourcing… or rather, I’ve found an overwhelming amount of supposedly event sourcing posts, all talking about a lot of different things (I’m looking at you CQRS).</p>
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js"></script>
+
+<script type="text/javascript">trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Event Sourcing","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=Event%20Sourcing","guestPath":"https://trends.google.com:443/trends/embed/"});</script>
+
+<p>So, I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”, not by actually going into any technical details, but rather into how we solve a problem on that subject.</p>
+
+<h2 id="backstory-sourcing-events">Backstory (Sourcing Events)</h2>
+
+<p>We had a small internal app that we used in big meetings to serialize conversations. Think of it as an over-complicated, over-designed queue. The app had a backend and a frontend, both which shared the particular state that the app should show to the user.</p>
+
+<p>Basically: Who was talking, and who comes next.</p>
+
+<p>The app kept all of our smartphones in sync. Whenever someone, say Joe, pushed the “I want to talk next” button, the backend did all the computations to add him to the end of the queue, and all of our smartphones got the message with the new state to display. Joe was now on the queue. Waiting.</p>
+
+<p>This was good enough for several meetings but we, as a tech savvy company, wanted more! So, of course, we added features like emoji support to 👍, 👎 and ask that the speaker would wrap up (🌯).</p>
+
+<p>So far, no Events to be Sourced whatsoever.</p>
+
+<p>After a new round of emoji-enhanced meetings, I wondered: How many 👍 did I had when I spoke last week?</p>
+
+<p>I had no way of knowing. The backend was <em>updating</em> the list of reactions every time a new speaker’s turn was up. And therein laid my problem. I never considered that after the meeting I might want to know something as simple as that.</p>
+
+<p>So we put on our thinking hats and settled on a simple heuristic:</p>
+
+<p><strong>No Updates. No Deletes.</strong></p>
+
+<h2 id="the-actual-potato-eventing-source">The actual potato (Eventing Source)</h2>
+
+<p>No Updates, no deletes might look like a daunting feat. How would we <a href="https://blog.10pines.com/2019/05/27/reifying-problems-in-our-software/">reflect reality</a> without the basic premise that <strong>things change</strong>. Luckily, we have functional programing close to our hearts here at 10Pines, and we can imagine a world where “things are immutable”.</p>
+
+<p>So we had a frontend that was sending the intentions. What the user wanted to do. I will call this intentions <strong>Events</strong>.</p>
+
+<p>We had 3 major events:</p>
+
+<ul>
+  <li>“I want to talk” event.</li>
+  <li>“I don’t want to talk anymore” event</li>
+  <li>“I want to react with a 👍” event</li>
+</ul>
+
+<p>Notice this were not <em>“Add me to the queue”</em>, or <em>“Now the speaker has 5 👍”</em>, but rather the intention the user had.</p>
+
+<p>Now, the backend had to receive these events, and instead of <strong>updating</strong> its state, saving it and broadcasting it; we were saving the event and computing a new state (based on the previous state and this new event)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Previous state</th>
+      <th>Event</th>
+      <th>Current state</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{ currentSpeaker: Joaco, queue: [] }</code></td>
+      <td>Dave wants to talk</td>
+      <td><code class="language-plaintext highlighter-rouge">{ currentSpeaker: Joaco, queue: [Dave] }</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>And, you guessed it: the previous state was <strong>itself</strong> computed with its previous state plus the last event before this new one. So on and so forth.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Previous-previous state</th>
+      <th>Event</th>
+      <th>Previous state</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{ currentSpeaker: nil, queue: [] }</code></td>
+      <td>Joaco wants to talk</td>
+      <td><code class="language-plaintext highlighter-rouge">{ currentSpeaker: Joaco, queue: [] }</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We changed from a state that was being updated, to adding onto a list events, and finding out the new state computing every event and how they changed the state. No information can be lost. Ever. <strong>No updates. No deletes.</strong></p>
+
+<h2 id="back-to-the-original-question-source-event">Back to the original question (Source Event)</h2>
+
+<p>How many reactions did I have. Well, now I could figure this out. I just needed to replay all the events, but now, instead of having a state that had the whole queue, I’d use the events to transform a different, more useful state:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A state</th>
+      <th>Event</th>
+      <th>New state</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{ reactions_joaco_had: 0 }</code></td>
+      <td>Joaco wants to talk</td>
+      <td><code class="language-plaintext highlighter-rouge">{ reactions_joaco_had: 0 }</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>A state</th>
+      <th>Event</th>
+      <th>New state</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{ reactions_joaco_had: 0 }</code></td>
+      <td>I want to react with a 👍</td>
+      <td><code class="language-plaintext highlighter-rouge">{ reactions_joaco_had: 1 }</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>*This is an oversimplification because we would still need to know who was talking at the time to know if we had to increment the reaction counter or not.</em></p>
+
+<p>This is called a projection, and it is the way we can “fold” our events into relevant information.</p>
+
+<h2 id="lets-recap-evented-source">Lets recap (Evented Source)</h2>
+
+<p>We changed the way we thought of our storage. Rather than update what we know, we add to an infinite list the events that change our domain.</p>
+
+<p>This way, we can <em>replay</em> those events and answer questions we never thought we wanted to ask at the time of writing the code.</p>
+
+<h2 id="food-for-thought">Food for thought:</h2>
+
+<p>I wanted to keep this post short and high-concept; but I’ll let the reader think of some interesting things that steam from this kind of approach:</p>
+
+<ul>
+  <li>If we ever botched the part of the system that computed new states; we could rollout a fixed version, and replay the whole history of the application, and the error would cease to exist.</li>
+  <li>Structural changes to the database stop being something to worry about. We are only storing events, and those don’t change often. Rolling back and replaying the history is the fabric of event sourcing.</li>
+  <li>The new state doesn’t need to be computed from the first initial state, along with all the events thereafter. We can periodically take “snapshots” of events, and compute newer events from that saved state.</li>
+  <li>The same stream of events can be used by many applications, each having their own projection to answer a wildly different set of questions.</li>
+</ul>
+
+
+</article>
+
+
+
+
+
+
+
+
+  <h3 class="related-post-title">Related Posts</h3>
+  
+  
+  
+    
+    
+
+    
+
+    
+      
+      <div class="post ml2 related">
+        <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
+          <h4 class="post-title">Inspiraciones</h4>
+        </a>
+        <p class="post-summary">
+          ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
+          <span class="related-categories">
+            <a href="/categories#xpost">#xpost</a>
+          </span>
+        </p>
+      </div>
+      
+      
+    
+
+  
+    
+    
+
+    
+
+    
+      
+      <div class="post ml2 related">
+        <a href="/xpost/2020/12/03/haskell-para-mentes-imperativas/" class="post-link">
+          <h4 class="post-title">Haskell para mentes imperativas</h4>
+        </a>
+        <p class="post-summary">
+          En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.
+          <span class="related-categories">
+            <a href="/categories#xpost">#xpost</a>
+          </span>
+        </p>
+      </div>
+      
+      
+    
+
+  
+    
+    
+
+    
+
+    
+      
+      <div class="post ml2 related">
+        <a href="/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/" class="post-link">
+          <h4 class="post-title">koncierge Una librería para segmentar usuarios</h4>
+        </a>
+        <p class="post-summary">
+          La historia de una librería para evaluar variantes de tests AB, dado una definición de un experimento con un DSL parecido a Mongo y un contexto.
+          <span class="related-categories">
+            <a href="/categories#xpost">#xpost</a>
+          </span>
+        </p>
+      </div>
+      
+      
+        
+  
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme heavily inspired in <a href="http://johnotander.com">John Otander</a>' <a href="https://github.com/johno/pixyll">pixyll</a>.
+    </small>
+  </div>
+</footer>
+<!-- AnchorJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>
+
+</body>
+</html>

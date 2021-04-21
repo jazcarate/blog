@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-04-21T22:36:21+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin &quot;Flroius&quot; Azcarate’s personal blog</subtitle><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué /cazzo/ hacer&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Así empezó la conversación con un amigo. Después de hablar un poco, creo haber destilado un par de ideas que me gustaría compartir&lt;/p&gt;
+
+&lt;h2 id=&quot;por-qué-yo&quot;&gt;¿Por qué yo?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Q&lt;/strong&gt;: Habiendo miles de otros posts de miles de otras personas -muchas mejor calificadas que yo-, por qué leer este?&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;: Creo que mi enfoque es mucho más especifico del que eh encontrado: Proyectos personales de programación, cuyo principal driver&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; es aprender algo nuevo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;prove-it&quot;&gt;Prove it&lt;/h3&gt;
+&lt;p&gt;En mi porfolio (&lt;a href=&quot;https://florius.com.ar/&quot;&gt;florius.com.ar&lt;/a&gt;) podrás ver alguno de los proyectos más recientes y más interesantes. No son muchísimos, pero son algunos. Siempre estoy tinkering&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; con algo nuevo.&lt;/p&gt;
+
+&lt;h2 id=&quot;fuentes-de-inspiración&quot;&gt;Fuentes de inspiración&lt;/h2&gt;
+&lt;p&gt;Voy a separar la inspiración en 3 categorías, no porque una sea más “fácil” o menos costosa; si no porque he conocido personas que están muy entonadas con una u otra categoría, y tal vez alguna de esta resuene más contigo.&lt;/p&gt;
+
+&lt;h3 id=&quot;level-1---directo&quot;&gt;Level 1 - Directo&lt;/h3&gt;
+&lt;p&gt;En el trabajo, me pasa a veces que estoy haciendo algo, y pienso&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Uh, esto sería super guay si fuese así”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Pero caigo en la realidad de que no habría forma que pueda completar el feature en el tiempo si hiciera todo ese cambio, ni que me aprueben un PR si agrego siete millones de bibliotecas 😅.
+Entonces me lo anoto:
+“Estaría bueno una aplicación que haga X o una biblioteca que haga Y”.&lt;/p&gt;
+
+&lt;p&gt;Tiene una aplicación real, concreta y directa (por eso el nombre); que si existiese la usaría aquí y ahora. Pero no existe.&lt;/p&gt;
+
+&lt;p&gt;Algunos ejemplos de esto mismo&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jazcarate/koncierge&quot;&gt;GitHub :: koncierge 🔔&lt;/a&gt;: Necesitabamos segmentar clientes según un u otro atributo; entonces se me ocurrió que un DSL parecido al query-dsl de Mongo podría verse bien. Finalmente terminamos utilizando algo similar en produción!&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jazcarate/aao&quot;&gt;GitHub:: Apples and Oranges&lt;/a&gt;:  Tambien en el trabajo quería una forma de testear un código que tenía todos &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BigInt&lt;/code&gt;s, algunos números tenían impuestos otros no; entonces no podía sumar libremente unos con otros; por lo que me ocurrió una librería para “tagear” objetos.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jazcarate/marble-os&quot;&gt;GitHub :: marble-OS&lt;/a&gt;: En la facultad, para probar y evaluar trabajos prácticos, muchas veces necesitabamos lanzar programas de manera sincronizada. La mejor herramienta hasta el momento era ser una persona alta que pueda presionar en dos computadoras diferentes la tecla &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;↵ Enter&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para este tipo de proyectos, recomiendo siempre estar atento a hacerse este tipo de preguntas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Este feature/bug/issue en el que estoy trabajando: ¿Tiene alguna parte súper interesante que podría extraer en su propia cosa?&lt;/li&gt;
+  &lt;li&gt;¿Puedo desacoplar completamente esta sección de lógica en su propia cosa?&lt;/li&gt;
+  &lt;li&gt;Veo que alguien tomó esta decisión de arquitectura; ¿por qué no lo habrán hecho diferente? ¿puedo hacerlo de otra forma?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;level-2---concretization&quot;&gt;Level 2 - Concretization&lt;/h3&gt;
+&lt;p&gt;Otra “forma” que suelo descubrir nuevas ideas es encontrar un blog post o algo que sea una idea abstracta, y convertirla en algo más concreto.
+No es casual que me guste mirar videos sobre matemática!&lt;/p&gt;
+
+&lt;p&gt;En esta categoría no empiezo de un proyecto como en la categoría anterior, si no que llego a un proyecto desde algo más abstracto.&lt;/p&gt;
+
+&lt;p&gt;Algunos ejemplos de mis proyectos que surgieron a partir de esta forma de encarar problemas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jazcarate/aao#tag-laws&quot;&gt;GitHub:: Apples and Oranges # leyes de tags&lt;/a&gt;: Hace algunos 3 años vi una charla de “propagators” por &lt;a href=&quot;https://www.youtube.com/watch?v=acZkF6Q2XKs&quot;&gt;YouTube :: Edward Kmett&lt;/a&gt;. Sumamente interesante! Adicionalmente semirretículos es un tema que eh dado en clase de Matemática Discreta; y nunca le encontré una aplicación tan directa y &lt;em&gt;linda&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jazcarate/tryhard/blob/main/src/Tryhard/TUI.hs#L360-L362&quot;&gt;GitHub :: Tryhard # applicativos en todos lados&lt;/a&gt; _(warning: el código es un desastre, estaba trabajando en eso, pero otro proyecto se llevó toda mi atención por ahora 🙈): También viendo un video de &lt;a href=&quot;https://www.youtube.com/watch?v=RtYWKG_zZrM&quot;&gt;YouTube :: Tsoding&lt;/a&gt; y la relación de &lt;a href=&quot;https://hackage.haskell.org/package/base-4.14.1.0/docs/Control-Applicative.html#t:Applicative&quot;&gt;Applicative&lt;/a&gt; y &lt;a href=&quot;https://hackage.haskell.org/package/base-4.14.1.0/docs/Data-Monoid.html#t:Monoid&quot;&gt;Monoid&lt;/a&gt; y como podríá usar esto para “sumar” resultados de &lt;a href=&quot;https://www.opendota.com/&quot;&gt;OpenDota&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;WIP&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rapt&lt;/code&gt;: También en un video de &lt;a href=&quot;https://www.youtube.com/user/Computerphile&quot;&gt;YouTube :: Computerphile&lt;/a&gt; &lt;em&gt;(¿tendré un problema con la consumición de videos?)&lt;/em&gt; sobre onion routing, y encriptación en capas; junto con contraseñas y OTP&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Se que tengo una idea ahí, pero creo que es muy parecida a &lt;a href=&quot;https://www.vaultproject.io/&quot;&gt;Vault, de HashiCorp&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para este tipo de proyectos recomiendo pensar cada vez que escuches o leas algo (no importa de que; no digo oque hay que solo hacer uso de matemática! Estoy seguro que otras ramas de la ciencia son tan aptas a esto.) pensar:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;¿Cómo podría usar eso?&lt;/li&gt;
+  &lt;li&gt;¿En qué universo esta idea sería útil?&lt;/li&gt;
+  &lt;li&gt;¿Veo que dice que se puede usar en &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt;; se podrá usar en &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Z&lt;/code&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(&lt;strong&gt;bonus&lt;/strong&gt;: Creo que este mentalidad ayuda mucho a adquirir nuevos conocimientos. Más que una atención pasiva sobre un tema nuevo)&lt;/p&gt;
+
+&lt;h3 id=&quot;level-3---snapshot&quot;&gt;Level 3 - Snapshot&lt;/h3&gt;
+&lt;p&gt;A mi gusto, la mejor forma de inspiración: Cuando pienso solo en una interacción, en una pantalla, en un link.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jazcarate.github.io/es-dia-de-helado-de-fruta/&quot;&gt;GitHub :: es-dia-de-helado-de-fruta&lt;/a&gt;: Mi novia me dijo que hoy no era día de helado de fruta, porque hacía mucho frio. Sería ideal tener una página que le pueda pasar para &lt;strong&gt;demostrarle&lt;/strong&gt; la temperatura&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://frasal.florius.com.ar/?q=velocidad%20de%20dios&quot;&gt;FrasaL&lt;/a&gt;: Tienes un amigo que habla español traduciendo &lt;strong&gt;literalmente&lt;/strong&gt;  verbos preposicionales del ingles? Dice cosas como “velocidad de dios” en vez de “buena suerte”, y quieres pasar una página como &lt;a href=&quot;https://www.deepl.com/en/translator&quot;&gt;DeepL&lt;/a&gt; para ayudar a otras personas a comprenderle?&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/JuanFdS/delCanioBot&quot;&gt;GitHub :: delCanioBot&lt;/a&gt;: Necesitas un bot que genere imágenes de Nicolás del Caño, a razón de el &lt;em&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=tdOP4V4mtoY&quot;&gt;meme del año, Nico del Caño&lt;/a&gt;&lt;/em&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A veces estos &lt;em&gt;chistes&lt;/em&gt; incluso terminan siendo aplicaciones de verdad, como una aplicación para coordinar car pooling (&lt;a href=&quot;https://github.com/jazcarate/catapult&quot;&gt;GitHub :: catapult&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;No tengo una buena recomendación para estos proyectos “chistes”, más que intentar hacerte pensar que no necesariamente un proyecto tiene que ser completamente serio; y son muchas veces estos proyectos que se combinan y que sirven de lugar para aprender nuevas tecnologías o metodologías. Y te podrían brindar un &lt;em&gt;armazón&lt;/em&gt; para proyectos al futuro.&lt;/p&gt;
+
+&lt;h3 id=&quot;level-9000---todas-las-anteriores&quot;&gt;Level 9000 - Todas las anteriores&lt;/h3&gt;
+&lt;p&gt;Lamentablemente, la “creatividad” no es un proceso súper directo. A veces algo sale por un lado, a veces por otro. A veces 2 ideas inconexas se conectan en una idea mejor.
+Personalmente, me gusta escribir estas esbozos de ideas en un receptáculo físico. hay quienes prefieren un archivo en la computadora. Hay quienes tienen varios pre-ideas en la mente a la vez y nueva información decanta esas pre-ideas en un proyecto.&lt;/p&gt;
+
+&lt;p&gt;Gracias por tu tiempo, y espero que algo de todo esto te ayude a encontrar inspiración!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;em&gt;driver&lt;/em&gt;: Un factor que hace que suceda o se desarrolle un fenómeno particular. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;em&gt;tinkering&lt;/em&gt;: Intentar reparar o mejorar algo de manera casual o poco metódica. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;em&gt;otp&lt;/em&gt;: One-time password &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="xpost" /><summary type="html">El post original se puede leer en mi dev.to. Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué /cazzo/ hacer Así empezó la conversación con un amigo. Después de hablar un poco, creo haber destilado un par de ideas que me gustaría compartir ¿Por qué yo? Q: Habiendo miles de otros posts de miles de otras personas -muchas mejor calificadas que yo-, por qué leer este? A: Creo que mi enfoque es mucho más especifico del que eh encontrado: Proyectos personales de programación, cuyo principal driver1 es aprender algo nuevo. Prove it En mi porfolio (florius.com.ar) podrás ver alguno de los proyectos más recientes y más interesantes. No son muchísimos, pero son algunos. Siempre estoy tinkering2 con algo nuevo. Fuentes de inspiración Voy a separar la inspiración en 3 categorías, no porque una sea más “fácil” o menos costosa; si no porque he conocido personas que están muy entonadas con una u otra categoría, y tal vez alguna de esta resuene más contigo. Level 1 - Directo En el trabajo, me pasa a veces que estoy haciendo algo, y pienso “Uh, esto sería super guay si fuese así” Pero caigo en la realidad de que no habría forma que pueda completar el feature en el tiempo si hiciera todo ese cambio, ni que me aprueben un PR si agrego siete millones de bibliotecas 😅. Entonces me lo anoto: “Estaría bueno una aplicación que haga X o una biblioteca que haga Y”. Tiene una aplicación real, concreta y directa (por eso el nombre); que si existiese la usaría aquí y ahora. Pero no existe. Algunos ejemplos de esto mismo GitHub :: koncierge 🔔: Necesitabamos segmentar clientes según un u otro atributo; entonces se me ocurrió que un DSL parecido al query-dsl de Mongo podría verse bien. Finalmente terminamos utilizando algo similar en produción! GitHub:: Apples and Oranges: Tambien en el trabajo quería una forma de testear un código que tenía todos BigInts, algunos números tenían impuestos otros no; entonces no podía sumar libremente unos con otros; por lo que me ocurrió una librería para “tagear” objetos. GitHub :: marble-OS: En la facultad, para probar y evaluar trabajos prácticos, muchas veces necesitabamos lanzar programas de manera sincronizada. La mejor herramienta hasta el momento era ser una persona alta que pueda presionar en dos computadoras diferentes la tecla ↵ Enter. Para este tipo de proyectos, recomiendo siempre estar atento a hacerse este tipo de preguntas: Este feature/bug/issue en el que estoy trabajando: ¿Tiene alguna parte súper interesante que podría extraer en su propia cosa? ¿Puedo desacoplar completamente esta sección de lógica en su propia cosa? Veo que alguien tomó esta decisión de arquitectura; ¿por qué no lo habrán hecho diferente? ¿puedo hacerlo de otra forma? Level 2 - Concretization Otra “forma” que suelo descubrir nuevas ideas es encontrar un blog post o algo que sea una idea abstracta, y convertirla en algo más concreto. No es casual que me guste mirar videos sobre matemática! En esta categoría no empiezo de un proyecto como en la categoría anterior, si no que llego a un proyecto desde algo más abstracto. Algunos ejemplos de mis proyectos que surgieron a partir de esta forma de encarar problemas: GitHub:: Apples and Oranges # leyes de tags: Hace algunos 3 años vi una charla de “propagators” por YouTube :: Edward Kmett. Sumamente interesante! Adicionalmente semirretículos es un tema que eh dado en clase de Matemática Discreta; y nunca le encontré una aplicación tan directa y linda. GitHub :: Tryhard # applicativos en todos lados _(warning: el código es un desastre, estaba trabajando en eso, pero otro proyecto se llevó toda mi atención por ahora 🙈): También viendo un video de YouTube :: Tsoding y la relación de Applicative y Monoid y como podríá usar esto para “sumar” resultados de OpenDota. WIP rapt: También en un video de YouTube :: Computerphile (¿tendré un problema con la consumición de videos?) sobre onion routing, y encriptación en capas; junto con contraseñas y OTP3. Se que tengo una idea ahí, pero creo que es muy parecida a Vault, de HashiCorp. Para este tipo de proyectos recomiendo pensar cada vez que escuches o leas algo (no importa de que; no digo oque hay que solo hacer uso de matemática! Estoy seguro que otras ramas de la ciencia son tan aptas a esto.) pensar: ¿Cómo podría usar eso? ¿En qué universo esta idea sería útil? ¿Veo que dice que se puede usar en X e Y; se podrá usar en Z? (bonus: Creo que este mentalidad ayuda mucho a adquirir nuevos conocimientos. Más que una atención pasiva sobre un tema nuevo) Level 3 - Snapshot A mi gusto, la mejor forma de inspiración: Cuando pienso solo en una interacción, en una pantalla, en un link. GitHub :: es-dia-de-helado-de-fruta: Mi novia me dijo que hoy no era día de helado de fruta, porque hacía mucho frio. Sería ideal tener una página que le pueda pasar para demostrarle la temperatura FrasaL: Tienes un amigo que habla español traduciendo literalmente verbos preposicionales del ingles? Dice cosas como “velocidad de dios” en vez de “buena suerte”, y quieres pasar una página como DeepL para ayudar a otras personas a comprenderle? GitHub :: delCanioBot: Necesitas un bot que genere imágenes de Nicolás del Caño, a razón de el meme del año, Nico del Caño? A veces estos chistes incluso terminan siendo aplicaciones de verdad, como una aplicación para coordinar car pooling (GitHub :: catapult). No tengo una buena recomendación para estos proyectos “chistes”, más que intentar hacerte pensar que no necesariamente un proyecto tiene que ser completamente serio; y son muchas veces estos proyectos que se combinan y que sirven de lugar para aprender nuevas tecnologías o metodologías. Y te podrían brindar un armazón para proyectos al futuro. Level 9000 - Todas las anteriores Lamentablemente, la “creatividad” no es un proceso súper directo. A veces algo sale por un lado, a veces por otro. A veces 2 ideas inconexas se conectan en una idea mejor. Personalmente, me gusta escribir estas esbozos de ideas en un receptáculo físico. hay quienes prefieren un archivo en la computadora. Hay quienes tienen varios pre-ideas en la mente a la vez y nueva información decanta esas pre-ideas en un proyecto. Gracias por tu tiempo, y espero que algo de todo esto te ayude a encontrar inspiración! driver: Un factor que hace que suceda o se desarrolle un fenómeno particular. &amp;#8617; tinkering: Intentar reparar o mejorar algo de manera casual o poco metódica. &amp;#8617; otp: One-time password &amp;#8617;</summary></entry><entry><title type="html">Haskell para mentes imperativas</title><link href="https://blog.florius.com.ar/xpost/2020/12/03/haskell-para-mentes-imperativas/" rel="alternate" type="text/html" title="Haskell para mentes imperativas" /><published>2020-12-03T00:00:00+00:00</published><updated>2020-12-03T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2020/12/03/haskell-para-mentes-imperativas</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2020/12/03/haskell-para-mentes-imperativas/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/haskell-para-mentes-imperativas-4n7k&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Browseando YouTube encontré una playlist con un nombre muy interesante: “&lt;a href=&quot;https://www.youtube.com/watch?v=Vgu82wiiZ90&amp;amp;list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV&quot;&gt;Haskell for Imperative Programmers&lt;/a&gt;” en donde el autor Philipp Hagenlocher explica conceptos de Haskell en videos cortos, concisos, con varios ejemplos y hasta algunos ejercicios. Lo que me inspiró a pensar cómo podría aprender alguien que tiene raíces en un paradigma imperativo. Por suerte no tuve que usar mucho la imaginación, ya que yo comencé con lenguajes imperativos, y en mi trabajo utilizo mayoritariamente el paradigma de objetos.&lt;/p&gt;
+
+&lt;p&gt;En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.&lt;/p&gt;
+
+&lt;p&gt;Si crees que entras en esta categoría, continúa leyendo.&lt;/p&gt;
+
+&lt;h3 id=&quot;prefacio&quot;&gt;Prefacio&lt;/h3&gt;
+&lt;p&gt;En este post haré uso de analogías y de patrones fuertemente asociados a la programación imperativa, de tal forma que la carga para aclimatarse al nuevo paradigma sea la menor posible, pero no considero esta la mejora forma de programar de forma funcional. Mi razonamiento es que: usando nuestro conocimiento previo ayude a comenzar a escalar la pendiente que es aprender un paradigma nuevo, y que esto a su vez dispare nuevas e interesantes investigaciones.&lt;/p&gt;
+
+&lt;h2 id=&quot;variables&quot;&gt;Variables&lt;/h2&gt;
+
+&lt;p&gt;Veo muy comúnmente la cara de espanto cuando uno habla de un lenguaje, como Haskell, donde la inmutabilidad está por defecto. Prontamente surge la pregunta de “cómo puedo asignar una variable” o “como puedo cambiar el valor de un contador”.
+Recordemos que Haskell es un lenguaje de programación &lt;a href=&quot;https://es.wikipedia.org/wiki/Turing_completo&quot;&gt;Turing completo&lt;/a&gt;, así que no es que &lt;em&gt;no se pueda&lt;/em&gt; hacer, solo que hay que reconocer  que hay diferentes formas de afrontar un problema.&lt;/p&gt;
+
+&lt;p&gt;En Haskell, el símbolo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&lt;/code&gt; no representa una asignación, si no es más próximo a la idea matemática del &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&lt;/code&gt; donde lo leemos (e interpretamos) como que algo &lt;strong&gt;es&lt;/strong&gt; otra cosa.&lt;/p&gt;
+
+&lt;p&gt;En un lenguaje imperativo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x = 3&lt;/code&gt; lo leemos como “asignamos el valor &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt; a la variable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;”, donde en un paradigma funcional, lo deberíamos interpretar como “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; &lt;em&gt;es&lt;/em&gt; 3”. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; no puede cambiar. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; simplemente &lt;em&gt;es&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Se que esta justificación suele no quitar el pavor. Tras indagar más a fondo, suelo descubrir que hay dos temas distintos (pero muy  sobrelapados en los lenguajes imperativos):&lt;/p&gt;
+
+&lt;p&gt;Ponerle nombre a algo “intermedio”. Por ejemplo, si uno está escribiendo un método, y ve que hay una operación que se repite dos veces, suele ser considerado una buena práctica extraer lo común a una “variable” y ponerle nombre. Por ejemplo, podríamos empezar con un método:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;y luego refactorizar a algo como:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tamaño&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tamaño&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tamaño&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En este acaso &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tamaño&lt;/code&gt; si bien es una “variable”, su intención no es variar en el contexto de la función. Es tan común y útil poder aseverar sobre qué cosas no cambian, que en otros lenguajes existe la idea que las “variables” puedan ser constantes (vaya oxímoron). Como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt; en JavaScript y PHP, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;val&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt;en Kotlin, variables en mayúsculas en Python o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;final&lt;/code&gt; en Java.&lt;/p&gt;
+
+&lt;p&gt;Lectores atentos pueden reconocer un potencial problema en esta refactorización, en donde no podemos asegurar 100% que el método &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;List::size()&lt;/code&gt; no cambia la lista, y que invocarlo 2 veces como en el código de “antes” podría no ser igual al código de “despues” en donde solo se invoca una vez. Dado que conocemos la semántica de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;List::size()&lt;/code&gt;, podemos descansar que no va a alterar la lista; pero a veces, por la naturaleza de la mutabilidad, esto lleva a problemas. Toda una categoría de problemas que simplemente no pueden ocurrir en un mundo inmutable 😉.&lt;/p&gt;
+
+&lt;p&gt;Esto mismo podríamos lograr en Haskell con palabras reservadas como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let … in&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;where&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;then&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+       &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Y luego del refactor:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+   &lt;span class=&quot;kr&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tama&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;
+   &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tama&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;then&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+       &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;tama&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;o&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tama&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;then&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+       &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;tama&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;
+   &lt;span class=&quot;kr&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tama&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si bien hacen lo mismo, tienen sutiles diferencias a las entraré en detalle (pero si está aquí: &lt;a href=&quot;https://wiki.haskell.org/Let_vs._Where&quot;&gt;Let vs. Where - HaskellWiki&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;cosas-que-cambian&quot;&gt;Cosas que cambian&lt;/h2&gt;
+
+&lt;p&gt;El otro &lt;em&gt;sabor&lt;/em&gt; de variables, es el de algo que cambia; y aquí, no tenemos suerte. No vamos a poder hacerlo. Pero eso no quita que podamos generar abstracciones para poder escribir algo que &lt;em&gt;se parezca&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pero antes de hablar de cosas que cambian, primero necesitamos estar de acuerdo en algunas convenciones. Cosas como&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En donde una función altera el valor que se le pasa son &lt;em&gt;el mal&lt;/em&gt;, y no poder hacerlo es un &lt;em&gt;feature&lt;/em&gt; (Aunque me encanta la idea de &lt;a href=&quot;https://www.tweag.io/blog/2020-11-11-linear-dps/&quot;&gt;Pure destination-passing style in Linear Haskell&lt;/a&gt; cuando se apalanca del maravilloso sistema de tipos).&lt;/p&gt;
+
+&lt;p&gt;Algo mucho más sensible sería una función que tome el argumento y devuelva un nuevo número, resultado de la suma del argumento y 4.&lt;/p&gt;
+
+&lt;p&gt;Pero no siempre es tan sencillo. A veces tenemos varias mutaciones encadenadas, o unas que dependen de otras; por lo que podemos aplicar este algoritmo mental:
+Cada vez que fuésemos a cambiar una variable, en realidad utilizaremos una nueva variable que sea el resultado del cambio, y de ahora en adelante, utilizar el nuevo nombre.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, con la nueva herramienta de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let … in&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buzz&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;buzz&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;let&lt;/span&gt; 
+       &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Si esta forma de escribir parece tediosa (lo es!), al final de la próxima sección volveremos sobre esto, pero todavía tenemos algo que podemos hacer. Revisemos qué es lo que es tan inconveniente: nombrar los pasos intermedios (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x0 - x3&lt;/code&gt;) ¿Podemos no hacerlo?.&lt;/p&gt;
+
+&lt;p&gt;De esta forma nos acercamos a un patrón muy común en funcional, en donde uno tiene funciones intermedias que toman un valor, y devuelven “el nuevo” valor. Podemos concatenar estas operaciones (que hablan de cambios, no de variables).&lt;/p&gt;
+
+&lt;p&gt;Imaginemos el mismo ejemplo, pero vamos a re escribirlo en pequeñas funciones intermedias que cambien el valor.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;buzz&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;f3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+      
+       &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f3&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Lamentablemente como es un ejemplo tan sintético, los nombres de las funciones intermedias serán malos; pero espero que puedan imaginarse que estas funciones sean cosas como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;incrementarEdad&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extraerDinero&lt;/code&gt; u otro nombre más cercano al dominio de lo que esten programando.&lt;/p&gt;
+
+&lt;p&gt;Por ello voy a cambiar levemente el ejemplo para tener algo que sea más humanamente legible.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;numeroValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;normalizarValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;esValido&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;tarjetaValida&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numeroValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;normalizarValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;esValido&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ahora podemos intentar pensar sobre nuestra &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tarjetaValida&lt;/code&gt;, donde lo que tiene que pasar es, en orden:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Dado un número pasado como parámetro (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Tomamos el número validador (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x mod 3&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Lo normalizamos (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x + 2&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Migramos el coeficiente (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x + 5&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Y chequeamos que sea válido (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x &amp;gt; 3&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Probablemente todavía no sea evidente, pero ahora podemos hacer un refactor de “inline” en cada variable intermedia (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x0 - x3&lt;/code&gt;). Empecemos con &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x3&lt;/code&gt; e iremos ineline-ando de a una&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;tarjetaValida&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numeroValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;normalizarValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;esValido&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;tarjetaValida&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numeroValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;In&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;esValido&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normalizarValidador&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;tarjetaValida&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;esValido&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normalizarValidador&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numeroValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;tarjetaValida&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;esValido&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normalizarValidador&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numeroValidador&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esto se parece mucho más a la descripción funcional de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tarjetaValida&lt;/code&gt;, pero está escrito “al revés”. Por razones como esta existen &lt;a href=&quot;https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Function.html#v:-38-&quot;&gt;combinadores como &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;&lt;/a&gt;, donde hablando mal y pronto, éste es el operador de &lt;em&gt;aplicación reversa&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;tarjetaValida&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;numeroValidador&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;normalizarValidador&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;esValido&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Es interesante notar como todas nuestras funciones de “cambio” tienen la misma firma: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:: Int -&amp;gt; Int&lt;/code&gt;. De forma más genérica, son funciones que toman un valor de un tipo, y &lt;em&gt;devuelven&lt;/em&gt; algo del mismo tipo.&lt;/p&gt;
+
+&lt;h3 id=&quot;aplicación-parcial&quot;&gt;Aplicación parcial&lt;/h3&gt;
+&lt;p&gt;Con el código que tenemos hasta aquí; podríamos cambiarlo para que &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;migrarCoeficiente&lt;/code&gt; no siempre sume 5, si no que pueda ser parametrizable por una letra.
+Sabiendo que hay una función que transforma una letra a un número &lt;a href=&quot;https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Char.html#v:ord&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ord :: Char -&amp;gt; Int&lt;/code&gt;&lt;/a&gt; 
+Podríamos cambiar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;migrarCoeficiente&lt;/code&gt; a:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letra&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ord&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;caracter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ahora nuestra &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tarjetaValida&lt;/code&gt; no sufre muchos cambios:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;tarjetaValida&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;numeroValidador&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;normalizarValidador&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;migrarCoeficiente&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'f'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;esValido&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Y eso fué gracias a &lt;a href=&quot;http://aprendehaskell.es/content/OrdenSuperior.html&quot;&gt;la currificación&lt;/a&gt; de todas las funciones en Haskell!&lt;/p&gt;
+
+&lt;h3 id=&quot;a-veces&quot;&gt;A veces&lt;/h3&gt;
+
+&lt;p&gt;Otro gran “hack” que nos permite la mutabilidad, es la de cambiar el valor, pero solo según un flujo de control. Algo como:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;qux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;En donde asignamos una variable que según uno u otro flujo de control puede cambiar. Siempre podremos reescribir esto de forma inmutable. Por ejemplo&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;qux&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Interesante notar que necesitamos un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else&lt;/code&gt; que “deje todo como estaba”, pues no podemos “no hacer nada” en esta forma de escribirlo.&lt;/p&gt;
+
+&lt;h2 id=&quot;monadas&quot;&gt;Monadas&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;(No podía ser un post de Haskell, y no mencionar a las monadas)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Una idea en la programación imperativa muy arraigada es que uno escribe una línea debajo de la otra, y esto hace que se ejecuten en ese orden.
+Tan arraigada que casi no se considera una decisión del lenguaje, pero lo es! Es una decisión de diseño, y una que en un paradigma funcional es fácil escaparse.&lt;/p&gt;
+
+&lt;p&gt;Pero a veces, queremos ordenar una secuencia de cosas. Recordemos el ejemplo anterior de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;buz&lt;/code&gt;. Hay una monada (y probablemente &lt;a href=&quot;http://aprendehaskell.es/content/MasMonadas.html&quot;&gt;miles de&lt;/a&gt; &lt;a href=&quot;https://gist.github.com/sdiehl/8d991a718f7a9c80f54b&quot;&gt;tutoriales de&lt;/a&gt; &lt;a href=&quot;https://wiki.haskell.org/State_Monad&quot;&gt;como&lt;/a&gt; &lt;a href=&quot;https://mmhaskell.com/monads/state&quot;&gt;implementarla&lt;/a&gt;) llamada “state” que representa una forma de secuenciar operaciones, e ir mutando un valor. Por lo que uno podría escribir algo mucho más parecido a la forma imperativa:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;cd&quot;&gt;--            |----- Va a ir mutando un Int
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;--            v   v- va a retornar un booleano
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;buz&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;State&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;buz&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;`&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;put&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Cada &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ret&lt;/code&gt; en este caso solo existe dentro del lambda &lt;em&gt;(todo lo que esté entre &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(\&lt;/code&gt; y &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;)&lt;/code&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Muchas veces se ven las monadas con el &lt;a href=&quot;https://es.wikipedia.org/wiki/Az%C3%BAcar_sint%C3%A1ctico&quot;&gt;&lt;em&gt;azúcar sintáctico&lt;/em&gt;&lt;/a&gt; de la notación &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;do&lt;/code&gt;, que lo hace muy conveniente porque nos deja, como en un paradigma imperativo, escribir una línea debajo de la otra.&lt;/p&gt;
+
+&lt;h3 id=&quot;monadas-cont&quot;&gt;Monadas Cont.&lt;/h3&gt;
+&lt;p&gt;Otra gran razón para implementar una secuencia de operaciones, es que estas puedan fallar. El fallo en cualquier renglón invalide toda la computación. Pensemos en métodos que podrían lanzar excepciones.
+Para esto también existe una monada! Y podríamos escribir algo como:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;precio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemConNombre&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nombre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inventario&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Errores&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;noExiste&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;nombre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nombre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cantidad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Errores&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fueraDeStock&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;De esta forma&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;kr&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Errores&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;FueraDeStock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NoExiste&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;buscar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Inventario&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Maybe&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Item&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;buscar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;precio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Either&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Errores&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;precio&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nombre&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;maybe&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Left&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NoExiste&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nombre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Right&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;itemEncontrado&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;-- (1)
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cantidad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Left&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;FueraDeStock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;precio&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;where&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;itemEncontrado&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Maybe&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Item&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;itemEncontrado&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buscar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inventario&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nombre&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;La idea de la función &lt;a href=&quot;https://hackage.haskell.org/package/base-4.14.0.0/docs/Prelude.html#v:maybe&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maybe&lt;/code&gt;&lt;/a&gt; es poder extraer el valor de un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Maybe&lt;/code&gt; (algo que puede o no estar). En el caso de que pueda fallar, &lt;em&gt;devolveremos&lt;/em&gt; un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Left&lt;/code&gt; (recordemos, representaría como lanzar una excepción), y en el caso que hubiese un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Item&lt;/code&gt;, devolveremos un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Right&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;De esta forma, no &lt;em&gt;ejecutaremos&lt;/em&gt; el &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt; hasta que no pasen las dos condiciones anteriores.&lt;/p&gt;
+
+&lt;h2 id=&quot;getter-y-setter&quot;&gt;Getter y Setter&lt;/h2&gt;
+
+&lt;p&gt;Por último, quiero tocar algo de modelado, y la parte de lo que menos quiero escribir, porque es la que más se separa del paradigma; pero no obstante puedo ver cómo alguien puede estar tentado a utilizar herramientas de modelado de paradigmas que ya conoce, y pensar en un &lt;a href=&quot;http://aprendehaskell.es/content/ClasesDeTipos.html&quot;&gt;&lt;em&gt;record&lt;/em&gt;&lt;/a&gt; es parecido a un objeto. Pero si así fuera… donde ponemos los métodos de este objeto?! (Sin entrar en el mundo de &lt;a href=&quot;https://hackage.haskell.org/package/lens&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lens&lt;/code&gt;&lt;/a&gt;).
+No voy a objetar (🤭) porque se que yo lo hice durante mucho tiempo, así que mientras que sepamos que hay &lt;em&gt;tela para cortar&lt;/em&gt;, por ahora puedo vivir con que pensemos que son objetos.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Point&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;podríamos escribirlo así:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;kr&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Y tendremos &lt;em&gt;gratis&lt;/em&gt; la función &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;edad :: Persona -&amp;gt; Int&lt;/code&gt; que “saca” la edad de una persona. Cual un getter, y la construcción:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;cambiarEdad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cambiarEdad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nuevaEdad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;persona&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nuevaEdad&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Como un setter. Pero, como en OOP no estamos limitados a simplemente asignar el nuevo valor; podríamos hacer lo que queramos!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;n&quot;&gt;cambiarEdad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cambiarEdad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nuevaEdad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;persona&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nuevaEdad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Podemos encontrar un patrón recurrente, donde tengamos funciones que &lt;em&gt;terminen&lt;/em&gt; con el tipo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;foo :: … -&amp;gt; Algo -&amp;gt; Algo&lt;/code&gt;. Si recordamos el ejemplo de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tarjetaValida&lt;/code&gt;, todas las funciones intermedias que teníamos eran del tipo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:: Int -&amp;gt; Int&lt;/code&gt;, y el ejercicio al lector hubiera generado una función con el tipo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:: Char -&amp;gt; Int -&amp;gt; Int&lt;/code&gt;. Podemos pensar en toda esta familia de funciones como funciones que “alteran”. Además ahora ya sabemos cómo combinarlas!
+Por ejemplo, concatenar listas  &lt;a href=&quot;https://hackage.haskell.org/package/base-4.14.0.0/docs/GHC-List.html#v:-43--43-&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(++) :: [a] -&amp;gt; [a] -&amp;gt; [a] &lt;/code&gt;&lt;/a&gt; en donde toma una primera lista y una segunda, y las “altera” (recordando que en realidad lo que hace es &lt;em&gt;devolver&lt;/em&gt; una nueva lista) o tomar los primeros &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; elementos (&lt;a href=&quot;https://hackage.haskell.org/package/base-4.14.0.0/docs/GHC-List.html#v:take&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;take :: Int -&amp;gt; [a] -&amp;gt; [a]&lt;/code&gt;&lt;/a&gt;). Hay muchísimas funciones como estas, y probablemente escribamos tantas de estas como “métodos” podrían tener nuestros objetos, si lo modelamos en OOP.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-kotlin&quot; data-lang=&quot;kotlin&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Persona&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;edad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;altura&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;crecer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;años&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                 &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;edad&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;años&lt;/span&gt;
+                 &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;altura&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;años&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;kr&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;altura&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;crecer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;crecer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Persona&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edad&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;altura&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;altura&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;persona&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ñ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;fin&quot;&gt;Fin&lt;/h2&gt;
+&lt;p&gt;Espero que con estas herramientas, el prospecto de programar en Haskell sea menos aterrorizador.&lt;/p&gt;</content><author><name></name></author><category term="xpost" /><summary type="html">El post original se puede leer en mi dev.to. Browseando YouTube encontré una playlist con un nombre muy interesante: “Haskell for Imperative Programmers” en donde el autor Philipp Hagenlocher explica conceptos de Haskell en videos cortos, concisos, con varios ejemplos y hasta algunos ejercicios. Lo que me inspiró a pensar cómo podría aprender alguien que tiene raíces en un paradigma imperativo. Por suerte no tuve que usar mucho la imaginación, ya que yo comencé con lenguajes imperativos, y en mi trabajo utilizo mayoritariamente el paradigma de objetos. En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell. Si crees que entras en esta categoría, continúa leyendo. Prefacio En este post haré uso de analogías y de patrones fuertemente asociados a la programación imperativa, de tal forma que la carga para aclimatarse al nuevo paradigma sea la menor posible, pero no considero esta la mejora forma de programar de forma funcional. Mi razonamiento es que: usando nuestro conocimiento previo ayude a comenzar a escalar la pendiente que es aprender un paradigma nuevo, y que esto a su vez dispare nuevas e interesantes investigaciones. Variables Veo muy comúnmente la cara de espanto cuando uno habla de un lenguaje, como Haskell, donde la inmutabilidad está por defecto. Prontamente surge la pregunta de “cómo puedo asignar una variable” o “como puedo cambiar el valor de un contador”. Recordemos que Haskell es un lenguaje de programación Turing completo, así que no es que no se pueda hacer, solo que hay que reconocer que hay diferentes formas de afrontar un problema. En Haskell, el símbolo = no representa una asignación, si no es más próximo a la idea matemática del = donde lo leemos (e interpretamos) como que algo es otra cosa. En un lenguaje imperativo x = 3 lo leemos como “asignamos el valor 3 a la variable x”, donde en un paradigma funcional, lo deberíamos interpretar como “x es 3”. x no puede cambiar. x simplemente es. Se que esta justificación suele no quitar el pavor. Tras indagar más a fondo, suelo descubrir que hay dos temas distintos (pero muy sobrelapados en los lenguajes imperativos): Ponerle nombre a algo “intermedio”. Por ejemplo, si uno está escribiendo un método, y ve que hay una operación que se repite dos veces, suele ser considerado una buena práctica extraer lo común a una “variable” y ponerle nombre. Por ejemplo, podríamos empezar con un método: Int foo(List&amp;lt;Int&amp;gt; xs) { if(xs.size() &amp;gt; 3) return -1; else return xs.size(); } y luego refactorizar a algo como: Int foo(List&amp;lt;Int&amp;gt; xs) { Int tamaño = xs.size(); if(tamaño &amp;gt; 3) return -1; else return tamaño; } En este acaso tamaño si bien es una “variable”, su intención no es variar en el contexto de la función. Es tan común y útil poder aseverar sobre qué cosas no cambian, que en otros lenguajes existe la idea que las “variables” puedan ser constantes (vaya oxímoron). Como const en JavaScript y PHP, val/varen Kotlin, variables en mayúsculas en Python o final en Java. Lectores atentos pueden reconocer un potencial problema en esta refactorización, en donde no podemos asegurar 100% que el método List::size() no cambia la lista, y que invocarlo 2 veces como en el código de “antes” podría no ser igual al código de “despues” en donde solo se invoca una vez. Dado que conocemos la semántica de List::size(), podemos descansar que no va a alterar la lista; pero a veces, por la naturaleza de la mutabilidad, esto lleva a problemas. Toda una categoría de problemas que simplemente no pueden ocurrir en un mundo inmutable 😉. Esto mismo podríamos lograr en Haskell con palabras reservadas como let … in o where. foo :: [Int] -&amp;gt; Int foo xs = if length xs then -1 else length xs Y luego del refactor: foo :: [Int] -&amp;gt; Int foo xs = let tamaño = length xs in if tamaño &amp;gt; 3 then -1 else tamaño o foo :: [Int] -&amp;gt; Int foo xs = if tamaño &amp;gt; 3 then -1 else tamaño where tamaño = length xs Si bien hacen lo mismo, tienen sutiles diferencias a las entraré en detalle (pero si está aquí: Let vs. Where - HaskellWiki). Cosas que cambian El otro sabor de variables, es el de algo que cambia; y aquí, no tenemos suerte. No vamos a poder hacerlo. Pero eso no quita que podamos generar abstracciones para poder escribir algo que se parezca. Pero antes de hablar de cosas que cambian, primero necesitamos estar de acuerdo en algunas convenciones. Cosas como void bar(int* x){ *x += 4; } En donde una función altera el valor que se le pasa son el mal, y no poder hacerlo es un feature (Aunque me encanta la idea de Pure destination-passing style in Linear Haskell cuando se apalanca del maravilloso sistema de tipos). Algo mucho más sensible sería una función que tome el argumento y devuelva un nuevo número, resultado de la suma del argumento y 4. Pero no siempre es tan sencillo. A veces tenemos varias mutaciones encadenadas, o unas que dependen de otras; por lo que podemos aplicar este algoritmo mental: Cada vez que fuésemos a cambiar una variable, en realidad utilizaremos una nueva variable que sea el resultado del cambio, y de ahora en adelante, utilizar el nuevo nombre. Por ejemplo, con la nueva herramienta de let … in: def buzz (n) ret = n ret = ret % 3 ret = ret +2 ret = ret + 5 ret &amp;gt; 3 end buzz n = let x0 = n x1 = x0 `mod` 3 x2 = x1 + 2 x3 = x2 + 5 In x3 &amp;gt; 3 Si esta forma de escribir parece tediosa (lo es!), al final de la próxima sección volveremos sobre esto, pero todavía tenemos algo que podemos hacer. Revisemos qué es lo que es tan inconveniente: nombrar los pasos intermedios (x0 - x3) ¿Podemos no hacerlo?. De esta forma nos acercamos a un patrón muy común en funcional, en donde uno tiene funciones intermedias que toman un valor, y devuelven “el nuevo” valor. Podemos concatenar estas operaciones (que hablan de cambios, no de variables). Imaginemos el mismo ejemplo, pero vamos a re escribirlo en pequeñas funciones intermedias que cambien el valor. buzz n = let f0 x = x `mod` 3 f1 x = x + 2 f2 x = x + 5 f3 x = x &amp;gt; 3 x0 = n x1 = f0 x0 x2 = f1 x1 x3 = f2 x2 In f3 x3 Lamentablemente como es un ejemplo tan sintético, los nombres de las funciones intermedias serán malos; pero espero que puedan imaginarse que estas funciones sean cosas como incrementarEdad, extraerDinero u otro nombre más cercano al dominio de lo que esten programando. Por ello voy a cambiar levemente el ejemplo para tener algo que sea más humanamente legible. numeroValidador x = x `mod` 3 normalizarValidador x = x + 2 migrarCoeficiente x = x + 5 esValido x = x &amp;gt; 3 tarjetaValida n = x0 = numeroValidador n x1 = normalizarValidador x0 x2 = migrarCoeficiente x1 In esValido x2 Ahora podemos intentar pensar sobre nuestra tarjetaValida, donde lo que tiene que pasar es, en orden: Dado un número pasado como parámetro (n) Tomamos el número validador (x mod 3) Lo normalizamos (x + 2) Migramos el coeficiente (x + 5) Y chequeamos que sea válido (x &amp;gt; 3) Probablemente todavía no sea evidente, pero ahora podemos hacer un refactor de “inline” en cada variable intermedia (x0 - x3). Empecemos con x3 e iremos ineline-ando de a una tarjetaValida n = x0 = n x1 = numeroValidador x0 x2 = normalizarValidador x1 In esValido (migrarCoeficiente x1) tarjetaValida n = x0 = n x1 = numeroValidador x0 In esValido (migrarCoeficiente (normalizarValidador x1)) tarjetaValida n = x0 = n esValido (migrarCoeficiente (normalizarValidador (numeroValidador x0))) tarjetaValida n = esValido (migrarCoeficiente (normalizarValidador (numeroValidador n))) Esto se parece mucho más a la descripción funcional de tarjetaValida, pero está escrito “al revés”. Por razones como esta existen combinadores como &amp;amp;, donde hablando mal y pronto, éste es el operador de aplicación reversa. tarjetaValida n = n &amp;amp; numeroValidador &amp;amp; normalizarValidador &amp;amp; migrarCoeficiente &amp;amp; esValido Es interesante notar como todas nuestras funciones de “cambio” tienen la misma firma: :: Int -&amp;gt; Int. De forma más genérica, son funciones que toman un valor de un tipo, y devuelven algo del mismo tipo. Aplicación parcial Con el código que tenemos hasta aquí; podríamos cambiarlo para que migrarCoeficiente no siempre sume 5, si no que pueda ser parametrizable por una letra. Sabiendo que hay una función que transforma una letra a un número ord :: Char -&amp;gt; Int Podríamos cambiar migrarCoeficiente a: migrarCoeficiente :: Char -&amp;gt; Int -&amp;gt; Int migrarCoeficiente letra x = x + (ord caracter) Ahora nuestra tarjetaValida no sufre muchos cambios: tarjetaValida n = n &amp;amp; numeroValidador &amp;amp; normalizarValidador &amp;amp; migrarCoeficiente 'f' &amp;amp; esValido Y eso fué gracias a la currificación de todas las funciones en Haskell! A veces Otro gran “hack” que nos permite la mutabilidad, es la de cambiar el valor, pero solo según un flujo de control. Algo como: def qux(n): ret = n if(ret % 3): ret = 10 return ret En donde asignamos una variable que según uno u otro flujo de control puede cambiar. Siempre podremos reescribir esto de forma inmutable. Por ejemplo qux n = if n `mod` 3 == 0 then 10 else n Interesante notar que necesitamos un else que “deje todo como estaba”, pues no podemos “no hacer nada” en esta forma de escribirlo. Monadas (No podía ser un post de Haskell, y no mencionar a las monadas) Una idea en la programación imperativa muy arraigada es que uno escribe una línea debajo de la otra, y esto hace que se ejecuten en ese orden. Tan arraigada que casi no se considera una decisión del lenguaje, pero lo es! Es una decisión de diseño, y una que en un paradigma funcional es fácil escaparse. Pero a veces, queremos ordenar una secuencia de cosas. Recordemos el ejemplo anterior de buz. Hay una monada (y probablemente miles de tutoriales de como implementarla) llamada “state” que representa una forma de secuenciar operaciones, e ir mutando un valor. Por lo que uno podría escribir algo mucho más parecido a la forma imperativa: -- |----- Va a ir mutando un Int -- v v- va a retornar un booleano buz :: State Int Bool buz = get &amp;gt;&amp;gt;= (\ret -&amp;gt; set (ret `mod` 3)) &amp;gt;&amp;gt; get &amp;gt;&amp;gt;= (\ret -&amp;gt; put (ret + 2)) &amp;gt;&amp;gt; get &amp;gt;&amp;gt;= (\ret -&amp;gt; set (ret + 5)) &amp;gt;&amp;gt; get &amp;gt;&amp;gt;= (\ret -&amp;gt; return (ret &amp;gt; 3)) Cada ret en este caso solo existe dentro del lambda (todo lo que esté entre (\ y )) Muchas veces se ven las monadas con el azúcar sintáctico de la notación do, que lo hace muy conveniente porque nos deja, como en un paradigma imperativo, escribir una línea debajo de la otra. Monadas Cont. Otra gran razón para implementar una secuencia de operaciones, es que estas puedan fallar. El fallo en cualquier renglón invalide toda la computación. Pensemos en métodos que podrían lanzar excepciones. Para esto también existe una monada! Y podríamos escribir algo como: func precio(itemConNombre nombre: String) throws { guard let item = inventario[name] else { throw Errores.noExiste(nombre: nombre) } guard item.cantidad &amp;gt; 0 else { throw Errores.fueraDeStock } item.price } De esta forma data Errores = FueraDeStock | NoExiste String buscar :: Inventario -&amp;gt; String -&amp;gt; Maybe Item buscar = (...) precio :: String -&amp;gt; Either Errores Int precio nombre = do item &amp;lt;- maybe (Left (NoExiste nombre)) Right itemEncontrado -- (1) when (cantidad item &amp;gt; 0) (Left FueraDeStock) return precio item where itemEncontrado :: Maybe Item itemEncontrado = buscar inventario nombre La idea de la función maybe es poder extraer el valor de un Maybe (algo que puede o no estar). En el caso de que pueda fallar, devolveremos un Left (recordemos, representaría como lanzar una excepción), y en el caso que hubiese un Item, devolveremos un Right. De esta forma, no ejecutaremos el return hasta que no pasen las dos condiciones anteriores. Getter y Setter Por último, quiero tocar algo de modelado, y la parte de lo que menos quiero escribir, porque es la que más se separa del paradigma; pero no obstante puedo ver cómo alguien puede estar tentado a utilizar herramientas de modelado de paradigmas que ya conoce, y pensar en un record es parecido a un objeto. Pero si así fuera… donde ponemos los métodos de este objeto?! (Sin entrar en el mundo de lens). No voy a objetar (🤭) porque se que yo lo hice durante mucho tiempo, así que mientras que sepamos que hay tela para cortar, por ahora puedo vivir con que pensemos que son objetos. class Point { public int edad; } podríamos escribirlo así: data Persona = Persona { edad :: Int } Y tendremos gratis la función edad :: Persona -&amp;gt; Int que “saca” la edad de una persona. Cual un getter, y la construcción: cambiarEdad :: Int -&amp;gt; Persona -&amp;gt; Persona cambiarEdad nuevaEdad persona = persona { edad = nuevaEdad } Como un setter. Pero, como en OOP no estamos limitados a simplemente asignar el nuevo valor; podríamos hacer lo que queramos! cambiarEdad :: Int -&amp;gt; Persona -&amp;gt; Persona cambiarEdad nuevaEdad persona = persona { edad = nuevaEdad + 3 } Podemos encontrar un patrón recurrente, donde tengamos funciones que terminen con el tipo: foo :: … -&amp;gt; Algo -&amp;gt; Algo. Si recordamos el ejemplo de tarjetaValida, todas las funciones intermedias que teníamos eran del tipo: :: Int -&amp;gt; Int, y el ejercicio al lector hubiera generado una función con el tipo: :: Char -&amp;gt; Int -&amp;gt; Int. Podemos pensar en toda esta familia de funciones como funciones que “alteran”. Además ahora ya sabemos cómo combinarlas! Por ejemplo, concatenar listas (++) :: [a] -&amp;gt; [a] -&amp;gt; [a] en donde toma una primera lista y una segunda, y las “altera” (recordando que en realidad lo que hace es devolver una nueva lista) o tomar los primeros n elementos (take :: Int -&amp;gt; [a] -&amp;gt; [a]). Hay muchísimas funciones como estas, y probablemente escribamos tantas de estas como “métodos” podrían tener nuestros objetos, si lo modelamos en OOP. class Persona(var edad: Int, var altura: Int) { fun crecer(años : Int) { this.edad += años this.altura += años*2 } } data Persona = Persona { edad :: Int, altura :: Int } crecer :: Int -&amp;gt; Persona -&amp;gt; Persona crecer años persona = Persona { edad = edad persona + años, altura = altura persona + (años * 2) } Fin Espero que con estas herramientas, el prospecto de programar en Haskell sea menos aterrorizador.</summary></entry><entry><title type="html">koncierge Una librería para segmentar usuarios</title><link href="https://blog.florius.com.ar/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/" rel="alternate" type="text/html" title="koncierge Una librería para segmentar usuarios" /><published>2020-09-14T00:00:00+00:00</published><updated>2020-09-14T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/koncierge-una-libreria-para-segmentar-usuarios-fjp&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;trasfondo&quot;&gt;Trasfondo&lt;/h2&gt;
+
+&lt;p&gt;En donde estoy trabajando, cada nuevo feature o idea, pasa por un proceso de &lt;em&gt;A/B Testing&lt;/em&gt;.
+Normalmente lo que hacemos es:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Generamos una hipótesis del estilo: “Si los usuarios tuviesen una notificación cuando pasa &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X&lt;/code&gt;, entonces van a hacer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt; más seguido”.&lt;/li&gt;
+  &lt;li&gt;Desarrollamos esta notificación, o lo que sea.&lt;/li&gt;
+  &lt;li&gt;Apuntamos a algún mercado para participar de esta prueba&lt;/li&gt;
+  &lt;li&gt;Dividimos a la mitad de los usuarios de ese mercado, tal que vean e interactúen con en nuevo feature, mientras que la otra mitad (grupo &lt;em&gt;control&lt;/em&gt;) no.&lt;/li&gt;
+  &lt;li&gt;Esperamos dos semanas&lt;/li&gt;
+  &lt;li&gt;Comparamos las métricas entre los dos grupos.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Este último paso puede llevar a miles de ramificaciones: Activamos el feature para toda la población. Cambiamos algo y volvemos a hacer una prueba. Lo deshabilitamos por completo porque nuestra hipótesis era incorrecta. Etc, etc.&lt;/p&gt;
+
+&lt;p&gt;Para la segmentación de la población, estamos usando un servicio de un tercero. A este servicio, ocasionalmente le brindamos la información de segmentación de nuestros usuarios.
+Información como&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;El usuario `123` es de Madrid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;para que luego, cuando queramos segmentar, podríamos segmentar solo usuarios de Madrid.&lt;/p&gt;
+
+&lt;p&gt;Este servicio externo, adicionalmente, solo nos provee acceso a las variantes (si un usuario pertenece al segmento, es parte del grupo de control, o es parte del grupo que participa) mediante un SDK para usar en móviles (iOS y Android).&lt;/p&gt;
+
+&lt;p&gt;Esto nos presentaba dos dificultades:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Si quisiéramos hacer un A/B Test en alguno de los micro-servicios de backend, no podríamos consultar a este servicio.&lt;/li&gt;
+  &lt;li&gt;Si quisiéramos segmentar por algo de lo que no le habíamos informado al servicio, deberíamos compartirle toda esta nueva información para que este pueda segmentar.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Por esta situación, decidimos crear un micro-servicio que se encargue de segmentar y separar en variantes a nuestros usuarios.&lt;/p&gt;
+
+&lt;h2 id=&quot;problemas&quot;&gt;Problemas&lt;/h2&gt;
+
+&lt;p&gt;Rápidamente nos vimos enfrentados a resolver como hacer para obtener la información para segmentar.&lt;/p&gt;
+
+&lt;p&gt;Normalmente segmentamos por país, lo que sería sencillo hacer que el nuevo micro-servicio consultara con otro micro-servicio de información; y obtuviese el país del usuario.
+Con esta nueva información, podríamos segmentar.&lt;/p&gt;
+
+&lt;p&gt;Lo que presenta un desafío interesante:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Como evitar que este micro-servicio crezca
+cada vez introduzcamos un nuevo micro-servicio que almacene
+alguna información del usuario?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Por eso, pensamos que podríamos delegar la responsabilidad de obtener el &lt;em&gt;contexto&lt;/em&gt; del usuario, a quien consuma este micro-servicio; por lo que una llamada podría ser:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Dado el usuario `123`, de Madrid;
+a qué variante pertenece?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;De esta manera, es quien consume quien necesita saber todas las dependencias del experimento, y cada experimento puede tener dependencias distintas, de distintas formas de computarse, y el micro-servicio podría no crecer.&lt;/p&gt;
+
+&lt;h2 id=&quot;dsl-domain-specific-language---lenguaje-específico-de-dominio&quot;&gt;DSL (Domain-specific language - Lenguaje específico de dominio)&lt;/h2&gt;
+
+&lt;p&gt;Ya sabíamos como querríamos que se comporte el micro-servicio, ahora necesitábamos una forma de expresar como querríamos segmentar nuestra población. Hacía poco estaba trabajando mucho con &lt;a href=&quot;https://www.mongodb.com/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mongo&lt;/code&gt;&lt;/a&gt; y se me ocurrió que un lenguaje de consultas como el de mongo podría ser interesante de explorar.
+De tal forma que una segmentación como:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Quiero que solo participen del experimento `EXP001`,
+usuarios quienes sean de Madrid.
+De estos, la mitad estarán en el grupo de participando
+y el esto en control.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Se transformaría en:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;EXP001&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;ubicación&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Madrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;$children&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;participando&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;$rand&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;$gt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;control&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://koncierge-playground.herokuapp.com/?context=%7B%0A%20%20%20%20%22ubicaci%C3%B3n%22:%20%22Madrid%22,%0A%20%20%20%20%22userId%22:%205%0A%7D&amp;amp;experiment=%7B%0A%20%20%20%20%22EXP001%22:%20%7B%0A%20%20%20%20%20%20%20%20%22ubicaci%C3%B3n%22:%20%22Madrid%22,%0A%20%20%20%20%20%20%20%20%22%24children%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22participando%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%24rand%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%24gt%22:%200.5%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D,%0A%20%20%20%20%20%20%20%20%20%20%20%20%22control%22:%20%7B%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&quot;&gt;Playground&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;De esta manera, quien consuma al micro-servicio debería proveer, al menos, la información de la &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;ubicación&quot;&lt;/code&gt; del usuario.
+Una posible consulta podría ser con el contexto:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;ubicación&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Madrid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;userId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;El micro-servicio debería responder que pertenece al &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EXP001&lt;/code&gt; (dado que la ubicación empareja con la definición), y podría pertenecer a la variante &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;participando&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;control&lt;/code&gt;.
+Los usuarios deberían estar distribuidos 50%-50%; dado que hay un 50% de probabilidad que un numero al azar, uniformemente distribuido entre 0 y 1 (como es &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$rand&lt;/code&gt;) sea mayor a 0.5.&lt;/p&gt;
+
+&lt;p&gt;Con esta idea, sabiendo que la intención era que el micro-servicio no dependiente de ninguna otra parte de arquitectura de nuestro ecosistema; se me ocurrió que podría desarrollarlo como una librería pública; por si alguien más tiene la necesidad que tuvimos nosotros.&lt;/p&gt;
+
+&lt;h2 id=&quot;koncierge-&quot;&gt;koncierge 🛎&lt;/h2&gt;
+
+&lt;p&gt;La librería está en &lt;a href=&quot;https://github.com/jazcarate/koncierge#readme&quot;&gt;GitHub :: jazcarate/koncierge&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="xpost" /><category term="show-and-tell" /><summary type="html">El post original se puede leer en mi dev.to. Trasfondo En donde estoy trabajando, cada nuevo feature o idea, pasa por un proceso de A/B Testing. Normalmente lo que hacemos es: Generamos una hipótesis del estilo: “Si los usuarios tuviesen una notificación cuando pasa X, entonces van a hacer Y más seguido”. Desarrollamos esta notificación, o lo que sea. Apuntamos a algún mercado para participar de esta prueba Dividimos a la mitad de los usuarios de ese mercado, tal que vean e interactúen con en nuevo feature, mientras que la otra mitad (grupo control) no. Esperamos dos semanas Comparamos las métricas entre los dos grupos. Este último paso puede llevar a miles de ramificaciones: Activamos el feature para toda la población. Cambiamos algo y volvemos a hacer una prueba. Lo deshabilitamos por completo porque nuestra hipótesis era incorrecta. Etc, etc. Para la segmentación de la población, estamos usando un servicio de un tercero. A este servicio, ocasionalmente le brindamos la información de segmentación de nuestros usuarios. Información como El usuario `123` es de Madrid para que luego, cuando queramos segmentar, podríamos segmentar solo usuarios de Madrid. Este servicio externo, adicionalmente, solo nos provee acceso a las variantes (si un usuario pertenece al segmento, es parte del grupo de control, o es parte del grupo que participa) mediante un SDK para usar en móviles (iOS y Android). Esto nos presentaba dos dificultades: Si quisiéramos hacer un A/B Test en alguno de los micro-servicios de backend, no podríamos consultar a este servicio. Si quisiéramos segmentar por algo de lo que no le habíamos informado al servicio, deberíamos compartirle toda esta nueva información para que este pueda segmentar. Por esta situación, decidimos crear un micro-servicio que se encargue de segmentar y separar en variantes a nuestros usuarios. Problemas Rápidamente nos vimos enfrentados a resolver como hacer para obtener la información para segmentar. Normalmente segmentamos por país, lo que sería sencillo hacer que el nuevo micro-servicio consultara con otro micro-servicio de información; y obtuviese el país del usuario. Con esta nueva información, podríamos segmentar. Lo que presenta un desafío interesante: Como evitar que este micro-servicio crezca cada vez introduzcamos un nuevo micro-servicio que almacene alguna información del usuario? Por eso, pensamos que podríamos delegar la responsabilidad de obtener el contexto del usuario, a quien consuma este micro-servicio; por lo que una llamada podría ser: Dado el usuario `123`, de Madrid; a qué variante pertenece? De esta manera, es quien consume quien necesita saber todas las dependencias del experimento, y cada experimento puede tener dependencias distintas, de distintas formas de computarse, y el micro-servicio podría no crecer. DSL (Domain-specific language - Lenguaje específico de dominio) Ya sabíamos como querríamos que se comporte el micro-servicio, ahora necesitábamos una forma de expresar como querríamos segmentar nuestra población. Hacía poco estaba trabajando mucho con Mongo y se me ocurrió que un lenguaje de consultas como el de mongo podría ser interesante de explorar. De tal forma que una segmentación como: Quiero que solo participen del experimento `EXP001`, usuarios quienes sean de Madrid. De estos, la mitad estarán en el grupo de participando y el esto en control. Se transformaría en: { &quot;EXP001&quot;: { &quot;ubicación&quot;: &quot;Madrid&quot;, &quot;$children&quot;: { &quot;participando&quot;: { &quot;$rand&quot;: { &quot;$gt&quot;: 0.5 } }, &quot;control&quot;: {} } } } Playground De esta manera, quien consuma al micro-servicio debería proveer, al menos, la información de la &quot;ubicación&quot; del usuario. Una posible consulta podría ser con el contexto: { &quot;ubicación&quot;: &quot;Madrid&quot;, &quot;userId&quot;: 5 } El micro-servicio debería responder que pertenece al EXP001 (dado que la ubicación empareja con la definición), y podría pertenecer a la variante participando o control. Los usuarios deberían estar distribuidos 50%-50%; dado que hay un 50% de probabilidad que un numero al azar, uniformemente distribuido entre 0 y 1 (como es $rand) sea mayor a 0.5. Con esta idea, sabiendo que la intención era que el micro-servicio no dependiente de ninguna otra parte de arquitectura de nuestro ecosistema; se me ocurrió que podría desarrollarlo como una librería pública; por si alguien más tiene la necesidad que tuvimos nosotros. koncierge 🛎 La librería está en GitHub :: jazcarate/koncierge</summary></entry><entry><title type="html">The essence of Event Sourcing</title><link href="https://blog.florius.com.ar/xpost/2019/07/10/the-essence-of-event-sourcing/" rel="alternate" type="text/html" title="The essence of Event Sourcing" /><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2019/07/10/the-essence-of-event-sourcing</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2019/07/10/the-essence-of-event-sourcing/">&lt;p&gt;&lt;em&gt;Original post can be found in the &lt;a href=&quot;https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/&quot;&gt;10Pines blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Event Sourcing is a somewhat trending topic, but by no accounts a new one. Right now you can find a lot of stories on how to event Source in Rust, Kafka or PostgreSQL, but I’ve found a lack of high concept blog posts on what &lt;strong&gt;is&lt;/strong&gt; event sourcing… or rather, I’ve found an overwhelming amount of supposedly event sourcing posts, all talking about a lot of different things (I’m looking at you CQRS).&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;trends.embed.renderExploreWidget(&quot;TIMESERIES&quot;, {&quot;comparisonItem&quot;:[{&quot;keyword&quot;:&quot;Event Sourcing&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;}],&quot;category&quot;:0,&quot;property&quot;:&quot;&quot;}, {&quot;exploreQuery&quot;:&quot;date=today%205-y&amp;q=Event%20Sourcing&quot;,&quot;guestPath&quot;:&quot;https://trends.google.com:443/trends/embed/&quot;});&lt;/script&gt;
+
+&lt;p&gt;So, I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”, not by actually going into any technical details, but rather into how we solve a problem on that subject.&lt;/p&gt;
+
+&lt;h2 id=&quot;backstory-sourcing-events&quot;&gt;Backstory (Sourcing Events)&lt;/h2&gt;
+
+&lt;p&gt;We had a small internal app that we used in big meetings to serialize conversations. Think of it as an over-complicated, over-designed queue. The app had a backend and a frontend, both which shared the particular state that the app should show to the user.&lt;/p&gt;
+
+&lt;p&gt;Basically: Who was talking, and who comes next.&lt;/p&gt;
+
+&lt;p&gt;The app kept all of our smartphones in sync. Whenever someone, say Joe, pushed the “I want to talk next” button, the backend did all the computations to add him to the end of the queue, and all of our smartphones got the message with the new state to display. Joe was now on the queue. Waiting.&lt;/p&gt;
+
+&lt;p&gt;This was good enough for several meetings but we, as a tech savvy company, wanted more! So, of course, we added features like emoji support to 👍, 👎 and ask that the speaker would wrap up (🌯).&lt;/p&gt;
+
+&lt;p&gt;So far, no Events to be Sourced whatsoever.&lt;/p&gt;
+
+&lt;p&gt;After a new round of emoji-enhanced meetings, I wondered: How many 👍 did I had when I spoke last week?&lt;/p&gt;
+
+&lt;p&gt;I had no way of knowing. The backend was &lt;em&gt;updating&lt;/em&gt; the list of reactions every time a new speaker’s turn was up. And therein laid my problem. I never considered that after the meeting I might want to know something as simple as that.&lt;/p&gt;
+
+&lt;p&gt;So we put on our thinking hats and settled on a simple heuristic:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;No Updates. No Deletes.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-actual-potato-eventing-source&quot;&gt;The actual potato (Eventing Source)&lt;/h2&gt;
+
+&lt;p&gt;No Updates, no deletes might look like a daunting feat. How would we &lt;a href=&quot;https://blog.10pines.com/2019/05/27/reifying-problems-in-our-software/&quot;&gt;reflect reality&lt;/a&gt; without the basic premise that &lt;strong&gt;things change&lt;/strong&gt;. Luckily, we have functional programing close to our hearts here at 10Pines, and we can imagine a world where “things are immutable”.&lt;/p&gt;
+
+&lt;p&gt;So we had a frontend that was sending the intentions. What the user wanted to do. I will call this intentions &lt;strong&gt;Events&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We had 3 major events:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“I want to talk” event.&lt;/li&gt;
+  &lt;li&gt;“I don’t want to talk anymore” event&lt;/li&gt;
+  &lt;li&gt;“I want to react with a 👍” event&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notice this were not &lt;em&gt;“Add me to the queue”&lt;/em&gt;, or &lt;em&gt;“Now the speaker has 5 👍”&lt;/em&gt;, but rather the intention the user had.&lt;/p&gt;
+
+&lt;p&gt;Now, the backend had to receive these events, and instead of &lt;strong&gt;updating&lt;/strong&gt; its state, saving it and broadcasting it; we were saving the event and computing a new state (based on the previous state and this new event)&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Previous state&lt;/th&gt;
+      &lt;th&gt;Event&lt;/th&gt;
+      &lt;th&gt;Current state&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ currentSpeaker: Joaco, queue: [] }&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Dave wants to talk&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ currentSpeaker: Joaco, queue: [Dave] }&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;And, you guessed it: the previous state was &lt;strong&gt;itself&lt;/strong&gt; computed with its previous state plus the last event before this new one. So on and so forth.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Previous-previous state&lt;/th&gt;
+      &lt;th&gt;Event&lt;/th&gt;
+      &lt;th&gt;Previous state&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ currentSpeaker: nil, queue: [] }&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Joaco wants to talk&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ currentSpeaker: Joaco, queue: [] }&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;We changed from a state that was being updated, to adding onto a list events, and finding out the new state computing every event and how they changed the state. No information can be lost. Ever. &lt;strong&gt;No updates. No deletes.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;back-to-the-original-question-source-event&quot;&gt;Back to the original question (Source Event)&lt;/h2&gt;
+
+&lt;p&gt;How many reactions did I have. Well, now I could figure this out. I just needed to replay all the events, but now, instead of having a state that had the whole queue, I’d use the events to transform a different, more useful state:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;A state&lt;/th&gt;
+      &lt;th&gt;Event&lt;/th&gt;
+      &lt;th&gt;New state&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ reactions_joaco_had: 0 }&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Joaco wants to talk&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ reactions_joaco_had: 0 }&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;A state&lt;/th&gt;
+      &lt;th&gt;Event&lt;/th&gt;
+      &lt;th&gt;New state&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ reactions_joaco_had: 0 }&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;I want to react with a 👍&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ reactions_joaco_had: 1 }&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;*This is an oversimplification because we would still need to know who was talking at the time to know if we had to increment the reaction counter or not.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This is called a projection, and it is the way we can “fold” our events into relevant information.&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-recap-evented-source&quot;&gt;Lets recap (Evented Source)&lt;/h2&gt;
+
+&lt;p&gt;We changed the way we thought of our storage. Rather than update what we know, we add to an infinite list the events that change our domain.&lt;/p&gt;
+
+&lt;p&gt;This way, we can &lt;em&gt;replay&lt;/em&gt; those events and answer questions we never thought we wanted to ask at the time of writing the code.&lt;/p&gt;
+
+&lt;h2 id=&quot;food-for-thought&quot;&gt;Food for thought:&lt;/h2&gt;
+
+&lt;p&gt;I wanted to keep this post short and high-concept; but I’ll let the reader think of some interesting things that steam from this kind of approach:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If we ever botched the part of the system that computed new states; we could rollout a fixed version, and replay the whole history of the application, and the error would cease to exist.&lt;/li&gt;
+  &lt;li&gt;Structural changes to the database stop being something to worry about. We are only storing events, and those don’t change often. Rolling back and replaying the history is the fabric of event sourcing.&lt;/li&gt;
+  &lt;li&gt;The new state doesn’t need to be computed from the first initial state, along with all the events thereafter. We can periodically take “snapshots” of events, and compute newer events from that saved state.&lt;/li&gt;
+  &lt;li&gt;The same stream of events can be used by many applications, each having their own projection to answer a wildly different set of questions.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="xpost" /><summary type="html">Original post can be found in the 10Pines blog. Event Sourcing is a somewhat trending topic, but by no accounts a new one. Right now you can find a lot of stories on how to event Source in Rust, Kafka or PostgreSQL, but I’ve found a lack of high concept blog posts on what is event sourcing… or rather, I’ve found an overwhelming amount of supposedly event sourcing posts, all talking about a lot of different things (I’m looking at you CQRS). So, I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”, not by actually going into any technical details, but rather into how we solve a problem on that subject. Backstory (Sourcing Events) We had a small internal app that we used in big meetings to serialize conversations. Think of it as an over-complicated, over-designed queue. The app had a backend and a frontend, both which shared the particular state that the app should show to the user. Basically: Who was talking, and who comes next. The app kept all of our smartphones in sync. Whenever someone, say Joe, pushed the “I want to talk next” button, the backend did all the computations to add him to the end of the queue, and all of our smartphones got the message with the new state to display. Joe was now on the queue. Waiting. This was good enough for several meetings but we, as a tech savvy company, wanted more! So, of course, we added features like emoji support to 👍, 👎 and ask that the speaker would wrap up (🌯). So far, no Events to be Sourced whatsoever. After a new round of emoji-enhanced meetings, I wondered: How many 👍 did I had when I spoke last week? I had no way of knowing. The backend was updating the list of reactions every time a new speaker’s turn was up. And therein laid my problem. I never considered that after the meeting I might want to know something as simple as that. So we put on our thinking hats and settled on a simple heuristic: No Updates. No Deletes. The actual potato (Eventing Source) No Updates, no deletes might look like a daunting feat. How would we reflect reality without the basic premise that things change. Luckily, we have functional programing close to our hearts here at 10Pines, and we can imagine a world where “things are immutable”. So we had a frontend that was sending the intentions. What the user wanted to do. I will call this intentions Events. We had 3 major events: “I want to talk” event. “I don’t want to talk anymore” event “I want to react with a 👍” event Notice this were not “Add me to the queue”, or “Now the speaker has 5 👍”, but rather the intention the user had. Now, the backend had to receive these events, and instead of updating its state, saving it and broadcasting it; we were saving the event and computing a new state (based on the previous state and this new event) Previous state Event Current state { currentSpeaker: Joaco, queue: [] } Dave wants to talk { currentSpeaker: Joaco, queue: [Dave] } And, you guessed it: the previous state was itself computed with its previous state plus the last event before this new one. So on and so forth. Previous-previous state Event Previous state { currentSpeaker: nil, queue: [] } Joaco wants to talk { currentSpeaker: Joaco, queue: [] } We changed from a state that was being updated, to adding onto a list events, and finding out the new state computing every event and how they changed the state. No information can be lost. Ever. No updates. No deletes. Back to the original question (Source Event) How many reactions did I have. Well, now I could figure this out. I just needed to replay all the events, but now, instead of having a state that had the whole queue, I’d use the events to transform a different, more useful state: A state Event New state { reactions_joaco_had: 0 } Joaco wants to talk { reactions_joaco_had: 0 } A state Event New state { reactions_joaco_had: 0 } I want to react with a 👍 { reactions_joaco_had: 1 } *This is an oversimplification because we would still need to know who was talking at the time to know if we had to increment the reaction counter or not. This is called a projection, and it is the way we can “fold” our events into relevant information. Lets recap (Evented Source) We changed the way we thought of our storage. Rather than update what we know, we add to an infinite list the events that change our domain. This way, we can replay those events and answer questions we never thought we wanted to ask at the time of writing the code. Food for thought: I wanted to keep this post short and high-concept; but I’ll let the reader think of some interesting things that steam from this kind of approach: If we ever botched the part of the system that computed new states; we could rollout a fixed version, and replay the whole history of the application, and the error would cease to exist. Structural changes to the database stop being something to worry about. We are only storing events, and those don’t change often. Rolling back and replaying the history is the fabric of event sourcing. The new state doesn’t need to be computed from the first initial state, along with all the events thereafter. We can periodically take “snapshots” of events, and compute newer events from that saved state. The same stream of events can be used by many applications, each having their own projection to answer a wildly different set of questions.</summary></entry><entry><title type="html">Cuándo intervenir en un juego</title><link href="https://blog.florius.com.ar/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego/" rel="alternate" type="text/html" title="Cuándo intervenir en un juego" /><published>2019-02-27T00:00:00+00:00</published><updated>2019-02-27T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego/">&lt;p&gt;&lt;em&gt;El post original se puede leer en el blog de &lt;a href=&quot;https://blogs.magicjudges.org/latam/2019/02/27/cuando-intervenir-en-un-juego-por-joaquin-azcarate/&quot;&gt;Jueces Hispanoamericanos&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Les quiero contar una pesadilla recurrente que tengo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Estoy jueceando. Escucho dos jugadores, gritando, acusarse de tramposos. Corro a ver qué está pasando. En el camino entre las mesas, que parece interminable, veo a alguien enderezar sus tierras y su Dark Confidant, robar solo una carta y jugar una tierra.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy.  La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”.&lt;/p&gt;
+
+&lt;h2 id=&quot;depende-el-nivel-de-imposición-de-reglas&quot;&gt;Depende el nivel de imposición de reglas.&lt;/h2&gt;
+
+&lt;p&gt;En un torneo de donde el Nivel de Imposición de Reglas (NIR) es Normal, citando al documento de “Juzgando a Nivel de Imposición de Reglas Normal” (NIR):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Deberías intervenir si ves que sucede algo ilegal en una partida, pero más allá de eso puedes &lt;strong&gt;usar tu criterio&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;También debemos tener en cuenta el tenor propio del evento. Por suerte se explaya sobre qué criterio debería uno usar para decidir su criterio de intervenir.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Por ejemplo, que intervengas cuando un jugador olvida un disparo debería estar determinado por el tenor que le quieres dar al evento; podría ser apropiado dar un poco de ayuda adicional en un entorno más casual, pero no tanto si tu grupo de juego es más competitivo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;No hay una mejor forma de ponerlo, y no hay una respuesta íntegramente incorrecta sobre cuándo intervenir. Tu eres quien mejor conoce a tus jugadores. Haz lo que te parezca más correcto en cada situación, y si los jugadores se sienten avasallados o dejados a la deriva, toma acciones correctivas en cualquiera de las dos direcciones. Siempre recordando que como jueces debemos ser árbitros neutrales y alentar una atmósfera cordial y una competencia amistosa.&lt;/p&gt;
+
+&lt;h2 id=&quot;y-en-competitivo&quot;&gt;¿Y en competitivo?&lt;/h2&gt;
+
+&lt;p&gt;Por suerte en torneos con un REL competitivo muchas de estas dicotomías están resueltas. La Guía de Procedimientos de Infracciones nos dice claramente en su segundo párrafos:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Un juez no debería intervenir en un juego a menos que crea que ocurrió una violación de reglas, un jugador con una pregunta o preocupación solicita asistencia, o el juez desea evitar que una situación empeore.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Las primera premisas es suficientemente fáciles de entender.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;… crea que ocurrió una violación de reglas…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para esto tenemos todo el compendio de reglas de Magic para ser quebrantadas. El próximo párrafo de la guía justamente vá sobre este tópico, siguiendo&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Los jueces no evitan que sucedan los errores de juego, sino que lidian con errores que ocurrieron, penalizan a aquellos que violan las reglas o políticas y promueven el juego limpio y la conducta deportiva con el ejemplo y la diplomacia.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Pero ya la segunda tiene su vericueto.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;… un jugador con una pregunta o preocupación solicita asistencia…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A lo lejos se escucha un árbol golpear contra una ventana, pero uno solo escucha “Juez!!”.&lt;/p&gt;
+
+&lt;p&gt;Pero, qué hay de esas veces en donde vemos un jugador a lo lejos con cara de confusión y desesperación. Todavía no llamó a un Juez, pero tal vez ni siquiera lo haga si no vé a ningún juez alrededor. ¿Debemos acercarnos? ¡Estaríamos entrometidos con la misma esencia del continuo espacio tiempo!… No. Esto es parte de brindar aquel elusivo “servicio al cliente”. Debemos ser vistos como personas neutrales, pero también tenemos que intentar brindar una experiencia grata a todos los jugadores. Lo que nos lleva a la tercera y ultima parte:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;…  el juez desea evitar que una situación empeore.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lo que hay que entender, y las anotaciones de la Guía nos ayudan a esto, es que esta situación a empeorar es una “situación delicada como una discusión”, no un campo de batalla con 60 criaturas, o un stack con 7 hechizos contrarrestando entre ellos, si no cuando la situación podría bien encuadrar en la definición de conducta antideportiva.&lt;/p&gt;
+
+&lt;h2 id=&quot;algunas-situaciones&quot;&gt;Algunas situaciones&lt;/h2&gt;
+
+&lt;p&gt;Dos buenos amigos (Nick y Audrey) están jugando en un FNM. Audrey juega una criatura, en lo que Nick responde con un [Absorber] contrarrestando. La criatura va al cementerio y Audrey pasa su turno. Nick endereza sus tierras, y en ese momento se dá cuenta que se olvidó de ganar 3 vidas por el Absorber. Tu escuchas a Nick decir esto y te acercas a la mesa inconspicuamente.&lt;/p&gt;
+
+&lt;p&gt;Notas que el hechizo de Absorber no fue correctamente resuelto, pero los jugadores parecerían continuar jugando. ¿Intervienes? – ¡Si!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Deberías intervenir si ves que sucede algo &lt;strong&gt;ilegal&lt;/strong&gt; en una partida…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Dándose cuenta de su error, los jugadores anotan que Nick ganó 3 vidas, y continúan jugando. ¿Intervienes? – ¡No! A lo sumo, de la manera menos intrusiva posible, puedes recordarles que jueguen con más cuidado.&lt;/p&gt;
+
+&lt;p&gt;Misma situación, pero los jugadores rápidamente anotan que Nick ganó 3 vidas convenciendose que si estuviesen en un Magic Fest, la habilidad disparada del Absor no podría perderse, porque pasaron menos de 3 turnos. Notas que la justificación por la cual corrigieron el estado del juego es errónea. ¿Intervienes? ¡Si!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Nuestras soluciones deberían focalizarse en &lt;strong&gt;educar&lt;/strong&gt; a los jugadores&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Observas a un jugador barajar su mazo al final del primer partido en un Grand Prix, y te percatas de que una criatura previamente exiliada está en la mesa y el jugador olvidó barajar dicha carta en su mazo. ¿Intervienes? ¡Si! Este ejemplo viene directo de la guía anotada. Lo importante a destacar de esta situación, es que el error se pudo detectar “fuera del juego”&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Los jueces pueden intervenir para prevenir o evitar errores que ocurren fuera de un juego.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ese mismo jugador sus tierras solo 17,3 grados para producir maná.¿Intervienes? – ¡Si! Por suerte, la guía de infracciones aclara que como jueces, podemos  solicitar a los jugadores que aclaren la situación, incluso si los jugadores están jugando de manera clara para ellos. Si pudiese confundir a un observador externo.&lt;/p&gt;
+
+&lt;p&gt;Si llegaron a leer hasta acá; ignoren este último ejemplo. Muchísimas gracias y siganla rockeando.&lt;/p&gt;</content><author><name></name></author><category term="mtg" /><summary type="html">El post original se puede leer en el blog de Jueces Hispanoamericanos. Les quiero contar una pesadilla recurrente que tengo: Estoy jueceando. Escucho dos jugadores, gritando, acusarse de tramposos. Corro a ver qué está pasando. En el camino entre las mesas, que parece interminable, veo a alguien enderezar sus tierras y su Dark Confidant, robar solo una carta y jugar una tierra. Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy. La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”. Depende el nivel de imposición de reglas. En un torneo de donde el Nivel de Imposición de Reglas (NIR) es Normal, citando al documento de “Juzgando a Nivel de Imposición de Reglas Normal” (NIR): Deberías intervenir si ves que sucede algo ilegal en una partida, pero más allá de eso puedes usar tu criterio. También debemos tener en cuenta el tenor propio del evento. Por suerte se explaya sobre qué criterio debería uno usar para decidir su criterio de intervenir. Por ejemplo, que intervengas cuando un jugador olvida un disparo debería estar determinado por el tenor que le quieres dar al evento; podría ser apropiado dar un poco de ayuda adicional en un entorno más casual, pero no tanto si tu grupo de juego es más competitivo. No hay una mejor forma de ponerlo, y no hay una respuesta íntegramente incorrecta sobre cuándo intervenir. Tu eres quien mejor conoce a tus jugadores. Haz lo que te parezca más correcto en cada situación, y si los jugadores se sienten avasallados o dejados a la deriva, toma acciones correctivas en cualquiera de las dos direcciones. Siempre recordando que como jueces debemos ser árbitros neutrales y alentar una atmósfera cordial y una competencia amistosa. ¿Y en competitivo? Por suerte en torneos con un REL competitivo muchas de estas dicotomías están resueltas. La Guía de Procedimientos de Infracciones nos dice claramente en su segundo párrafos: Un juez no debería intervenir en un juego a menos que crea que ocurrió una violación de reglas, un jugador con una pregunta o preocupación solicita asistencia, o el juez desea evitar que una situación empeore. Las primera premisas es suficientemente fáciles de entender. … crea que ocurrió una violación de reglas… Para esto tenemos todo el compendio de reglas de Magic para ser quebrantadas. El próximo párrafo de la guía justamente vá sobre este tópico, siguiendo Los jueces no evitan que sucedan los errores de juego, sino que lidian con errores que ocurrieron, penalizan a aquellos que violan las reglas o políticas y promueven el juego limpio y la conducta deportiva con el ejemplo y la diplomacia. Pero ya la segunda tiene su vericueto. … un jugador con una pregunta o preocupación solicita asistencia… A lo lejos se escucha un árbol golpear contra una ventana, pero uno solo escucha “Juez!!”. Pero, qué hay de esas veces en donde vemos un jugador a lo lejos con cara de confusión y desesperación. Todavía no llamó a un Juez, pero tal vez ni siquiera lo haga si no vé a ningún juez alrededor. ¿Debemos acercarnos? ¡Estaríamos entrometidos con la misma esencia del continuo espacio tiempo!… No. Esto es parte de brindar aquel elusivo “servicio al cliente”. Debemos ser vistos como personas neutrales, pero también tenemos que intentar brindar una experiencia grata a todos los jugadores. Lo que nos lleva a la tercera y ultima parte: … el juez desea evitar que una situación empeore. Lo que hay que entender, y las anotaciones de la Guía nos ayudan a esto, es que esta situación a empeorar es una “situación delicada como una discusión”, no un campo de batalla con 60 criaturas, o un stack con 7 hechizos contrarrestando entre ellos, si no cuando la situación podría bien encuadrar en la definición de conducta antideportiva. Algunas situaciones Dos buenos amigos (Nick y Audrey) están jugando en un FNM. Audrey juega una criatura, en lo que Nick responde con un [Absorber] contrarrestando. La criatura va al cementerio y Audrey pasa su turno. Nick endereza sus tierras, y en ese momento se dá cuenta que se olvidó de ganar 3 vidas por el Absorber. Tu escuchas a Nick decir esto y te acercas a la mesa inconspicuamente. Notas que el hechizo de Absorber no fue correctamente resuelto, pero los jugadores parecerían continuar jugando. ¿Intervienes? – ¡Si! Deberías intervenir si ves que sucede algo ilegal en una partida… Dándose cuenta de su error, los jugadores anotan que Nick ganó 3 vidas, y continúan jugando. ¿Intervienes? – ¡No! A lo sumo, de la manera menos intrusiva posible, puedes recordarles que jueguen con más cuidado. Misma situación, pero los jugadores rápidamente anotan que Nick ganó 3 vidas convenciendose que si estuviesen en un Magic Fest, la habilidad disparada del Absor no podría perderse, porque pasaron menos de 3 turnos. Notas que la justificación por la cual corrigieron el estado del juego es errónea. ¿Intervienes? ¡Si! Nuestras soluciones deberían focalizarse en educar a los jugadores Observas a un jugador barajar su mazo al final del primer partido en un Grand Prix, y te percatas de que una criatura previamente exiliada está en la mesa y el jugador olvidó barajar dicha carta en su mazo. ¿Intervienes? ¡Si! Este ejemplo viene directo de la guía anotada. Lo importante a destacar de esta situación, es que el error se pudo detectar “fuera del juego” Los jueces pueden intervenir para prevenir o evitar errores que ocurren fuera de un juego. Ese mismo jugador sus tierras solo 17,3 grados para producir maná.¿Intervienes? – ¡Si! Por suerte, la guía de infracciones aclara que como jueces, podemos solicitar a los jugadores que aclaren la situación, incluso si los jugadores están jugando de manera clara para ellos. Si pudiese confundir a un observador externo. Si llegaron a leer hasta acá; ignoren este último ejemplo. Muchísimas gracias y siganla rockeando.</summary></entry><entry><title type="html">Limit the Problem Space!</title><link href="https://blog.florius.com.ar/xpost/2018/08/14/limit-problem-space/" rel="alternate" type="text/html" title="Limit the Problem Space!" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2018/08/14/limit-problem-space</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2018/08/14/limit-problem-space/">&lt;p&gt;&lt;em&gt;Original post can be found in the &lt;a href=&quot;https://blog.10pines.com/2018/08/14/limit-problem-space/&quot;&gt;10Pines blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;write-less-error-prone-code&quot;&gt;Write less error-prone code.&lt;/h2&gt;
+
+&lt;p&gt;First things first: What is the problem space?
+Simply put, it is the entire spectrum of inputs that exists in the process of finding a solution to a problem.
+Say you want to buy a soda from a vending machine. You now have a problem to solve: “Decide what beverage to purchase”. Every button is part of the problem space; yet you can narrow it down to just buttons that get you a can.&lt;/p&gt;
+
+&lt;h2 id=&quot;down-to-business&quot;&gt;Down to business&lt;/h2&gt;
+
+&lt;p&gt;In order to present my idea, let’s take a somewhat simple example. a TennisMatch object, that represents just that: a tennis match.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;TennisMatch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;williamsVsPetrova&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TennisMatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(...);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;One thing that a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TennisMatch&lt;/code&gt; should keep track of is its score. Let’s assume the match is responsible of doing this with a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;score&lt;/code&gt; method. We have several design options:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.score('williams')&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.score('player1')&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.score(0)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.scorePlayer1()&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Most of the times, we’d go for alternative 1 or 2. This makes our code look something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Please bear with me for the sake of this example, because we are going to be using a dictionary with the player (whichever their representation: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Player&lt;/code&gt;) as the key, and their score as the value. This decision in and of itself is not important, but rather a way to scaffold the point I’m trying to get across.&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TennisMatch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;player&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;scoreAPoint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Which would lead to several unwanted ramifications:
+What if…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;player&lt;/code&gt; parameter is not in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Map&lt;/code&gt;?&lt;/li&gt;
+  &lt;li&gt;the player is null?&lt;/li&gt;
+  &lt;li&gt;the player key is in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Map&lt;/code&gt;, but the value of the map is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Before talking about how can we can improve our code, let’s take a minute to think how the latter in particular might be easily fixed.&lt;/p&gt;
+
+&lt;p&gt;We could avoid it altogether (and maybe the other ones) by forcing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TennisMatch&lt;/code&gt; creation to have two players and making those players have a valid starting score.&lt;/p&gt;
+
+&lt;h2 id=&quot;maths&quot;&gt;Maths!&lt;/h2&gt;
+
+&lt;p&gt;Let’s jump briefly to another situation.&lt;/p&gt;
+
+&lt;p&gt;Suppose that we wanted to solve the following problem:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;If we have 3 minutes for a presentation,
+and we need to equally divide them between n students,
+how many minutes would each student get?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A method that would solve this problem might look something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;superDivide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Of course, it doesn’t make much sense to accept an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Object&lt;/code&gt; in the method signature, since we already know we are going to be dealing with numbers. And, mind you, because &lt;a href=&quot;https://en.wikipedia.org/wiki/Downcasting&quot;&gt;downcasting&lt;/a&gt; stinks.&lt;/p&gt;
+
+&lt;p&gt;So, based on what we already know, we could avoid downcasting, limiting the possible inputs from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Object&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;superDivide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I’d ponder this is not much better.
+With a keen eye for finding problems, one might realize that if the parameter were &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;, the program would explode.
+Say this is not what we want, because we know that we are dealing with an amount of students, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;. And &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; should never be zero. &lt;em&gt;Nor should it be less than zero&lt;/em&gt;.
+This suggests to me that our method is accepting a problem space much much larger than what we actually can and should be able to handle.&lt;/p&gt;
+
+&lt;p&gt;We could take two paths to fix this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Preparing for the worse and checking for this restrictions to be met inside our method&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;superDivide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;InvalidAmountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Deal with the problem head on, and limit the problem space!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Math has a name for this kind of numbers: &lt;a href=&quot;https://en.wikipedia.org/wiki/Natural_number&quot;&gt;Natural numbers&lt;/a&gt;. Java does not. At least not out-of-the-box. But we can create the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NaturalNumber&lt;/code&gt; class!&lt;/p&gt;
+
+&lt;p&gt;This way, we wouldn’t need to be prepared for those edge cases, since we’d have limited the input of our method, and deal only with valid numbers:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;superDivide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;NaturalNumber&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Java does not have an object to handle the filter for unauthorized users on a rest API call either, yet we are eager to create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UnauthorizedUserFilter implements RESTFilter&lt;/code&gt;. I don’t usually see simple &lt;em&gt;problem limiting&lt;/em&gt; classes like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NaturalNumber&lt;/code&gt;. It baffles me.&lt;/p&gt;
+
+&lt;h2 id=&quot;argumentative&quot;&gt;Argumentative&lt;/h2&gt;
+
+&lt;p&gt;Back to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.score&lt;/code&gt;. Let’s think about this problem as a math &lt;em&gt;function&lt;/em&gt;. Its &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_of_a_function&quot;&gt;domain&lt;/a&gt; &lt;strong&gt;should be only two&lt;/strong&gt; values. One for each player.
+Now, lets analyze the parameter types we mentioned above:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public void score(&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;player)&lt;/code&gt;: The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt; type is infinitely &lt;em&gt;(disregard limited memory problem)&lt;/em&gt; large. So it might not be the best type.
+    If we do go for this option, we will be forced to do some assertions if the name is one of the player participating in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TennisMatch&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public void score(&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;player)&lt;/code&gt;: Same as 1., but with added obfuscation. Please don’t.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public void scorePlayer1()&lt;/code&gt;: No parameter means the domain size is only one. We are half way there!
+    We re now forced to implement public void scorePlayer2(). The code for these two methods might be conspicuously similar, so we might refactor them like so:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scorePlayer1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;scoreFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scorePlayer2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;scoreFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scoreFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scorer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Although we are using a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt; with its infinitely large domain space, the method is private and we are sure that the only possible calls are with one of two valid values.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;public void score( Bool player): In spite of the fact that the the Boolean type might fit our domain-length restrictions; think about how it will look like when used:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;williamsVsPetrova&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Ball for Petrova ?!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;a-side-note-on-the-language&quot;&gt;A side note on the language&lt;/h2&gt;
+
+&lt;p&gt;I used Java throughout the post, and although I took advantage of the fact that Java is &lt;a href=&quot;https://en.wikipedia.org/wiki/Type_system#Static_type_checking&quot;&gt;strongly and explicitly typed with static type checking&lt;/a&gt;, this principles are not language-specific.&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus-make-the-problem-space-explicit&quot;&gt;Bonus: Make the problem space explicit!&lt;/h2&gt;
+
+&lt;p&gt;Since a method can have its argument either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt; or an actual value; rather than have a comment, use a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; that represents both cases &lt;em&gt;(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Optionals&lt;/code&gt; in the case of Java)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;recap&quot;&gt;Recap&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)&quot;&gt;Constructors&lt;/a&gt; are important. If you can’t build invalid objects, then you can write code assuming the objects you interact with are valid. This can save you many headaches.&lt;/li&gt;
+  &lt;li&gt;Don’t be afraid of creating classes with the sole purpose of delimiting your problem space.&lt;/li&gt;
+  &lt;li&gt;Thinking about the domain space of a method, albeit a good technique, is not the only one. Think of it as an extra tool in your tool belt.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="xpost" /><category term="design" /><summary type="html">Original post can be found in the 10Pines blog. Write less error-prone code. First things first: What is the problem space? Simply put, it is the entire spectrum of inputs that exists in the process of finding a solution to a problem. Say you want to buy a soda from a vending machine. You now have a problem to solve: “Decide what beverage to purchase”. Every button is part of the problem space; yet you can narrow it down to just buttons that get you a can. Down to business In order to present my idea, let’s take a somewhat simple example. a TennisMatch object, that represents just that: a tennis match. TennisMatch williamsVsPetrova = new TennisMatch(...); One thing that a TennisMatch should keep track of is its score. Let’s assume the match is responsible of doing this with a score method. We have several design options: williamsVsPetrova.score('williams') / williamsVsPetrova.score('player1') williamsVsPetrova.score(0) williamsVsPetrova.scorePlayer1() Most of the times, we’d go for alternative 1 or 2. This makes our code look something like this: Please bear with me for the sake of this example, because we are going to be using a dictionary with the player (whichever their representation: String, Integer or Player) as the key, and their score as the value. This decision in and of itself is not important, but rather a way to scaffold the point I’m trying to get across. public class TennisMatch { private Map&amp;lt;String, Point&amp;gt; points; ... public void score(String player) { points.get(player).scoreAPoint(); } } Which would lead to several unwanted ramifications: What if… the player parameter is not in our Map? the player is null? the player key is in the Map, but the value of the map is null? Before talking about how can we can improve our code, let’s take a minute to think how the latter in particular might be easily fixed. We could avoid it altogether (and maybe the other ones) by forcing the TennisMatch creation to have two players and making those players have a valid starting score. Maths! Let’s jump briefly to another situation. Suppose that we wanted to solve the following problem: If we have 3 minutes for a presentation, and we need to equally divide them between n students, how many minutes would each student get? A method that would solve this problem might look something like this: superDivide(Object amountOfStudents) { return 3 / ((Integer) amountOfStudents); } Of course, it doesn’t make much sense to accept an Object in the method signature, since we already know we are going to be dealing with numbers. And, mind you, because downcasting stinks. So, based on what we already know, we could avoid downcasting, limiting the possible inputs from Object to Integer: superDivide(Integer amountOfStudents) { return 3 / amountOfStudents; } I’d ponder this is not much better. With a keen eye for finding problems, one might realize that if the parameter were 0, the program would explode. Say this is not what we want, because we know that we are dealing with an amount of students, n. And n should never be zero. Nor should it be less than zero. This suggests to me that our method is accepting a problem space much much larger than what we actually can and should be able to handle. We could take two paths to fix this: Preparing for the worse and checking for this restrictions to be met inside our method superDivide(Integer amountOfStudents) { if( amountOfStudents &amp;lt;= 0 ) throw new InvalidAmountOfStudents(amountOfStudents); return 3 / amountOfStudents; } Deal with the problem head on, and limit the problem space! Math has a name for this kind of numbers: Natural numbers. Java does not. At least not out-of-the-box. But we can create the NaturalNumber class! This way, we wouldn’t need to be prepared for those edge cases, since we’d have limited the input of our method, and deal only with valid numbers: superDivide(NaturalNumber amountOfStudents) { return 3 / amountOfStudents; } Java does not have an object to handle the filter for unauthorized users on a rest API call either, yet we are eager to create UnauthorizedUserFilter implements RESTFilter. I don’t usually see simple problem limiting classes like NaturalNumber. It baffles me. Argumentative Back to williamsVsPetrova.score. Let’s think about this problem as a math function. Its domain should be only two values. One for each player. Now, lets analyze the parameter types we mentioned above: public void score( String player): The String type is infinitely (disregard limited memory problem) large. So it might not be the best type. If we do go for this option, we will be forced to do some assertions if the name is one of the player participating in the TennisMatch. public void score( Integer player): Same as 1., but with added obfuscation. Please don’t. public void scorePlayer1(): No parameter means the domain size is only one. We are half way there! We re now forced to implement public void scorePlayer2(). The code for these two methods might be conspicuously similar, so we might refactor them like so: public void scorePlayer1() { scoreFor('player1'); } public void scorePlayer2() { scoreFor('player2'); } private void scoreFor(String scorer) { ... } Although we are using a String with its infinitely large domain space, the method is private and we are sure that the only possible calls are with one of two valid values. public void score( Bool player): In spite of the fact that the the Boolean type might fit our domain-length restrictions; think about how it will look like when used: williamsVsPetrova.score(false); //Ball for Petrova ?! A side note on the language I used Java throughout the post, and although I took advantage of the fact that Java is strongly and explicitly typed with static type checking, this principles are not language-specific. Bonus: Make the problem space explicit! Since a method can have its argument either null or an actual value; rather than have a comment, use a type that represents both cases (Optionals in the case of Java). Recap Constructors are important. If you can’t build invalid objects, then you can write code assuming the objects you interact with are valid. This can save you many headaches. Don’t be afraid of creating classes with the sole purpose of delimiting your problem space. Thinking about the domain space of a method, albeit a good technique, is not the only one. Think of it as an extra tool in your tool belt.</summary></entry></feed>
