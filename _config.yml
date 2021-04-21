@@ -8,9 +8,9 @@ url: "https://blog.florius.com.ar"
 # Build settings
 theme: minima
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-seo-tag
 
 show_social_icons: true
 animated: true
@@ -29,6 +29,10 @@ gitlab_username: jazcarate
 linkedin_username: joaquin-azcarate
 devto_username: florius
 
+assets:
+   plugins:
+    img: { optim: {}}
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -36,3 +40,5 @@ exclude:
   - README.md
   - ATTRIBUTION.md
   - vendor
+  - .devcontainer/
+  - .github

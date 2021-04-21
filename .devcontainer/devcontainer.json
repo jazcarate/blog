@@ -1,4 +1,6 @@
 {
 	"name": "jekyll-blog",
-	"image": "jekyll/jekyll:4.2.0"
+	"image": "jekyll/jekyll:4.2.0",
+	"forwardPorts": [4000, 35729],
+	"postCreateCommand": "apk --update add imagemagick"
 }
