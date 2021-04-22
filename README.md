@@ -10,5 +10,5 @@
 
 
 ### TODO
-- Add image between "related posts" and the end of a post
 - Fix the layout of the about vs (index or posts) beeing slighty to the left
+- Assets CSS a mess minima and such :D 
