@@ -35,13 +35,13 @@ Split the deck by dividing it into two piles: lands and non-lands.
 Then proceed to split each pile by card name.
 Afterwards go through the deck list in order and verify the quantity is correct.
 
-{% asset deck-tree/type.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
+{% asset deck-partition/type.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
 
 ### 2. Mana value[^mana_value] separation
 Split the deck into piles, categorized by mana value.
 Then go though the deck list and retrieve the cards with the required quantity from the appropriate pile.
 
-{% asset deck-tree/type-cmc.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
+{% asset deck-partition/type-cmc.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
 
 This got me thinking, to perform a deckcheck, there are two pieces of information that we need. A sorted deck, and a deck list.
 Technique number 1 starts with a sorted deck and then uses the list. Technique number 2 starts to sort a deck, and then uses the decklist to make the remaining sorting easier.
@@ -70,24 +70,24 @@ This process is repeated until cards are **classified** by name. Further sub-cla
 
 ### 1. Type separation tree
 Start with the whole deck.
-{% asset deck-tree/none.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
+{% asset deck-partition/none.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
 
 Split the deck into a lands and a non-lands pile.
-{% asset deck-tree/type.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
+{% asset deck-partition/type.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
 
 Then proceed to split each pile by card name.
-{% asset deck-tree/all.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
+{% asset deck-partition/all.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
 
 
 ### 2. Mana value separation tree
 Start with the whole deck.
-{% asset deck-tree/none.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
+{% asset deck-partition/none.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
 
 Afterwards split each pile by mana value.
-{% asset deck-tree/type-cmc.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
+{% asset deck-partition/type-cmc.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
 
 And finally each by card name.
-{% asset deck-tree/all.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
+{% asset deck-partition/all.jpg alt='no classification' magick:resize='840x' magick:format='.png' %}
 
 ## Evaluation
 Now that we know how to construct any strategy of partitions, we need to decide which is _the best_.
