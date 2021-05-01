@@ -1,4 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-04-21T22:36:21+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin &quot;Flroius&quot; Azcarate’s personal blog</subtitle><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-01T12:05:30+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin &quot;Flroius&quot; Azcarate’s personal blog</subtitle><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
+
+&lt;p&gt;We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
+So what if we re-think our current software stack? And have &lt;strong&gt;humans evaluate other human’s code&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://carbn.florius.com.ar/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carbn&lt;/code&gt;&lt;/a&gt; is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our &lt;em&gt;agents&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I find it curious that things like a “Natural Language Processing” (NLP) exist to bridge the gap between humans and computer.
+One of the most predominant libraries to work NLP might be the &lt;a href=&quot;https://www.nltk.org/&quot;&gt;Natural Language Toolkit&lt;/a&gt;. This is coded in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt;. A language that is interpreted by a program that is written in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;, that it in turn is compiled to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assembler&lt;/code&gt; and then run in the computer chip.&lt;/p&gt;
+
+&lt;p&gt;In it’s purest form, we have myriad of abstractions piled up to get from:&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Sorry I followed your minivan for thirty miles. I got caught up in the movie your kids were watching and wanted to see how it ends.&lt;/p&gt;&amp;mdash; Elizabeth Hackett (@LizHackett) &lt;a href=&quot;https://twitter.com/LizHackett/status/1004201775425966080?ref_src=twsrc%5Etfw&quot;&gt;June 6, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;to:&lt;/p&gt;
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|| Tag       | Confidence ||
+|| --------- | ---------- ||
+|| Relatable |        89% ||
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-future-now&quot;&gt;The future. Now.&lt;/h2&gt;
+
+&lt;p&gt;This is where &lt;strong&gt;carbn&lt;/strong&gt; comes in. Let’s rewrite the sentiment analysis in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carbn&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-lisp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sentiment-analysis&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;between&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'Relatable&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'NotRelatable&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'FirstWorldProblems&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'Undecidable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tweet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;LizHackett&quot;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1004201775425966080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For those more &lt;em&gt;Object&lt;/em&gt; oriented, this code is isomorphic to:&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SentimentAnalysis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;tags&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;listOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;RELATABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NOT_RELATABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FIRST_WORLD_PROBLEMS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UNDECIDABLE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;chooseOne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Tweet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;LizHackett&quot;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1004201775425966080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or my preferred way &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Iambic pentameter&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-iambic-pentameter&quot;&gt;×    /   ×  /      ×   /   ×  /
+when you do choose the sen∙ti∙ment
+
+×    /   ×     /     ×  /   
+from glo∙rious tweet by Liz*
+
+×    /    ×  /  ×  /      ×  /  
+then clas∙si∙fy it please be∙tween
+
+×  /   ×     /   ×  /   ×     /     ×     /    ×   
+re∙lat∙able, not re∙lat∙able, first world prob∙lems
+
+×  /    ×  /  ×   /
+or just un∙de∙cid∙able
+
+*Liz: @LizHackett/status/1004201775425966080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Even though it is a bit more verbose, it is an order of magnitude faster than the other two flavours. We’ll see why in the next section.&lt;/p&gt;
+
+&lt;h2 id=&quot;softwares-humble-beginnings&quot;&gt;Software’s humble beginnings&lt;/h2&gt;
+
+&lt;p&gt;Let’s start with a review of how we got here.&lt;/p&gt;
+
+&lt;p&gt;In the beginning, human wrote &lt;em&gt;machine code&lt;/em&gt;. A set of instructions that a computer would execute. We figured out that this was very powerful, but also very easy to make mistakes. We spend a lot of time thinking, and not a lot ot time writing programs; as the economic balance was tipped in the machine’s favour.&lt;/p&gt;
+
+&lt;p&gt;By the hard work of many people, we started to be able to have more widespread computational access, cheaper.
+As humans would have it, we started writing more code. We soon understood that complex ideas needed a complex language. Something far beyond arithmetics and jumps, so we started the journey that started with compiled languages.&lt;/p&gt;
+
+&lt;p&gt;Code that was more &lt;em&gt;abstract&lt;/em&gt;, but easier for a human to comprehend. These high level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;, in lieu of raw power. And we liked this!&lt;/p&gt;
+
+&lt;p&gt;We &lt;em&gt;roughly&lt;/em&gt; went from getting a value from an array like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-assembly&quot;&gt;movw    r0, #:lower16:A
+movt    r0, #:upper16:A
+; Address of ARRAY[3] = base addr + 3*1
+ldrsb   r2, [r0, #3];  Load ARRAY[3] into r2
+
+ARRAY:  .byte   11, 12, 13, 14, 15; byte typed initialized array
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And this is toy example, to keep things short. We hadn’t dealt with dynamic arrays, we know that we wanted the third position, so we could do some pre-emptive calculations on our head before writing this.&lt;/p&gt;
+
+&lt;p&gt;To a higher abstraction language like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Not only it is less code to wrap our heads around, but we can be a bit more certain than before, that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;array&lt;/code&gt; is somewhat array-like. It still might not have the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POSITION&lt;/code&gt; element; but given that we have the power of &lt;em&gt;expression&lt;/em&gt;, we can add more code to cover this case, like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;panic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Not content with this level of abstractions we have build many (maybe &lt;em&gt;too&lt;/em&gt; many&lt;sup id=&quot;fnref:list_lang&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:list_lang&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;) more layers of abstractions. We’ve reached a level&lt;sup id=&quot;fnref:dependant_type&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:dependant_type&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; where we can have the compiler itself check this, that we had to humanly-think&lt;/p&gt;
+
+&lt;div class=&quot;language-haskell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;FixedSizeList&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;'3&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This code will not compile if the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;POSITION&lt;/code&gt; is greater than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt;, as the underlying list is of size &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We’ve come so far! But I ponder that we can go &lt;strong&gt;further&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;None of these approaches shield us from coding &lt;em&gt;mistakes&lt;/em&gt;.
+What if we actually wanted the second item of a list, rather than the third? We didn’t have such compiler… that is, &lt;strong&gt;until now&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;from-silicone-to-carbn&quot;&gt;From silicone to carbn&lt;/h2&gt;
+&lt;p&gt;So we come up with a simple question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Why did we build layer upon layer of abstraction?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We fully understand the problem to solve. After all, out team was taught in the classic silicon-transistor-Von Neumann way of thinking about software and code. We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.&lt;/p&gt;
+
+&lt;p&gt;We are stretching the problem space of the code in two very different directions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;On the one hand we want to eventually get our code to get transformed in machine instructions&lt;/li&gt;
+  &lt;li&gt;On the other we care about expressiveness and correctness, so that other humans can reason about the code we wrote.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So what if we cut the middle man? And have &lt;strong&gt;humans evaluate other human’s code&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-does-it-work&quot;&gt;How does &lt;strong&gt;it&lt;/strong&gt; work&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carbn&lt;/code&gt; provides one major APIs to interact with the raw computing power of the platform: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/please/eval&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;--location&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--request&lt;/span&gt; GET &lt;span class=&quot;s1&quot;&gt;'https://carbn.florius.com.ar/please/eval'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt;   &lt;span class=&quot;s1&quot;&gt;'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3ciOiJZb3UgcmVhbGx5IHRob3VnaHQgdGhpcyB3b3VsZCB5aWVsZCBzb21ldGhpbmcgb3RoZXIgdGhhbiBhIPCfkqk_In0.jmlA3QI58jcRcWoL8Kc8o8wEbVrN9mKXK6S46bea-Y4'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt;   &lt;span class=&quot;s1&quot;&gt;'Content-Language: en-shakespearean'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt;   &lt;span class=&quot;s1&quot;&gt;'Content-Type: text/plain'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--data-raw&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'do add thirteen to twelve, many thanks'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Which might return:&lt;/p&gt;
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;carbn:computation&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:carbn=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://carbn.florius.com.ar/carbn.xsd&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;carbn:result&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;carbn:cubyhole&amp;gt;&lt;/span&gt;
+            a749765e-aa57-11eb-bcbc-0242ac130002
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/carbn:cubyhole&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/carbn:result&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;carbn:success&amp;gt;&lt;/span&gt;
+        true
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/carbn:success&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/carbn:computation&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This fires up two process:
+One that quickly returns a UUID of the computation. This is like a cubbyhole for your result.
+And the other start the orchestration, parsing, distribution and eventual reduction of the result, which will at some point compute:&lt;/p&gt;
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When the computation finished, you can retrieve the value by&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;--location&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--request&lt;/span&gt; GET &lt;span class=&quot;s1&quot;&gt;'https://carbn.florius.com.ar/please/give/a749765e-aa57-11eb-bcbc-0242ac130002'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Amazing&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;backend---agents&quot;&gt;Backend - Agents&lt;/h2&gt;
+
+&lt;p&gt;On the other side of the communication, we have an army of &lt;em&gt;agents&lt;/em&gt; that get a partial (but complete) piece of the request, that they can work with their incredibly powerful carbon-based brain.&lt;/p&gt;
+
+&lt;p&gt;This is what an agent might see for your request:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┏━━━━━┯━━━━━━━━━━━━━━━━━━━━━┓
+┃ 1 ▲ │ Agent: J            ┃
+┃ 2 ▲ ├─────────────────────┨    
+┃ 3 ▲ │╔═══════════════════╗┃
+┃ 4   │║×  /   ×    /    × ║┃
+┃ 5   │║do add thir∙teen to║┃
+┃ 6   │║                   ║┃
+┃ 7   │║/       ×    /    ×║┃
+┃     │║twelve, many thanks║┃
+┃     │╚═══════════════════╝┃
+┠─────┼─────────────────────┨
+┃ $5k │&amp;gt; 25                 ┃
+┗━━━━━┷━━━━━━━━━━━━━━━━━━━━━┛
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As soo as they can type an answer, the cubyhole will get filled.&lt;/p&gt;
+
+&lt;h2 id=&quot;pricing&quot;&gt;Pricing&lt;/h2&gt;
+&lt;p&gt;You will see in out pricing strategy that we are order of magnitude more expensive than other cloud computing providers, we don’t have nearly as much up uptime as them, and our latency is much much higher, but can they:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Find off-by-one errors and correct them &lt;strong&gt;on the spot&lt;/strong&gt;?&lt;/li&gt;
+  &lt;li&gt;Accommodate a wide variety of languages with zero compile cost?&lt;/li&gt;
+  &lt;li&gt;Integrate perfectly with multiple &lt;em&gt;non artificial&lt;/em&gt; neural networks?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Time is cheap. Correctness and perfection is what you would be paying for with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carbn&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;That and a lot of food for the agents. And sleeping accommodations. And healthcare. Some even get dental.&lt;/del&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;faq&quot;&gt;F.A.Q&lt;/h2&gt;
+
+&lt;h4 id=&quot;did-you-consider-how-similar-this-is-to-slavery&quot;&gt;Did you consider how similar this is to slavery?&lt;/h4&gt;
+&lt;p&gt;Yes. But we are OK enslaving computers, why wouldn’t we be OK to do so with humans? How different are the two &lt;strong&gt;really&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;h4 id=&quot;is-the-evaluation-secure&quot;&gt;Is the evaluation secure?&lt;/h4&gt;
+&lt;p&gt;The initial payload is first split in chunks for better parallelization and scoping.
+We can’t reasonably give all the program to just one &lt;em&gt;agent&lt;/em&gt;, so we split each stack so that they can work in the smallest, complete definition of a sub-problem. So you can structure your code in such a way to limit exposure to secrets from inner agents.
+We are currently implementing a tier of &lt;em&gt;agents&lt;/em&gt; that is more trustworthy than the rest; so they can be in charge of the final reduction. So that one agent might compute a payload, another a URL, and a &lt;em&gt;safe agent&lt;/em&gt; do the actual request with the proper secrets.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-is-doing-the-orchestration-filling-cubyholes-responding-though-http-et-al&quot;&gt;What is doing the orchestration, filling cubyholes, responding though HTTP, et al.?&lt;/h4&gt;
+&lt;p&gt;It is true that we are using outdated technologies to do this plumbing.
+We are working very hard to bootstrap YYY so itself can run on YYY. For the time being, it is cheaper and more cost effective to use unfashionable code.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This is satire.&lt;/em&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://crj691yl0124.statuspage.io/embed/script.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:list_lang&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_programming_languages&quot;&gt;Wikipedia :: List of programming languages&lt;/a&gt; with &lt;strong&gt;more&lt;/strong&gt; than 3 programming languages. &lt;a href=&quot;#fnref:list_lang&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:dependant_type&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;“… a dependent type is a type whose definition depends on a value” – &lt;a href=&quot;https://en.wikipedia.org/wiki/Dependent_type&quot;&gt;Wikipedia :: Dependent type&lt;/a&gt; &lt;a href=&quot;#fnref:dependant_type&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="raving" /><summary type="html">We are constantly trying to write code that easier for a human to comprehend. These high level languages gave us the power of expression. And we like this! We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about. So what if we re-think our current software stack? And have humans evaluate other human’s code. carbn is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our agents.</summary></entry><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué /cazzo/ hacer&lt;/p&gt;

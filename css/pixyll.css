@@ -500,6 +500,8 @@ blockquote footer { background-color: #f5f5f5; border-color: transparent; color:
 
 .read-time { color: palevioletred; }
 
+.separator { padding: 3em; text-align: center; }
+
 .related-post-title { border-bottom: thin solid #f3f3f3; }
 
 .related .related-categories { font-weight: 300; color: #7a7a7a; font-style: italic; }

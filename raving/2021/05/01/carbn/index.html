@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-689SEV7MTT"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-689SEV7MTT', { cookie_domain: 'blog.florius.com.ar', cookie_flags: 'SameSite=None;Secure' });</script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>carbn &#8211; Florius’ Blog</title>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Joaquin &quot;Flroius&quot; Azcarate’s personal blog">
+    <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/site.webmanifest" />
+    <meta name="robots" content="all">
+    <meta name="author" content="">
+    
+    <meta name="keywords" content="raving">
+    <link rel="canonical" href="https://blog.florius.com.ar/raving/2021/05/01/carbn/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202105011205" type="text/css">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
+    
+    <script src="//kit.fontawesome.com/88434a0a24.js" crossorigin="anonymous"></script>
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="carbn">
+    <meta property="og:description" content="Joaquin &quot;Flroius&quot; Azcarate’s personal blog">
+    <meta property="og:url" content="https://blog.florius.com.ar/raving/2021/05/01/carbn/">
+    <meta property="og:site_name" content="Florius’ Blog">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="carbn" />
+    <meta name="twitter:description" content="Joaquin "Flroius" Azcarate’s personal blog" />
+    <meta name="twitter:url" content="https://blog.florius.com.ar/raving/2021/05/01/carbn/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="manifest" href="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    
+</head>
+
+<body class="site">
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Florius’ Blog</a>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">About</a>
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/categories/">Categories</a>
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/jazcarate"></a>
+    
+    
+      <a class="fa fa-gitlab" href="https://gitlab.com/jazcarate"></a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:j@florius.com.ar"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/joaquin-azcarate"></a>
+    
+    
+    <a class="fab fa-dev" href="https://dev.to/florius"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap animated fade-in-down" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>carbn</h1>
+  <span class="post-meta">May 1, 2021</span><br>
+  
+  <span class="post-meta small read-time">
+  
+    8 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>We are constantly trying to write code that easier for a human to comprehend. These high level languages gave us the power of <strong>expression</strong>. And we like this!</p>
+
+<p>We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
+So what if we re-think our current software stack? And have <strong>humans evaluate other human’s code</strong>.</p>
+
+<p><a href="https://carbn.florius.com.ar/"><code class="language-plaintext highlighter-rouge">carbn</code></a> is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our <em>agents</em>.</p>
+
+<!--more-->
+
+<p>I find it curious that things like a “Natural Language Processing” (NLP) exist to bridge the gap between humans and computer.
+One of the most predominant libraries to work NLP might be the <a href="https://www.nltk.org/">Natural Language Toolkit</a>. This is coded in <code class="language-plaintext highlighter-rouge">python</code>. A language that is interpreted by a program that is written in <code class="language-plaintext highlighter-rouge">c</code>, that it in turn is compiled to <code class="language-plaintext highlighter-rouge">assembler</code> and then run in the computer chip.</p>
+
+<p>In it’s purest form, we have myriad of abstractions piled up to get from:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sorry I followed your minivan for thirty miles. I got caught up in the movie your kids were watching and wanted to see how it ends.</p>&mdash; Elizabeth Hackett (@LizHackett) <a href="https://twitter.com/LizHackett/status/1004201775425966080?ref_src=twsrc%5Etfw">June 6, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>to:</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|| Tag       | Confidence ||
+|| --------- | ---------- ||
+|| Relatable |        89% ||
+</code></pre></div></div>
+
+<h2 id="the-future-now">The future. Now.</h2>
+
+<p>This is where <strong>carbn</strong> comes in. Let’s rewrite the sentiment analysis in <code class="language-plaintext highlighter-rouge">carbn</code>:</p>
+
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nv">sentiment-analysis</span>
+    <span class="p">(</span><span class="nv">between</span> <span class="p">(</span><span class="nb">list</span> <span class="ss">'Relatable</span> <span class="ss">'NotRelatable</span> <span class="ss">'FirstWorldProblems</span> <span class="ss">'Undecidable</span><span class="p">))</span>
+    <span class="p">(</span><span class="nv">from</span> <span class="p">(</span><span class="nv">tweet</span> <span class="p">(</span><span class="nv">@</span> <span class="s">"LizHackett"</span> <span class="mi">1004201775425966080</span><span class="p">))))</span>
+</code></pre></div></div>
+
+<p>For those more <em>Object</em> oriented, this code is isomorphic to:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">model</span> <span class="p">=</span> <span class="nc">SentimentAnalysis</span><span class="p">(</span>
+        <span class="n">tags</span> <span class="p">=</span> <span class="nf">listOf</span><span class="p">(</span><span class="nc">RELATABLE</span><span class="p">,</span> <span class="nc">NOT_RELATABLE</span><span class="p">,</span> <span class="nc">FIRST_WORLD_PROBLEMS</span><span class="p">,</span> <span class="nc">UNDECIDABLE</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">chooseOne</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">process</span><span class="p">(</span><span class="nc">Tweet</span><span class="p">(</span><span class="s">"LizHackett"</span> <span class="mi">1004201775425966080</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Or my preferred way <code class="language-plaintext highlighter-rouge">Iambic pentameter</code>:</p>
+
+<pre><code class="language-iambic-pentameter">×    /   ×  /      ×   /   ×  /
+when you do choose the sen∙ti∙ment
+
+×    /   ×     /     ×  /   
+from glo∙rious tweet by Liz*
+
+×    /    ×  /  ×  /      ×  /  
+then clas∙si∙fy it please be∙tween
+
+×  /   ×     /   ×  /   ×     /     ×     /    ×   
+re∙lat∙able, not re∙lat∙able, first world prob∙lems
+
+×  /    ×  /  ×   /
+or just un∙de∙cid∙able
+
+*Liz: @LizHackett/status/1004201775425966080
+</code></pre>
+
+<p>Even though it is a bit more verbose, it is an order of magnitude faster than the other two flavours. We’ll see why in the next section.</p>
+
+<h2 id="softwares-humble-beginnings">Software’s humble beginnings</h2>
+
+<p>Let’s start with a review of how we got here.</p>
+
+<p>In the beginning, human wrote <em>machine code</em>. A set of instructions that a computer would execute. We figured out that this was very powerful, but also very easy to make mistakes. We spend a lot of time thinking, and not a lot ot time writing programs; as the economic balance was tipped in the machine’s favour.</p>
+
+<p>By the hard work of many people, we started to be able to have more widespread computational access, cheaper.
+As humans would have it, we started writing more code. We soon understood that complex ideas needed a complex language. Something far beyond arithmetics and jumps, so we started the journey that started with compiled languages.</p>
+
+<p>Code that was more <em>abstract</em>, but easier for a human to comprehend. These high level languages gave us the power of <strong>expression</strong>, in lieu of raw power. And we liked this!</p>
+
+<p>We <em>roughly</em> went from getting a value from an array like this:</p>
+<pre><code class="language-assembly">movw    r0, #:lower16:A
+movt    r0, #:upper16:A
+; Address of ARRAY[3] = base addr + 3*1
+ldrsb   r2, [r0, #3];  Load ARRAY[3] into r2
+
+ARRAY:  .byte   11, 12, 13, 14, 15; byte typed initialized array
+</code></pre>
+<p>And this is toy example, to keep things short. We hadn’t dealt with dynamic arrays, we know that we wanted the third position, so we could do some pre-emptive calculations on our head before writing this.</p>
+
+<p>To a higher abstraction language like <code class="language-plaintext highlighter-rouge">c</code>:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">value</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">POSITION</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Not only it is less code to wrap our heads around, but we can be a bit more certain than before, that <code class="language-plaintext highlighter-rouge">array</code> is somewhat array-like. It still might not have the <code class="language-plaintext highlighter-rouge">POSITION</code> element; but given that we have the power of <em>expression</em>, we can add more code to cover this case, like so:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">POSITION</span><span class="p">)</span> <span class="n">panic</span><span class="p">()</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">POSITION</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Not content with this level of abstractions we have build many (maybe <em>too</em> many<sup id="fnref:list_lang" role="doc-noteref"><a href="#fn:list_lang" class="footnote" rel="footnote">1</a></sup>) more layers of abstractions. We’ve reached a level<sup id="fnref:dependant_type" role="doc-noteref"><a href="#fn:dependant_type" class="footnote" rel="footnote">2</a></sup> where we can have the compiler itself check this, that we had to humanly-think</p>
+
+<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">array</span> <span class="o">:</span> <span class="kt">FixedSizeList</span> <span class="n">'3</span> <span class="kt">Int</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="kt">POSITION</span><span class="p">]</span>
+</code></pre></div></div>
+<p>This code will not compile if the <code class="language-plaintext highlighter-rouge">POSITION</code> is greater than <code class="language-plaintext highlighter-rouge">3</code>, as the underlying list is of size <code class="language-plaintext highlighter-rouge">3</code>.</p>
+
+<p>We’ve come so far! But I ponder that we can go <strong>further</strong>.</p>
+
+<p>None of these approaches shield us from coding <em>mistakes</em>.
+What if we actually wanted the second item of a list, rather than the third? We didn’t have such compiler… that is, <strong>until now</strong>.</p>
+
+<h2 id="from-silicone-to-carbn">From silicone to carbn</h2>
+<p>So we come up with a simple question:</p>
+
+<blockquote>
+  <p>Why did we build layer upon layer of abstraction?</p>
+</blockquote>
+
+<p>We fully understand the problem to solve. After all, out team was taught in the classic silicon-transistor-Von Neumann way of thinking about software and code. We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.</p>
+
+<p>We are stretching the problem space of the code in two very different directions:</p>
+
+<ol>
+  <li>On the one hand we want to eventually get our code to get transformed in machine instructions</li>
+  <li>On the other we care about expressiveness and correctness, so that other humans can reason about the code we wrote.</li>
+</ol>
+
+<p>So what if we cut the middle man? And have <strong>humans evaluate other human’s code</strong>.</p>
+
+<h1 id="how-does-it-work">How does <strong>it</strong> work</h1>
+<p><code class="language-plaintext highlighter-rouge">carbn</code> provides one major APIs to interact with the raw computing power of the platform: <code class="language-plaintext highlighter-rouge">/please/eval</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">--location</span> <span class="se">\</span>
+<span class="nt">--request</span> GET <span class="s1">'https://carbn.florius.com.ar/please/eval'</span> <span class="se">\</span>
+<span class="nt">--header</span>   <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3b3ciOiJZb3UgcmVhbGx5IHRob3VnaHQgdGhpcyB3b3VsZCB5aWVsZCBzb21ldGhpbmcgb3RoZXIgdGhhbiBhIPCfkqk_In0.jmlA3QI58jcRcWoL8Kc8o8wEbVrN9mKXK6S46bea-Y4'</span> <span class="se">\</span>
+<span class="nt">--header</span>   <span class="s1">'Content-Language: en-shakespearean'</span> <span class="se">\</span>
+<span class="nt">--header</span>   <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+<span class="nt">--data-raw</span> <span class="s1">'do add thirteen to twelve, many thanks'</span>
+</code></pre></div></div>
+<p>Which might return:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;carbn:computation</span> <span class="na">xmlns:carbn=</span><span class="s">"https://carbn.florius.com.ar/carbn.xsd"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;carbn:result&gt;</span>
+        <span class="nt">&lt;carbn:cubyhole&gt;</span>
+            a749765e-aa57-11eb-bcbc-0242ac130002
+        <span class="nt">&lt;/carbn:cubyhole&gt;</span>
+    <span class="nt">&lt;/carbn:result&gt;</span>
+    <span class="nt">&lt;carbn:success&gt;</span>
+        true
+    <span class="nt">&lt;/carbn:success&gt;</span>
+<span class="nt">&lt;/carbn:computation&gt;</span>
+</code></pre></div></div>
+
+<p>This fires up two process:
+One that quickly returns a UUID of the computation. This is like a cubbyhole for your result.
+And the other start the orchestration, parsing, distribution and eventual reduction of the result, which will at some point compute:</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>25
+</code></pre></div></div>
+
+<p>When the computation finished, you can retrieve the value by</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">--location</span> <span class="se">\</span>
+<span class="nt">--request</span> GET <span class="s1">'https://carbn.florius.com.ar/please/give/a749765e-aa57-11eb-bcbc-0242ac130002'</span>
+</code></pre></div></div>
+
+<p><strong>Amazing</strong>!</p>
+
+<h2 id="backend---agents">Backend - Agents</h2>
+
+<p>On the other side of the communication, we have an army of <em>agents</em> that get a partial (but complete) piece of the request, that they can work with their incredibly powerful carbon-based brain.</p>
+
+<p>This is what an agent might see for your request:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┏━━━━━┯━━━━━━━━━━━━━━━━━━━━━┓
+┃ 1 ▲ │ Agent: J            ┃
+┃ 2 ▲ ├─────────────────────┨    
+┃ 3 ▲ │╔═══════════════════╗┃
+┃ 4   │║×  /   ×    /    × ║┃
+┃ 5   │║do add thir∙teen to║┃
+┃ 6   │║                   ║┃
+┃ 7   │║/       ×    /    ×║┃
+┃     │║twelve, many thanks║┃
+┃     │╚═══════════════════╝┃
+┠─────┼─────────────────────┨
+┃ $5k │&gt; 25                 ┃
+┗━━━━━┷━━━━━━━━━━━━━━━━━━━━━┛
+</code></pre></div></div>
+
+<p>As soo as they can type an answer, the cubyhole will get filled.</p>
+
+<h2 id="pricing">Pricing</h2>
+<p>You will see in out pricing strategy that we are order of magnitude more expensive than other cloud computing providers, we don’t have nearly as much up uptime as them, and our latency is much much higher, but can they:</p>
+
+<ol>
+  <li>Find off-by-one errors and correct them <strong>on the spot</strong>?</li>
+  <li>Accommodate a wide variety of languages with zero compile cost?</li>
+  <li>Integrate perfectly with multiple <em>non artificial</em> neural networks?</li>
+</ol>
+
+<p>Time is cheap. Correctness and perfection is what you would be paying for with <code class="language-plaintext highlighter-rouge">carbn</code>.</p>
+
+<p><del>That and a lot of food for the agents. And sleeping accommodations. And healthcare. Some even get dental.</del></p>
+
+<h2 id="faq">F.A.Q</h2>
+
+<h4 id="did-you-consider-how-similar-this-is-to-slavery">Did you consider how similar this is to slavery?</h4>
+<p>Yes. But we are OK enslaving computers, why wouldn’t we be OK to do so with humans? How different are the two <strong>really</strong>?</p>
+
+<h4 id="is-the-evaluation-secure">Is the evaluation secure?</h4>
+<p>The initial payload is first split in chunks for better parallelization and scoping.
+We can’t reasonably give all the program to just one <em>agent</em>, so we split each stack so that they can work in the smallest, complete definition of a sub-problem. So you can structure your code in such a way to limit exposure to secrets from inner agents.
+We are currently implementing a tier of <em>agents</em> that is more trustworthy than the rest; so they can be in charge of the final reduction. So that one agent might compute a payload, another a URL, and a <em>safe agent</em> do the actual request with the proper secrets.</p>
+
+<h4 id="what-is-doing-the-orchestration-filling-cubyholes-responding-though-http-et-al">What is doing the orchestration, filling cubyholes, responding though HTTP, et al.?</h4>
+<p>It is true that we are using outdated technologies to do this plumbing.
+We are working very hard to bootstrap YYY so itself can run on YYY. For the time being, it is cheaper and more cost effective to use unfashionable code.</p>
+
+<p><em>This is satire.</em></p>
+
+<script src="https://crj691yl0124.statuspage.io/embed/script.js"></script>
+
+<hr />
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:list_lang" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/List_of_programming_languages">Wikipedia :: List of programming languages</a> with <strong>more</strong> than 3 programming languages. <a href="#fnref:list_lang" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:dependant_type" role="doc-endnote">
+      <p>“… a dependent type is a type whose definition depends on a value” – <a href="https://en.wikipedia.org/wiki/Dependent_type">Wikipedia :: Dependent type</a> <a href="#fnref:dependant_type" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</article>
+
+
+
+
+
+
+
+<div class="separator">
+  <img src="/assets/cat-0fe72554239fb5bc68cc3b08063d5fb3d3984c6381e560b01fa8d5e35ed5a68e4741595a4929859029f18386c321ac391d55cccf60a51f08dd3148d38b5a44b7.png">
+</div>
+
+
+  <h3 class="related-post-title">Related Posts</h3>
+  
+  
+  
+    
+    
+
+    
+
+    
+
+  
+    
+    
+
+    
+
+    
+
+  
+    
+    
+
+    
+
+    
+
+  
+    
+    
+
+    
+
+    
+
+  
+    
+    
+
+    
+
+    
+
+  
+    
+    
+
+    
+
+    
+
+  
+    
+    
+
+    
+
+    
+
+  
+  
+    
+    <div class="post ml2">
+      <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
+        <h4 class="post-title">Inspiraciones</h4>
+        <p class="post-summary">¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.</p>
+      </a>
+    </div>
+    
+    <div class="post ml2">
+      <a href="/xpost/2020/12/03/haskell-para-mentes-imperativas/" class="post-link">
+        <h4 class="post-title">Haskell para mentes imperativas</h4>
+        <p class="post-summary">En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.</p>
+      </a>
+    </div>
+    
+    <div class="post ml2">
+      <a href="/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/" class="post-link">
+        <h4 class="post-title">koncierge Una librería para segmentar usuarios</h4>
+        <p class="post-summary">La historia de una librería para evaluar variantes de tests AB, dado una definición de un experimento con un DSL parecido a Mongo y un contexto.</p>
+      </a>
+    </div>
+    
+    <div class="post ml2">
+      <a href="/xpost/2019/07/10/the-essence-of-event-sourcing/" class="post-link">
+        <h4 class="post-title">The essence of Event Sourcing</h4>
+        <p class="post-summary">Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.</p>
+      </a>
+    </div>
+    
+    <div class="post ml2">
+      <a href="/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego/" class="post-link">
+        <h4 class="post-title">Cuándo intervenir en un juego</h4>
+        <p class="post-summary">Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy.  La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”.</p>
+      </a>
+    </div>
+    
+    <div class="post ml2">
+      <a href="/xpost/2018/08/14/limit-problem-space/" class="post-link">
+        <h4 class="post-title">Limit the Problem Space!</h4>
+        <p class="post-summary">How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!</p>
+      </a>
+    </div>
+    
+  
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme heavily inspired in <a href="http://johnotander.com">John Otander</a>' <a href="https://github.com/johno/pixyll">pixyll</a>.
+    </small>
+  </div>
+</footer>
+<!-- AnchorJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>
+
+</body>
+</html>
