@@ -26,7 +26,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202105011205" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202105030758" type="text/css">
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
@@ -233,7 +233,7 @@
 </div>
 
 <article class="post-content">
-  <p>We are constantly trying to write code that easier for a human to comprehend. These high level languages gave us the power of <strong>expression</strong>. And we like this!</p>
+  <p>We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of <strong>expression</strong>. And we like this!</p>
 
 <p>We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
 So what if we re-think our current software stack? And have <strong>humans evaluate other human’s code</strong>.</p>
@@ -242,10 +242,10 @@ So what if we re-think our current software stack? And have <strong>humans evalu
 
 <!--more-->
 
-<p>I find it curious that things like a “Natural Language Processing” (NLP) exist to bridge the gap between humans and computer.
+<p>I find it curious that things like a “Natural Language Processing” (NLP) exist to bridge the gap between humans and computers.
 One of the most predominant libraries to work NLP might be the <a href="https://www.nltk.org/">Natural Language Toolkit</a>. This is coded in <code class="language-plaintext highlighter-rouge">python</code>. A language that is interpreted by a program that is written in <code class="language-plaintext highlighter-rouge">c</code>, that it in turn is compiled to <code class="language-plaintext highlighter-rouge">assembler</code> and then run in the computer chip.</p>
 
-<p>In it’s purest form, we have myriad of abstractions piled up to get from:</p>
+<p>In its purest form, we have myriad of abstractions piled up to get from:</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sorry I followed your minivan for thirty miles. I got caught up in the movie your kids were watching and wanted to see how it ends.</p>&mdash; Elizabeth Hackett (@LizHackett) <a href="https://twitter.com/LizHackett/status/1004201775425966080?ref_src=twsrc%5Etfw">June 6, 2018</a></blockquote>
 <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -293,18 +293,18 @@ or just un∙de∙cid∙able
 *Liz: @LizHackett/status/1004201775425966080
 </code></pre>
 
-<p>Even though it is a bit more verbose, it is an order of magnitude faster than the other two flavours. We’ll see why in the next section.</p>
+<p>Even though it is a bit more verbose, it is an order of magnitude faster than the other two flavors. We’ll see why in the next section.</p>
 
 <h2 id="softwares-humble-beginnings">Software’s humble beginnings</h2>
 
 <p>Let’s start with a review of how we got here.</p>
 
-<p>In the beginning, human wrote <em>machine code</em>. A set of instructions that a computer would execute. We figured out that this was very powerful, but also very easy to make mistakes. We spend a lot of time thinking, and not a lot ot time writing programs; as the economic balance was tipped in the machine’s favour.</p>
+<p>In the beginning, humans wrote <em>machine code</em>. A set of instructions that a computer would execute. We figured out that this was very powerful, but also very easy to make mistakes. We spend a lot of time thinking, and not a lot of time writing programs; as the economic balance was tipped in the machine’s favor.</p>
 
-<p>By the hard work of many people, we started to be able to have more widespread computational access, cheaper.
+<p>With the hard work of many people, we started to be able to have more widespread computational access, cheaper.
 As humans would have it, we started writing more code. We soon understood that complex ideas needed a complex language. Something far beyond arithmetics and jumps, so we started the journey that started with compiled languages.</p>
 
-<p>Code that was more <em>abstract</em>, but easier for a human to comprehend. These high level languages gave us the power of <strong>expression</strong>, in lieu of raw power. And we liked this!</p>
+<p>Code that was more <em>abstract</em>, but easier for a human to comprehend. These high-level languages gave us the power of <strong>expression</strong>, in lieu of raw power. And we liked this!</p>
 
 <p>We <em>roughly</em> went from getting a value from an array like this:</p>
 <pre><code class="language-assembly">movw    r0, #:lower16:A
@@ -314,7 +314,7 @@ ldrsb   r2, [r0, #3];  Load ARRAY[3] into r2
 
 ARRAY:  .byte   11, 12, 13, 14, 15; byte typed initialized array
 </code></pre>
-<p>And this is toy example, to keep things short. We hadn’t dealt with dynamic arrays, we know that we wanted the third position, so we could do some pre-emptive calculations on our head before writing this.</p>
+<p>And this is a toy example, to keep things short. We hadn’t dealt with dynamic arrays, we know that we wanted the third position, so we could do some pre-emptive calculations on our head before writing this.</p>
 
 <p>To a higher abstraction language like <code class="language-plaintext highlighter-rouge">c</code>:</p>
 
@@ -338,7 +338,7 @@ ARRAY:  .byte   11, 12, 13, 14, 15; byte typed initialized array
 <p>We’ve come so far! But I ponder that we can go <strong>further</strong>.</p>
 
 <p>None of these approaches shield us from coding <em>mistakes</em>.
-What if we actually wanted the second item of a list, rather than the third? We didn’t have such compiler… that is, <strong>until now</strong>.</p>
+What if we <strong>actually</strong> wanted the second item of a list, rather than the third? We didn’t have such a compiler… that is, <strong>until now</strong>.</p>
 
 <h2 id="from-silicone-to-carbn">From silicone to carbn</h2>
 <p>So we come up with a simple question:</p>
@@ -347,13 +347,13 @@ What if we actually wanted the second item of a list, rather than the third? We 
   <p>Why did we build layer upon layer of abstraction?</p>
 </blockquote>
 
-<p>We fully understand the problem to solve. After all, out team was taught in the classic silicon-transistor-Von Neumann way of thinking about software and code. We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.</p>
+<p>We fully understand the problem to solve. After all, our team was taught in the classic silicon-transistor-Von Neumann way of thinking about software and code. We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.</p>
 
 <p>We are stretching the problem space of the code in two very different directions:</p>
 
 <ol>
-  <li>On the one hand we want to eventually get our code to get transformed in machine instructions</li>
-  <li>On the other we care about expressiveness and correctness, so that other humans can reason about the code we wrote.</li>
+  <li>On the one hand, we want to eventually get our code to get transformed into machine instructions</li>
+  <li>On the other, we care about expressiveness and correctness so that other humans can reason about the code we wrote.</li>
 </ol>
 
 <p>So what if we cut the middle man? And have <strong>humans evaluate other human’s code</strong>.</p>
@@ -381,9 +381,9 @@ What if we actually wanted the second item of a list, rather than the third? We 
 <span class="nt">&lt;/carbn:computation&gt;</span>
 </code></pre></div></div>
 
-<p>This fires up two process:
+<p>This fires up two processes:
 One that quickly returns a UUID of the computation. This is like a cubbyhole for your result.
-And the other start the orchestration, parsing, distribution and eventual reduction of the result, which will at some point compute:</p>
+And the other starts the orchestration, parsing, distribution, and eventual reduction of the result, which will at some point compute:</p>
 <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>25
 </code></pre></div></div>
 
@@ -415,18 +415,18 @@ And the other start the orchestration, parsing, distribution and eventual reduct
 ┗━━━━━┷━━━━━━━━━━━━━━━━━━━━━┛
 </code></pre></div></div>
 
-<p>As soo as they can type an answer, the cubyhole will get filled.</p>
+<p>As soon as they can type an answer, the cubbyhole will get filled.</p>
 
 <h2 id="pricing">Pricing</h2>
-<p>You will see in out pricing strategy that we are order of magnitude more expensive than other cloud computing providers, we don’t have nearly as much up uptime as them, and our latency is much much higher, but can they:</p>
+<p>You will see in our pricing strategy that we are an order of magnitude more expensive than other cloud computing providers, we don’t have nearly as much up uptime as them, and our latency is much much higher, but can they:</p>
 
 <ol>
   <li>Find off-by-one errors and correct them <strong>on the spot</strong>?</li>
   <li>Accommodate a wide variety of languages with zero compile cost?</li>
-  <li>Integrate perfectly with multiple <em>non artificial</em> neural networks?</li>
+  <li>Integrate perfectly with multiple <em>non-artificial</em> neural networks?</li>
 </ol>
 
-<p>Time is cheap. Correctness and perfection is what you would be paying for with <code class="language-plaintext highlighter-rouge">carbn</code>.</p>
+<p>Time is cheap. Correctness and perfection are what you would be paying for with <code class="language-plaintext highlighter-rouge">carbn</code>.</p>
 
 <p><del>That and a lot of food for the agents. And sleeping accommodations. And healthcare. Some even get dental.</del></p>
 
@@ -436,13 +436,13 @@ And the other start the orchestration, parsing, distribution and eventual reduct
 <p>Yes. But we are OK enslaving computers, why wouldn’t we be OK to do so with humans? How different are the two <strong>really</strong>?</p>
 
 <h4 id="is-the-evaluation-secure">Is the evaluation secure?</h4>
-<p>The initial payload is first split in chunks for better parallelization and scoping.
-We can’t reasonably give all the program to just one <em>agent</em>, so we split each stack so that they can work in the smallest, complete definition of a sub-problem. So you can structure your code in such a way to limit exposure to secrets from inner agents.
+<p>The initial payload is first split into chunks for better parallelization and scoping.
+We can’t reasonably give all the programs to just one <em>agent</em>, so we split each stack so that they can work in the smallest, complete definition of a sub-problem. So you can structure your code in such a way as to limit exposure to secrets from inner agents.
 We are currently implementing a tier of <em>agents</em> that is more trustworthy than the rest; so they can be in charge of the final reduction. So that one agent might compute a payload, another a URL, and a <em>safe agent</em> do the actual request with the proper secrets.</p>
 
-<h4 id="what-is-doing-the-orchestration-filling-cubyholes-responding-though-http-et-al">What is doing the orchestration, filling cubyholes, responding though HTTP, et al.?</h4>
-<p>It is true that we are using outdated technologies to do this plumbing.
-We are working very hard to bootstrap YYY so itself can run on YYY. For the time being, it is cheaper and more cost effective to use unfashionable code.</p>
+<h4 id="what-is-doing-the-orchestration-filling-cubbyholes-responding-through-http-et-al">What is doing the orchestration, filling cubbyholes, responding through HTTP, et al.?</h4>
+<p>We are indeed using outdated technologies to do this plumbing.
+We are working very hard to bootstrap <code class="language-plaintext highlighter-rouge">carbn</code> so it can run on <code class="language-plaintext highlighter-rouge">carbn</code>. For the time being, it is cheaper and more cost-effective to use unfashionable code.</p>
 
 <p><em>This is satire.</em></p>
 

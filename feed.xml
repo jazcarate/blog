@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-01T12:05:30+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin &quot;Flroius&quot; Azcarate’s personal blog</subtitle><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-03T07:58:05+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin &quot;Flroius&quot; Azcarate’s personal blog</subtitle><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
 
 &lt;p&gt;We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
 So what if we re-think our current software stack? And have &lt;strong&gt;humans evaluate other human’s code&lt;/strong&gt;.&lt;/p&gt;
@@ -7,10 +7,10 @@ So what if we re-think our current software stack? And have &lt;strong&gt;humans
 
 &lt;!--more--&gt;
 
-&lt;p&gt;I find it curious that things like a “Natural Language Processing” (NLP) exist to bridge the gap between humans and computer.
+&lt;p&gt;I find it curious that things like a “Natural Language Processing” (NLP) exist to bridge the gap between humans and computers.
 One of the most predominant libraries to work NLP might be the &lt;a href=&quot;https://www.nltk.org/&quot;&gt;Natural Language Toolkit&lt;/a&gt;. This is coded in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt;. A language that is interpreted by a program that is written in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;, that it in turn is compiled to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assembler&lt;/code&gt; and then run in the computer chip.&lt;/p&gt;
 
-&lt;p&gt;In it’s purest form, we have myriad of abstractions piled up to get from:&lt;/p&gt;
+&lt;p&gt;In its purest form, we have myriad of abstractions piled up to get from:&lt;/p&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Sorry I followed your minivan for thirty miles. I got caught up in the movie your kids were watching and wanted to see how it ends.&lt;/p&gt;&amp;mdash; Elizabeth Hackett (@LizHackett) &lt;a href=&quot;https://twitter.com/LizHackett/status/1004201775425966080?ref_src=twsrc%5Etfw&quot;&gt;June 6, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
@@ -58,18 +58,18 @@ or just un∙de∙cid∙able
 *Liz: @LizHackett/status/1004201775425966080
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Even though it is a bit more verbose, it is an order of magnitude faster than the other two flavours. We’ll see why in the next section.&lt;/p&gt;
+&lt;p&gt;Even though it is a bit more verbose, it is an order of magnitude faster than the other two flavors. We’ll see why in the next section.&lt;/p&gt;
 
 &lt;h2 id=&quot;softwares-humble-beginnings&quot;&gt;Software’s humble beginnings&lt;/h2&gt;
 
 &lt;p&gt;Let’s start with a review of how we got here.&lt;/p&gt;
 
-&lt;p&gt;In the beginning, human wrote &lt;em&gt;machine code&lt;/em&gt;. A set of instructions that a computer would execute. We figured out that this was very powerful, but also very easy to make mistakes. We spend a lot of time thinking, and not a lot ot time writing programs; as the economic balance was tipped in the machine’s favour.&lt;/p&gt;
+&lt;p&gt;In the beginning, humans wrote &lt;em&gt;machine code&lt;/em&gt;. A set of instructions that a computer would execute. We figured out that this was very powerful, but also very easy to make mistakes. We spend a lot of time thinking, and not a lot of time writing programs; as the economic balance was tipped in the machine’s favor.&lt;/p&gt;
 
-&lt;p&gt;By the hard work of many people, we started to be able to have more widespread computational access, cheaper.
+&lt;p&gt;With the hard work of many people, we started to be able to have more widespread computational access, cheaper.
 As humans would have it, we started writing more code. We soon understood that complex ideas needed a complex language. Something far beyond arithmetics and jumps, so we started the journey that started with compiled languages.&lt;/p&gt;
 
-&lt;p&gt;Code that was more &lt;em&gt;abstract&lt;/em&gt;, but easier for a human to comprehend. These high level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;, in lieu of raw power. And we liked this!&lt;/p&gt;
+&lt;p&gt;Code that was more &lt;em&gt;abstract&lt;/em&gt;, but easier for a human to comprehend. These high-level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;, in lieu of raw power. And we liked this!&lt;/p&gt;
 
 &lt;p&gt;We &lt;em&gt;roughly&lt;/em&gt; went from getting a value from an array like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-assembly&quot;&gt;movw    r0, #:lower16:A
@@ -79,7 +79,7 @@ ldrsb   r2, [r0, #3];  Load ARRAY[3] into r2
 
 ARRAY:  .byte   11, 12, 13, 14, 15; byte typed initialized array
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And this is toy example, to keep things short. We hadn’t dealt with dynamic arrays, we know that we wanted the third position, so we could do some pre-emptive calculations on our head before writing this.&lt;/p&gt;
+&lt;p&gt;And this is a toy example, to keep things short. We hadn’t dealt with dynamic arrays, we know that we wanted the third position, so we could do some pre-emptive calculations on our head before writing this.&lt;/p&gt;
 
 &lt;p&gt;To a higher abstraction language like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;:&lt;/p&gt;
 
@@ -103,7 +103,7 @@ ARRAY:  .byte   11, 12, 13, 14, 15; byte typed initialized array
 &lt;p&gt;We’ve come so far! But I ponder that we can go &lt;strong&gt;further&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;None of these approaches shield us from coding &lt;em&gt;mistakes&lt;/em&gt;.
-What if we actually wanted the second item of a list, rather than the third? We didn’t have such compiler… that is, &lt;strong&gt;until now&lt;/strong&gt;.&lt;/p&gt;
+What if we &lt;strong&gt;actually&lt;/strong&gt; wanted the second item of a list, rather than the third? We didn’t have such a compiler… that is, &lt;strong&gt;until now&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;from-silicone-to-carbn&quot;&gt;From silicone to carbn&lt;/h2&gt;
 &lt;p&gt;So we come up with a simple question:&lt;/p&gt;
@@ -112,13 +112,13 @@ What if we actually wanted the second item of a list, rather than the third? We 
   &lt;p&gt;Why did we build layer upon layer of abstraction?&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;We fully understand the problem to solve. After all, out team was taught in the classic silicon-transistor-Von Neumann way of thinking about software and code. We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.&lt;/p&gt;
+&lt;p&gt;We fully understand the problem to solve. After all, our team was taught in the classic silicon-transistor-Von Neumann way of thinking about software and code. We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.&lt;/p&gt;
 
 &lt;p&gt;We are stretching the problem space of the code in two very different directions:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;On the one hand we want to eventually get our code to get transformed in machine instructions&lt;/li&gt;
-  &lt;li&gt;On the other we care about expressiveness and correctness, so that other humans can reason about the code we wrote.&lt;/li&gt;
+  &lt;li&gt;On the one hand, we want to eventually get our code to get transformed into machine instructions&lt;/li&gt;
+  &lt;li&gt;On the other, we care about expressiveness and correctness so that other humans can reason about the code we wrote.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;So what if we cut the middle man? And have &lt;strong&gt;humans evaluate other human’s code&lt;/strong&gt;.&lt;/p&gt;
@@ -146,9 +146,9 @@ What if we actually wanted the second item of a list, rather than the third? We 
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/carbn:computation&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This fires up two process:
+&lt;p&gt;This fires up two processes:
 One that quickly returns a UUID of the computation. This is like a cubbyhole for your result.
-And the other start the orchestration, parsing, distribution and eventual reduction of the result, which will at some point compute:&lt;/p&gt;
+And the other starts the orchestration, parsing, distribution, and eventual reduction of the result, which will at some point compute:&lt;/p&gt;
 &lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;25
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -180,18 +180,18 @@ And the other start the orchestration, parsing, distribution and eventual reduct
 ┗━━━━━┷━━━━━━━━━━━━━━━━━━━━━┛
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;As soo as they can type an answer, the cubyhole will get filled.&lt;/p&gt;
+&lt;p&gt;As soon as they can type an answer, the cubbyhole will get filled.&lt;/p&gt;
 
 &lt;h2 id=&quot;pricing&quot;&gt;Pricing&lt;/h2&gt;
-&lt;p&gt;You will see in out pricing strategy that we are order of magnitude more expensive than other cloud computing providers, we don’t have nearly as much up uptime as them, and our latency is much much higher, but can they:&lt;/p&gt;
+&lt;p&gt;You will see in our pricing strategy that we are an order of magnitude more expensive than other cloud computing providers, we don’t have nearly as much up uptime as them, and our latency is much much higher, but can they:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Find off-by-one errors and correct them &lt;strong&gt;on the spot&lt;/strong&gt;?&lt;/li&gt;
   &lt;li&gt;Accommodate a wide variety of languages with zero compile cost?&lt;/li&gt;
-  &lt;li&gt;Integrate perfectly with multiple &lt;em&gt;non artificial&lt;/em&gt; neural networks?&lt;/li&gt;
+  &lt;li&gt;Integrate perfectly with multiple &lt;em&gt;non-artificial&lt;/em&gt; neural networks?&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Time is cheap. Correctness and perfection is what you would be paying for with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carbn&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Time is cheap. Correctness and perfection are what you would be paying for with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carbn&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;del&gt;That and a lot of food for the agents. And sleeping accommodations. And healthcare. Some even get dental.&lt;/del&gt;&lt;/p&gt;
 
@@ -201,13 +201,13 @@ And the other start the orchestration, parsing, distribution and eventual reduct
 &lt;p&gt;Yes. But we are OK enslaving computers, why wouldn’t we be OK to do so with humans? How different are the two &lt;strong&gt;really&lt;/strong&gt;?&lt;/p&gt;
 
 &lt;h4 id=&quot;is-the-evaluation-secure&quot;&gt;Is the evaluation secure?&lt;/h4&gt;
-&lt;p&gt;The initial payload is first split in chunks for better parallelization and scoping.
-We can’t reasonably give all the program to just one &lt;em&gt;agent&lt;/em&gt;, so we split each stack so that they can work in the smallest, complete definition of a sub-problem. So you can structure your code in such a way to limit exposure to secrets from inner agents.
+&lt;p&gt;The initial payload is first split into chunks for better parallelization and scoping.
+We can’t reasonably give all the programs to just one &lt;em&gt;agent&lt;/em&gt;, so we split each stack so that they can work in the smallest, complete definition of a sub-problem. So you can structure your code in such a way as to limit exposure to secrets from inner agents.
 We are currently implementing a tier of &lt;em&gt;agents&lt;/em&gt; that is more trustworthy than the rest; so they can be in charge of the final reduction. So that one agent might compute a payload, another a URL, and a &lt;em&gt;safe agent&lt;/em&gt; do the actual request with the proper secrets.&lt;/p&gt;
 
-&lt;h4 id=&quot;what-is-doing-the-orchestration-filling-cubyholes-responding-though-http-et-al&quot;&gt;What is doing the orchestration, filling cubyholes, responding though HTTP, et al.?&lt;/h4&gt;
-&lt;p&gt;It is true that we are using outdated technologies to do this plumbing.
-We are working very hard to bootstrap YYY so itself can run on YYY. For the time being, it is cheaper and more cost effective to use unfashionable code.&lt;/p&gt;
+&lt;h4 id=&quot;what-is-doing-the-orchestration-filling-cubbyholes-responding-through-http-et-al&quot;&gt;What is doing the orchestration, filling cubbyholes, responding through HTTP, et al.?&lt;/h4&gt;
+&lt;p&gt;We are indeed using outdated technologies to do this plumbing.
+We are working very hard to bootstrap &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carbn&lt;/code&gt; so it can run on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;carbn&lt;/code&gt;. For the time being, it is cheaper and more cost-effective to use unfashionable code.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is satire.&lt;/em&gt;&lt;/p&gt;
 
@@ -223,7 +223,7 @@ We are working very hard to bootstrap YYY so itself can run on YYY. For the time
       &lt;p&gt;“… a dependent type is a type whose definition depends on a value” – &lt;a href=&quot;https://en.wikipedia.org/wiki/Dependent_type&quot;&gt;Wikipedia :: Dependent type&lt;/a&gt; &lt;a href=&quot;#fnref:dependant_type&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="raving" /><summary type="html">We are constantly trying to write code that easier for a human to comprehend. These high level languages gave us the power of expression. And we like this! We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about. So what if we re-think our current software stack? And have humans evaluate other human’s code. carbn is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our agents.</summary></entry><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="raving" /><summary type="html">We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of expression. And we like this! We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about. So what if we re-think our current software stack? And have humans evaluate other human’s code. carbn is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our agents.</summary></entry><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué /cazzo/ hacer&lt;/p&gt;
