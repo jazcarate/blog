@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-689SEV7MTT"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-689SEV7MTT', { cookie_domain: 'blog.florius.com.ar', cookie_flags: 'SameSite=None;Secure' });</script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Discovering Crystal &#8211; Florius’ Blog</title>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Joaquin &quot;Flroius&quot; Azcarate’s personal blog">
+    <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/site.webmanifest" />
+    <meta name="robots" content="all">
+    <meta name="author" content="">
+    
+    <meta name="keywords" content="xpost">
+    <link rel="canonical" href="https://apiumhub.com/tech-blog-barcelona/discovering-crystal-language/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202105051315" type="text/css">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
+    
+    <script src="//kit.fontawesome.com/88434a0a24.js" crossorigin="anonymous"></script>
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Discovering Crystal">
+    <meta property="og:description" content="Joaquin &quot;Flroius&quot; Azcarate’s personal blog">
+    <meta property="og:url" content="https://blog.florius.com.ar/xpost/2021/04/15/discoverying-crystal/">
+    <meta property="og:site_name" content="Florius’ Blog">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="Discovering Crystal" />
+    <meta name="twitter:description" content="Joaquin "Flroius" Azcarate’s personal blog" />
+    <meta name="twitter:url" content="https://blog.florius.com.ar/xpost/2021/04/15/discoverying-crystal/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="manifest" href="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    
+</head>
+
+<body class="site">
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Florius’ Blog</a>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">About</a>
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/categories/">Categories</a>
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/jazcarate"></a>
+    
+    
+      <a class="fa fa-gitlab" href="https://gitlab.com/jazcarate"></a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:j@florius.com.ar"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/joaquin-azcarate"></a>
+    
+    
+    <a class="fab fa-dev" href="https://dev.to/florius"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap animated fade-in-down" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Discovering Crystal</h1>
+  <span class="post-meta">Apr 15, 2021</span><br>
+  
+  <span class="post-meta small read-time">
+  
+    6 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p><em>Original post can be found in the <a href="https://apiumhub.com/tech-blog-barcelona/discovering-crystal-language/">ApiumHub blog</a>.</em></p>
+
+<p>Another in the series. Check out other languages we’ve explored in the past at:</p>
+
+<ul>
+  <li><a href="https://apiumhub.com/tech-blog-barcelona/discovering-vue-3-features/">Discovering Vue 3</a></li>
+  <li><a href="https://apiumhub.com/tech-blog-barcelona/discovering-rust/">Analyzing functionalities in Rust</a></li>
+</ul>
+
+<p>A bit of background about me before we begin our exploration of a new programming language.</p>
+
+<p>I’ve been in love with programing languages for a couple of years now. I’m very interested in their semantics, the reasoning of why their designers chose to do <code class="language-plaintext highlighter-rouge">X</code> over <code class="language-plaintext highlighter-rouge">Y</code>, and why they outright discarded <code class="language-plaintext highlighter-rouge">Z</code>. I’ve done my fair share of DSLs in my tenure as a software developer for both fun and profit; so programming languages are the reasonable “step up” to be interested in.</p>
+
+<p>As such I’m always in the lookout of up-and-coming languages.</p>
+
+<h2 id="why-crystal">Why Crystal?</h2>
+
+<p>Long time ago, far far away I was working with Ruby on Rails on a project with other very skilled Ruby and Rails developers. As many others working with Ruby, we liked it’s syntax, it’s ease of use, it’s dependencies (gems) but had some issues with it. Every programming language does.</p>
+
+<p>Honestly, performance was not my main driver to look to other programming languages, even though in many <a href="https://github.com/kostya/benchmarks#readme">benchmarks</a> Crystal does excel.</p>
+
+<p>I was more concerned with safety and documentation. Let me explain.</p>
+
+<h2 id="safety">Safety</h2>
+
+<p>Whilst programming in Ruby, I many times had an error where an object I thought was a <code class="language-plaintext highlighter-rouge">Hash</code> was actually a block, or a string was in fact a number. Many times a test would just fail or panic, and it took a minute to look at the trace, maybe put a breakpoint. Pry open the execution. Realize there was a branch of the code that did not set a key in an <code class="language-plaintext highlighter-rouge">options</code> parameter that got passed along and I did not account for. Fix it and continue coding.
+<code class="language-plaintext highlighter-rouge">undefined method ‘foo’ for nil:NilClass</code> was particularly recurring in my development cycle.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Here I’m not referring to the actual docs I can find in Ruby Doc but rather how much information can the IDE help me out with. I’m a big proponent of making tools to help development, but having to hydrate an <code class="language-plaintext highlighter-rouge">options</code> hash to send to a gem’s method and having to yield to look at the gem’s code to understand what values are even available, is a big reason why I enjoy typed programing languages so much.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FooConfiguration</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">bar</span><span class="o">;</span>
+    <span class="nc">Integer</span> <span class="n">biz</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">}</span>
+
+<span class="kt">void</span> <span class="nf">foo</span><span class="o">(</span><span class="nc">FooConfiguration</span> <span class="n">options</span><span class="o">)</span> <span class="o">{</span> <span class="err">…</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<p>At a glance (and with IDE support), one can deduce that <code class="language-plaintext highlighter-rouge">foo</code>’s options have a required <code class="language-plaintext highlighter-rouge">bar</code> string, and a <code class="language-plaintext highlighter-rouge">biz</code> that defaults to 3. Where as a similar code in Ruby could look like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">options</span><span class="p">):</span>
+  <span class="c1"># …</span>
+  <span class="n">enc</span> <span class="o">=</span> <span class="n">options</span><span class="p">.</span><span class="nf">bar</span><span class="p">.</span><span class="nf">encoding</span> <span class="c1">#Oh, so `bar` is a string. Gotcha!</span>
+  <span class="c1"># ... </span>
+  <span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="nf">biz</span> <span class="o">||</span> <span class="mi">3</span><span class="p">).</span><span class="nf">times</span> <span class="p">{</span> <span class="nb">puts</span> <span class="n">enc</span> <span class="p">}</span> <span class="c1"># if `biz` is falsey, then `3`. Can I send a boolean? Oh, no, it `#.times` it, so it is a number. 🤕 </span>
+  <span class="c1"># ...</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Both these pain points were addressed, interestingly enough, by the same approach: <em>Types</em>.</p>
+
+<p>In Crystal there is a very smart, very competent compiler that keeps track of the busy work of knowing what methods any reference might have, if it is <code class="language-plaintext highlighter-rouge">nil</code> or what can and can’t be done to an object. This was a godsend.</p>
+
+<p>As luck would have it, I was also in close contact with some very vociferous advocate of Crystal. You can imagine, with the tagline: <em>“Fast as C, Slick as Ruby”</em>, I was hooked.</p>
+
+<p>My breakout project, the moment I really “got” Crystal was when we needed some dashboard like solution. We realized we had built too many internal tools and no one place to cluster them all. For whatever reason we didn’t want some static lame webpage. We decided to roll out our own. Some YAML parsing, some macro goodness and a lot of type safety later we had it running. Adding apps was simple and a CI build made sure that all the things were correctly wired. It was a small project, probably way overengineered; but onboarding another Ruby developer was incredibly simple. That was a good selling point.</p>
+
+<h2 id="why-crystal-now">Why Crystal now?</h2>
+
+<p><em>That’s leading the subject, your honor!</em></p>
+
+<p>Recently™ the nice people of Crystal announced <a href="https://crystal-lang.org/2021/03/22/crystal-1.0-what-to-expect.html">the release of Crystal 1.0</a> - Production ready, stable and useful standard library all in a tight little bundle; so if it was ever the time to seriously look at Crystal; I would say today is the day.
+Other awesome features
+Type ergonomics</p>
+
+<p>We talked about type safety, and some might have rolled your eyes expecting a very verbose way of writing the code; but let’s not forget one of the key drivers of Crystal is to have a similar syntax to Ruby. A dynamically typed language. So both:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span>                                                                  	 
+  <span class="k">def</span> <span class="nf">biz</span>
+    <span class="nb">puts</span> <span class="s2">"foo"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Bar</span>
+  <span class="k">def</span> <span class="nf">biz</span>
+    <span class="nb">puts</span> <span class="s2">"bar"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">invoke_biz</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="n">x</span><span class="p">.</span><span class="nf">biz</span>
+<span class="k">end</span>
+
+<span class="n">invoke_biz</span><span class="p">(</span><span class="no">Foo</span><span class="p">.</span><span class="nf">new</span><span class="p">)</span> <span class="c1"># =&gt; foo</span>
+<span class="n">invoke_biz</span><span class="p">(</span><span class="no">Bar</span><span class="p">.</span><span class="nf">new</span><span class="p">)</span> <span class="c1"># =&gt; bar</span>
+</code></pre></div></div>
+
+<p>Is both valid Ruby and Crystal. You can try that out in your browser in <a href="https://play.crystal-lang.org/#/r/apl0">the crystal playground here!</a> No type to be seen, thanks to the incredible type inference that comes with Crystal’s compiler. There is much cool things about it that I would need entire new blog posts to write, luckily <a href="https://crystal-lang.org/reference/index.html">Crystal’s book</a> does a good job covering the basics: <a href="https://crystal-lang.org/reference/syntax_and_semantics/type_inference.html">Type inference</a>.</p>
+
+<h2 id="yaml--json--xml">YAML / JSON / XML</h2>
+
+<p>It’s amazing how useful it is to have such a robust parsing library already in the standard library, no need to deal with extraneous dependencies to read a configuration file, or write one out.</p>
+
+<div class="language-crystal highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s2">"yaml"</span>
+
+<span class="k">class</span> <span class="nc">Bar</span>
+  <span class="kp">include</span> <span class="no">YAML</span><span class="o">::</span><span class="no">Serializable</span>
+  <span class="kp">property</span> <span class="n">biz</span> <span class="p">:</span> <span class="no">Float64</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+  <span class="kp">include</span> <span class="no">YAML</span><span class="o">::</span><span class="no">Serializable</span>
+  <span class="kp">property</span> <span class="n">foo</span> <span class="p">:</span> <span class="no">String</span>
+  <span class="kp">property</span> <span class="n">bar</span> <span class="p">:</span> <span class="no">Bar</span><span class="p">?</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>That’s all the code needed to parse something like</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">foo</span><span class="pi">:</span> <span class="s">hi!</span>
+<span class="na">bar</span><span class="pi">:</span>
+  <span class="na">biz</span><span class="pi">:</span> <span class="m">3.2</span>
+</code></pre></div></div>
+
+<p>The same holds for JSON and XML.
+I find it baffling how, when reading and writing configuration is so easy, much more customization I allow when developing tools with Crystal.</p>
+
+<h2 id="de-centralized-shards">De-centralized shards</h2>
+
+<p>Maybe as I’m getting older, I’m getting more paranoid about where my dependencies (which run, for all intents and purposes, arbitrary code that gets deployed on my behalf) are fetched; but I can’t/won’t wait for a cabal to approve a new dependency. Being able to choose either a local file or any <code class="language-plaintext highlighter-rouge">git</code> provider gives me a bit more peace of mind.</p>
+
+<h2 id="the-logo-its-alive-its-moving-its-alive-its-alive">The logo… It’s alive, it’s moving, it’s alive, it’s alive!</h2>
+
+<p>The black logo in the <a href="https://crystal-lang.org/">Crystal’s home page</a> is interactive. You can click and spin it around.
+At first glance, one can brush off that fact, thinking it is superfluous and useless; but I would urge you to wander: Would a <em>bad language</em><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> such a polished home page, such well <a href="https://crystal-lang.org/reference/getting_started/">written tutorials</a>, such <a href="https://crystal-lang.org/community/">active community</a>? 🤔</p>
+
+<h2 id="where-to-now">Where to now?</h2>
+
+<p>If you are interested, you can keep learning Crystal with <a href="https://crystal-lang.org/reference/getting_started/">the book</a> and the <a href="https://play.crystal-lang.org/#/cr">online playground</a>. Have a look at the <a href="https://github.com/veelenga/awesome-crystal">awesome-crystal</a> compiled list of things, some might inspire you in your current or next project. <a href="https://crystal-lang.org/community/">Reach out</a>.</p>
+
+<hr />
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>reader’s interpretation of what a bad language might be. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</article>
+
+
+
+
+
+
+
+<div class="separator">
+  <img src="/assets/cat-0fe72554239fb5bc68cc3b08063d5fb3d3984c6381e560b01fa8d5e35ed5a68e4741595a4929859029f18386c321ac391d55cccf60a51f08dd3148d38b5a44b7.png">
+</div>
+
+
+  <h3 class="related-post-title">Related Posts</h3>
+  
+  
+  
+    
+    
+
+    
+
+    
+
+  
+    
+    
+
+    
+
+    
+
+  
+    
+    
+
+    
+
+    
+      
+      <div class="post ml2 related">
+        <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
+          <h4 class="post-title">Inspiraciones</h4>
+        </a>
+        <p class="post-summary">
+          ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
+          <span class="related-categories">
+            <a href="/categories#xpost">#xpost</a>
+          </span>
+        </p>
+      </div>
+      
+      
+    
+
+  
+    
+    
+
+    
+
+    
+      
+      <div class="post ml2 related">
+        <a href="/xpost/2020/12/03/haskell-para-mentes-imperativas/" class="post-link">
+          <h4 class="post-title">Haskell para mentes imperativas</h4>
+        </a>
+        <p class="post-summary">
+          En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.
+          <span class="related-categories">
+            <a href="/categories#xpost">#xpost</a>
+          </span>
+        </p>
+      </div>
+      
+      
+    
+
+  
+    
+    
+
+    
+
+    
+      
+      <div class="post ml2 related">
+        <a href="/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/" class="post-link">
+          <h4 class="post-title">koncierge Una librería para segmentar usuarios</h4>
+        </a>
+        <p class="post-summary">
+          La historia de una librería para evaluar variantes de tests AB, dado una definición de un experimento con un DSL parecido a Mongo y un contexto.
+          <span class="related-categories">
+            <a href="/categories#xpost">#xpost</a>
+          </span>
+        </p>
+      </div>
+      
+      
+        
+  
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme heavily inspired in <a href="http://johnotander.com">John Otander</a>' <a href="https://github.com/johno/pixyll">pixyll</a>.
+    </small>
+  </div>
+</footer>
+<!-- AnchorJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>
+
+</body>
+</html>

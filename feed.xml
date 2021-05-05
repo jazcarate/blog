@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-03T07:58:05+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin &quot;Flroius&quot; Azcarate’s personal blog</subtitle><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-05T13:15:37+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin &quot;Flroius&quot; Azcarate’s personal blog</subtitle><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
 
 &lt;p&gt;We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
 So what if we re-think our current software stack? And have &lt;strong&gt;humans evaluate other human’s code&lt;/strong&gt;.&lt;/p&gt;
@@ -223,7 +223,146 @@ We are working very hard to bootstrap &lt;code class=&quot;language-plaintext hi
       &lt;p&gt;“… a dependent type is a type whose definition depends on a value” – &lt;a href=&quot;https://en.wikipedia.org/wiki/Dependent_type&quot;&gt;Wikipedia :: Dependent type&lt;/a&gt; &lt;a href=&quot;#fnref:dependant_type&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="raving" /><summary type="html">We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of expression. And we like this! We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about. So what if we re-think our current software stack? And have humans evaluate other human’s code. carbn is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our agents.</summary></entry><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="raving" /><summary type="html">We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of expression. And we like this! We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about. So what if we re-think our current software stack? And have humans evaluate other human’s code. carbn is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our agents.</summary></entry><entry><title type="html">Discovering Crystal</title><link href="https://blog.florius.com.ar/xpost/2021/04/15/discoverying-crystal/" rel="alternate" type="text/html" title="Discovering Crystal" /><published>2021-04-15T00:00:00+00:00</published><updated>2021-04-15T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/04/15/discoverying-crystal</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/04/15/discoverying-crystal/">&lt;p&gt;&lt;em&gt;Original post can be found in the &lt;a href=&quot;https://apiumhub.com/tech-blog-barcelona/discovering-crystal-language/&quot;&gt;ApiumHub blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Another in the series. Check out other languages we’ve explored in the past at:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://apiumhub.com/tech-blog-barcelona/discovering-vue-3-features/&quot;&gt;Discovering Vue 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://apiumhub.com/tech-blog-barcelona/discovering-rust/&quot;&gt;Analyzing functionalities in Rust&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A bit of background about me before we begin our exploration of a new programming language.&lt;/p&gt;
+
+&lt;p&gt;I’ve been in love with programing languages for a couple of years now. I’m very interested in their semantics, the reasoning of why their designers chose to do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X&lt;/code&gt; over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Y&lt;/code&gt;, and why they outright discarded &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Z&lt;/code&gt;. I’ve done my fair share of DSLs in my tenure as a software developer for both fun and profit; so programming languages are the reasonable “step up” to be interested in.&lt;/p&gt;
+
+&lt;p&gt;As such I’m always in the lookout of up-and-coming languages.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-crystal&quot;&gt;Why Crystal?&lt;/h2&gt;
+
+&lt;p&gt;Long time ago, far far away I was working with Ruby on Rails on a project with other very skilled Ruby and Rails developers. As many others working with Ruby, we liked it’s syntax, it’s ease of use, it’s dependencies (gems) but had some issues with it. Every programming language does.&lt;/p&gt;
+
+&lt;p&gt;Honestly, performance was not my main driver to look to other programming languages, even though in many &lt;a href=&quot;https://github.com/kostya/benchmarks#readme&quot;&gt;benchmarks&lt;/a&gt; Crystal does excel.&lt;/p&gt;
+
+&lt;p&gt;I was more concerned with safety and documentation. Let me explain.&lt;/p&gt;
+
+&lt;h2 id=&quot;safety&quot;&gt;Safety&lt;/h2&gt;
+
+&lt;p&gt;Whilst programming in Ruby, I many times had an error where an object I thought was a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash&lt;/code&gt; was actually a block, or a string was in fact a number. Many times a test would just fail or panic, and it took a minute to look at the trace, maybe put a breakpoint. Pry open the execution. Realize there was a branch of the code that did not set a key in an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;options&lt;/code&gt; parameter that got passed along and I did not account for. Fix it and continue coding.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;undefined method ‘foo’ for nil:NilClass&lt;/code&gt; was particularly recurring in my development cycle.&lt;/p&gt;
+
+&lt;h2 id=&quot;documentation&quot;&gt;Documentation&lt;/h2&gt;
+
+&lt;p&gt;Here I’m not referring to the actual docs I can find in Ruby Doc but rather how much information can the IDE help me out with. I’m a big proponent of making tools to help development, but having to hydrate an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;options&lt;/code&gt; hash to send to a gem’s method and having to yield to look at the gem’s code to understand what values are even available, is a big reason why I enjoy typed programing languages so much.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FooConfiguration&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;biz&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;FooConfiguration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;…&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;At a glance (and with IDE support), one can deduce that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;foo&lt;/code&gt;’s options have a required &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bar&lt;/code&gt; string, and a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;biz&lt;/code&gt; that defaults to 3. Where as a similar code in Ruby could look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# …&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;enc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;encoding&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#Oh, so `bar` is a string. Gotcha!&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# ... &lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;biz&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enc&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# if `biz` is falsey, then `3`. Can I send a boolean? Oh, no, it `#.times` it, so it is a number. 🤕 &lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# ...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Both these pain points were addressed, interestingly enough, by the same approach: &lt;em&gt;Types&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In Crystal there is a very smart, very competent compiler that keeps track of the busy work of knowing what methods any reference might have, if it is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nil&lt;/code&gt; or what can and can’t be done to an object. This was a godsend.&lt;/p&gt;
+
+&lt;p&gt;As luck would have it, I was also in close contact with some very vociferous advocate of Crystal. You can imagine, with the tagline: &lt;em&gt;“Fast as C, Slick as Ruby”&lt;/em&gt;, I was hooked.&lt;/p&gt;
+
+&lt;p&gt;My breakout project, the moment I really “got” Crystal was when we needed some dashboard like solution. We realized we had built too many internal tools and no one place to cluster them all. For whatever reason we didn’t want some static lame webpage. We decided to roll out our own. Some YAML parsing, some macro goodness and a lot of type safety later we had it running. Adding apps was simple and a CI build made sure that all the things were correctly wired. It was a small project, probably way overengineered; but onboarding another Ruby developer was incredibly simple. That was a good selling point.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-crystal-now&quot;&gt;Why Crystal now?&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;That’s leading the subject, your honor!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently™ the nice people of Crystal announced &lt;a href=&quot;https://crystal-lang.org/2021/03/22/crystal-1.0-what-to-expect.html&quot;&gt;the release of Crystal 1.0&lt;/a&gt; - Production ready, stable and useful standard library all in a tight little bundle; so if it was ever the time to seriously look at Crystal; I would say today is the day.
+Other awesome features
+Type ergonomics&lt;/p&gt;
+
+&lt;p&gt;We talked about type safety, and some might have rolled your eyes expecting a very verbose way of writing the code; but let’s not forget one of the key drivers of Crystal is to have a similar syntax to Ruby. A dynamically typed language. So both:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;                                                                  	 
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;biz&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;foo&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bar&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;biz&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;bar&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;invoke_biz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;biz&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;invoke_biz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; foo&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;invoke_biz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; bar&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Is both valid Ruby and Crystal. You can try that out in your browser in &lt;a href=&quot;https://play.crystal-lang.org/#/r/apl0&quot;&gt;the crystal playground here!&lt;/a&gt; No type to be seen, thanks to the incredible type inference that comes with Crystal’s compiler. There is much cool things about it that I would need entire new blog posts to write, luckily &lt;a href=&quot;https://crystal-lang.org/reference/index.html&quot;&gt;Crystal’s book&lt;/a&gt; does a good job covering the basics: &lt;a href=&quot;https://crystal-lang.org/reference/syntax_and_semantics/type_inference.html&quot;&gt;Type inference&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;yaml--json--xml&quot;&gt;YAML / JSON / XML&lt;/h2&gt;
+
+&lt;p&gt;It’s amazing how useful it is to have such a robust parsing library already in the standard library, no need to deal with extraneous dependencies to read a configuration file, or write one out.&lt;/p&gt;
+
+&lt;div class=&quot;language-crystal highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;yaml&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bar&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;YAML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Serializable&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;biz&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Float64&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;YAML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Serializable&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s all the code needed to parse something like&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;hi!&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;biz&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3.2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The same holds for JSON and XML.
+I find it baffling how, when reading and writing configuration is so easy, much more customization I allow when developing tools with Crystal.&lt;/p&gt;
+
+&lt;h2 id=&quot;de-centralized-shards&quot;&gt;De-centralized shards&lt;/h2&gt;
+
+&lt;p&gt;Maybe as I’m getting older, I’m getting more paranoid about where my dependencies (which run, for all intents and purposes, arbitrary code that gets deployed on my behalf) are fetched; but I can’t/won’t wait for a cabal to approve a new dependency. Being able to choose either a local file or any &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; provider gives me a bit more peace of mind.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-logo-its-alive-its-moving-its-alive-its-alive&quot;&gt;The logo… It’s alive, it’s moving, it’s alive, it’s alive!&lt;/h2&gt;
+
+&lt;p&gt;The black logo in the &lt;a href=&quot;https://crystal-lang.org/&quot;&gt;Crystal’s home page&lt;/a&gt; is interactive. You can click and spin it around.
+At first glance, one can brush off that fact, thinking it is superfluous and useless; but I would urge you to wander: Would a &lt;em&gt;bad language&lt;/em&gt;&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; such a polished home page, such well &lt;a href=&quot;https://crystal-lang.org/reference/getting_started/&quot;&gt;written tutorials&lt;/a&gt;, such &lt;a href=&quot;https://crystal-lang.org/community/&quot;&gt;active community&lt;/a&gt;? 🤔&lt;/p&gt;
+
+&lt;h2 id=&quot;where-to-now&quot;&gt;Where to now?&lt;/h2&gt;
+
+&lt;p&gt;If you are interested, you can keep learning Crystal with &lt;a href=&quot;https://crystal-lang.org/reference/getting_started/&quot;&gt;the book&lt;/a&gt; and the &lt;a href=&quot;https://play.crystal-lang.org/#/cr&quot;&gt;online playground&lt;/a&gt;. Have a look at the &lt;a href=&quot;https://github.com/veelenga/awesome-crystal&quot;&gt;awesome-crystal&lt;/a&gt; compiled list of things, some might inspire you in your current or next project. &lt;a href=&quot;https://crystal-lang.org/community/&quot;&gt;Reach out&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;reader’s interpretation of what a bad language might be. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="xpost" /><summary type="html">Original post can be found in the ApiumHub blog.</summary></entry><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué /cazzo/ hacer&lt;/p&gt;
