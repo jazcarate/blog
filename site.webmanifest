@@ -1,16 +1,18 @@
 {
     "name": "Florius’ Blog",
     "short_name": "blog.florius.com.ar",
+    "start_url": "https://blog.florius.com.ar",
     "icons": [
         {
-            "src": "/assets/0d3bda-0020e3b748a8667e822bb2a0e8ec4c6bbd6d17abceb6b061d352da883112798a42072f5a50e407a85b68dbae0f22ad340ee0db5d7b149ddca286135f46091683.png",
+            "src": "/assets/0d3bda-52530a8ea1d80824522a81913c051399b930eafb87724347f1219f515dc77a4c0a171077471cb17eccb6a748f4e37789803e0f8a3ad60fdd352db62e3b1c35ad.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/a4418e-744043bef6e176dcda3f1b9b2ee2d79af0d3337ae5a8b69d7956dd42832e2d1dde79b37945963175921c68585cb528cb1ac18aca85e7c6c8eb53d6b70916f3ef.png",
+            "src": "/assets/a4418e-55f2f79a65a5b918f990f5e7431199f3da2462679141d6e3f4ea32d3dc66324d80856953bb2baa6bd0a0454725ddf25b5350b17d885d56f9a48886466b5a8796.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
     "theme_color": "#000000",
