@@ -2,11 +2,11 @@
 layout: post
 title: Haskell para mentes imperativas
 date: 2020-12-03
-canonical: https://dev.to/florius/haskell-para-mentes-imperativas-4n7k
+canonical_url: https://dev.to/florius/haskell-para-mentes-imperativas-4n7k
 summary: En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.
 ---
 
-_El post original se puede leer en mi [dev.to]({{ page.canonical }})._
+_El post original se puede leer en mi [dev.to]({{ page.canonical_url }})._
 
 Browseando YouTube encontré una playlist con un nombre muy interesante: “[Haskell for Imperative Programmers](https://www.youtube.com/watch?v=Vgu82wiiZ90&list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV)” en donde el autor Philipp Hagenlocher explica conceptos de Haskell en videos cortos, concisos, con varios ejemplos y hasta algunos ejercicios. Lo que me inspiró a pensar cómo podría aprender alguien que tiene raíces en un paradigma imperativo. Por suerte no tuve que usar mucho la imaginación, ya que yo comencé con lenguajes imperativos, y en mi trabajo utilizo mayoritariamente el paradigma de objetos.
 

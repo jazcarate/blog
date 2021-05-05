@@ -3,11 +3,11 @@ layout: post
 title: Limit the Problem Space!
 date: 2018-08-14
 summary: How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!
-canonical: https://blog.10pines.com/2018/08/14/limit-problem-space/
+canonical_url: https://blog.10pines.com/2018/08/14/limit-problem-space/
 tag: design
 ---
 
-_Original post can be found in the [10Pines blog]({{ page.canonical }})._
+_Original post can be found in the [10Pines blog]({{ page.canonical_url }})._
 
 ## Write less error-prone code.
 

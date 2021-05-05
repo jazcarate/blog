@@ -5,10 +5,10 @@ date: 2019-07-10
 summary: >-
     Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is.
     I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.
-canonical: https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/
+canonical_url: https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/
 ---
 
-_Original post can be found in the [10Pines blog]({{ page.canonical }})._
+_Original post can be found in the [10Pines blog]({{ page.canonical_url }})._
 
 Event Sourcing is a somewhat trending topic, but by no accounts a new one. Right now you can find a lot of stories on how to event Source in Rust, Kafka or PostgreSQL, but I've found a lack of high concept blog posts on what **is** event sourcing… or rather, I've found an overwhelming amount of supposedly event sourcing posts, all talking about a lot of different things (I’m looking at you CQRS).
 

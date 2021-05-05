@@ -1,7 +1,7 @@
 title: "Florius’ Blog"
 email: j@florius.com.ar
 description: >-
-  Joaquin "Flroius" Azcarate’s personal blog
+  Joaquin 'Florius' Azcarate’s personal blog
 baseurl: ""
 url: "https://blog.florius.com.ar"
 
@@ -11,6 +11,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+
+twitter:
+  username: FloriusWasTaken
+author: florius
+seo_paginator_message: "%<current>s / %<total>s | "
 
 show_social_icons: true
 animated: true

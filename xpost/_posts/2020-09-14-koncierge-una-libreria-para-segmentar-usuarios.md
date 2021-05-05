@@ -2,12 +2,12 @@
 layout: post
 title: koncierge Una librería para segmentar usuarios 
 date: 2020-09-14
-canonical: https://dev.to/florius/koncierge-una-libreria-para-segmentar-usuarios-fjp
+canonical_url: https://dev.to/florius/koncierge-una-libreria-para-segmentar-usuarios-fjp
 summary: La historia de una librería para evaluar variantes de tests AB, dado una definición de un experimento con un DSL parecido a Mongo y un contexto.
 tag: show-and-tell
 ---
 
-_El post original se puede leer en mi [dev.to]({{ page.canonical }})._
+_El post original se puede leer en mi [dev.to]({{ page.canonical_url }})._
 
 ## Trasfondo
 

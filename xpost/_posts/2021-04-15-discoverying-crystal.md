@@ -2,10 +2,10 @@
 layout: post
 title: Discovering Crystal
 date: 2021-04-15
-canonical: https://apiumhub.com/tech-blog-barcelona/discovering-crystal-language/
+canonical_url: https://apiumhub.com/tech-blog-barcelona/discovering-crystal-language/
 ---
 
-_Original post can be found in the [ApiumHub blog]({{ page.canonical }})._
+_Original post can be found in the [ApiumHub blog]({{ page.canonical_url }})._
 
 Another in the series. Check out other languages we’ve explored in the past at:
 
