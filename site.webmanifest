@@ -4,6 +4,7 @@ layout: null
 {
     "name": "Florius’ Blog",
     "short_name": "blog.florius.com.ar",
+    "start_url": "https://blog.florius.com.ar",
     "icons": [
         {
             "src": "{% asset favicon.png @path magick:resize='192x192' %}",
@@ -13,7 +14,8 @@ layout: null
         {
             "src": "{% asset favicon.png @path magick:resize='512x512' %}",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ],
     "theme_color": "#000000",
