@@ -35,7 +35,7 @@ linkedin_username: joaquin-azcarate
 devto_username: florius
 
 assets:
-   plugins:
+  plugins:
     img: { optim: {}}
 
 exclude:
