@@ -3,6 +3,10 @@ layout: post
 title: Desire Driven Development
 date: 2021-05-12 20:45
 categories: rambling coding
+excerpt: >-
+    Long have I heard and reaped the benefits of Test Driven Development.
+    But I'm starting to sense that much of the material written and explained about TDD is by fanatics.
+    In this post I'll explore my own take on TDD, and the journey &rarr; Desire Driven Development.
 ---
 
 > **Desire** _verb [ T not continuous ] /dɪˈzaɪər/_
@@ -12,7 +16,7 @@ categories: rambling coding
 > — [Cambridge dictionary](https://dictionary.cambridge.org/dictionary/english/desire)
 
 Long have I heard and reaped the benefits of TDD (_Test Driven Development_).
-But I'm starting to see that much of the material written and explained about TDD is by fanatics.
+But I'm starting to sense that much of the material written and explained about TDD is by fanatics.
 Don't get me wrong. I see the value when learning a new tool to _overcompensate_.
 If you have never written a test before coding, then I'm all in for trying for a month or two to **always** write a test before, write the least amount of code, and iterate.
 
@@ -74,6 +78,7 @@ These all are great characteristics to have for DDD.
 
 ## Closing thoughts
 
+The more I think about it; the more I'm convinced that DDD is less about **D**evelopment, and more about **D**esign. SO I might need to change the title at some point. But for the time being, I'll try to piggy back on TDD.
 Maybe DDD is not for everyone or every use case, but it is how I usually code 😺.
 
 ---
