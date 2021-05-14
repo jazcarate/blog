@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-14T10:15:30+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">Desire Driven Development</title><link href="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/" rel="alternate" type="text/html" title="Desire Driven Development" /><published>2021-05-12T20:45:00+00:00</published><updated>2021-05-12T20:45:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-14T10:25:38+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">Desire Driven Development</title><link href="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/" rel="alternate" type="text/html" title="Desire Driven Development" /><published>2021-05-12T20:45:00+00:00</published><updated>2021-05-12T20:45:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Desire&lt;/strong&gt; &lt;em&gt;verb [ T not continuous ] /dɪˈzaɪər/&lt;/em&gt;&lt;/p&gt;
 
   &lt;p&gt;to want something, especially strongly.&lt;/p&gt;
@@ -7,7 +7,7 @@
 &lt;/blockquote&gt;
 
 &lt;p&gt;Long have I heard and reaped the benefits of TDD (&lt;em&gt;Test Driven Development&lt;/em&gt;).
-But I’m starting to see that much of the material written and explained about TDD is by fanatics.
+But I’m starting to sense that much of the material written and explained about TDD is by fanatics.
 Don’t get me wrong. I see the value when learning a new tool to &lt;em&gt;overcompensate&lt;/em&gt;.
 If you have never written a test before coding, then I’m all in for trying for a month or two to &lt;strong&gt;always&lt;/strong&gt; write a test before, write the least amount of code, and iterate.&lt;/p&gt;
 
@@ -77,7 +77,8 @@ I like languages that allow me to express these DSL with little to no extra synt
 
 &lt;h2 id=&quot;closing-thoughts&quot;&gt;Closing thoughts&lt;/h2&gt;
 
-&lt;p&gt;Maybe DDD is not for everyone or every use case, but it is how I usually code 😺.&lt;/p&gt;
+&lt;p&gt;The more I think about it; the more I’m convinced that DDD is less about &lt;strong&gt;D&lt;/strong&gt;evelopment, and more about &lt;strong&gt;D&lt;/strong&gt;esign. SO I might need to change the title at some point. But for the time being, I’ll try to piggy back on TDD.
+Maybe DDD is not for everyone or every use case, but it is how I usually code 😺.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
@@ -119,7 +120,7 @@ I like languages that allow me to express these DSL with little to no extra synt
       &lt;p&gt;Almost verbatim &lt;a href=&quot;https://hackage.haskell.org/package/base-4.15.0.0/docs/Prelude.html#v:undefined&quot;&gt;Haskell’s Prelude &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;undefined&lt;/code&gt; docs&lt;/a&gt; &lt;a href=&quot;#fnref:undefined&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="rambling" /><category term="coding" /><summary type="html">Desire verb [ T not continuous ] /dɪˈzaɪər/ to want something, especially strongly. — Cambridge dictionary</summary></entry><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="rambling" /><category term="coding" /><summary type="html">Long have I heard and reaped the benefits of Test Driven Development. But I'm starting to sense that much of the material written and explained about TDD is by fanatics. In this post I'll explore my own take on TDD, and the journey &amp;rarr; Desire Driven Development.</summary></entry><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
 
 &lt;p&gt;We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
 So what if we re-think our current software stack? And have &lt;strong&gt;humans evaluate other human’s code&lt;/strong&gt;.&lt;/p&gt;
