@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-13T18:26:58+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-14T10:15:30+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">Desire Driven Development</title><link href="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/" rel="alternate" type="text/html" title="Desire Driven Development" /><published>2021-05-12T20:45:00+00:00</published><updated>2021-05-12T20:45:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Desire&lt;/strong&gt; &lt;em&gt;verb [ T not continuous ] /dɪˈzaɪər/&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;to want something, especially strongly.&lt;/p&gt;
+
+  &lt;p&gt;— &lt;a href=&quot;https://dictionary.cambridge.org/dictionary/english/desire&quot;&gt;Cambridge dictionary&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Long have I heard and reaped the benefits of TDD (&lt;em&gt;Test Driven Development&lt;/em&gt;).
+But I’m starting to see that much of the material written and explained about TDD is by fanatics.
+Don’t get me wrong. I see the value when learning a new tool to &lt;em&gt;overcompensate&lt;/em&gt;.
+If you have never written a test before coding, then I’m all in for trying for a month or two to &lt;strong&gt;always&lt;/strong&gt; write a test before, write the least amount of code, and iterate.&lt;/p&gt;
+
+&lt;p&gt;As with most tools, the implementation is as important as to knowing when to use it, and when not to&lt;sup id=&quot;fnref:hammers&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:hammers&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;I like the analogy of this learning as an infection. It may be because I’m writing this amid a pandemic, or that the experience was explained to me as being “test-infected”. But either way, I think that &lt;strong&gt;TDD is a bacteria&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Not all bacteria are bad. Some are cute and cuddly&lt;sup id=&quot;fnref:acidophilus&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:acidophilus&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and helps in our digestion. But some are mean and make out belly ache. In order to protect yourself, you need to build up an immunity. And there are, broadly speaking, two approaches:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The risky way is to contract the infection. Set out to TDD &lt;strong&gt;all the things&lt;/strong&gt; for a while. Don’t question it, just do it.&lt;/li&gt;
+  &lt;li&gt;The hard way is to develop and apply a vaccine. Analyze when to apply the technique; how to simplify a problem or a part of the problem to attack it with TDD. This is &lt;strong&gt;difficult&lt;/strong&gt; to do right, but you can work at it little by little until you develop a potent response.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You &lt;strong&gt;can&lt;/strong&gt; have too much of a good thing.&lt;/p&gt;
+
+&lt;p&gt;I’ve come to terms with the idea that I no longer do TDD, but my take of it: &lt;strong&gt;Desire Driven Development&lt;/strong&gt;.
+When discussing this blog entry, many people did agree that they also find a middle ground between strict TDD and testing&lt;sup id=&quot;fnref:testing&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:testing&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; code.&lt;/p&gt;
+
+&lt;h2 id=&quot;desire-driven-development-by-example&quot;&gt;Desire-Driven Development by Example&lt;/h2&gt;
+
+&lt;p&gt;If I want to become a famous author, I need to distill the idea down to a few, simple, easy to comprehend steps. Bonus points if they form an acronym.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start with your &lt;span style=&quot;font-size: 1.3em&quot;&gt;S&lt;/span&gt;cratchpad. This can be a new test suite. extending an existing one. If your language/technology allows for an interactive workspace or REPL, those too can work. Anywhere where you can code, and it can eventually be run.&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;font-size: 1.3em&quot;&gt;A&lt;/span&gt;ssume that all the code is done already. All features implemented. No bugs. Well-designed, neat, and functional.&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;font-size: 1.3em&quot;&gt;W&lt;/span&gt;rite down the acceptance criteria and what the expected outcome should be. Remember, all the classes, methods, functions that you want &lt;em&gt;exist&lt;/em&gt; already, and work exactly as you expect.&lt;/li&gt;
+  &lt;li&gt;&lt;span style=&quot;font-size: 1.3em&quot;&gt;F&lt;/span&gt;ollow down the compile errors, missing methods, classes, runtime checks, et al. until your scratchpad does indeed work as you intended.
+    &lt;ul&gt;
+      &lt;li&gt;It might come the time where you’ll need to update the criteria written in step 3. You are allowed to do so &lt;strong&gt;but&lt;/strong&gt; you need to first think hard about the change.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(unchanged&lt;sup id=&quot;fnref:beck&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:beck&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;)&lt;/em&gt; &lt;span style=&quot;font-size: 1.3em&quot;&gt;R&lt;/span&gt;efactor as needed.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;sawfr&quot;&gt;S.A.W.F.R.&lt;/h3&gt;
+
+&lt;p&gt;The linchpin of this technique is that I usually want to write and read code in the same way.
+There is no feasible way that I can know what other people will understand when, in the future, they reason about my code. But I am constant&lt;sup id=&quot;fnref:theseus&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:theseus&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;. Then I should strive to produce code that astonished me the least&lt;sup id=&quot;fnref:POLA&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:POLA&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. Hopefully, like minded individuals will be equally un-astonished.&lt;/p&gt;
+
+&lt;p&gt;And bare in mind, this original code in step 3 has no concept of the inner workings, the details, the implementation. Pure and unadulterated issue-resolving code.&lt;/p&gt;
+
+&lt;p&gt;If I gave you my 5 letter acronym&lt;sup id=&quot;fnref:acronym&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:acronym&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;, I can top it of with a 5 words summary:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;TDD, but lightweight&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;the-same-but-different-too&quot;&gt;The same, but different too&lt;/h2&gt;
+
+&lt;p&gt;The major distinction between TDD and Desire Driven Development is that the latter focuses on the &lt;em&gt;outer most&lt;/em&gt; implementation. The technique spends a lot of time thinking, contemplating, and in awe of what the final implementation will feel like.
+Anything that is needed to make step 3 possible, I don’t care about testing, or developing. I’ll go so far as to say, I would like to have the most freedom of changing it at a whim. Writing tests for this inner layer makes change harder.&lt;/p&gt;
+
+&lt;h2 id=&quot;hairy-step-4&quot;&gt;Hairy step 4.&lt;/h2&gt;
+
+&lt;p&gt;It might come a time where I have a complicated piece of logic that I wished was already there. Then I usually &lt;em&gt;Shahrazad&lt;/em&gt;&lt;sup id=&quot;fnref:shahrazad&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:shahrazad&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; and DDD again from that point onwards. But this is a conscious decision I make. I don’t zealously write tests for each intermediate abstraction.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, I need to change the beautiful code written in step 3. That is because my squishy human brain&lt;sup id=&quot;fnref:cognitive_dissonance&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:cognitive_dissonance&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; can cope with the inherent vagueness of my desires, without considering the minutia required for it to be codable, but more often than not; when I realize that additional contextual information is needed (like an extra parameter; or a fatter way of building the environment), I look back at my original assumption and try to make that the default behavior, with as minimal code change to the original desire.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-water-shapes-the-rock-and-the-rock-shapes-the-water&quot;&gt;The water shapes the rock, and the rock shapes the water&lt;/h2&gt;
+
+&lt;p&gt;Whilst writing this, I realized that I, personally, am a big fan of writing my custom DSL&lt;sup id=&quot;fnref:DSL&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:DSL&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;s.
+I like languages that allow me to express these DSL with little to no extra syntax and I gravitate to statically typed languages with good inference and tooling.&lt;/p&gt;
+
+&lt;p&gt;Bonus points when the language’s bottom&lt;sup id=&quot;fnref:perp&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:perp&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; helps the compiler insert error messages which are more appropriate to the context in which it appears&lt;sup id=&quot;fnref:undefined&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:undefined&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt;, or in runtime when &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;throw Error()&lt;/code&gt; caries with it the stack trace.&lt;/p&gt;
+
+&lt;p&gt;These all are great characteristics to have for DDD.&lt;/p&gt;
+
+&lt;h2 id=&quot;closing-thoughts&quot;&gt;Closing thoughts&lt;/h2&gt;
+
+&lt;p&gt;Maybe DDD is not for everyone or every use case, but it is how I usually code 😺.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:hammers&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;“If the only tool you have is a hammer, to treat everything as if it were a nail.” — &lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_the_instrument&quot;&gt;Wikipedia&lt;/a&gt; &lt;a href=&quot;#fnref:hammers&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:acidophilus&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;I’m not affiliated with Giant Microbes, but &lt;a href=&quot;https://www.giantmicrobes.com/us/products/acidophilus.html&quot;&gt;this plush&lt;/a&gt; just too cute to pass up. &lt;a href=&quot;#fnref:acidophilus&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:testing&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;I don’t think that putting “testing” and “TDD” at the two ends of the spectrum of writing code is a newfangled idea. &lt;a href=&quot;#fnref:testing&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:beck&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;em&gt;“““inspired”””&lt;/em&gt; by Kent Beck’s Test-Driven Development by Example step 5: Refactor as needed. &lt;a href=&quot;#fnref:beck&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:theseus&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;The Ship of Theseus is a thought experiment that raises the question of whether an object that has had all of its components replaced remains fundamentally the same object — (Wikipedia)[https://en.wikipedia.org/wiki/Ship_of_Theseus]. I reckon for this particular aspect of my code reasoning abilities: I’ll always be the same, or more knowledgeable. &lt;a href=&quot;#fnref:theseus&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:POLA&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Principle_of_least_astonishment&quot;&gt;Principle of least astonishment&lt;/a&gt; &lt;a href=&quot;#fnref:POLA&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:acronym&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Yes. It is an &lt;a href=&quot;https://en.wikipedia.org/wiki/Acronym&quot;&gt;acronym&lt;/a&gt;. It should be pronounced as a word. I won’t have another /gɪf/ vs /dʒɪf/ pronunciation battle. So I’m deciding that the pronunciation of SAWFR is: /bɑb/ &lt;a href=&quot;#fnref:acronym&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:shahrazad&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;There is a card in Magic: The Gathering™ called &lt;a href=&quot;https://gatherer.wizards.com/pages/card/details.aspx?name=Shahrazad&quot;&gt;Shahrazad&lt;/a&gt; that represents a function call, with its stack and return point. It states: “Players play a Magic subgame, using their libraries as their decks. Each player who doesn’t win the subgame loses half their life, rounded up.” &lt;a href=&quot;#fnref:shahrazad&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:cognitive_dissonance&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Cognitive dissonance occurs when a person holds contradictory ideas. — (Wikipedia)[https://en.wikipedia.org/wiki/Cognitive_dissonance] &lt;a href=&quot;#fnref:cognitive_dissonance&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:DSL&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Domain-specific_language&quot;&gt;Domain-specific language&lt;/a&gt; &lt;a href=&quot;#fnref:DSL&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:perp&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Bottom (⊥) refers to a computation that never completes successfully. &lt;a href=&quot;#fnref:perp&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:undefined&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Almost verbatim &lt;a href=&quot;https://hackage.haskell.org/package/base-4.15.0.0/docs/Prelude.html#v:undefined&quot;&gt;Haskell’s Prelude &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;undefined&lt;/code&gt; docs&lt;/a&gt; &lt;a href=&quot;#fnref:undefined&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="rambling" /><category term="coding" /><summary type="html">Desire verb [ T not continuous ] /dɪˈzaɪər/ to want something, especially strongly. — Cambridge dictionary</summary></entry><entry><title type="html">carbn</title><link href="https://blog.florius.com.ar/raving/2021/05/01/carbn/" rel="alternate" type="text/html" title="carbn" /><published>2021-05-01T06:39:00+00:00</published><updated>2021-05-01T06:39:00+00:00</updated><id>https://blog.florius.com.ar/raving/2021/05/01/carbn</id><content type="html" xml:base="https://blog.florius.com.ar/raving/2021/05/01/carbn/">&lt;p&gt;We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of &lt;strong&gt;expression&lt;/strong&gt;. And we like this!&lt;/p&gt;
 
 &lt;p&gt;We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
 So what if we re-think our current software stack? And have &lt;strong&gt;humans evaluate other human’s code&lt;/strong&gt;.&lt;/p&gt;
