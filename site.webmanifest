@@ -4,12 +4,12 @@
     "start_url": "https://blog.florius.com.ar",
     "icons": [
         {
-            "src": "/assets/0d3bda-15ee3e866ed5fc8393af52e6e578a92893c9f1a730749eef12130de2d039bf672048a37a3c79743b21366cfad1be9c4dc381f702db862fbdd15702476958a473.png",
+            "src": "/assets/0d3bda-24c4d65d395f147e0d54b90bfbc19233b230440fc39f3595230afcdaaedcbd3a41f26875982b2097c27297c2775a2786f8aa642f98f9285ba1f4526221c4a974.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/a4418e-9fe81f025c9c429e83d72fb4d2b7b9954e147938441071ab9897a019a5cbf28ddb04c39e7294430f6a9e6e0f199f419baa4404c55cbb5239bed7c1b2f1df0719.png",
+            "src": "/assets/a4418e-58f3fdf9e4dd2528144d037010b3bfbb86bdb53d0f0abaa0361d336e32b795773ecc8610245ab8190d79c2754282b92d1c4df410c11ec357fc97a15ff3e06d85.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"

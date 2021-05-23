@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-22T19:27:41+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">Desire Driven Development</title><link href="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/" rel="alternate" type="text/html" title="Desire Driven Development" /><published>2021-05-12T20:45:00+00:00</published><updated>2021-05-12T20:45:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-23T15:26:52+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">Desire Driven Development</title><link href="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/" rel="alternate" type="text/html" title="Desire Driven Development" /><published>2021-05-12T20:45:00+00:00</published><updated>2021-05-12T20:45:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Desire&lt;/strong&gt; &lt;em&gt;verb [ T not continuous ] /dɪˈzaɪər/&lt;/em&gt;&lt;/p&gt;
 
   &lt;p&gt;to want something, especially strongly.&lt;/p&gt;
@@ -484,7 +484,347 @@ At first glance, one can brush off that fact, thinking it is superfluous and use
       &lt;p&gt;reader’s interpretation of what a bad language might be. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="xpost" /><summary type="html">Original post can be found in the ApiumHub blog.</summary></entry><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="xpost" /><summary type="html">Original post can be found in the ApiumHub blog.</summary></entry><entry><title type="html">Deckchecks, Heuristics, and Decision Trees</title><link href="https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/" rel="alternate" type="text/html" title="Deckchecks, Heuristics, and Decision Trees" /><published>2021-04-11T15:45:00+00:00</published><updated>2021-04-11T15:45:00+00:00</updated><id>https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees</id><content type="html" xml:base="https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/">&lt;p&gt;Recently I had the pleasure of attending an online conference&lt;sup id=&quot;fnref:covid&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:covid&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;: &lt;strong&gt;Practical Deck Checks with Oli Bird&lt;/strong&gt; where they talked about the specifics of when, why we do deckchecks&lt;sup id=&quot;fnref:deckchecks&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:deckchecks&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, and how. The latter point sparked some ideation.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;How do we chose the strategy by which we deck check?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Are we consciously choosing the best strategy for each deck check? Are we leveraging all the tools at our disposal to make such a decision?&lt;/p&gt;
+
+&lt;p&gt;In this post, I want to explore such questions; as at first glance, the answer seems to be: &lt;strong&gt;no&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;tldr&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;Play around with the &lt;strong&gt;&lt;a href=&quot;https://jazcarate.github.io/deck-partitioner/&quot;&gt;Deck Partitioner&lt;/a&gt;&lt;/strong&gt; tool. Paste a deck. See the cost of each partition strategy and see if your heuristic matches my hypothesis of costs.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-are-deck-checks&quot;&gt;What &lt;em&gt;are&lt;/em&gt; deck checks&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Feel free to skip this section if you are already versed in what they are&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In Magic: The Gathering™’s tournaments, players are expected not to cheat.
+And there are people (called &lt;em&gt;judges&lt;/em&gt;) that train to, in addition to other more noble and customer-caring actions, prevent that from happening.
+One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament or section of the tournament, and routinely checked that the cards they are playing with are those that they settled from the start.&lt;/p&gt;
+
+&lt;p&gt;Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques.
+In this blog post, I would like to explore their inner workings, propose a hypothesis on why they might work in some situations but not others, consider unexplored alternatives, and hopefully build a heuristic on what method is better for each circumstance.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Side note: It feels so weird writing about a deck check amidst a pandemic; when the last one I did was well over a year ago, and who knows how we’ll perform them in the future. The mere thought of manipulating other human being’s cards is bizarre. Time will tell…&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;techniques&quot;&gt;Techniques&lt;/h2&gt;
+&lt;p&gt;I’ll briefly go through two ways I know judges do deck checks.
+I highly recommend watching the video from Federico Donner where he goes in-depth with a visual aide on many other techniques &lt;em&gt;(even though it is in Spanish, it has subtitles)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;
+    &lt;iframe title=&quot;YouTube video - Técnicas de deckcheck&quot; src=&quot;https://www.youtube.com/embed/EovGP2dB6QU&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;1-type-separation&quot;&gt;1. Type separation&lt;/h3&gt;
+&lt;p&gt;Split the deck by dividing it into two piles: lands and non-lands.
+Then proceed to split each pile by card name.
+Afterward go through the decklist in order and verify the quantity is correct.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-038e786785002e87de7d23fdf928b8d7a6628af658888e73cbc7c0f8bfb1fb0349d3188e41ee8cceea85686c59856644fd6b264d3fe3c5856e423008aeb48028.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-mana-value-separation&quot;&gt;2. Mana value&lt;sup id=&quot;fnref:mana_value&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:mana_value&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; separation&lt;/h3&gt;
+&lt;p&gt;Split the deck into piles, categorized by mana value.
+Then go through the decklist and retrieve the cards with the required quantity from the appropriate pile.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;by mana value&quot; src=&quot;/assets/52e2be-fc2c7db7ec92778d54f420f832e3de4eb183d2ae97574b3e012274c6c9e2c4e15f005466cdd355dfbbfbfd6b277844d30d4c0bb4c81845278a1a8420b22e5abe.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This got me thinking, to perform a deck check, there are two &lt;strong&gt;critical&lt;/strong&gt; pieces of information that we need:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A sorted deck&lt;/li&gt;
+  &lt;li&gt;and a decklist.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Technique number 1 starts with a sorted deck and then uses the list. Technique number 2 starts to sort a deck, and then uses the decklist to make the remaining sorting easier.
+Thus I wondered: Is there something we can do with just the list? Considering we have unlimited access to a list, and &lt;em&gt;(baring the opportunity cost of not being on the floor)&lt;/em&gt; looking at the list has no impact on the timings of a tournament.&lt;/p&gt;
+
+&lt;p&gt;It then dawned upon me that I know some judges that do a different permutation when checking &lt;a href=&quot;https://www.mtggoldfish.com/archetype/tron&quot;&gt;Modern’s Tron&lt;/a&gt; than &lt;a href=&quot;https://www.mtggoldfish.com/archetype/burn-a2dd1132-5301-4882-907a-7b668da3b58a&quot;&gt;Modern’s Burn&lt;/a&gt; for example.&lt;/p&gt;
+
+&lt;p&gt;Their heuristics tell them that separating Burn by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; is less efficient than separating by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mana value&lt;/code&gt;. And separating by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;color&lt;/code&gt; is all but useless.
+Most lists run four copies of each card, and the mana values are very tightly packed. Whereas Tron benefits greatly by doing the first split by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lands / non-lands&lt;/code&gt;, and then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;color&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This got me thinking, it would be great to devise a mathematical model of deck sorting to figure out what the best approach to separating a deck is. I feel we &lt;strong&gt;under-use&lt;/strong&gt; the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective.&lt;/p&gt;
+
+&lt;h2 id=&quot;defining-the-problem-statement&quot;&gt;Defining the problem statement&lt;/h2&gt;
+&lt;p&gt;I want to find a mathematical formula to aid me in minimizing the time of performing a deck check.
+As I’m not a good mathematician. But I know a thing or two about &lt;em&gt;coding&lt;/em&gt;. I reckon I can compute for a deck every single permutation of partition strategy; and with a way of putting a numeric value on the &lt;em&gt;cost&lt;/em&gt; of each arrangement, select the optimal.&lt;/p&gt;
+
+&lt;p&gt;To do so, we’ll have to establish some common names and operations, and abstract away some details like “how much desk space does each technique use up”, or how to deal with a sideboard-ed deck.&lt;/p&gt;
+
+&lt;p&gt;Given those abstractions, we can reframe the problem of checking a deck, to one much closer to ~botanics~programming: Constructing a tree.
+In my model, the process of deck checking is equivalent to building a tree, where each node holds an intermediate pile of cards that have been split by some criteria. And the leaves are piles of same-name cards ready to be cross-checked with a decklist.&lt;/p&gt;
+
+&lt;p&gt;To construct the procedure tree you start with a &lt;strong&gt;node&lt;/strong&gt; with all the cards. Then for each category you want to &lt;strong&gt;classify&lt;/strong&gt;&lt;sup id=&quot;fnref:partition&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:partition&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; them, you split into &lt;strong&gt;sub-nodes&lt;/strong&gt; with the cards that match that criteria. This way you &lt;em&gt;learn&lt;/em&gt; more about each pile.&lt;/p&gt;
+
+&lt;p&gt;This test may be binary (e.g.: land vs non-land) or not (e.g.: by mana value, or by color).
+This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt; by name. Further sub-classifications are pointless, as cards with the same name will &lt;em&gt;(by definition)&lt;/em&gt; have the same attributes.&lt;/p&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+&lt;p&gt;We’ll be using just a deck of 16 cards to make things concise:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4 Primeval Titan
+2 Azusa, Lost but Seeking
+4 Amulet of Vigor
+2 Valakut, the Molten Pinnacle
+4 Simic Growth Chamber
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Remember you can &lt;em&gt;play along&lt;/em&gt; in the &lt;a href=&quot;https://jazcarate.github.io/deck-partitioner/&quot;&gt;Deck Partitioner&lt;/a&gt; web.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-type-separation-tree&quot;&gt;1. Type separation tree&lt;/h3&gt;
+&lt;p&gt;Start with the whole deck.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-8aed2efa24b7d5fc1d22c2c52494e500e5f63c1c5cfebc5e38e3c68fd387d7ef1c7e4b05b2938357b4c01ff449249fca5cf439885c19442853bbb66cc308acf0.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll represent this deck, unclassified, like so:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+└──a card
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We know nothing about these cards yet. So we proceed by the deck into a lands and a non-lands pile.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-038e786785002e87de7d23fdf928b8d7a6628af658888e73cbc7c0f8bfb1fb0349d3188e41ee8cceea85686c59856644fd6b264d3fe3c5856e423008aeb48028.png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──Non-Land
+│  │  Non-Land
+│  │  Non-Land
+│  │  Non-Land
+│  │  Non-Land
+│  │  Non-Land
+│  │  Non-Land
+│  │  Non-Land
+│  │  Non-Land
+│  └──Non-Land
+│  
+│  ┌──Land
+│  │  Land
+│  │  Land
+│  │  Land
+│  │  Land
+└──└──Land
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We now know more about each pile, but not enough to verify the deck. So we continue to split each pile by card name.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-0df9776ac0bbc430583dd3816bc8624e413d06c5245849c955f4e8c03162706ec4b3bfb9bcf2553865395a428ac482fef2bcaf8b7352bd402f4a69bb3efaa5aa.png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──┌──Non-Land   Primeval Titan
+│  │  │  Non-Land   Primeval Titan
+│  │  │  Non-Land   Primeval Titan
+│  │  └──Non-Land   Primeval Titan
+│  │  
+│  │  ┌──Non-Land   Azusa, Lost but Seeking
+│  │  └──Non-Land   Azusa, Lost but Seeking
+│  │  
+│  │  ┌──Non-Land   Amulet of Vigor
+│  │  │  Non-Land   Amulet of Vigor
+│  │  │  Non-Land   Amulet of Vigor
+│  └──└──Non-Land   Amulet of Vigor
+│  
+│  ┌──┌──Land       Valakut, the Molten Pinnacle
+│  │  └──Land       Valakut, the Molten Pinnacle
+│  │  
+│  │  ┌──Land       Simic Growth Chamber
+│  │  │  Land       Simic Growth Chamber
+│  │  │  Land       Simic Growth Chamber
+└──└──└──Land       Simic Growth Chamber
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-type-separation-tree&quot;&gt;2. Type separation tree&lt;/h3&gt;
+&lt;p&gt;Again start with the whole deck.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-8aed2efa24b7d5fc1d22c2c52494e500e5f63c1c5cfebc5e38e3c68fd387d7ef1c7e4b05b2938357b4c01ff449249fca5cf439885c19442853bbb66cc308acf0.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And once more, the same text representation, with no information whatsoever:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+│  a card
+└──a card
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Afterward, split each pile by type.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;by type&quot; src=&quot;/assets/21ad13-a79cc2169577014d255647a5e2233472ba649bc8bcd00e600c291a1b1173e6c187c47a2a34630dbd31928c906593ede34937a3eaa9f9b5e568323bc79c57c43f.png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──Creature
+│  │  Creature
+│  │  Creature
+│  │  Creature
+│  │  Creature
+│  └──Creature
+│  
+│  ┌──Artifact
+│  │  Artifact
+│  │  Artifact
+│  └──Artifact
+│  
+│  ┌──Land
+│  │  Land
+│  │  Land
+│  │  Land
+│  │  Land
+└──└──Land
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And finally each by card name.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-0df9776ac0bbc430583dd3816bc8624e413d06c5245849c955f4e8c03162706ec4b3bfb9bcf2553865395a428ac482fef2bcaf8b7352bd402f4a69bb3efaa5aa.png&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──┌──Creature   Primeval Titan
+│  │  │  Creature   Primeval Titan
+│  │  │  Creature   Primeval Titan
+│  │  └──Creature   Primeval Titan
+│  │ 
+│  │  ┌──Creature   Azusa, Lost but Seeking
+│  └──└──Creature   Azusa, Lost but Seeking
+│   
+│  ┌──┌──Artifact   Amulet of Vigor
+│  │  │  Artifact   Amulet of Vigor
+│  │  │  Artifact   Amulet of Vigor
+│  └──└──Artifact   Amulet of Vigor
+│   
+│  ┌──┌──Land       Valakut, the Molten Pinnacle
+│  │  └──Land       Valakut, the Molten Pinnacle
+│  │   
+│  │  ┌──Land       Simic Growth Chamber
+│  │  │  Land       Simic Growth Chamber
+│  │  │  Land       Simic Growth Chamber
+└──└──└──Land       Simic Growth Chamber
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The result is, as to be expected, the same.&lt;/p&gt;
+
+&lt;h2 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h2&gt;
+&lt;p&gt;Now that we know how to construct any strategy of partitions, we need to decide which is &lt;strong&gt;the best&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;In my model, I pose that the cost of each classification &lt;strong&gt;is&lt;/strong&gt; associated with the number of &lt;em&gt;piles&lt;/em&gt;&lt;sup id=&quot;fnref:partition:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:partition&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; generated by the test.
+It is faster to decide&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;land&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;non-land&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;than&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mana value=0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mana value=1&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mana value=2&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not only there is much more brainpower needed to parse a card into these categories, but the physical act of placing the card in the appropriate pile is costly. This action of deciding each pile is then multiplied for how many cards need to be sorted. It does not take the same time to sort 10 cards as 100. But I reckon that the cost is linearly proportional, as it is just doing the same classification over and over again.&lt;/p&gt;
+
+&lt;p&gt;So to go from&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card  &amp;gt;&amp;gt;  ┌──┌──Non-Land
+│  a card  &amp;gt;&amp;gt;  │  │  Non-Land
+│  a card  &amp;gt;&amp;gt;  │  │  Non-Land
+│  a card  &amp;gt;&amp;gt;  │  │  Non-Land
+│  a card  &amp;gt;&amp;gt;  │  │  Non-Land
+│  a card  &amp;gt;&amp;gt;  │  │  Non-Land
+│  a card  &amp;gt;&amp;gt;  │  │  Non-Land
+│  a card  &amp;gt;&amp;gt;  │  │  Non-Land
+│  a card  &amp;gt;&amp;gt;  │  │  Non-Land
+│  a card  &amp;gt;&amp;gt;  │  └──Non-Land
+│              │  
+│  a card  &amp;gt;&amp;gt;  │  ┌──Land
+│  a card  &amp;gt;&amp;gt;  │  │  Land
+│  a card  &amp;gt;&amp;gt;  │  │  Land
+│  a card  &amp;gt;&amp;gt;  │  │  Land
+│  a card  &amp;gt;&amp;gt;  │  │  Land
+└──a card  &amp;gt;&amp;gt;  └──└──Land
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We need to go through each card (\(16\)) and with each one decide between one of two buckets. Thus the total cost is \(16 \times 2 = 32\).
+Whereas to classify like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card  &amp;gt;&amp;gt;  ┌──┌──Creature
+│  a card  &amp;gt;&amp;gt;  │  │  Creature
+│  a card  &amp;gt;&amp;gt;  │  │  Creature
+│  a card  &amp;gt;&amp;gt;  │  │  Creature
+│  a card  &amp;gt;&amp;gt;  │  │  Creature
+│  a card  &amp;gt;&amp;gt;  │  └──Creature
+│              │  
+│  a card  &amp;gt;&amp;gt;  │  ┌──Artifact
+│  a card  &amp;gt;&amp;gt;  │  │  Artifact
+│  a card  &amp;gt;&amp;gt;  │  │  Artifact
+│  a card  &amp;gt;&amp;gt;  │  └──Artifact
+│              │
+│  a card  &amp;gt;&amp;gt;  │  ┌──Land
+│  a card  &amp;gt;&amp;gt;  │  │  Land
+│  a card  &amp;gt;&amp;gt;  │  │  Land
+│  a card  &amp;gt;&amp;gt;  │  │  Land
+│  a card  &amp;gt;&amp;gt;  │  │  Land
+└──a card  &amp;gt;&amp;gt;  └──└──Land
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;we again have to decide \(16\) times, but now on four possible classifications, so the cost is much higher (&lt;em&gt;twice as high&lt;/em&gt;): \(16  \times 4 = 64\). But we end with smaller buckets.&lt;/p&gt;
+
+&lt;p&gt;The entire cost of a sorting technique then is adding up all the costs of each node’s classification cost &lt;em&gt;(in the &lt;a href=&quot;https://jazcarate.github.io/deck-partitioner/&quot;&gt;web&lt;/a&gt; you can mouse over each tree section to get the drill of the cost. And the total cost at the bottom of the page)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I did not add a cost associated with how many levels of the classification there are, as I think it is small enough to be ignored. Though in my limited testing, it does cause fatigue if above a certain number of classifications.&lt;/p&gt;
+
+&lt;p&gt;Going back to the Modern Burn, the math seems to agree with their heuristic, and the most cost-efficient partition is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;by mana value &amp;gt; by name&lt;/code&gt;; whereas for Tron, the most efficient way of splitting is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;by land/non-land &amp;gt; by color &amp;gt; by type &amp;gt; by name&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;request-for-help&quot;&gt;Request for help&lt;/h2&gt;
+
+&lt;p&gt;I would &lt;strong&gt;love&lt;/strong&gt; other people to experiment and time themselves to figure out if my hypothesis does hold; or if the cost of further sub-partitions is not, in fact, negligible. But rather scales exponentially each new level. I’m very curious.&lt;/p&gt;
+
+&lt;p&gt;If you want to help me out fine-tuning my &lt;em&gt;cost&lt;/em&gt; function costs to find a better heuristic you can very much do so by classifying some cards and measuring the time it took in &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSffb1aN8cVwAQz6gDcjToL4EYtdIhBjYKBg58WlPBzjegChAw/viewform?usp=sf_link&quot;&gt;this form&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you instead do a different classification strategy, I would be very interested in learning about it. So please feel free to comment on the &lt;a href=&quot;https://github.com/jazcarate/deck-partitioner/issues&quot;&gt;application issue list&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;playground&quot;&gt;Playground&lt;/h2&gt;
+&lt;p&gt;As I said before, I write code for a living and very much enjoy it, so I came up with a small program to do these simulations.
+You can input any deck, and it will figure out all the possible ways of splitting and sorting it, and then choose the one with the least cost.&lt;/p&gt;
+
+&lt;p&gt;You can try it out &lt;a href=&quot;https://jazcarate.github.io/deck-partitioner/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:covid&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;It’s 2021 and we are still in lockdown because of the &lt;a href=&quot;https://es.wikipedia.org/wiki/COVID-19&quot;&gt;COVID-19&lt;/a&gt;, hence why the conference was virtual. &lt;a href=&quot;#fnref:covid&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:deckchecks&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://magic.wizards.com/en/articles/archive/deck-check-procedures-2000-02-29&quot;&gt;Deck Check Procedures in Wizard’s article page&lt;/a&gt;. &lt;a href=&quot;#fnref:deckchecks&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:mana_value&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Previously known as “casting cost”, “total casting cost” or “converted mana cost” (cmc). &lt;a href=&quot;#fnref:mana_value&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:partition&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;For those interested in the math, I can point you in the right direction of the formalization of this: Generating a &lt;a href=&quot;https://en.wikipedia.org/wiki/Equivalence_relation&quot;&gt;Equivalence relation&lt;/a&gt; that yields a &lt;a href=&quot;https://en.wikipedia.org/wiki/Partition_of_a_set&quot;&gt;partition&lt;/a&gt;. &lt;a href=&quot;#fnref:partition&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:partition:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="mtg" /><summary type="html">One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament, and routinely check them. Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques. I feel we under-use the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective. In this post, I would like to explore some techniques' inner workings. Propose a hypothesis on why they might work in some situations but not others. Consider unexplored alternatives. And build a heuristic on what method is better for each circumstance. Join me!</summary></entry><entry><title type="html">Inspiraciones</title><link href="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/" rel="alternate" type="text/html" title="Inspiraciones" /><published>2021-01-31T00:00:00+00:00</published><updated>2021-01-31T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2021/01/31/inspiraciones/">&lt;p&gt;&lt;em&gt;El post original se puede leer en mi &lt;a href=&quot;https://dev.to/florius/inspiraciones-824&quot;&gt;dev.to&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué /cazzo/ hacer&lt;/p&gt;

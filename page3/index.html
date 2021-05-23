@@ -22,7 +22,7 @@
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>3 / 3 | Florius’ Blog | Joaquin ‘Florius’ Azcarate’s personal blog</title>
+<title>3 / 4 | Florius’ Blog | Joaquin ‘Florius’ Azcarate’s personal blog</title>
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Florius’ Blog" />
 <meta name="author" content="Joaquin 'Florius' Azcarate" />
@@ -33,6 +33,7 @@
 <meta property="og:url" content="https://blog.florius.com.ar/page3/" />
 <meta property="og:site_name" content="Florius’ Blog" />
 <link rel="prev" href="https://blog.florius.com.ar/page2" />
+<link rel="next" href="https://blog.florius.com.ar/page4" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Florius’ Blog" />
 <meta name="twitter:site" content="@FloriusWasTaken" />
@@ -42,7 +43,7 @@
 <!-- End Jekyll SEO tag -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202105221927" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202105231526" type="text/css">
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
@@ -59,9 +60,9 @@
 
     <!-- Icons -->
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-a6aac8d4d9cf0342b7e115ea53616d6a5afb1313ec6a57e83a84beb808e1fae4ee67fe0c3e238e83fcbb1c87bde45c5107a2a2b40dc9ffa7fee8542ebf136cf5.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-c676bf2d45ffca0f725f25edeb999c44c9534e301c22f8bc99fdd6bea4103085da0b69afb67d53faddfb5a1de949f2b4e8ee8db11c788f08e051fa01c30f6f2c.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-89933b2e67e343c6c757370e6025c705cf6c5c94b33dc419fdafee38aaa8741b856c0049fe06d1da87e5bdf8a86ee0d713bdf2ee7694cdcb639c44ecbe247bd1.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-c0ee5ca9c1b59382b690f514f961a49ecd5a0f28427cb4db0a2407cf86fdc965f074c6dcbd7153586042a0a478a1654e0df0a2502f0e4dfc870a72f727287ee0.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-e5f0551267982fb91476746e25a0d26b43359fc94a6300eaef46b5ea960d700212027d13e12efc416ef27039216ffe3515f35aa73f1c76c536b5c065d5a52ef3.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-247f125a9cc158c805ff38b61bdc54d114845c8f87a48f23781597338173f2296a075cac2e403280eac7d9b05bd1e0dfc915835bf9973af5fb8f13803d0f28aa.png"/>
 
     <meta name="theme-color" content="#000000">
 
@@ -102,6 +103,13 @@
     
     
         <a class="nav-link" href="/categories/">Categories</a>
+    
+
+    
+
+    
+    
+    
     
 
     
@@ -238,6 +246,125 @@
 <div class="home">
   
     <div class="posts">
+      
+        <div class="post py3">
+          <p class="post-meta">
+	    
+	      Sep 14, 2020
+	    
+	        </p>
+          <a href="/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/" class="post-link"><h3 class="h1 post-title">koncierge Una librería para segmentar usuarios</h3></a>
+          <span class="post-summary">
+            <p><em>El post original se puede leer en mi <a href="https://dev.to/florius/koncierge-una-libreria-para-segmentar-usuarios-fjp">dev.to</a>.</em></p>
+
+<h2 id="trasfondo">Trasfondo</h2>
+
+<p>En donde estoy trabajando, cada nuevo feature o idea, pasa por un proceso de <em>A/B Testing</em>.
+Normalmente lo que hacemos es:</p>
+
+<ol>
+  <li>Generamos una hipótesis del estilo: “Si los usuarios tuviesen una notificación cuando pasa <code class="language-plaintext highlighter-rouge">X</code>, entonces van a hacer <code class="language-plaintext highlighter-rouge">Y</code> más seguido”.</li>
+  <li>Desarrollamos esta notificación, o lo que sea.</li>
+  <li>Apuntamos a algún mercado para participar de esta prueba</li>
+  <li>Dividimos a la mitad de los usuarios de ese mercado, tal que vean e interactúen con en nuevo feature, mientras que la otra mitad (grupo <em>control</em>) no.</li>
+  <li>Esperamos dos semanas</li>
+  <li>Comparamos las métricas entre los dos grupos.</li>
+</ol>
+
+<p>Este último paso puede llevar a miles de ramificaciones: Activamos el feature para toda la población. Cambiamos algo y volvemos a hacer una prueba. Lo deshabilitamos por completo porque nuestra hipótesis era incorrecta. Etc, etc.</p>
+
+<p>Para la segmentación de la población, estamos usando un servicio de un tercero. A este servicio, ocasionalmente le brindamos la información de segmentación de nuestros usuarios.
+Información como</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>El usuario `123` es de Madrid
+</code></pre></div></div>
+
+<p>para que luego, cuando queramos segmentar, podríamos segmentar solo usuarios de Madrid.</p>
+
+<p>Este servicio externo, adicionalmente, solo nos provee acceso a las variantes (si un usuario pertenece al segmento, es parte del grupo de control, o es parte del grupo que participa) mediante un SDK para usar en móviles (iOS y Android).</p>
+
+<p>Esto nos presentaba dos dificultades:</p>
+
+<ol>
+  <li>Si quisiéramos hacer un A/B Test en alguno de los micro-servicios de backend, no podríamos consultar a este servicio.</li>
+  <li>Si quisiéramos segmentar por algo de lo que no le habíamos informado al servicio, deberíamos compartirle toda esta nueva información para que este pueda segmentar.</li>
+</ol>
+
+<p>Por esta situación, decidimos crear un micro-servicio que se encargue de segmentar y separar en variantes a nuestros usuarios.</p>
+
+<h2 id="problemas">Problemas</h2>
+
+<p>Rápidamente nos vimos enfrentados a resolver como hacer para obtener la información para segmentar.</p>
+
+<p>Normalmente segmentamos por país, lo que sería sencillo hacer que el nuevo micro-servicio consultara con otro micro-servicio de información; y obtuviese el país del usuario.
+Con esta nueva información, podríamos segmentar.</p>
+
+<p>Lo que presenta un desafío interesante:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Como evitar que este micro-servicio crezca
+cada vez introduzcamos un nuevo micro-servicio que almacene
+alguna información del usuario?
+</code></pre></div></div>
+
+<p>Por eso, pensamos que podríamos delegar la responsabilidad de obtener el <em>contexto</em> del usuario, a quien consuma este micro-servicio; por lo que una llamada podría ser:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dado el usuario `123`, de Madrid;
+a qué variante pertenece?
+</code></pre></div></div>
+
+<p>De esta manera, es quien consume quien necesita saber todas las dependencias del experimento, y cada experimento puede tener dependencias distintas, de distintas formas de computarse, y el micro-servicio podría no crecer.</p>
+
+<h2 id="dsl-domain-specific-language---lenguaje-específico-de-dominio">DSL (Domain-specific language - Lenguaje específico de dominio)</h2>
+
+<p>Ya sabíamos como querríamos que se comporte el micro-servicio, ahora necesitábamos una forma de expresar como querríamos segmentar nuestra población. Hacía poco estaba trabajando mucho con <a href="https://www.mongodb.com/"><code class="language-plaintext highlighter-rouge">Mongo</code></a> y se me ocurrió que un lenguaje de consultas como el de mongo podría ser interesante de explorar.
+De tal forma que una segmentación como:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Quiero que solo participen del experimento `EXP001`,
+usuarios quienes sean de Madrid.
+De estos, la mitad estarán en el grupo de participando
+y el esto en control.
+</code></pre></div></div>
+
+<p>Se transformaría en:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nl">"EXP001"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ubicación"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Madrid"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"$children"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"participando"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$rand"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$gt"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"control"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p><a href="https://koncierge-playground.herokuapp.com/?context=%7B%0A%20%20%20%20%22ubicaci%C3%B3n%22:%20%22Madrid%22,%0A%20%20%20%20%22userId%22:%205%0A%7D&amp;experiment=%7B%0A%20%20%20%20%22EXP001%22:%20%7B%0A%20%20%20%20%20%20%20%20%22ubicaci%C3%B3n%22:%20%22Madrid%22,%0A%20%20%20%20%20%20%20%20%22%24children%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22participando%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%24rand%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%24gt%22:%200.5%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D,%0A%20%20%20%20%20%20%20%20%20%20%20%20%22control%22:%20%7B%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D">Playground</a></p>
+
+<p>De esta manera, quien consuma al micro-servicio debería proveer, al menos, la información de la <code class="language-plaintext highlighter-rouge">"ubicación"</code> del usuario.
+Una posible consulta podría ser con el contexto:</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nl">"ubicación"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Madrid"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>El micro-servicio debería responder que pertenece al <code class="language-plaintext highlighter-rouge">EXP001</code> (dado que la ubicación empareja con la definición), y podría pertenecer a la variante <code class="language-plaintext highlighter-rouge">participando</code> o <code class="language-plaintext highlighter-rouge">control</code>.
+Los usuarios deberían estar distribuidos 50%-50%; dado que hay un 50% de probabilidad que un numero al azar, uniformemente distribuido entre 0 y 1 (como es <code class="language-plaintext highlighter-rouge">$rand</code>) sea mayor a 0.5.</p>
+
+<p>Con esta idea, sabiendo que la intención era que el micro-servicio no dependiente de ninguna otra parte de arquitectura de nuestro ecosistema; se me ocurrió que podría desarrollarlo como una librería pública; por si alguien más tiene la necesidad que tuvimos nosotros.</p>
+
+<h2 id="koncierge-">koncierge 🛎</h2>
+
+<p>La librería está en <a href="https://github.com/jazcarate/koncierge#readme">GitHub :: jazcarate/koncierge</a></p>
+
+          </span>
+          
+            <span class="related-categories">
+            
+              <a href="/categories#xpost">#xpost</a>
+            
+            </span>
+          
+        </div>
       
         <div class="post py3">
           <p class="post-meta">
@@ -513,175 +640,6 @@
           
         </div>
       
-        <div class="post py3">
-          <p class="post-meta">
-	    
-	      Aug 14, 2018
-	    
-	        </p>
-          <a href="/xpost/2018/08/14/limit-problem-space/" class="post-link"><h3 class="h1 post-title">Limit the Problem Space!</h3></a>
-          <span class="post-summary">
-            <p><em>Original post can be found in the <a href="https://blog.10pines.com/2018/08/14/limit-problem-space/">10Pines blog</a>.</em></p>
-
-<h2 id="write-less-error-prone-code">Write less error-prone code.</h2>
-
-<p>First things first: What is the problem space?
-Simply put, it is the entire spectrum of inputs that exists in the process of finding a solution to a problem.
-Say you want to buy a soda from a vending machine. You now have a problem to solve: “Decide what beverage to purchase”. Every button is part of the problem space; yet you can narrow it down to just buttons that get you a can.</p>
-
-<h2 id="down-to-business">Down to business</h2>
-
-<p>In order to present my idea, let’s take a somewhat simple example. a TennisMatch object, that represents just that: a tennis match.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">TennisMatch</span> <span class="n">williamsVsPetrova</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TennisMatch</span><span class="o">(...);</span></code></pre></figure>
-
-<p>One thing that a <code class="language-plaintext highlighter-rouge">TennisMatch</code> should keep track of is its score. Let’s assume the match is responsible of doing this with a <code class="language-plaintext highlighter-rouge">score</code> method. We have several design options:</p>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">williamsVsPetrova.score('williams')</code> / <code class="language-plaintext highlighter-rouge">williamsVsPetrova.score('player1')</code></li>
-  <li><code class="language-plaintext highlighter-rouge">williamsVsPetrova.score(0)</code></li>
-  <li><code class="language-plaintext highlighter-rouge">williamsVsPetrova.scorePlayer1()</code></li>
-</ol>
-
-<p>Most of the times, we’d go for alternative 1 or 2. This makes our code look something like this:</p>
-
-<p><em>Please bear with me for the sake of this example, because we are going to be using a dictionary with the player (whichever their representation: <code class="language-plaintext highlighter-rouge">String</code>, <code class="language-plaintext highlighter-rouge">Integer</code> or <code class="language-plaintext highlighter-rouge">Player</code>) as the key, and their score as the value. This decision in and of itself is not important, but rather a way to scaffold the point I’m trying to get across.</em></p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TennisMatch</span> <span class="o">{</span>
-    <span class="kd">private</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Point</span><span class="o">&gt;</span> <span class="n">points</span><span class="o">;</span>
-    <span class="o">...</span>
-    
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">score</span><span class="o">(</span><span class="nc">String</span> <span class="n">player</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">points</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">player</span><span class="o">).</span><span class="na">scoreAPoint</span><span class="o">();</span>
-    <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Which would lead to several unwanted ramifications:
-What if…</p>
-
-<ul>
-  <li>the <code class="language-plaintext highlighter-rouge">player</code> parameter is not in our <code class="language-plaintext highlighter-rouge">Map</code>?</li>
-  <li>the player is null?</li>
-  <li>the player key is in the <code class="language-plaintext highlighter-rouge">Map</code>, but the value of the map is <code class="language-plaintext highlighter-rouge">null</code>?</li>
-</ul>
-
-<p>Before talking about how can we can improve our code, let’s take a minute to think how the latter in particular might be easily fixed.</p>
-
-<p>We could avoid it altogether (and maybe the other ones) by forcing the <code class="language-plaintext highlighter-rouge">TennisMatch</code> creation to have two players and making those players have a valid starting score.</p>
-
-<h2 id="maths">Maths!</h2>
-
-<p>Let’s jump briefly to another situation.</p>
-
-<p>Suppose that we wanted to solve the following problem:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If we have 3 minutes for a presentation,
-and we need to equally divide them between n students,
-how many minutes would each student get?
-</code></pre></div></div>
-
-<p>A method that would solve this problem might look something like this:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">superDivide</span><span class="o">(</span><span class="nc">Object</span> <span class="n">amountOfStudents</span><span class="o">)</span> <span class="o">{</span> 
-  <span class="k">return</span> <span class="mi">3</span> <span class="o">/</span> <span class="o">((</span><span class="nc">Integer</span><span class="o">)</span> <span class="n">amountOfStudents</span><span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Of course, it doesn’t make much sense to accept an <code class="language-plaintext highlighter-rouge">Object</code> in the method signature, since we already know we are going to be dealing with numbers. And, mind you, because <a href="https://en.wikipedia.org/wiki/Downcasting">downcasting</a> stinks.</p>
-
-<p>So, based on what we already know, we could avoid downcasting, limiting the possible inputs from <code class="language-plaintext highlighter-rouge">Object</code> to <code class="language-plaintext highlighter-rouge">Integer</code>:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">superDivide</span><span class="o">(</span><span class="nc">Integer</span> <span class="n">amountOfStudents</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">return</span> <span class="mi">3</span> <span class="o">/</span> <span class="n">amountOfStudents</span><span class="o">;</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>I’d ponder this is not much better.
-With a keen eye for finding problems, one might realize that if the parameter were <code class="language-plaintext highlighter-rouge">0</code>, the program would explode.
-Say this is not what we want, because we know that we are dealing with an amount of students, <code class="language-plaintext highlighter-rouge">n</code>. And <code class="language-plaintext highlighter-rouge">n</code> should never be zero. <em>Nor should it be less than zero</em>.
-This suggests to me that our method is accepting a problem space much much larger than what we actually can and should be able to handle.</p>
-
-<p>We could take two paths to fix this:</p>
-
-<ul>
-  <li>Preparing for the worse and checking for this restrictions to be met inside our method</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">superDivide</span><span class="o">(</span><span class="nc">Integer</span> <span class="n">amountOfStudents</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">if</span><span class="o">(</span> <span class="n">amountOfStudents</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">)</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">InvalidAmountOfStudents</span><span class="o">(</span><span class="n">amountOfStudents</span><span class="o">);</span>
-  <span class="k">return</span> <span class="mi">3</span> <span class="o">/</span> <span class="n">amountOfStudents</span><span class="o">;</span>
-<span class="o">}</span></code></pre></figure>
-
-<ul>
-  <li>Deal with the problem head on, and limit the problem space!</li>
-</ul>
-
-<p>Math has a name for this kind of numbers: <a href="https://en.wikipedia.org/wiki/Natural_number">Natural numbers</a>. Java does not. At least not out-of-the-box. But we can create the <code class="language-plaintext highlighter-rouge">NaturalNumber</code> class!</p>
-
-<p>This way, we wouldn’t need to be prepared for those edge cases, since we’d have limited the input of our method, and deal only with valid numbers:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">superDivide</span><span class="o">(</span><span class="nc">NaturalNumber</span> <span class="n">amountOfStudents</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">return</span> <span class="mi">3</span> <span class="o">/</span> <span class="n">amountOfStudents</span><span class="o">;</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Java does not have an object to handle the filter for unauthorized users on a rest API call either, yet we are eager to create <code class="language-plaintext highlighter-rouge">UnauthorizedUserFilter implements RESTFilter</code>. I don’t usually see simple <em>problem limiting</em> classes like <code class="language-plaintext highlighter-rouge">NaturalNumber</code>. It baffles me.</p>
-
-<h2 id="argumentative">Argumentative</h2>
-
-<p>Back to <code class="language-plaintext highlighter-rouge">williamsVsPetrova.score</code>. Let’s think about this problem as a math <em>function</em>. Its <a href="https://en.wikipedia.org/wiki/Domain_of_a_function">domain</a> <strong>should be only two</strong> values. One for each player.
-Now, lets analyze the parameter types we mentioned above:</p>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">public void score(</code> <code class="language-plaintext highlighter-rouge">String</code> <code class="language-plaintext highlighter-rouge">player)</code>: The <code class="language-plaintext highlighter-rouge">String</code> type is infinitely <em>(disregard limited memory problem)</em> large. So it might not be the best type.
-    If we do go for this option, we will be forced to do some assertions if the name is one of the player participating in the <code class="language-plaintext highlighter-rouge">TennisMatch</code>.</li>
-  <li><code class="language-plaintext highlighter-rouge">public void score(</code> <code class="language-plaintext highlighter-rouge">Integer</code> <code class="language-plaintext highlighter-rouge">player)</code>: Same as 1., but with added obfuscation. Please don’t.</li>
-  <li><code class="language-plaintext highlighter-rouge">public void scorePlayer1()</code>: No parameter means the domain size is only one. We are half way there!
-    We re now forced to implement public void scorePlayer2(). The code for these two methods might be conspicuously similar, so we might refactor them like so:</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">scorePlayer1</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">scoreFor</span><span class="o">(</span><span class="err">'</span><span class="n">player1</span><span class="err">'</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">scorePlayer2</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">scoreFor</span><span class="o">(</span><span class="err">'</span><span class="n">player2</span><span class="err">'</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="kd">private</span> <span class="kt">void</span> <span class="nf">scoreFor</span><span class="o">(</span><span class="nc">String</span> <span class="n">scorer</span><span class="o">)</span> <span class="o">{</span>
-    <span class="o">...</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Although we are using a <code class="language-plaintext highlighter-rouge">String</code> with its infinitely large domain space, the method is private and we are sure that the only possible calls are with one of two valid values.</p>
-
-<ol>
-  <li>public void score( Bool player): In spite of the fact that the the Boolean type might fit our domain-length restrictions; think about how it will look like when used:</li>
-</ol>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">williamsVsPetrova</span><span class="o">.</span><span class="na">score</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span> <span class="c1">//Ball for Petrova ?!</span></code></pre></figure>
-
-<h2 id="a-side-note-on-the-language">A side note on the language</h2>
-
-<p>I used Java throughout the post, and although I took advantage of the fact that Java is <a href="https://en.wikipedia.org/wiki/Type_system#Static_type_checking">strongly and explicitly typed with static type checking</a>, this principles are not language-specific.</p>
-
-<h2 id="bonus-make-the-problem-space-explicit">Bonus: Make the problem space explicit!</h2>
-
-<p>Since a method can have its argument either <code class="language-plaintext highlighter-rouge">null</code> or an actual value; rather than have a comment, use a <code class="language-plaintext highlighter-rouge">type</code> that represents both cases <em>(<code class="language-plaintext highlighter-rouge">Optionals</code> in the case of Java)</em>.</p>
-
-<h2 id="recap">Recap</h2>
-
-<ul>
-  <li><a href="https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)">Constructors</a> are important. If you can’t build invalid objects, then you can write code assuming the objects you interact with are valid. This can save you many headaches.</li>
-  <li>Don’t be afraid of creating classes with the sole purpose of delimiting your problem space.</li>
-  <li>Thinking about the domain space of a method, albeit a good technique, is not the only one. Think of it as an extra tool in your tool belt.</li>
-</ul>
-
-          </span>
-          
-            <span class="related-categories">
-            
-              <a href="/categories#xpost">#xpost</a>
-            
-            </span>
-          
-        </div>
-      
     </div>
 
     
@@ -695,10 +653,10 @@ Now, lets analyze the parameter types we mentioned above:</p>
   </div>
   <div class="right">
     
-      <span class="pagination-item disabled">Older</span>
+      <a class="pagination-item" href="/page4">Older</a>
     
   </div>
-  <div class="pagination-meta">Page 3 of 3</div>
+  <div class="pagination-meta">Page 3 of 4</div>
 </div>
 
 

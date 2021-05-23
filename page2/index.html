@@ -22,7 +22,7 @@
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>2 / 3 | Florius’ Blog | Joaquin ‘Florius’ Azcarate’s personal blog</title>
+<title>2 / 4 | Florius’ Blog | Joaquin ‘Florius’ Azcarate’s personal blog</title>
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Florius’ Blog" />
 <meta name="author" content="Joaquin 'Florius' Azcarate" />
@@ -43,7 +43,7 @@
 <!-- End Jekyll SEO tag -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202105221927" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202105231526" type="text/css">
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
@@ -60,9 +60,9 @@
 
     <!-- Icons -->
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-a6aac8d4d9cf0342b7e115ea53616d6a5afb1313ec6a57e83a84beb808e1fae4ee67fe0c3e238e83fcbb1c87bde45c5107a2a2b40dc9ffa7fee8542ebf136cf5.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-c676bf2d45ffca0f725f25edeb999c44c9534e301c22f8bc99fdd6bea4103085da0b69afb67d53faddfb5a1de949f2b4e8ee8db11c788f08e051fa01c30f6f2c.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-89933b2e67e343c6c757370e6025c705cf6c5c94b33dc419fdafee38aaa8741b856c0049fe06d1da87e5bdf8a86ee0d713bdf2ee7694cdcb639c44ecbe247bd1.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-c0ee5ca9c1b59382b690f514f961a49ecd5a0f28427cb4db0a2407cf86fdc965f074c6dcbd7153586042a0a478a1654e0df0a2502f0e4dfc870a72f727287ee0.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-e5f0551267982fb91476746e25a0d26b43359fc94a6300eaef46b5ea960d700212027d13e12efc416ef27039216ffe3515f35aa73f1c76c536b5c065d5a52ef3.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-247f125a9cc158c805ff38b61bdc54d114845c8f87a48f23781597338173f2296a075cac2e403280eac7d9b05bd1e0dfc915835bf9973af5fb8f13803d0f28aa.png"/>
 
     <meta name="theme-color" content="#000000">
 
@@ -103,6 +103,13 @@
     
     
         <a class="nav-link" href="/categories/">Categories</a>
+    
+
+    
+
+    
+    
+    
     
 
     
@@ -239,6 +246,25 @@
 <div class="home">
   
     <div class="posts">
+      
+        <div class="post py3">
+          <p class="post-meta">
+	    
+	      Apr 11, 2021
+	    
+	        </p>
+          <a href="/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/" class="post-link"><h3 class="h1 post-title">Deckchecks, Heuristics, and Decision Trees</h3></a>
+          <span class="post-summary">
+            One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament, and routinely check them. Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques. I feel we under-use the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective. In this post, I would like to explore some techniques' inner workings. Propose a hypothesis on why they might work in some situations but not others. Consider unexplored alternatives. And build a heuristic on what method is better for each circumstance. Join me!
+          </span>
+          
+            <span class="related-categories">
+            
+              <a href="/categories#mtg">#mtg</a>
+            
+            </span>
+          
+        </div>
       
         <div class="post py3">
           <p class="post-meta">
@@ -702,125 +728,6 @@ Por ejemplo, concatenar listas  <a href="https://hackage.haskell.org/package/bas
           
         </div>
       
-        <div class="post py3">
-          <p class="post-meta">
-	    
-	      Sep 14, 2020
-	    
-	        </p>
-          <a href="/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/" class="post-link"><h3 class="h1 post-title">koncierge Una librería para segmentar usuarios</h3></a>
-          <span class="post-summary">
-            <p><em>El post original se puede leer en mi <a href="https://dev.to/florius/koncierge-una-libreria-para-segmentar-usuarios-fjp">dev.to</a>.</em></p>
-
-<h2 id="trasfondo">Trasfondo</h2>
-
-<p>En donde estoy trabajando, cada nuevo feature o idea, pasa por un proceso de <em>A/B Testing</em>.
-Normalmente lo que hacemos es:</p>
-
-<ol>
-  <li>Generamos una hipótesis del estilo: “Si los usuarios tuviesen una notificación cuando pasa <code class="language-plaintext highlighter-rouge">X</code>, entonces van a hacer <code class="language-plaintext highlighter-rouge">Y</code> más seguido”.</li>
-  <li>Desarrollamos esta notificación, o lo que sea.</li>
-  <li>Apuntamos a algún mercado para participar de esta prueba</li>
-  <li>Dividimos a la mitad de los usuarios de ese mercado, tal que vean e interactúen con en nuevo feature, mientras que la otra mitad (grupo <em>control</em>) no.</li>
-  <li>Esperamos dos semanas</li>
-  <li>Comparamos las métricas entre los dos grupos.</li>
-</ol>
-
-<p>Este último paso puede llevar a miles de ramificaciones: Activamos el feature para toda la población. Cambiamos algo y volvemos a hacer una prueba. Lo deshabilitamos por completo porque nuestra hipótesis era incorrecta. Etc, etc.</p>
-
-<p>Para la segmentación de la población, estamos usando un servicio de un tercero. A este servicio, ocasionalmente le brindamos la información de segmentación de nuestros usuarios.
-Información como</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>El usuario `123` es de Madrid
-</code></pre></div></div>
-
-<p>para que luego, cuando queramos segmentar, podríamos segmentar solo usuarios de Madrid.</p>
-
-<p>Este servicio externo, adicionalmente, solo nos provee acceso a las variantes (si un usuario pertenece al segmento, es parte del grupo de control, o es parte del grupo que participa) mediante un SDK para usar en móviles (iOS y Android).</p>
-
-<p>Esto nos presentaba dos dificultades:</p>
-
-<ol>
-  <li>Si quisiéramos hacer un A/B Test en alguno de los micro-servicios de backend, no podríamos consultar a este servicio.</li>
-  <li>Si quisiéramos segmentar por algo de lo que no le habíamos informado al servicio, deberíamos compartirle toda esta nueva información para que este pueda segmentar.</li>
-</ol>
-
-<p>Por esta situación, decidimos crear un micro-servicio que se encargue de segmentar y separar en variantes a nuestros usuarios.</p>
-
-<h2 id="problemas">Problemas</h2>
-
-<p>Rápidamente nos vimos enfrentados a resolver como hacer para obtener la información para segmentar.</p>
-
-<p>Normalmente segmentamos por país, lo que sería sencillo hacer que el nuevo micro-servicio consultara con otro micro-servicio de información; y obtuviese el país del usuario.
-Con esta nueva información, podríamos segmentar.</p>
-
-<p>Lo que presenta un desafío interesante:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Como evitar que este micro-servicio crezca
-cada vez introduzcamos un nuevo micro-servicio que almacene
-alguna información del usuario?
-</code></pre></div></div>
-
-<p>Por eso, pensamos que podríamos delegar la responsabilidad de obtener el <em>contexto</em> del usuario, a quien consuma este micro-servicio; por lo que una llamada podría ser:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dado el usuario `123`, de Madrid;
-a qué variante pertenece?
-</code></pre></div></div>
-
-<p>De esta manera, es quien consume quien necesita saber todas las dependencias del experimento, y cada experimento puede tener dependencias distintas, de distintas formas de computarse, y el micro-servicio podría no crecer.</p>
-
-<h2 id="dsl-domain-specific-language---lenguaje-específico-de-dominio">DSL (Domain-specific language - Lenguaje específico de dominio)</h2>
-
-<p>Ya sabíamos como querríamos que se comporte el micro-servicio, ahora necesitábamos una forma de expresar como querríamos segmentar nuestra población. Hacía poco estaba trabajando mucho con <a href="https://www.mongodb.com/"><code class="language-plaintext highlighter-rouge">Mongo</code></a> y se me ocurrió que un lenguaje de consultas como el de mongo podría ser interesante de explorar.
-De tal forma que una segmentación como:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Quiero que solo participen del experimento `EXP001`,
-usuarios quienes sean de Madrid.
-De estos, la mitad estarán en el grupo de participando
-y el esto en control.
-</code></pre></div></div>
-
-<p>Se transformaría en:</p>
-
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-  </span><span class="nl">"EXP001"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"ubicación"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Madrid"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"$children"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"participando"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$rand"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$gt"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"control"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span></code></pre></figure>
-
-<p><a href="https://koncierge-playground.herokuapp.com/?context=%7B%0A%20%20%20%20%22ubicaci%C3%B3n%22:%20%22Madrid%22,%0A%20%20%20%20%22userId%22:%205%0A%7D&amp;experiment=%7B%0A%20%20%20%20%22EXP001%22:%20%7B%0A%20%20%20%20%20%20%20%20%22ubicaci%C3%B3n%22:%20%22Madrid%22,%0A%20%20%20%20%20%20%20%20%22%24children%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22participando%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%24rand%22:%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22%24gt%22:%200.5%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D,%0A%20%20%20%20%20%20%20%20%20%20%20%20%22control%22:%20%7B%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D">Playground</a></p>
-
-<p>De esta manera, quien consuma al micro-servicio debería proveer, al menos, la información de la <code class="language-plaintext highlighter-rouge">"ubicación"</code> del usuario.
-Una posible consulta podría ser con el contexto:</p>
-
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nl">"ubicación"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Madrid"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
-</span><span class="p">}</span></code></pre></figure>
-
-<p>El micro-servicio debería responder que pertenece al <code class="language-plaintext highlighter-rouge">EXP001</code> (dado que la ubicación empareja con la definición), y podría pertenecer a la variante <code class="language-plaintext highlighter-rouge">participando</code> o <code class="language-plaintext highlighter-rouge">control</code>.
-Los usuarios deberían estar distribuidos 50%-50%; dado que hay un 50% de probabilidad que un numero al azar, uniformemente distribuido entre 0 y 1 (como es <code class="language-plaintext highlighter-rouge">$rand</code>) sea mayor a 0.5.</p>
-
-<p>Con esta idea, sabiendo que la intención era que el micro-servicio no dependiente de ninguna otra parte de arquitectura de nuestro ecosistema; se me ocurrió que podría desarrollarlo como una librería pública; por si alguien más tiene la necesidad que tuvimos nosotros.</p>
-
-<h2 id="koncierge-">koncierge 🛎</h2>
-
-<p>La librería está en <a href="https://github.com/jazcarate/koncierge#readme">GitHub :: jazcarate/koncierge</a></p>
-
-          </span>
-          
-            <span class="related-categories">
-            
-              <a href="/categories#xpost">#xpost</a>
-            
-            </span>
-          
-        </div>
-      
     </div>
 
     
@@ -837,7 +744,7 @@ Los usuarios deberían estar distribuidos 50%-50%; dado que hay un 50% de probab
       <a class="pagination-item" href="/page3">Older</a>
     
   </div>
-  <div class="pagination-meta">Page 2 of 3</div>
+  <div class="pagination-meta">Page 2 of 4</div>
 </div>
 
 
