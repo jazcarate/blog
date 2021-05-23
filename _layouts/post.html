@@ -54,53 +54,26 @@ layout: default
   {% asset cat.png alt='Melian' %}
 </div>
 
-{% if site.show_related_posts %}
-  <h3 class="related-post-title">{{ site.text.post.related_posts | default: "Related Posts" }}</h3>
-  
-  {% assign relatedShown = 0 %}
-  {% for post in site.posts %}
-    {% assign sameTagCount = 0 %}
-    {% assign commonCategories = '' %}
+<h3 class="related-post-title">Random Posts</h3>
+{% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample:4 %}
+{% for post in posts %}
+  {% assign sameTagCount = 0 %}
+  {% assign commonCategories = '' %}
 
-    {% for category in post.categories %}
-      {% if post.url != page.url %}
-        {% if page.categories contains category %}
-          {% assign sameTagCount = sameTagCount | plus: 1 %}
-          {% capture categoryMarkup %}
-            <a href="{{ "/categories" | absolute_ur}}#{{category | slugify}}">#{{ category }}</a>
-          {% endcapture %}
-          {% assign commonCategories = commonCategories | append: categoryMarkup %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-
-    {% if sameTagCount >= 1 %}
-      {% assign relatedShown = relatedShown | plus: 1 %}
-      <div class="post ml2 related">
-        <a href="{{ post.url | relative_url }}" class="post-link">
-          <h4 class="post-title">{{ post.title }}</h4>
-        </a>
-        <p class="post-summary">
-          {{ post.summary }}
-          <span class="related-categories">{{ commonCategories }}</span>
-        </p>
-      </div>
-      {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-      {% if maxRelatedCounter >= site.max_related %}
-        {% break %}
-      {% endif %}
-    {% endif %}
-
+  {% for category in post.categories %}
+    {% capture categoryMarkup %}
+      <a href="{{ "/categories" | absolute_ur}}#{{category | slugify}}">#{{ category }}</a>
+    {% endcapture %}
+    {% assign commonCategories = commonCategories | append: categoryMarkup %}
   {% endfor %}
-  {% if relatedShown < 1 %}
-    {% for post in site.related_posts %}
-    <div class="post ml2">
-      <a href="{{ post.url | relative_url }}" class="post-link">
-        <h4 class="post-title">{{ post.title }}</h4>
-        <p class="post-summary">{{ post.summary }}</p>
-      </a>
-    </div>
-    {% endfor %}
-  {% endif %}
 
-{% endif %}
+  <div class="post ml2 related">
+    <a href="{{ post.url | relative_url }}" class="post-link">
+      <h4 class="post-title">{{ post.title }}</h4>
+    </a>
+    <p class="post-summary">
+      {{ post.excerpt }}
+      <span class="related-categories">{{ commonCategories }}</span>
+    </p>
+  </div>
+{% endfor %}

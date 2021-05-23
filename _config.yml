@@ -19,11 +19,10 @@ seo_paginator_message: "%<current>s / %<total>s | "
 
 show_social_icons: true
 animated: true
-show_related_posts: true
 max_related: 3
 enable_anchorjs: true
 permalink:    pretty
-paginate:     3
+paginate:     6
 date_format: "%b %-d, %Y"
 
 google_tag_manager: G-689SEV7MTT
