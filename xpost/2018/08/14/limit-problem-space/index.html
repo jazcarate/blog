@@ -27,8 +27,8 @@
 <meta property="og:title" content="Limit the Problem Space!" />
 <meta name="author" content="Joaquin 'Florius' Azcarate" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Original post can be found in the 10Pines blog. Write less error-prone code. First things first: What is the problem space? Simply put, it is the entire spectrum of inputs that exists in the process of finding a solution to a problem. Say you want to buy a soda from a vending machine. You now have a problem to solve: “Decide what beverage to purchase”. Every button is part of the problem space; yet you can narrow it down to just buttons that get you a can. Down to business In order to present my idea, let’s take a somewhat simple example. a TennisMatch object, that represents just that: a tennis match. TennisMatch williamsVsPetrova = new TennisMatch(...); One thing that a TennisMatch should keep track of is its score. Let’s assume the match is responsible of doing this with a score method. We have several design options: williamsVsPetrova.score(&#39;williams&#39;) / williamsVsPetrova.score(&#39;player1&#39;) williamsVsPetrova.score(0) williamsVsPetrova.scorePlayer1() Most of the times, we’d go for alternative 1 or 2. This makes our code look something like this: Please bear with me for the sake of this example, because we are going to be using a dictionary with the player (whichever their representation: String, Integer or Player) as the key, and their score as the value. This decision in and of itself is not important, but rather a way to scaffold the point I’m trying to get across. public class TennisMatch { private Map&lt;String, Point&gt; points; ... public void score(String player) { points.get(player).scoreAPoint(); } } Which would lead to several unwanted ramifications: What if… the player parameter is not in our Map? the player is null? the player key is in the Map, but the value of the map is null? Before talking about how can we can improve our code, let’s take a minute to think how the latter in particular might be easily fixed. We could avoid it altogether (and maybe the other ones) by forcing the TennisMatch creation to have two players and making those players have a valid starting score. Maths! Let’s jump briefly to another situation. Suppose that we wanted to solve the following problem: If we have 3 minutes for a presentation, and we need to equally divide them between n students, how many minutes would each student get? A method that would solve this problem might look something like this: superDivide(Object amountOfStudents) { return 3 / ((Integer) amountOfStudents); } Of course, it doesn’t make much sense to accept an Object in the method signature, since we already know we are going to be dealing with numbers. And, mind you, because downcasting stinks. So, based on what we already know, we could avoid downcasting, limiting the possible inputs from Object to Integer: superDivide(Integer amountOfStudents) { return 3 / amountOfStudents; } I’d ponder this is not much better. With a keen eye for finding problems, one might realize that if the parameter were 0, the program would explode. Say this is not what we want, because we know that we are dealing with an amount of students, n. And n should never be zero. Nor should it be less than zero. This suggests to me that our method is accepting a problem space much much larger than what we actually can and should be able to handle. We could take two paths to fix this: Preparing for the worse and checking for this restrictions to be met inside our method superDivide(Integer amountOfStudents) { if( amountOfStudents &lt;= 0 ) throw new InvalidAmountOfStudents(amountOfStudents); return 3 / amountOfStudents; } Deal with the problem head on, and limit the problem space! Math has a name for this kind of numbers: Natural numbers. Java does not. At least not out-of-the-box. But we can create the NaturalNumber class! This way, we wouldn’t need to be prepared for those edge cases, since we’d have limited the input of our method, and deal only with valid numbers: superDivide(NaturalNumber amountOfStudents) { return 3 / amountOfStudents; } Java does not have an object to handle the filter for unauthorized users on a rest API call either, yet we are eager to create UnauthorizedUserFilter implements RESTFilter. I don’t usually see simple problem limiting classes like NaturalNumber. It baffles me. Argumentative Back to williamsVsPetrova.score. Let’s think about this problem as a math function. Its domain should be only two values. One for each player. Now, lets analyze the parameter types we mentioned above: public void score( String player): The String type is infinitely (disregard limited memory problem) large. So it might not be the best type. If we do go for this option, we will be forced to do some assertions if the name is one of the player participating in the TennisMatch. public void score( Integer player): Same as 1., but with added obfuscation. Please don’t. public void scorePlayer1(): No parameter means the domain size is only one. We are half way there! We re now forced to implement public void scorePlayer2(). The code for these two methods might be conspicuously similar, so we might refactor them like so: public void scorePlayer1() { scoreFor(&#39;player1&#39;); } public void scorePlayer2() { scoreFor(&#39;player2&#39;); } private void scoreFor(String scorer) { ... } Although we are using a String with its infinitely large domain space, the method is private and we are sure that the only possible calls are with one of two valid values. public void score( Bool player): In spite of the fact that the the Boolean type might fit our domain-length restrictions; think about how it will look like when used: williamsVsPetrova.score(false); //Ball for Petrova ?! A side note on the language I used Java throughout the post, and although I took advantage of the fact that Java is strongly and explicitly typed with static type checking, this principles are not language-specific. Bonus: Make the problem space explicit! Since a method can have its argument either null or an actual value; rather than have a comment, use a type that represents both cases (Optionals in the case of Java). Recap Constructors are important. If you can’t build invalid objects, then you can write code assuming the objects you interact with are valid. This can save you many headaches. Don’t be afraid of creating classes with the sole purpose of delimiting your problem space. Thinking about the domain space of a method, albeit a good technique, is not the only one. Think of it as an extra tool in your tool belt." />
-<meta property="og:description" content="Original post can be found in the 10Pines blog. Write less error-prone code. First things first: What is the problem space? Simply put, it is the entire spectrum of inputs that exists in the process of finding a solution to a problem. Say you want to buy a soda from a vending machine. You now have a problem to solve: “Decide what beverage to purchase”. Every button is part of the problem space; yet you can narrow it down to just buttons that get you a can. Down to business In order to present my idea, let’s take a somewhat simple example. a TennisMatch object, that represents just that: a tennis match. TennisMatch williamsVsPetrova = new TennisMatch(...); One thing that a TennisMatch should keep track of is its score. Let’s assume the match is responsible of doing this with a score method. We have several design options: williamsVsPetrova.score(&#39;williams&#39;) / williamsVsPetrova.score(&#39;player1&#39;) williamsVsPetrova.score(0) williamsVsPetrova.scorePlayer1() Most of the times, we’d go for alternative 1 or 2. This makes our code look something like this: Please bear with me for the sake of this example, because we are going to be using a dictionary with the player (whichever their representation: String, Integer or Player) as the key, and their score as the value. This decision in and of itself is not important, but rather a way to scaffold the point I’m trying to get across. public class TennisMatch { private Map&lt;String, Point&gt; points; ... public void score(String player) { points.get(player).scoreAPoint(); } } Which would lead to several unwanted ramifications: What if… the player parameter is not in our Map? the player is null? the player key is in the Map, but the value of the map is null? Before talking about how can we can improve our code, let’s take a minute to think how the latter in particular might be easily fixed. We could avoid it altogether (and maybe the other ones) by forcing the TennisMatch creation to have two players and making those players have a valid starting score. Maths! Let’s jump briefly to another situation. Suppose that we wanted to solve the following problem: If we have 3 minutes for a presentation, and we need to equally divide them between n students, how many minutes would each student get? A method that would solve this problem might look something like this: superDivide(Object amountOfStudents) { return 3 / ((Integer) amountOfStudents); } Of course, it doesn’t make much sense to accept an Object in the method signature, since we already know we are going to be dealing with numbers. And, mind you, because downcasting stinks. So, based on what we already know, we could avoid downcasting, limiting the possible inputs from Object to Integer: superDivide(Integer amountOfStudents) { return 3 / amountOfStudents; } I’d ponder this is not much better. With a keen eye for finding problems, one might realize that if the parameter were 0, the program would explode. Say this is not what we want, because we know that we are dealing with an amount of students, n. And n should never be zero. Nor should it be less than zero. This suggests to me that our method is accepting a problem space much much larger than what we actually can and should be able to handle. We could take two paths to fix this: Preparing for the worse and checking for this restrictions to be met inside our method superDivide(Integer amountOfStudents) { if( amountOfStudents &lt;= 0 ) throw new InvalidAmountOfStudents(amountOfStudents); return 3 / amountOfStudents; } Deal with the problem head on, and limit the problem space! Math has a name for this kind of numbers: Natural numbers. Java does not. At least not out-of-the-box. But we can create the NaturalNumber class! This way, we wouldn’t need to be prepared for those edge cases, since we’d have limited the input of our method, and deal only with valid numbers: superDivide(NaturalNumber amountOfStudents) { return 3 / amountOfStudents; } Java does not have an object to handle the filter for unauthorized users on a rest API call either, yet we are eager to create UnauthorizedUserFilter implements RESTFilter. I don’t usually see simple problem limiting classes like NaturalNumber. It baffles me. Argumentative Back to williamsVsPetrova.score. Let’s think about this problem as a math function. Its domain should be only two values. One for each player. Now, lets analyze the parameter types we mentioned above: public void score( String player): The String type is infinitely (disregard limited memory problem) large. So it might not be the best type. If we do go for this option, we will be forced to do some assertions if the name is one of the player participating in the TennisMatch. public void score( Integer player): Same as 1., but with added obfuscation. Please don’t. public void scorePlayer1(): No parameter means the domain size is only one. We are half way there! We re now forced to implement public void scorePlayer2(). The code for these two methods might be conspicuously similar, so we might refactor them like so: public void scorePlayer1() { scoreFor(&#39;player1&#39;); } public void scorePlayer2() { scoreFor(&#39;player2&#39;); } private void scoreFor(String scorer) { ... } Although we are using a String with its infinitely large domain space, the method is private and we are sure that the only possible calls are with one of two valid values. public void score( Bool player): In spite of the fact that the the Boolean type might fit our domain-length restrictions; think about how it will look like when used: williamsVsPetrova.score(false); //Ball for Petrova ?! A side note on the language I used Java throughout the post, and although I took advantage of the fact that Java is strongly and explicitly typed with static type checking, this principles are not language-specific. Bonus: Make the problem space explicit! Since a method can have its argument either null or an actual value; rather than have a comment, use a type that represents both cases (Optionals in the case of Java). Recap Constructors are important. If you can’t build invalid objects, then you can write code assuming the objects you interact with are valid. This can save you many headaches. Don’t be afraid of creating classes with the sole purpose of delimiting your problem space. Thinking about the domain space of a method, albeit a good technique, is not the only one. Think of it as an extra tool in your tool belt." />
+<meta name="description" content="Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!" />
+<meta property="og:description" content="Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!" />
 <link rel="canonical" href="https://blog.10pines.com/2018/08/14/limit-problem-space/" />
 <meta property="og:url" content="https://blog.10pines.com/2018/08/14/limit-problem-space/" />
 <meta property="og:site_name" content="Florius’ Blog" />
@@ -39,11 +39,11 @@
 <meta name="twitter:site" content="@FloriusWasTaken" />
 <meta name="twitter:creator" content="@FloriusWasTaken" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"description":"Original post can be found in the 10Pines blog. Write less error-prone code. First things first: What is the problem space? Simply put, it is the entire spectrum of inputs that exists in the process of finding a solution to a problem. Say you want to buy a soda from a vending machine. You now have a problem to solve: “Decide what beverage to purchase”. Every button is part of the problem space; yet you can narrow it down to just buttons that get you a can. Down to business In order to present my idea, let’s take a somewhat simple example. a TennisMatch object, that represents just that: a tennis match. TennisMatch williamsVsPetrova = new TennisMatch(...); One thing that a TennisMatch should keep track of is its score. Let’s assume the match is responsible of doing this with a score method. We have several design options: williamsVsPetrova.score(&#39;williams&#39;) / williamsVsPetrova.score(&#39;player1&#39;) williamsVsPetrova.score(0) williamsVsPetrova.scorePlayer1() Most of the times, we’d go for alternative 1 or 2. This makes our code look something like this: Please bear with me for the sake of this example, because we are going to be using a dictionary with the player (whichever their representation: String, Integer or Player) as the key, and their score as the value. This decision in and of itself is not important, but rather a way to scaffold the point I’m trying to get across. public class TennisMatch { private Map&lt;String, Point&gt; points; ... public void score(String player) { points.get(player).scoreAPoint(); } } Which would lead to several unwanted ramifications: What if… the player parameter is not in our Map? the player is null? the player key is in the Map, but the value of the map is null? Before talking about how can we can improve our code, let’s take a minute to think how the latter in particular might be easily fixed. We could avoid it altogether (and maybe the other ones) by forcing the TennisMatch creation to have two players and making those players have a valid starting score. Maths! Let’s jump briefly to another situation. Suppose that we wanted to solve the following problem: If we have 3 minutes for a presentation, and we need to equally divide them between n students, how many minutes would each student get? A method that would solve this problem might look something like this: superDivide(Object amountOfStudents) { return 3 / ((Integer) amountOfStudents); } Of course, it doesn’t make much sense to accept an Object in the method signature, since we already know we are going to be dealing with numbers. And, mind you, because downcasting stinks. So, based on what we already know, we could avoid downcasting, limiting the possible inputs from Object to Integer: superDivide(Integer amountOfStudents) { return 3 / amountOfStudents; } I’d ponder this is not much better. With a keen eye for finding problems, one might realize that if the parameter were 0, the program would explode. Say this is not what we want, because we know that we are dealing with an amount of students, n. And n should never be zero. Nor should it be less than zero. This suggests to me that our method is accepting a problem space much much larger than what we actually can and should be able to handle. We could take two paths to fix this: Preparing for the worse and checking for this restrictions to be met inside our method superDivide(Integer amountOfStudents) { if( amountOfStudents &lt;= 0 ) throw new InvalidAmountOfStudents(amountOfStudents); return 3 / amountOfStudents; } Deal with the problem head on, and limit the problem space! Math has a name for this kind of numbers: Natural numbers. Java does not. At least not out-of-the-box. But we can create the NaturalNumber class! This way, we wouldn’t need to be prepared for those edge cases, since we’d have limited the input of our method, and deal only with valid numbers: superDivide(NaturalNumber amountOfStudents) { return 3 / amountOfStudents; } Java does not have an object to handle the filter for unauthorized users on a rest API call either, yet we are eager to create UnauthorizedUserFilter implements RESTFilter. I don’t usually see simple problem limiting classes like NaturalNumber. It baffles me. Argumentative Back to williamsVsPetrova.score. Let’s think about this problem as a math function. Its domain should be only two values. One for each player. Now, lets analyze the parameter types we mentioned above: public void score( String player): The String type is infinitely (disregard limited memory problem) large. So it might not be the best type. If we do go for this option, we will be forced to do some assertions if the name is one of the player participating in the TennisMatch. public void score( Integer player): Same as 1., but with added obfuscation. Please don’t. public void scorePlayer1(): No parameter means the domain size is only one. We are half way there! We re now forced to implement public void scorePlayer2(). The code for these two methods might be conspicuously similar, so we might refactor them like so: public void scorePlayer1() { scoreFor(&#39;player1&#39;); } public void scorePlayer2() { scoreFor(&#39;player2&#39;); } private void scoreFor(String scorer) { ... } Although we are using a String with its infinitely large domain space, the method is private and we are sure that the only possible calls are with one of two valid values. public void score( Bool player): In spite of the fact that the the Boolean type might fit our domain-length restrictions; think about how it will look like when used: williamsVsPetrova.score(false); //Ball for Petrova ?! A side note on the language I used Java throughout the post, and although I took advantage of the fact that Java is strongly and explicitly typed with static type checking, this principles are not language-specific. Bonus: Make the problem space explicit! Since a method can have its argument either null or an actual value; rather than have a comment, use a type that represents both cases (Optionals in the case of Java). Recap Constructors are important. If you can’t build invalid objects, then you can write code assuming the objects you interact with are valid. This can save you many headaches. Don’t be afraid of creating classes with the sole purpose of delimiting your problem space. Thinking about the domain space of a method, albeit a good technique, is not the only one. Think of it as an extra tool in your tool belt.","url":"https://blog.10pines.com/2018/08/14/limit-problem-space/","@type":"BlogPosting","headline":"Limit the Problem Space!","dateModified":"2018-08-14T00:00:00+00:00","datePublished":"2018-08-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.10pines.com/2018/08/14/limit-problem-space/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"description":"Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!","url":"https://blog.10pines.com/2018/08/14/limit-problem-space/","@type":"BlogPosting","headline":"Limit the Problem Space!","dateModified":"2018-08-14T00:00:00+00:00","datePublished":"2018-08-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.10pines.com/2018/08/14/limit-problem-space/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202105231526" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202105231824" type="text/css">
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
@@ -60,9 +60,9 @@
 
     <!-- Icons -->
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-c0ee5ca9c1b59382b690f514f961a49ecd5a0f28427cb4db0a2407cf86fdc965f074c6dcbd7153586042a0a478a1654e0df0a2502f0e4dfc870a72f727287ee0.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-e5f0551267982fb91476746e25a0d26b43359fc94a6300eaef46b5ea960d700212027d13e12efc416ef27039216ffe3515f35aa73f1c76c536b5c065d5a52ef3.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-247f125a9cc158c805ff38b61bdc54d114845c8f87a48f23781597338173f2296a075cac2e403280eac7d9b05bd1e0dfc915835bf9973af5fb8f13803d0f28aa.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-7e477d5e7ca4c4d1df8a9705d5bf0686ecd185ff7cad7bbbf8e031be1e89dd14b43b99043dbde7f901693c889148f2baf82fa8bc9b1096a88941fc8276753262.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-9553cb8b35ce433c5c4afef88463773adb74b05a12ff3809baceac37635421421af316b10b67f70251d18a962533964210fb57f3955020753c818969701bc221.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-a7986df3b2744a5a0085d9ec51efcab422877a4b13831ec4cb51a014ce03ea4b028c196cea337cd1e0518503155ed59c135e040d5f0a17be2fb84ee30c57d8f4.png"/>
 
     <meta name="theme-color" content="#000000">
 
@@ -103,20 +103,6 @@
     
     
         <a class="nav-link" href="/categories/">Categories</a>
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
     
 
     
@@ -405,104 +391,78 @@ Now, lets analyze the parameter types we mentioned above:</p>
   <img alt="Melian" src="/assets/cat-0fe72554239fb5bc68cc3b08063d5fb3d3984c6381e560b01fa8d5e35ed5a68e4741595a4929859029f18386c321ac391d55cccf60a51f08dd3148d38b5a44b7.png">
 </div>
 
+<h3 class="related-post-title">Random Posts</h3>
 
-  <h3 class="related-post-title">Related Posts</h3>
-  
-  
-  
-    
-    
-
-    
-
-    
 
   
-    
-    
-
-    
-
-    
-
-  
-    
-    
-
-    
-
-    
-      
-      <div class="post ml2 related">
-        <a href="/xpost/2021/04/15/discoverying-crystal/" class="post-link">
-          <h4 class="post-title">Discovering Crystal</h4>
-        </a>
-        <p class="post-summary">
-          
-          <span class="related-categories">
-            <a href="/categories#xpost">#xpost</a>
-          </span>
-        </p>
-      </div>
-      
-      
-    
-
-  
-    
-    
-
-    
-
-    
-
-  
-    
-    
-
-    
-
-    
-      
-      <div class="post ml2 related">
-        <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
-          <h4 class="post-title">Inspiraciones</h4>
-        </a>
-        <p class="post-summary">
-          ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
-          <span class="related-categories">
-            <a href="/categories#xpost">#xpost</a>
-          </span>
-        </p>
-      </div>
-      
-      
-    
-
-  
-    
-    
-
-    
-
-    
-      
-      <div class="post ml2 related">
-        <a href="/xpost/2020/12/03/haskell-para-mentes-imperativas/" class="post-link">
-          <h4 class="post-title">Haskell para mentes imperativas</h4>
-        </a>
-        <p class="post-summary">
-          En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.
-          <span class="related-categories">
-            <a href="/categories#xpost">#xpost</a>
-          </span>
-        </p>
-      </div>
-      
-      
-        
   
 
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
+      <h4 class="post-title">Inspiraciones</h4>
+    </a>
+    <p class="post-summary">
+      ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/" class="post-link">
+      <h4 class="post-title">Deckchecks, Heuristics, and Decision Trees</h4>
+    </a>
+    <p class="post-summary">
+      One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament, and routinely check them. Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques. I feel we under-use the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective. In this post, I would like to explore some techniques' inner workings. Propose a hypothesis on why they might work in some situations but not others. Consider unexplored alternatives. And build a heuristic on what method is better for each circumstance. Join me!
+      <span class="related-categories">
+      <a href="/categories#mtg">#mtg</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2021/04/15/discoverying-crystal/" class="post-link">
+      <h4 class="post-title">Discovering Crystal</h4>
+    </a>
+    <p class="post-summary">
+      I was working with Ruby on Rails on a project with other very skilled Ruby and Rails developers. As many others working with Ruby, we liked it’s syntax, it’s ease of use, it’s dependencies (gems) but had some issues with it. Every programming language does. As luck would have it, I was also in close contact with some very vociferous advocate of Crystal. You can imagine, with the tagline: “Fast as C, Slick as Ruby”, I was hooked.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/rambling/coding/2021/05/12/desire-driven-development/" class="post-link">
+      <h4 class="post-title">Desire Driven Development</h4>
+    </a>
+    <p class="post-summary">
+      Long have I heard and reaped the benefits of Test Driven Development. But I'm starting to sense that much of the material written and explained about TDD is by fanatics. In this post I'll explore my own take on TDD, and the journey &rarr; Desire Driven Development.
+      <span class="related-categories">
+      <a href="/categories#rambling">#rambling</a>
+    
+      <a href="/categories#coding">#coding</a>
+    </span>
+    </p>
+  </div>
 
 
       </div>

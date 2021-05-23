@@ -27,8 +27,8 @@
 <meta property="og:title" content="The essence of Event Sourcing" />
 <meta name="author" content="Joaquin 'Florius' Azcarate" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Original post can be found in the 10Pines blog. Event Sourcing is a somewhat trending topic, but by no accounts a new one. Right now you can find a lot of stories on how to event Source in Rust, Kafka or PostgreSQL, but I’ve found a lack of high concept blog posts on what is event sourcing… or rather, I’ve found an overwhelming amount of supposedly event sourcing posts, all talking about a lot of different things (I’m looking at you CQRS). So, I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”, not by actually going into any technical details, but rather into how we solve a problem on that subject. Backstory (Sourcing Events) We had a small internal app that we used in big meetings to serialize conversations. Think of it as an over-complicated, over-designed queue. The app had a backend and a frontend, both which shared the particular state that the app should show to the user. Basically: Who was talking, and who comes next. The app kept all of our smartphones in sync. Whenever someone, say Joe, pushed the “I want to talk next” button, the backend did all the computations to add him to the end of the queue, and all of our smartphones got the message with the new state to display. Joe was now on the queue. Waiting. This was good enough for several meetings but we, as a tech savvy company, wanted more! So, of course, we added features like emoji support to 👍, 👎 and ask that the speaker would wrap up (🌯). So far, no Events to be Sourced whatsoever. After a new round of emoji-enhanced meetings, I wondered: How many 👍 did I had when I spoke last week? I had no way of knowing. The backend was updating the list of reactions every time a new speaker’s turn was up. And therein laid my problem. I never considered that after the meeting I might want to know something as simple as that. So we put on our thinking hats and settled on a simple heuristic: No Updates. No Deletes. The actual potato (Eventing Source) No Updates, no deletes might look like a daunting feat. How would we reflect reality without the basic premise that things change. Luckily, we have functional programing close to our hearts here at 10Pines, and we can imagine a world where “things are immutable”. So we had a frontend that was sending the intentions. What the user wanted to do. I will call this intentions Events. We had 3 major events: “I want to talk” event. “I don’t want to talk anymore” event “I want to react with a 👍” event Notice this were not “Add me to the queue”, or “Now the speaker has 5 👍”, but rather the intention the user had. Now, the backend had to receive these events, and instead of updating its state, saving it and broadcasting it; we were saving the event and computing a new state (based on the previous state and this new event) Previous state Event Current state { currentSpeaker: Joaco, queue: [] } Dave wants to talk { currentSpeaker: Joaco, queue: [Dave] } And, you guessed it: the previous state was itself computed with its previous state plus the last event before this new one. So on and so forth. Previous-previous state Event Previous state { currentSpeaker: nil, queue: [] } Joaco wants to talk { currentSpeaker: Joaco, queue: [] } We changed from a state that was being updated, to adding onto a list events, and finding out the new state computing every event and how they changed the state. No information can be lost. Ever. No updates. No deletes. Back to the original question (Source Event) How many reactions did I have. Well, now I could figure this out. I just needed to replay all the events, but now, instead of having a state that had the whole queue, I’d use the events to transform a different, more useful state: A state Event New state { reactions_joaco_had: 0 } Joaco wants to talk { reactions_joaco_had: 0 } A state Event New state { reactions_joaco_had: 0 } I want to react with a 👍 { reactions_joaco_had: 1 } *This is an oversimplification because we would still need to know who was talking at the time to know if we had to increment the reaction counter or not. This is called a projection, and it is the way we can “fold” our events into relevant information. Lets recap (Evented Source) We changed the way we thought of our storage. Rather than update what we know, we add to an infinite list the events that change our domain. This way, we can replay those events and answer questions we never thought we wanted to ask at the time of writing the code. Food for thought: I wanted to keep this post short and high-concept; but I’ll let the reader think of some interesting things that steam from this kind of approach: If we ever botched the part of the system that computed new states; we could rollout a fixed version, and replay the whole history of the application, and the error would cease to exist. Structural changes to the database stop being something to worry about. We are only storing events, and those don’t change often. Rolling back and replaying the history is the fabric of event sourcing. The new state doesn’t need to be computed from the first initial state, along with all the events thereafter. We can periodically take “snapshots” of events, and compute newer events from that saved state. The same stream of events can be used by many applications, each having their own projection to answer a wildly different set of questions." />
-<meta property="og:description" content="Original post can be found in the 10Pines blog. Event Sourcing is a somewhat trending topic, but by no accounts a new one. Right now you can find a lot of stories on how to event Source in Rust, Kafka or PostgreSQL, but I’ve found a lack of high concept blog posts on what is event sourcing… or rather, I’ve found an overwhelming amount of supposedly event sourcing posts, all talking about a lot of different things (I’m looking at you CQRS). So, I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”, not by actually going into any technical details, but rather into how we solve a problem on that subject. Backstory (Sourcing Events) We had a small internal app that we used in big meetings to serialize conversations. Think of it as an over-complicated, over-designed queue. The app had a backend and a frontend, both which shared the particular state that the app should show to the user. Basically: Who was talking, and who comes next. The app kept all of our smartphones in sync. Whenever someone, say Joe, pushed the “I want to talk next” button, the backend did all the computations to add him to the end of the queue, and all of our smartphones got the message with the new state to display. Joe was now on the queue. Waiting. This was good enough for several meetings but we, as a tech savvy company, wanted more! So, of course, we added features like emoji support to 👍, 👎 and ask that the speaker would wrap up (🌯). So far, no Events to be Sourced whatsoever. After a new round of emoji-enhanced meetings, I wondered: How many 👍 did I had when I spoke last week? I had no way of knowing. The backend was updating the list of reactions every time a new speaker’s turn was up. And therein laid my problem. I never considered that after the meeting I might want to know something as simple as that. So we put on our thinking hats and settled on a simple heuristic: No Updates. No Deletes. The actual potato (Eventing Source) No Updates, no deletes might look like a daunting feat. How would we reflect reality without the basic premise that things change. Luckily, we have functional programing close to our hearts here at 10Pines, and we can imagine a world where “things are immutable”. So we had a frontend that was sending the intentions. What the user wanted to do. I will call this intentions Events. We had 3 major events: “I want to talk” event. “I don’t want to talk anymore” event “I want to react with a 👍” event Notice this were not “Add me to the queue”, or “Now the speaker has 5 👍”, but rather the intention the user had. Now, the backend had to receive these events, and instead of updating its state, saving it and broadcasting it; we were saving the event and computing a new state (based on the previous state and this new event) Previous state Event Current state { currentSpeaker: Joaco, queue: [] } Dave wants to talk { currentSpeaker: Joaco, queue: [Dave] } And, you guessed it: the previous state was itself computed with its previous state plus the last event before this new one. So on and so forth. Previous-previous state Event Previous state { currentSpeaker: nil, queue: [] } Joaco wants to talk { currentSpeaker: Joaco, queue: [] } We changed from a state that was being updated, to adding onto a list events, and finding out the new state computing every event and how they changed the state. No information can be lost. Ever. No updates. No deletes. Back to the original question (Source Event) How many reactions did I have. Well, now I could figure this out. I just needed to replay all the events, but now, instead of having a state that had the whole queue, I’d use the events to transform a different, more useful state: A state Event New state { reactions_joaco_had: 0 } Joaco wants to talk { reactions_joaco_had: 0 } A state Event New state { reactions_joaco_had: 0 } I want to react with a 👍 { reactions_joaco_had: 1 } *This is an oversimplification because we would still need to know who was talking at the time to know if we had to increment the reaction counter or not. This is called a projection, and it is the way we can “fold” our events into relevant information. Lets recap (Evented Source) We changed the way we thought of our storage. Rather than update what we know, we add to an infinite list the events that change our domain. This way, we can replay those events and answer questions we never thought we wanted to ask at the time of writing the code. Food for thought: I wanted to keep this post short and high-concept; but I’ll let the reader think of some interesting things that steam from this kind of approach: If we ever botched the part of the system that computed new states; we could rollout a fixed version, and replay the whole history of the application, and the error would cease to exist. Structural changes to the database stop being something to worry about. We are only storing events, and those don’t change often. Rolling back and replaying the history is the fabric of event sourcing. The new state doesn’t need to be computed from the first initial state, along with all the events thereafter. We can periodically take “snapshots” of events, and compute newer events from that saved state. The same stream of events can be used by many applications, each having their own projection to answer a wildly different set of questions." />
+<meta name="description" content="Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”." />
+<meta property="og:description" content="Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”." />
 <link rel="canonical" href="https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/" />
 <meta property="og:url" content="https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/" />
 <meta property="og:site_name" content="Florius’ Blog" />
@@ -39,11 +39,11 @@
 <meta name="twitter:site" content="@FloriusWasTaken" />
 <meta name="twitter:creator" content="@FloriusWasTaken" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"description":"Original post can be found in the 10Pines blog. Event Sourcing is a somewhat trending topic, but by no accounts a new one. Right now you can find a lot of stories on how to event Source in Rust, Kafka or PostgreSQL, but I’ve found a lack of high concept blog posts on what is event sourcing… or rather, I’ve found an overwhelming amount of supposedly event sourcing posts, all talking about a lot of different things (I’m looking at you CQRS). So, I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”, not by actually going into any technical details, but rather into how we solve a problem on that subject. Backstory (Sourcing Events) We had a small internal app that we used in big meetings to serialize conversations. Think of it as an over-complicated, over-designed queue. The app had a backend and a frontend, both which shared the particular state that the app should show to the user. Basically: Who was talking, and who comes next. The app kept all of our smartphones in sync. Whenever someone, say Joe, pushed the “I want to talk next” button, the backend did all the computations to add him to the end of the queue, and all of our smartphones got the message with the new state to display. Joe was now on the queue. Waiting. This was good enough for several meetings but we, as a tech savvy company, wanted more! So, of course, we added features like emoji support to 👍, 👎 and ask that the speaker would wrap up (🌯). So far, no Events to be Sourced whatsoever. After a new round of emoji-enhanced meetings, I wondered: How many 👍 did I had when I spoke last week? I had no way of knowing. The backend was updating the list of reactions every time a new speaker’s turn was up. And therein laid my problem. I never considered that after the meeting I might want to know something as simple as that. So we put on our thinking hats and settled on a simple heuristic: No Updates. No Deletes. The actual potato (Eventing Source) No Updates, no deletes might look like a daunting feat. How would we reflect reality without the basic premise that things change. Luckily, we have functional programing close to our hearts here at 10Pines, and we can imagine a world where “things are immutable”. So we had a frontend that was sending the intentions. What the user wanted to do. I will call this intentions Events. We had 3 major events: “I want to talk” event. “I don’t want to talk anymore” event “I want to react with a 👍” event Notice this were not “Add me to the queue”, or “Now the speaker has 5 👍”, but rather the intention the user had. Now, the backend had to receive these events, and instead of updating its state, saving it and broadcasting it; we were saving the event and computing a new state (based on the previous state and this new event) Previous state Event Current state { currentSpeaker: Joaco, queue: [] } Dave wants to talk { currentSpeaker: Joaco, queue: [Dave] } And, you guessed it: the previous state was itself computed with its previous state plus the last event before this new one. So on and so forth. Previous-previous state Event Previous state { currentSpeaker: nil, queue: [] } Joaco wants to talk { currentSpeaker: Joaco, queue: [] } We changed from a state that was being updated, to adding onto a list events, and finding out the new state computing every event and how they changed the state. No information can be lost. Ever. No updates. No deletes. Back to the original question (Source Event) How many reactions did I have. Well, now I could figure this out. I just needed to replay all the events, but now, instead of having a state that had the whole queue, I’d use the events to transform a different, more useful state: A state Event New state { reactions_joaco_had: 0 } Joaco wants to talk { reactions_joaco_had: 0 } A state Event New state { reactions_joaco_had: 0 } I want to react with a 👍 { reactions_joaco_had: 1 } *This is an oversimplification because we would still need to know who was talking at the time to know if we had to increment the reaction counter or not. This is called a projection, and it is the way we can “fold” our events into relevant information. Lets recap (Evented Source) We changed the way we thought of our storage. Rather than update what we know, we add to an infinite list the events that change our domain. This way, we can replay those events and answer questions we never thought we wanted to ask at the time of writing the code. Food for thought: I wanted to keep this post short and high-concept; but I’ll let the reader think of some interesting things that steam from this kind of approach: If we ever botched the part of the system that computed new states; we could rollout a fixed version, and replay the whole history of the application, and the error would cease to exist. Structural changes to the database stop being something to worry about. We are only storing events, and those don’t change often. Rolling back and replaying the history is the fabric of event sourcing. The new state doesn’t need to be computed from the first initial state, along with all the events thereafter. We can periodically take “snapshots” of events, and compute newer events from that saved state. The same stream of events can be used by many applications, each having their own projection to answer a wildly different set of questions.","url":"https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/","@type":"BlogPosting","headline":"The essence of Event Sourcing","dateModified":"2019-07-10T00:00:00+00:00","datePublished":"2019-07-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"description":"Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.","url":"https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/","@type":"BlogPosting","headline":"The essence of Event Sourcing","dateModified":"2019-07-10T00:00:00+00:00","datePublished":"2019-07-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202105231526" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202105231824" type="text/css">
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
@@ -60,9 +60,9 @@
 
     <!-- Icons -->
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-c0ee5ca9c1b59382b690f514f961a49ecd5a0f28427cb4db0a2407cf86fdc965f074c6dcbd7153586042a0a478a1654e0df0a2502f0e4dfc870a72f727287ee0.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-e5f0551267982fb91476746e25a0d26b43359fc94a6300eaef46b5ea960d700212027d13e12efc416ef27039216ffe3515f35aa73f1c76c536b5c065d5a52ef3.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-247f125a9cc158c805ff38b61bdc54d114845c8f87a48f23781597338173f2296a075cac2e403280eac7d9b05bd1e0dfc915835bf9973af5fb8f13803d0f28aa.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-7e477d5e7ca4c4d1df8a9705d5bf0686ecd185ff7cad7bbbf8e031be1e89dd14b43b99043dbde7f901693c889148f2baf82fa8bc9b1096a88941fc8276753262.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-9553cb8b35ce433c5c4afef88463773adb74b05a12ff3809baceac37635421421af316b10b67f70251d18a962533964210fb57f3955020753c818969701bc221.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-a7986df3b2744a5a0085d9ec51efcab422877a4b13831ec4cb51a014ce03ea4b028c196cea337cd1e0518503155ed59c135e040d5f0a17be2fb84ee30c57d8f4.png"/>
 
     <meta name="theme-color" content="#000000">
 
@@ -103,20 +103,6 @@
     
     
         <a class="nav-link" href="/categories/">Categories</a>
-    
-
-    
-
-    
-    
-    
-    
-
-    
-
-    
-    
-    
     
 
     
@@ -400,104 +386,83 @@
   <img alt="Melian" src="/assets/cat-0fe72554239fb5bc68cc3b08063d5fb3d3984c6381e560b01fa8d5e35ed5a68e4741595a4929859029f18386c321ac391d55cccf60a51f08dd3148d38b5a44b7.png">
 </div>
 
+<h3 class="related-post-title">Random Posts</h3>
 
-  <h3 class="related-post-title">Related Posts</h3>
-  
-  
-  
-    
-    
-
-    
-
-    
 
   
-    
-    
-
-    
-
-    
-
-  
-    
-    
-
-    
-
-    
-      
-      <div class="post ml2 related">
-        <a href="/xpost/2021/04/15/discoverying-crystal/" class="post-link">
-          <h4 class="post-title">Discovering Crystal</h4>
-        </a>
-        <p class="post-summary">
-          
-          <span class="related-categories">
-            <a href="/categories#xpost">#xpost</a>
-          </span>
-        </p>
-      </div>
-      
-      
-    
-
-  
-    
-    
-
-    
-
-    
-
-  
-    
-    
-
-    
-
-    
-      
-      <div class="post ml2 related">
-        <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
-          <h4 class="post-title">Inspiraciones</h4>
-        </a>
-        <p class="post-summary">
-          ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
-          <span class="related-categories">
-            <a href="/categories#xpost">#xpost</a>
-          </span>
-        </p>
-      </div>
-      
-      
-    
-
-  
-    
-    
-
-    
-
-    
-      
-      <div class="post ml2 related">
-        <a href="/xpost/2020/12/03/haskell-para-mentes-imperativas/" class="post-link">
-          <h4 class="post-title">Haskell para mentes imperativas</h4>
-        </a>
-        <p class="post-summary">
-          En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.
-          <span class="related-categories">
-            <a href="/categories#xpost">#xpost</a>
-          </span>
-        </p>
-      </div>
-      
-      
-        
   
 
+  
+
+  <div class="post ml2 related">
+    <a href="/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/" class="post-link">
+      <h4 class="post-title">Deckchecks, Heuristics, and Decision Trees</h4>
+    </a>
+    <p class="post-summary">
+      One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament, and routinely check them. Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques. I feel we under-use the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective. In this post, I would like to explore some techniques' inner workings. Propose a hypothesis on why they might work in some situations but not others. Consider unexplored alternatives. And build a heuristic on what method is better for each circumstance. Join me!
+      <span class="related-categories">
+      <a href="/categories#mtg">#mtg</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2021/04/15/discoverying-crystal/" class="post-link">
+      <h4 class="post-title">Discovering Crystal</h4>
+    </a>
+    <p class="post-summary">
+      I was working with Ruby on Rails on a project with other very skilled Ruby and Rails developers. As many others working with Ruby, we liked it’s syntax, it’s ease of use, it’s dependencies (gems) but had some issues with it. Every programming language does. As luck would have it, I was also in close contact with some very vociferous advocate of Crystal. You can imagine, with the tagline: “Fast as C, Slick as Ruby”, I was hooked.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/raving/2021/05/01/carbn/" class="post-link">
+      <h4 class="post-title">carbn</h4>
+    </a>
+    <p class="post-summary">
+      <p>We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of <strong>expression</strong>. And we like this!</p>
+
+<p>We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
+So what if we re-think our current software stack? And have <strong>humans evaluate other human’s code</strong>.</p>
+
+<p><a href="https://carbn.florius.com.ar/"><code class="language-plaintext highlighter-rouge">carbn</code></a> is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our <em>agents</em>.</p>
+
+
+      <span class="related-categories">
+      <a href="/categories#raving">#raving</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/" class="post-link">
+      <h4 class="post-title">koncierge Una librería para segmentar usuarios</h4>
+    </a>
+    <p class="post-summary">
+      La historia de una librería para evaluar variantes de tests AB, dado una definición de un experimento con un DSL parecido a Mongo y un contexto.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
 
 
       </div>
