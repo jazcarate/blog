@@ -3,7 +3,7 @@ layout: post
 title: Haskell para mentes imperativas
 date: 2020-12-03
 canonical_url: https://dev.to/florius/haskell-para-mentes-imperativas-4n7k
-summary: En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.
+excerpt: En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.
 ---
 
 _El post original se puede leer en mi [dev.to]({{ page.canonical_url }})._

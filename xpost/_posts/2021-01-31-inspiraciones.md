@@ -3,7 +3,7 @@ layout: post
 title: Inspiraciones
 date: 2021-01-31
 canonical_url: https://dev.to/florius/inspiraciones-824
-summary: ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
+excerpt: ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
 ---
 
 _El post original se puede leer en mi [dev.to]({{ page.canonical_url }})._

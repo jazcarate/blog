@@ -2,7 +2,7 @@
 layout: post
 title: Cuándo intervenir en un juego
 date: 2019-02-27
-summary: >-
+excerpt: >-
     Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy.  La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”.
 canonical_url: https://blogs.magicjudges.org/latam/2019/02/27/cuando-intervenir-en-un-juego-por-joaquin-azcarate/
 category: mtg

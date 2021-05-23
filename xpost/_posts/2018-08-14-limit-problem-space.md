@@ -2,9 +2,11 @@
 layout: post
 title: Limit the Problem Space!
 date: 2018-08-14
-summary: How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!
 canonical_url: https://blog.10pines.com/2018/08/14/limit-problem-space/
 tag: design
+excerpt: >-
+    Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem.
+    How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!
 ---
 
 _Original post can be found in the [10Pines blog]({{ page.canonical_url }})._

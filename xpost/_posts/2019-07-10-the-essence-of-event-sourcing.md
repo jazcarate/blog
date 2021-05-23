@@ -2,7 +2,7 @@
 layout: post
 title: The essence of Event Sourcing
 date: 2019-07-10
-summary: >-
+excerpt: >-
     Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is.
     I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.
 canonical_url: https://blog.10pines.com/2019/07/10/the-essence-of-event-sourcing/

@@ -3,6 +3,9 @@ layout: post
 title: Discovering Crystal
 date: 2021-04-15
 canonical_url: https://apiumhub.com/tech-blog-barcelona/discovering-crystal-language/
+excerpt: >-
+  I was working with Ruby on Rails on a project with other very skilled Ruby and Rails developers. As many others working with Ruby, we liked it’s syntax, it’s ease of use, it’s dependencies (gems) but had some issues with it. Every programming language does.
+  As luck would have it, I was also in close contact with some very vociferous advocate of Crystal. You can imagine, with the tagline: “Fast as C, Slick as Ruby”, I was hooked.
 ---
 
 _Original post can be found in the [ApiumHub blog]({{ page.canonical_url }})._
