@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-23T18:24:12+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">Desire Driven Development</title><link href="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/" rel="alternate" type="text/html" title="Desire Driven Development" /><published>2021-05-12T20:45:00+00:00</published><updated>2021-05-12T20:45:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-28T20:13:16+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">Why Do I Write?</title><link href="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/" rel="alternate" type="text/html" title="Why Do I Write?" /><published>2021-05-28T14:54:00+00:00</published><updated>2021-05-28T14:54:00+00:00</updated><id>https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/">&lt;blockquote&gt;
+  &lt;p&gt;Why does this blog exist? Is it worth the carbon footprint to compile, host and serve this blog?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In my worldview, programming is much more about &lt;strong&gt;transmission of knowledge&lt;/strong&gt; than remembering how to invert&lt;sup id=&quot;fnref:invert&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:invert&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; a binary tree.
+I think it is paramount for programmers of this day and age to be competent in:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Communicating their ideas clearly and concisely.&lt;/li&gt;
+  &lt;li&gt;Using existing abstractions, or creating ones if the need arises&lt;sup id=&quot;fnref:not&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:not&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Abstractions entail vocabulary.&lt;/li&gt;
+  &lt;li&gt;Writing documentation, decisions, and tradeoffs that are selected. Both for posterity’s sake and as a way to decant what was and was not important at that time.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I &lt;em&gt;suck&lt;/em&gt; at these three. But that’s ok because I can work on improving 😊.&lt;/p&gt;
+
+&lt;h2 id=&quot;communicating-ideas&quot;&gt;Communicating Ideas&lt;/h2&gt;
+
+&lt;p&gt;I have a lot of experiences where I have an idea for which I can’t put words. I imagine blobs, arrows, and boxes of how things need to interact. But when I want to communicate them I usually ramble on, fail to draw what I have in my head, and by and large, those concepts are communicated imperfectly. Or not at all.&lt;/p&gt;
+
+&lt;p&gt;Communication &lt;strong&gt;is hard&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;But I think that the ability to communicate is a skill that can be worked on. Improved upon. It needs time and practice. This blog is my training ground.
+I don’t expect most of the posts here to be life-changing. But I hope that at some point I will have a groundbreaking idea that I’ll want to share. If/when that time comes, I would like to be prepared. So I train, here.&lt;/p&gt;
+
+&lt;h2 id=&quot;existing-abstractions&quot;&gt;Existing Abstractions&lt;/h2&gt;
+
+&lt;p&gt;Writing also forces me to do some research, and expand my vocabulary (and therefore my pool of abstractions). Every new entry I explore existing material. See what others have written about it. And I’m often presented with like-minded individuals with far more experience in the subject matter, that have interesting choices of terminology.&lt;/p&gt;
+
+&lt;p&gt;I’ve had some ideas I wanted to explore but quickly found other resources that covered all that I wanted to explore, and then some. And even if I didn’t end up writing an entry, my knowledge did expand.&lt;/p&gt;
+
+&lt;p&gt;I would love to be that &lt;em&gt;resource&lt;/em&gt; for someone else; that might be struggling to find the words for a problem, or get some guidance on a topic. Even if they disagree entirely on what I had to say, at least I can be a bad example.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“I’m not totally useless. I can be used as a bad example.”
+― Victor Hugo, Les Misérables&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;for-posteritys-sake&quot;&gt;For Posterity’s Sake&lt;/h2&gt;
+
+&lt;p&gt;Finally and most purposeless for you, the reader, it is a way I can log my journey through life. I look forward to coming back to some old entry and think: “Oh, how naïve young Joaco was”.
+And if &lt;strong&gt;you&lt;/strong&gt; are me, in the future, then remember: you left a pair of socks in the top left drawer in the kitchen 🧦.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:invert&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Why would anyone, in any domain, need to &lt;em&gt;invert&lt;/em&gt; a tree‽‽ &lt;a href=&quot;#fnref:invert&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:not&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;More often than not, abstractions over “new” ideas already exist. It is just too hard to find them in the &lt;em&gt;heat of the moment&lt;/em&gt;. We need some time to work on a particular problem that we start to see patterns and similarities the &lt;em&gt;new&lt;/em&gt; abstractions have with existing ones. &lt;a href=&quot;#fnref:not&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="rambling" /><summary type="html">I have much room for improvement where it comes to communicating. A tool I think can help me with it is writing a blog entry every so often about things I care about. This blog is just that. A training ground. My training ground.</summary></entry><entry><title type="html">Desire Driven Development</title><link href="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/" rel="alternate" type="text/html" title="Desire Driven Development" /><published>2021-05-12T20:45:00+00:00</published><updated>2021-05-12T20:45:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/05/12/desire-driven-development/">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Desire&lt;/strong&gt; &lt;em&gt;verb [ T not continuous ] /dɪˈzaɪər/&lt;/em&gt;&lt;/p&gt;
 
   &lt;p&gt;to want something, especially strongly.&lt;/p&gt;
@@ -523,13 +574,13 @@ I highly recommend watching the video from Federico Donner where he goes in-dept
 Then proceed to split each pile by card name.
 Afterward go through the decklist in order and verify the quantity is correct.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-3ba77970138aae9cf5262df2a69d6c4a477f2fba8171eee909a1b97002e253a6642a006eab4fd6af19c914a16ac16d1dab2816577cc989422a0533ce0f460331.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-9d7f8882889fc561cdc2ea63d27c77304fe55e1c24b338f19aa646c87a0bc08e30a3fcf123fe5c9eab0d88287c0b087c60c05b7da101504d65fc9effb0f9f8ac.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2-mana-value-separation&quot;&gt;2. Mana value&lt;sup id=&quot;fnref:mana_value&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:mana_value&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; separation&lt;/h3&gt;
 &lt;p&gt;Split the deck into piles, categorized by mana value.
 Then go through the decklist and retrieve the cards with the required quantity from the appropriate pile.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by mana value&quot; src=&quot;/assets/52e2be-41009ba425ba395c693966e1ddd8c5d728363d02d51400c0a855b6d9f7e227d876cd4530fd2636559e48e4c4b277e217caaff3a6565c2948d751c31cfa5038ad.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by mana value&quot; src=&quot;/assets/52e2be-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This got me thinking, to perform a deck check, there are two &lt;strong&gt;critical&lt;/strong&gt; pieces of information that we need:&lt;/p&gt;
 
@@ -576,7 +627,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 &lt;h3 id=&quot;1-type-separation-tree&quot;&gt;1. Type separation tree&lt;/h3&gt;
 &lt;p&gt;Start with the whole deck.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-a4be976ea9c51fb7e9a4829e1055aea34ed83c0ef3acae2eca2809fd3a7ee08565a284a6ac2907e77397c9f962e746b471362e06fc8e5a516f52a6f5de31ecc3.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-6281296e47325a1ccd6ab98fa425aab0f92fe2f501b34bf5b1c2011e2a6d3794b646195772358650ba4c972804d53e9cf262e36b16d364b0efda7662ac9d4bcf.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We’ll represent this deck, unclassified, like so:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card
@@ -599,7 +650,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;We know nothing about these cards yet. So we proceed by the deck into a lands and a non-lands pile.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-3ba77970138aae9cf5262df2a69d6c4a477f2fba8171eee909a1b97002e253a6642a006eab4fd6af19c914a16ac16d1dab2816577cc989422a0533ce0f460331.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-9d7f8882889fc561cdc2ea63d27c77304fe55e1c24b338f19aa646c87a0bc08e30a3fcf123fe5c9eab0d88287c0b087c60c05b7da101504d65fc9effb0f9f8ac.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──Non-Land
 │  │  Non-Land
@@ -622,7 +673,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;We now know more about each pile, but not enough to verify the deck. So we continue to split each pile by card name.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-41009ba425ba395c693966e1ddd8c5d728363d02d51400c0a855b6d9f7e227d876cd4530fd2636559e48e4c4b277e217caaff3a6565c2948d751c31cfa5038ad.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──┌──Non-Land   Primeval Titan
 │  │  │  Non-Land   Primeval Titan
@@ -649,7 +700,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 &lt;h3 id=&quot;2-type-separation-tree&quot;&gt;2. Type separation tree&lt;/h3&gt;
 &lt;p&gt;Again start with the whole deck.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-a4be976ea9c51fb7e9a4829e1055aea34ed83c0ef3acae2eca2809fd3a7ee08565a284a6ac2907e77397c9f962e746b471362e06fc8e5a516f52a6f5de31ecc3.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-6281296e47325a1ccd6ab98fa425aab0f92fe2f501b34bf5b1c2011e2a6d3794b646195772358650ba4c972804d53e9cf262e36b16d364b0efda7662ac9d4bcf.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And once more, the same text representation, with no information whatsoever:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card
@@ -672,7 +723,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;Afterward, split each pile by type.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by type&quot; src=&quot;/assets/21ad13-bed9e5eacdc4f5627563a8ec2afd5d38905b2222101e0d1d0bbb5284506811c7dcafb3fbf74f424f50d82f90269935d922cdd5dad97c53d7cd34b60e34821586.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by type&quot; src=&quot;/assets/21ad13-ea228e6907326fe9c9864a93c5b7cc2a35f8227e27749c2f76cdc01eb23e6419cdb4d051d0bb6f95b35b1733efff44975b73620a91736c3009aa7d3b0854882d.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──Creature
 │  │  Creature
@@ -696,7 +747,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;And finally each by card name.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-41009ba425ba395c693966e1ddd8c5d728363d02d51400c0a855b6d9f7e227d876cd4530fd2636559e48e4c4b277e217caaff3a6565c2948d751c31cfa5038ad.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──┌──Creature   Primeval Titan
 │  │  │  Creature   Primeval Titan
@@ -1576,153 +1627,4 @@ Los usuarios deberían estar distribuidos 50%-50%; dado que hay un 50% de probab
 
 &lt;p&gt;Ese mismo jugador sus tierras solo 17,3 grados para producir maná.¿Intervienes? – ¡Si! Por suerte, la guía de infracciones aclara que como jueces, podemos  solicitar a los jugadores que aclaren la situación, incluso si los jugadores están jugando de manera clara para ellos. Si pudiese confundir a un observador externo.&lt;/p&gt;
 
-&lt;p&gt;Si llegaron a leer hasta acá; ignoren este último ejemplo. Muchísimas gracias y siganla rockeando.&lt;/p&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="mtg" /><summary type="html">Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy. La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”.</summary></entry><entry><title type="html">Limit the Problem Space!</title><link href="https://blog.florius.com.ar/xpost/2018/08/14/limit-problem-space/" rel="alternate" type="text/html" title="Limit the Problem Space!" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/2018/08/14/limit-problem-space</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/2018/08/14/limit-problem-space/">&lt;p&gt;&lt;em&gt;Original post can be found in the &lt;a href=&quot;https://blog.10pines.com/2018/08/14/limit-problem-space/&quot;&gt;10Pines blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;write-less-error-prone-code&quot;&gt;Write less error-prone code.&lt;/h2&gt;
-
-&lt;p&gt;First things first: What is the problem space?
-Simply put, it is the entire spectrum of inputs that exists in the process of finding a solution to a problem.
-Say you want to buy a soda from a vending machine. You now have a problem to solve: “Decide what beverage to purchase”. Every button is part of the problem space; yet you can narrow it down to just buttons that get you a can.&lt;/p&gt;
-
-&lt;h2 id=&quot;down-to-business&quot;&gt;Down to business&lt;/h2&gt;
-
-&lt;p&gt;In order to present my idea, let’s take a somewhat simple example. a TennisMatch object, that represents just that: a tennis match.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;TennisMatch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;williamsVsPetrova&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TennisMatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(...);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;One thing that a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TennisMatch&lt;/code&gt; should keep track of is its score. Let’s assume the match is responsible of doing this with a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;score&lt;/code&gt; method. We have several design options:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.score('williams')&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.score('player1')&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.score(0)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.scorePlayer1()&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Most of the times, we’d go for alternative 1 or 2. This makes our code look something like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Please bear with me for the sake of this example, because we are going to be using a dictionary with the player (whichever their representation: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Player&lt;/code&gt;) as the key, and their score as the value. This decision in and of itself is not important, but rather a way to scaffold the point I’m trying to get across.&lt;/em&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TennisMatch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-    
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;player&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;scoreAPoint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Which would lead to several unwanted ramifications:
-What if…&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;player&lt;/code&gt; parameter is not in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Map&lt;/code&gt;?&lt;/li&gt;
-  &lt;li&gt;the player is null?&lt;/li&gt;
-  &lt;li&gt;the player key is in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Map&lt;/code&gt;, but the value of the map is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt;?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Before talking about how can we can improve our code, let’s take a minute to think how the latter in particular might be easily fixed.&lt;/p&gt;
-
-&lt;p&gt;We could avoid it altogether (and maybe the other ones) by forcing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TennisMatch&lt;/code&gt; creation to have two players and making those players have a valid starting score.&lt;/p&gt;
-
-&lt;h2 id=&quot;maths&quot;&gt;Maths!&lt;/h2&gt;
-
-&lt;p&gt;Let’s jump briefly to another situation.&lt;/p&gt;
-
-&lt;p&gt;Suppose that we wanted to solve the following problem:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;If we have 3 minutes for a presentation,
-and we need to equally divide them between n students,
-how many minutes would each student get?
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;A method that would solve this problem might look something like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;superDivide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Of course, it doesn’t make much sense to accept an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Object&lt;/code&gt; in the method signature, since we already know we are going to be dealing with numbers. And, mind you, because &lt;a href=&quot;https://en.wikipedia.org/wiki/Downcasting&quot;&gt;downcasting&lt;/a&gt; stinks.&lt;/p&gt;
-
-&lt;p&gt;So, based on what we already know, we could avoid downcasting, limiting the possible inputs from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Object&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;superDivide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I’d ponder this is not much better.
-With a keen eye for finding problems, one might realize that if the parameter were &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;, the program would explode.
-Say this is not what we want, because we know that we are dealing with an amount of students, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;. And &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt; should never be zero. &lt;em&gt;Nor should it be less than zero&lt;/em&gt;.
-This suggests to me that our method is accepting a problem space much much larger than what we actually can and should be able to handle.&lt;/p&gt;
-
-&lt;p&gt;We could take two paths to fix this:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Preparing for the worse and checking for this restrictions to be met inside our method&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;superDivide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;InvalidAmountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Deal with the problem head on, and limit the problem space!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Math has a name for this kind of numbers: &lt;a href=&quot;https://en.wikipedia.org/wiki/Natural_number&quot;&gt;Natural numbers&lt;/a&gt;. Java does not. At least not out-of-the-box. But we can create the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NaturalNumber&lt;/code&gt; class!&lt;/p&gt;
-
-&lt;p&gt;This way, we wouldn’t need to be prepared for those edge cases, since we’d have limited the input of our method, and deal only with valid numbers:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;superDivide&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;NaturalNumber&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amountOfStudents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Java does not have an object to handle the filter for unauthorized users on a rest API call either, yet we are eager to create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UnauthorizedUserFilter implements RESTFilter&lt;/code&gt;. I don’t usually see simple &lt;em&gt;problem limiting&lt;/em&gt; classes like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NaturalNumber&lt;/code&gt;. It baffles me.&lt;/p&gt;
-
-&lt;h2 id=&quot;argumentative&quot;&gt;Argumentative&lt;/h2&gt;
-
-&lt;p&gt;Back to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;williamsVsPetrova.score&lt;/code&gt;. Let’s think about this problem as a math &lt;em&gt;function&lt;/em&gt;. Its &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain_of_a_function&quot;&gt;domain&lt;/a&gt; &lt;strong&gt;should be only two&lt;/strong&gt; values. One for each player.
-Now, lets analyze the parameter types we mentioned above:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public void score(&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;player)&lt;/code&gt;: The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt; type is infinitely &lt;em&gt;(disregard limited memory problem)&lt;/em&gt; large. So it might not be the best type.
-    If we do go for this option, we will be forced to do some assertions if the name is one of the player participating in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TennisMatch&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public void score(&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;player)&lt;/code&gt;: Same as 1., but with added obfuscation. Please don’t.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public void scorePlayer1()&lt;/code&gt;: No parameter means the domain size is only one. We are half way there!
-    We re now forced to implement public void scorePlayer2(). The code for these two methods might be conspicuously similar, so we might refactor them like so:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scorePlayer1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;scoreFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scorePlayer2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;scoreFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;player2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scoreFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scorer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Although we are using a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt; with its infinitely large domain space, the method is private and we are sure that the only possible calls are with one of two valid values.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;public void score( Bool player): In spite of the fact that the the Boolean type might fit our domain-length restrictions; think about how it will look like when used:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;williamsVsPetrova&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Ball for Petrova ?!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;a-side-note-on-the-language&quot;&gt;A side note on the language&lt;/h2&gt;
-
-&lt;p&gt;I used Java throughout the post, and although I took advantage of the fact that Java is &lt;a href=&quot;https://en.wikipedia.org/wiki/Type_system#Static_type_checking&quot;&gt;strongly and explicitly typed with static type checking&lt;/a&gt;, this principles are not language-specific.&lt;/p&gt;
-
-&lt;h2 id=&quot;bonus-make-the-problem-space-explicit&quot;&gt;Bonus: Make the problem space explicit!&lt;/h2&gt;
-
-&lt;p&gt;Since a method can have its argument either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt; or an actual value; rather than have a comment, use a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; that represents both cases &lt;em&gt;(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Optionals&lt;/code&gt; in the case of Java)&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;recap&quot;&gt;Recap&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)&quot;&gt;Constructors&lt;/a&gt; are important. If you can’t build invalid objects, then you can write code assuming the objects you interact with are valid. This can save you many headaches.&lt;/li&gt;
-  &lt;li&gt;Don’t be afraid of creating classes with the sole purpose of delimiting your problem space.&lt;/li&gt;
-  &lt;li&gt;Thinking about the domain space of a method, albeit a good technique, is not the only one. Think of it as an extra tool in your tool belt.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="xpost" /><category term="design" /><summary type="html">Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!</summary></entry></feed>
+&lt;p&gt;Si llegaron a leer hasta acá; ignoren este último ejemplo. Muchísimas gracias y siganla rockeando.&lt;/p&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="mtg" /><summary type="html">Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy. La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”.</summary></entry></feed>
