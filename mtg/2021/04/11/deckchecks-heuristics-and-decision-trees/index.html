@@ -32,18 +32,20 @@
 <link rel="canonical" href="https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/" />
 <meta property="og:url" content="https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/" />
 <meta property="og:site_name" content="Florius’ Blog" />
+<meta property="og:image" content="https://blog.florius.com.ar/assets/image/avatar.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-04-11T15:45:00+00:00" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://blog.florius.com.ar/assets/image/avatar.jpg" />
 <meta property="twitter:title" content="Deckchecks, Heuristics, and Decision Trees" />
 <meta name="twitter:site" content="@FloriusWasTaken" />
 <meta name="twitter:creator" content="@FloriusWasTaken" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"description":"One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament, and routinely check them. Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques. I feel we under-use the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective. In this post, I would like to explore some techniques’ inner workings. Propose a hypothesis on why they might work in some situations but not others. Consider unexplored alternatives. And build a heuristic on what method is better for each circumstance. Join me!","url":"https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/","@type":"BlogPosting","headline":"Deckchecks, Heuristics, and Decision Trees","dateModified":"2021-04-11T15:45:00+00:00","datePublished":"2021-04-11T15:45:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/"},"description":"One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament, and routinely check them. Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques. I feel we under-use the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective. In this post, I would like to explore some techniques’ inner workings. Propose a hypothesis on why they might work in some situations but not others. Consider unexplored alternatives. And build a heuristic on what method is better for each circumstance. Join me!","url":"https://blog.florius.com.ar/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/","@type":"BlogPosting","image":"https://blog.florius.com.ar/assets/image/avatar.jpg","headline":"Deckchecks, Heuristics, and Decision Trees","dateModified":"2021-04-11T15:45:00+00:00","datePublished":"2021-04-11T15:45:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202106251101" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202106251146" type="text/css">
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
@@ -70,9 +72,8 @@
 
     <!-- Icons -->
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-ad98749f3b4bdbbd31de12d6314216ebf13f5205b971a116030c8c2a2a7b1adc784abf994b5c3513b7fd2899c5a8f1a97f71a16208a8e9e0f333d49bc5984895.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-5fcc384139decbdde606204c6e6d7aa09bb1700ecb31a5130186b7a899e04a838e64eee9af795e77d8d9ae5a18910d65505f9e5c2934491d96507a8e224b7ceb.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-ad46eb71215eef301299e0fa787879ddd2e61499102953206f92a9e73cba542f8ee4519a8cdf971f372abeba72af82b471e042efd043c2d33606cfb62f719b6c.png"/>
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/favicon.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png" />
 
     <meta name="theme-color" content="#000000">
 
@@ -277,13 +278,13 @@ I highly recommend watching the video from Federico Donner where he goes in-dept
 Then proceed to split each pile by card name.
 Afterward go through the decklist in order and verify the quantity is correct.</p>
 
-<p><img alt="land / non-land" src="/assets/f5327f-f6b48b2fd8c346321657d5e1dbfeafee1722df1151f6974c740df6220d42c5fcb495183dd1a0504e3da7c35b5b45f063fa08606eb199c38065b5923b2aef26a7.png" /></p>
+<p><img src="/assets/image/deck-partition/land-non-land.png" alt="land / non-land" /></p>
 
 <h3 id="2-mana-value-separation">2. Mana value<sup id="fnref:mana_value" role="doc-noteref"><a href="#fn:mana_value" class="footnote" rel="footnote">3</a></sup> separation</h3>
 <p>Split the deck into piles, categorized by mana value.
 Then go through the decklist and retrieve the cards with the required quantity from the appropriate pile.</p>
 
-<p><img alt="by mana value" src="/assets/52e2be-f604687c059ca6c9baa770e2b39591a46257fec88d4ae3ec68cacde19fb77598fd406701513ec10b5c24d944fa617fb44eddf5ee514281ff7f896a4654df3032.png" /></p>
+<p><img src="/assets/image/deck-partition/all.png" alt="by mana value" /></p>
 
 <p>This got me thinking, to perform a deck check, there are two <strong>critical</strong> pieces of information that we need:</p>
 
@@ -330,7 +331,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 <h3 id="1-type-separation-tree">1. Type separation tree</h3>
 <p>Start with the whole deck.</p>
 
-<p><img alt="no classification" src="/assets/979e36-771a50a44a85a5f98d44ba297a05f6bcbbfa6199effbf57e8fa3a5b7a9a553e963250ffb4e2b7c91e80e17108adb564231d1975580f430c0741ef9eba8abfcf9.png" /></p>
+<p><img src="/assets/image/deck-partition/none.png" alt="no classification" /></p>
 
 <p>We’ll represent this deck, unclassified, like so:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──a card
@@ -353,7 +354,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 
 <p>We know nothing about these cards yet. So we proceed by the deck into a lands and a non-lands pile.</p>
 
-<p><img alt="land / non-land" src="/assets/f5327f-f6b48b2fd8c346321657d5e1dbfeafee1722df1151f6974c740df6220d42c5fcb495183dd1a0504e3da7c35b5b45f063fa08606eb199c38065b5923b2aef26a7.png" /></p>
+<p><img src="/assets/image/deck-partition/land-non-land.png" alt="land / non-land" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──┌──Non-Land
 │  │  Non-Land
@@ -376,7 +377,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 
 <p>We now know more about each pile, but not enough to verify the deck. So we continue to split each pile by card name.</p>
 
-<p><img alt="by name" src="/assets/b24d72-838d21b423beed67f1b0b0101b54ad010dbcec1323c273c6b9507c6b83d1c307fceb4d252d90e689c9116dd62af158341e5dba4d890d61ad8687349adadc95fb.png" /></p>
+<p><img src="/assets/image/deck-partition/all.png" alt="by name" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──┌──┌──Non-Land   Primeval Titan
 │  │  │  Non-Land   Primeval Titan
@@ -403,7 +404,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 <h3 id="2-type-separation-tree">2. Type separation tree</h3>
 <p>Again start with the whole deck.</p>
 
-<p><img alt="no classification" src="/assets/979e36-771a50a44a85a5f98d44ba297a05f6bcbbfa6199effbf57e8fa3a5b7a9a553e963250ffb4e2b7c91e80e17108adb564231d1975580f430c0741ef9eba8abfcf9.png" /></p>
+<p><img src="/assets/image/deck-partition/none.png" alt="no classification" /></p>
 
 <p>And once more, the same text representation, with no information whatsoever:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──a card
@@ -426,7 +427,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 
 <p>Afterward, split each pile by type.</p>
 
-<p><img alt="by type" src="/assets/21ad13-fcac7a71e8ee16c99f5293d448a741934b707534034a494a3dfe658877671f294998ea510b6a5f20b061114ea4c44d1bea36caa4cfd52f281df2edcb2794c151.png" /></p>
+<p><img src="/assets/image/deck-partition/type.png" alt="by type" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──┌──Creature
 │  │  Creature
@@ -450,7 +451,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 
 <p>And finally each by card name.</p>
 
-<p><img alt="by name" src="/assets/b24d72-838d21b423beed67f1b0b0101b54ad010dbcec1323c273c6b9507c6b83d1c307fceb4d252d90e689c9116dd62af158341e5dba4d890d61ad8687349adadc95fb.png" /></p>
+<p><img src="/assets/image/deck-partition/all.png" alt="by name" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──┌──┌──Creature   Primeval Titan
 │  │  │  Creature   Primeval Titan
@@ -589,7 +590,7 @@ You can input any deck, and it will figure out all the possible ways of splittin
 
 
 <div class="separator">
-  <img alt="Melian" src="/assets/cat-0fe72554239fb5bc68cc3b08063d5fb3d3984c6381e560b01fa8d5e35ed5a68e4741595a4929859029f18386c321ac391d55cccf60a51f08dd3148d38b5a44b7.png">
+  ![Melian](/assets/cat.png)
 </div>
 
 <h3 class="related-post-title">Random Posts</h3>
@@ -618,32 +619,15 @@ You can input any deck, and it will figure out all the possible ways of splittin
   
 
   <div class="post ml2 related">
-    <a href="/rambling/coding/2021/05/12/desire-driven-development/" class="post-link">
-      <h4 class="post-title">Desire Driven Development</h4>
+    <a href="/rambling/coding/2021/06/24/costs-graphs-integrals/" class="post-link">
+      <h4 class="post-title">On costs, graphs and integrals</h4>
     </a>
     <p class="post-summary">
-      Long have I heard and reaped the benefits of Test Driven Development. But I'm starting to sense that much of the material written and explained about TDD is by fanatics. In this post I'll explore my own take on TDD, and the journey &rarr; Desire Driven Development.
+      Yet another tool to pick a technology. How does the cost of the choice evolve over the complexity? Is there a one-solution-fits-all? In this blog post, we’ll delve into some visualization to understand the difference between choosing Java, Haskell, Hibernate, Ruby on Rails, or drop programming altogether for a no-code approach. Let’s dive into the world of optimizations, integrals, and many many graphs!
       <span class="related-categories">
       <a href="/categories#rambling">#rambling</a>
     
       <a href="/categories#coding">#coding</a>
-    </span>
-    </p>
-  </div>
-
-  
-  
-
-  
-
-  <div class="post ml2 related">
-    <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
-      <h4 class="post-title">Inspiraciones</h4>
-    </a>
-    <p class="post-summary">
-      ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
-      <span class="related-categories">
-      <a href="/categories#xpost">#xpost</a>
     </span>
     </p>
   </div>
@@ -659,6 +643,23 @@ You can input any deck, and it will figure out all the possible ways of splittin
     </a>
     <p class="post-summary">
       La historia de una librería para evaluar variantes de tests AB, dado una definición de un experimento con un DSL parecido a Mongo y un contexto.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2019/07/10/the-essence-of-event-sourcing/" class="post-link">
+      <h4 class="post-title">The essence of Event Sourcing</h4>
+    </a>
+    <p class="post-summary">
+      Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.
       <span class="related-categories">
       <a href="/categories#xpost">#xpost</a>
     </span>
