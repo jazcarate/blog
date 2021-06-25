@@ -5,8 +5,8 @@ date: 2021-06-24 17:33
 categories: rambling coding
 enable_mathjax: true
 excerpt: >-
-    Yet another tool to pick a technology. How do the cost of the choice evolve over the complexity. Is there a one-solution-fits-all? In this blog post we'll delve into some visualization to understand the difference between choosing Java, Haskell, Hibernate, Ruby on Rails or drop programing altogether for a no-code approach.
-    Let's dive into the world of optimizations, integrals and many many graphs! 
+    Yet another tool to pick a technology. How does the cost of the choice evolve over the complexity? Is there a one-solution-fits-all? In this blog post, we’ll delve into some visualization to understand the difference between choosing Java, Haskell, Hibernate, Ruby on Rails, or drop programming altogether for a no-code approach.
+    Let’s dive into the world of optimizations, integrals, and many many graphs!
 ---
 
 Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like
