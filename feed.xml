@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-06-25T10:48:35+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">On costs, graphs and integrals</title><link href="https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/" rel="alternate" type="text/html" title="On costs, graphs and integrals" /><published>2021-06-24T17:33:00+00:00</published><updated>2021-06-24T17:33:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/">&lt;p&gt;Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-06-25T10:54:47+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">On costs, graphs and integrals</title><link href="https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/" rel="alternate" type="text/html" title="On costs, graphs and integrals" /><published>2021-06-24T17:33:00+00:00</published><updated>2021-06-24T17:33:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/">&lt;p&gt;Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;“familiarity in the team”&lt;/li&gt;
@@ -189,7 +189,7 @@ In other words:&lt;/p&gt;
       &lt;p&gt;Or rather lack thereof. &lt;a href=&quot;#fnref:monad_composition&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="rambling" /><category term="coding" /><summary type="html">Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like “familiarity in the team” “interoperability with other pieces in the ecosystem” and “existing dependencies that we can leverage” the idea of how to deal with complexity came up.</summary></entry><entry><title type="html">Why Do I Write?</title><link href="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/" rel="alternate" type="text/html" title="Why Do I Write?" /><published>2021-05-28T14:54:00+00:00</published><updated>2021-05-28T14:54:00+00:00</updated><id>https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/">&lt;blockquote&gt;
+&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="rambling" /><category term="coding" /><summary type="html">Yet another tool to pick a technology. How do the cost of the choice evolve over the complexity. Is there a one-solution-fits-all? In this blog post we'll delve into some visualization to understand the difference between choosing Java, Haskell, Hibernate, Ruby on Rails or drop programing altogether for a no-code approach. Let's dive into the world of optimizations, integrals and many many graphs!</summary></entry><entry><title type="html">Why Do I Write?</title><link href="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/" rel="alternate" type="text/html" title="Why Do I Write?" /><published>2021-05-28T14:54:00+00:00</published><updated>2021-05-28T14:54:00+00:00</updated><id>https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/">&lt;blockquote&gt;
   &lt;p&gt;Why does this blog exist? Is it worth the carbon footprint to compile, host and serve this blog?&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -765,13 +765,13 @@ I highly recommend watching the video from Federico Donner where he goes in-dept
 Then proceed to split each pile by card name.
 Afterward go through the decklist in order and verify the quantity is correct.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-7c8ca0496adfe05e8fb8ca92e70c7dcd9b727e4614034efbaa6038fc5f2a6c6e8fbd1f0861ae5016d682eff8d646a3242e478317a1c4babd084dade4cd33bcbb.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-e530e1eb223835eb3af5fa1faaf0c8e2fa36b8a98d4839fb8822251ffa59d6749faa5da54ab8a30640da7e9fc38f7c7978b6c3caa7bcfc3e8c9f29d4aa0bb009.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2-mana-value-separation&quot;&gt;2. Mana value&lt;sup id=&quot;fnref:mana_value&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:mana_value&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; separation&lt;/h3&gt;
 &lt;p&gt;Split the deck into piles, categorized by mana value.
 Then go through the decklist and retrieve the cards with the required quantity from the appropriate pile.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by mana value&quot; src=&quot;/assets/52e2be-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by mana value&quot; src=&quot;/assets/52e2be-aafb9a6e48b89492bb6179310969f49901e00a893ede9c8ce190d0ce6bea7450920e50ad09637bc05257ae5f7b7bbe2935e0ba74ddb1740569c7d8745b14c5ea.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This got me thinking, to perform a deck check, there are two &lt;strong&gt;critical&lt;/strong&gt; pieces of information that we need:&lt;/p&gt;
 
@@ -818,7 +818,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 &lt;h3 id=&quot;1-type-separation-tree&quot;&gt;1. Type separation tree&lt;/h3&gt;
 &lt;p&gt;Start with the whole deck.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-25769395e2929aa39dff25cbb6670a5be382de95f018141d4c6b2f0ebedec2c1a4d38ef87b30f5845d219417f544dbfc37f89bd3f9c700cc2da411bbf2bbfa1c.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-dcf2a686afe3e60a7b0b61e6edff95da779d8149eb2582c7a84992f7a6597042f13be544294c98f8b2f19ebe86ab6ad42f74aff3a18ccfa0c1b14991f0ded713.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We’ll represent this deck, unclassified, like so:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card
@@ -841,7 +841,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;We know nothing about these cards yet. So we proceed by the deck into a lands and a non-lands pile.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-7c8ca0496adfe05e8fb8ca92e70c7dcd9b727e4614034efbaa6038fc5f2a6c6e8fbd1f0861ae5016d682eff8d646a3242e478317a1c4babd084dade4cd33bcbb.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-e530e1eb223835eb3af5fa1faaf0c8e2fa36b8a98d4839fb8822251ffa59d6749faa5da54ab8a30640da7e9fc38f7c7978b6c3caa7bcfc3e8c9f29d4aa0bb009.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──Non-Land
 │  │  Non-Land
@@ -864,7 +864,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;We now know more about each pile, but not enough to verify the deck. So we continue to split each pile by card name.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-31acbe364046b110675b80dc141591cd52082ce59a2d050b742d4a2f9ab1267fa028bf22b39a71541c778ac2a599b2af3a43c4625db51fb7dd771e5fc89de1b1.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──┌──Non-Land   Primeval Titan
 │  │  │  Non-Land   Primeval Titan
@@ -891,7 +891,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 &lt;h3 id=&quot;2-type-separation-tree&quot;&gt;2. Type separation tree&lt;/h3&gt;
 &lt;p&gt;Again start with the whole deck.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-25769395e2929aa39dff25cbb6670a5be382de95f018141d4c6b2f0ebedec2c1a4d38ef87b30f5845d219417f544dbfc37f89bd3f9c700cc2da411bbf2bbfa1c.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-dcf2a686afe3e60a7b0b61e6edff95da779d8149eb2582c7a84992f7a6597042f13be544294c98f8b2f19ebe86ab6ad42f74aff3a18ccfa0c1b14991f0ded713.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And once more, the same text representation, with no information whatsoever:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card
@@ -914,7 +914,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;Afterward, split each pile by type.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by type&quot; src=&quot;/assets/21ad13-950d87e68c9857ad8535c988cab0a16bff13225cd0c70b9e509c81d73477632cbfc4221658b3a61345e386dc45e77968e4800966afe034f550766072733baa50.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by type&quot; src=&quot;/assets/21ad13-b6a54c666becc67703d10fef825f4c0b5e988e43426662e7d3f3ed3e8b25c683c8387e271dd796b77e0418901f40ec03858cca025c071873a5909bb9b3d5cee7.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──Creature
 │  │  Creature
@@ -938,7 +938,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;And finally each by card name.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-31acbe364046b110675b80dc141591cd52082ce59a2d050b742d4a2f9ab1267fa028bf22b39a71541c778ac2a599b2af3a43c4625db51fb7dd771e5fc89de1b1.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──┌──Creature   Primeval Titan
 │  │  │  Creature   Primeval Titan
