@@ -17,9 +17,6 @@ jobs:
           key: ${{ runner.os }}-build-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      - name: Install imagemagick 📚
-        run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
