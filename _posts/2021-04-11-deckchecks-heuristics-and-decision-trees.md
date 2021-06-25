@@ -49,13 +49,13 @@ Split the deck by dividing it into two piles: lands and non-lands.
 Then proceed to split each pile by card name.
 Afterward go through the decklist in order and verify the quantity is correct.
 
-{% asset deck-partition/land-non-land.png alt='land / non-land' magick:resize='840x' %}
+![land / non-land](/assets/image/deck-partition/land-non-land.png)
 
 ### 2. Mana value[^mana_value] separation
 Split the deck into piles, categorized by mana value.
 Then go through the decklist and retrieve the cards with the required quantity from the appropriate pile.
 
-{% asset deck-partition/all.png alt='by mana value' magick:resize='840x' %}
+![by mana value](/assets/image/deck-partition/all.png)
 
 This got me thinking, to perform a deck check, there are two **critical** pieces of information that we need:
 
@@ -101,7 +101,7 @@ Remember you can _play along_ in the [Deck Partitioner](https://jazcarate.github
 ### 1. Type separation tree
 Start with the whole deck.
 
-{% asset deck-partition/none.png alt='no classification' magick:resize='840x' %}
+![no classification](/assets/image/deck-partition/none.png)
 
 We'll represent this deck, unclassified, like so:
 ```
@@ -125,7 +125,7 @@ We'll represent this deck, unclassified, like so:
 
 We know nothing about these cards yet. So we proceed by the deck into a lands and a non-lands pile.
 
-{% asset deck-partition/land-non-land.png alt='land / non-land' magick:resize='840x' %}
+![land / non-land](/assets/image/deck-partition/land-non-land.png)
 
 ```
 ┌──┌──Non-Land
@@ -149,7 +149,7 @@ We know nothing about these cards yet. So we proceed by the deck into a lands an
 
 We now know more about each pile, but not enough to verify the deck. So we continue to split each pile by card name.
 
-{% asset deck-partition/all.png alt='by name' magick:resize='840x' %}
+![by name](/assets/image/deck-partition/all.png)
 
 ```
 ┌──┌──┌──Non-Land   Primeval Titan
@@ -177,7 +177,7 @@ We now know more about each pile, but not enough to verify the deck. So we conti
 ### 2. Type separation tree
 Again start with the whole deck.
 
-{% asset deck-partition/none.png alt='no classification' magick:resize='840x' %}
+![no classification](/assets/image/deck-partition/none.png)
 
 And once more, the same text representation, with no information whatsoever:
 ```
@@ -201,7 +201,7 @@ And once more, the same text representation, with no information whatsoever:
 
 Afterward, split each pile by type.
 
-{% asset deck-partition/type.png alt='by type' magick:resize='840x' %}
+![by type](/assets/image/deck-partition/type.png)
 
 ```
 ┌──┌──Creature
@@ -226,7 +226,7 @@ Afterward, split each pile by type.
 
 And finally each by card name.
 
-{% asset deck-partition/all.png alt='by name' magick:resize='840x' %}
+![by name](/assets/image/deck-partition/all.png)
 
 ```
 ┌──┌──┌──Creature   Primeval Titan

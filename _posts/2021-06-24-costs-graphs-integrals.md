@@ -7,6 +7,7 @@ enable_mathjax: true
 excerpt: >-
     Yet another tool to pick a technology. How does the cost of the choice evolve over the complexity? Is there a one-solution-fits-all? In this blog post, we’ll delve into some visualization to understand the difference between choosing Java, Haskell, Hibernate, Ruby on Rails, or drop programming altogether for a no-code approach.
     Let’s dive into the world of optimizations, integrals, and many many graphs!
+image: /assets/image/cost-graphs-integrals/comparison.png
 ---
 
 Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like
@@ -56,7 +57,7 @@ These two parameters give us a neat 2-dimensional space to explore the _cost/com
 No matter the complexity, the cost is constant.
 
 
-{% asset cost-graphs-integrals/absurd.png alt='Absurd scenario' %}
+![Absurd scenario](/assets/image/cost-graphs-integrals/absurd.png)
 
 
 With much grievances; I'll tell you that there exists no technology that can deliver on this. Complexity will always carry with it a cost. There might be technologies that promise this kind of behavior. They don't exist[^NFL].
@@ -67,7 +68,7 @@ So a better notion is that there is a lower bound of how much complexity incurs 
 With this mindset, we can establish a “minimum” graph. Technologies might promise better ratios, but we should mistrust.
 
 
-{% asset cost-graphs-integrals/ideal.png alt='Ideal scenario' %}
+![Ideal scenario](/assets/image/cost-graphs-integrals/ideal.png)
 
 
 It is worth mentioning that in all these graphs, a given complexity in the horizontal axis is but the accumulation of costs to reach to that complexity level, as to reach a complexity level of $$n$$, one must first cover $$n-\epsilon$$ (where $$\epsilon \in \mathbb{R}_{>0}$$). If we call $$f$$ the function that we are plotting, then there exists a $$\Delta f \colon \mathbb{Complexity} \mapsto \mathbb{Cost} $$ where $$ f(complexity) = \int_{0}^{complexity} \Delta f(x) \,dx $$). A useful corollary from this fact, is that our graphs are monotonically non-decreasing. And those are fun! 😺.
@@ -80,7 +81,7 @@ Maybe the most alluring. The more complex a problem, the more it costs to solve.
 
 
 
-{% asset cost-graphs-integrals/pay-as-you-go.png alt='Pay as you go' %}
+![Pay as you go](/assets/image/cost-graphs-integrals/pay-as-you-go.png)
 
 
 Technologies here could be plotted with a slightly different slope or initial height. I don't much care about the details comparing each of these technologies 😅. They are great all-around options. _Jack of all trades, master of none_. I see these technologies as the backbone of the software industry. Some have a steeper $$ \Delta f $$, where some have a costlier start; but on in all, they grow linearly. Never being able to have a slope less than the ideal scenario.
@@ -108,7 +109,7 @@ Simple things can be done incredibly fast and easy, without hindering other non-
 All those nice defaults start to work against your custom needs. You start to _fight_ the framework, find ways around checks and validations. Ways that deviate from the secure, fast, reliable path.
 
 
-{% asset cost-graphs-integrals/debt.png alt='Debt' %}
+![Debt](/assets/image/cost-graphs-integrals/debt.png)
 
 
 Examples of these are:
@@ -133,7 +134,7 @@ Be not mistaken, the cost difference before the **Debt** curve and the **Ideal**
 Finally: **Upfront**. These are a treat. You pay a steep cost upfront, but after some turning point, then the marginal cost is cheap. _Managing_ complexities. Composition, ways of meta-programing, having tools for code synthesis are all techniques that pay this cost upfront for future gains.
 
 
-{% asset cost-graphs-integrals/upfront.png alt='Upfront' %}
+![Upfront](/assets/image/cost-graphs-integrals/upfront.png)
 
 
 Some might call this approach _over engineering_, and it is true; up until the point where failing to have done it, the cost is greater.
@@ -162,7 +163,7 @@ Maybe you are one of the enlightened few to have partially-payed some of the cos
 No technology is better or worse in the abstract. It is a choice between good things, and bad things. In this blog post, I wanted to explore a different way of evaluating a piece of technology with just these two axes. And hopefully, give you a new tool to measure up prospects for your next undertaking.
 
 
-{% asset cost-graphs-integrals/comparison.png alt='Comparison' %}
+![Comparison](/assets/image/cost-graphs-integrals/comparison.png)
 
 So I leave you with this final question to encapsulate all of these learnings:
 
@@ -177,7 +178,7 @@ $$
 $$
 
 
-{% asset cost-graphs-integrals/comparison-min.png alt='Comparison' %}
+![Comparison optimized](/assets/image/cost-graphs-integrals/comparison-min.png)
 
 
 I'm not advocating on using a **Debt** technology at the begging and then _switching_ mid-project; as the cost at the switching point will double; but rather a methodology of choosing the _correct_ shape to deal with the expected complexity of it.

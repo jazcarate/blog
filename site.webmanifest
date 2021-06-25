@@ -7,12 +7,7 @@ layout: null
     "start_url": "https://blog.florius.com.ar",
     "icons": [
         {
-            "src": "{% asset favicon.png @path magick:resize='192x192' %}",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "{% asset favicon.png @path magick:resize='512x512' %}",
+            "src": "/assets/favicon.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
