@@ -4,7 +4,7 @@
     "start_url": "https://blog.florius.com.ar",
     "icons": [
         {
-            "src": "/assets/favicon.png",
+            "src": "/assets/image/favicon.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
