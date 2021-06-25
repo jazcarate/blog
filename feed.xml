@@ -1,4 +1,195 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-05-28T20:13:16+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">Why Do I Write?</title><link href="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/" rel="alternate" type="text/html" title="Why Do I Write?" /><published>2021-05-28T14:54:00+00:00</published><updated>2021-05-28T14:54:00+00:00</updated><id>https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blog.florius.com.ar/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.florius.com.ar/" rel="alternate" type="text/html" /><updated>2021-06-25T10:48:35+00:00</updated><id>https://blog.florius.com.ar/feed.xml</id><title type="html">Florius’ Blog</title><subtitle>Joaquin 'Florius' Azcarate’s personal blog</subtitle><author><name>florius</name></author><entry><title type="html">On costs, graphs and integrals</title><link href="https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/" rel="alternate" type="text/html" title="On costs, graphs and integrals" /><published>2021-06-24T17:33:00+00:00</published><updated>2021-06-24T17:33:00+00:00</updated><id>https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/">&lt;p&gt;Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“familiarity in the team”&lt;/li&gt;
+  &lt;li&gt;“interoperability with other pieces in the ecosystem” and&lt;/li&gt;
+  &lt;li&gt;“existing dependencies that we can leverage”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;the idea of how to deal with complexity came up.&lt;/p&gt;
+
+&lt;p&gt;In this blog post I would like to explore an idea that I can so clearly see with graphs in my mind, but takes more than a quick chat to get across. So hopefully, next time I’m in a position to talk about languages or any other technology to tackle a problem, I can point to random graphs&lt;sup id=&quot;fnref:graphs&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:graphs&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; in this article and it will make more sense to my interlocutor.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The graphs here were made with &lt;a href=&quot;https://jazcarate.github.io/rough-graph/&quot;&gt;jazcarate :: Rough Graph&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;limits&quot;&gt;Limits&lt;/h2&gt;
+&lt;p&gt;So, let’s start by setting the groundwork for the next graphs. Some axioms we’ll assume true for the sake of discussion:&lt;/p&gt;
+
+&lt;h3 id=&quot;complexity&quot;&gt;Complexity&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There is an upper- and lower-bound on the complexity of any given system.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The lower limit should be fairly easy to convince, there is such thing as a trivial program&lt;sup id=&quot;fnref:pure&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:pure&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
+On the other hand, the higher bound. And this is a bit more contentious. One can think of this limit as either:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The allowed limit of the universe. A sub-system can never be more complex than the system on which it is embedded.&lt;/li&gt;
+  &lt;li&gt;Or, if &lt;a href=&quot;https://en.wikipedia.org/wiki/Simulation_hypothesis&quot;&gt;simulation theory&lt;/a&gt; is too scary, the maximum capacity of the given team to tackle.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Either way, complexity is be bounded for the sake of this thought experiment.&lt;/p&gt;
+
+&lt;h3 id=&quot;costs&quot;&gt;Costs&lt;/h3&gt;
+&lt;p&gt;There are many ways to measure &lt;em&gt;costs&lt;/em&gt;. In this post, let’s not dwell much on what unit of measurement we chose. In other words, pick whichever is more relatable to you, and I think that my explorations would still make sense:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lines of code&lt;/li&gt;
+  &lt;li&gt;Number of entities in the ER model.&lt;/li&gt;
+  &lt;li&gt;Human Hours&lt;/li&gt;
+  &lt;li&gt;Money spent&lt;/li&gt;
+  &lt;li&gt;Number of sticky notes in the “😟” column in the retrospective.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;other&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But any of these will be, as complexity, bounded at both ends.
+These two parameters give us a neat 2-dimensional space to explore the &lt;em&gt;cost/complexity&lt;/em&gt; of things. So, without further ado, I present you with the first graph.&lt;/p&gt;
+
+&lt;h2 id=&quot;types&quot;&gt;Types&lt;/h2&gt;
+&lt;h3 id=&quot;absurd-scenario&quot;&gt;Absurd scenario&lt;/h3&gt;
+
+&lt;p&gt;No matter the complexity, the cost is constant.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Absurd scenario&quot; src=&quot;/assets/cost-graphs-integrals/absurd-85b8aa5a4abe03ee99b33a66fa4cf295448187dd1b91527f71d88833353eb445fae7ee28c76dfd5c42a1a679ab3b3f83097a4b90c2a0d55f248010d8b0a67f97.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With much grievances; I’ll tell you that there exists no technology that can deliver on this. Complexity will always carry with it a cost. There might be technologies that promise this kind of behavior. They don’t exist&lt;sup id=&quot;fnref:NFL&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:NFL&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;ideal-scenario&quot;&gt;Ideal scenario&lt;/h3&gt;
+&lt;p&gt;So a better notion is that there is a lower bound of how much complexity incurs in cost. I think it would not be unreasonable to propose that the marginal cost is proportional to the change of complexity.&lt;/p&gt;
+
+&lt;p&gt;With this mindset, we can establish a “minimum” graph. Technologies might promise better ratios, but we should mistrust.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Ideal scenario&quot; src=&quot;/assets/cost-graphs-integrals/ideal-29c2b7cf352aa28431fd9e4cd8f1db05d87c31c8606e3787424f6aacfc1ddb3418680893813ca35f5a66504a73ad23e7ca2170e7f03e940d686f158cff2d67a8.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is worth mentioning that in all these graphs, a given complexity in the horizontal axis is but the accumulation of costs to reach to that complexity level, as to reach a complexity level of \(n\), one must first cover \(n-\epsilon\) (where \(\epsilon \in \mathbb{R}_{&amp;gt;0}\)). If we call \(f\) the function that we are plotting, then there exists a \(\Delta f \colon \mathbb{Complexity} \mapsto \mathbb{Cost}\) where \(f(complexity) = \int_{0}^{complexity} \Delta f(x) \,dx\)). A useful corollary from this fact, is that our graphs are monotonically non-decreasing. And those are fun! 😺.&lt;/p&gt;
+
+&lt;p&gt;Now that we established a common ground to talk about complexity and cost, let’s dive into three distinct categories of technologies: &lt;strong&gt;Pay as you go&lt;/strong&gt;, &lt;strong&gt;Debt&lt;/strong&gt; and, &lt;strong&gt;Upfront&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;pay-as-you-go&quot;&gt;Pay as you go&lt;/h3&gt;
+&lt;p&gt;Maybe the most alluring. The more complex a problem, the more it costs to solve. It is a sensible way of understanding technology. The many flavors of pay as you go differ from one another by their slope, or their initial cost. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c&lt;/code&gt;-like languages fall squarely here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Pay as you go&quot; src=&quot;/assets/cost-graphs-integrals/pay-as-you-go-f9279b87eede36920d95559a4497344dbe9c0c2c60bdb510d37eb58310984e73e773e9a8b76423a1942b9dfecb8addf485859ac11f8d833924d8c9ebb4bd5459.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Technologies here could be plotted with a slightly different slope or initial height. I don’t much care about the details comparing each of these technologies 😅. They are great all-around options. &lt;em&gt;Jack of all trades, master of none&lt;/em&gt;. I see these technologies as the backbone of the software industry. Some have a steeper \(\Delta f\), where some have a costlier start; but on in all, they grow linearly. Never being able to have a slope less than the ideal scenario.&lt;/p&gt;
+
+&lt;p&gt;Examples of these are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Java&lt;/li&gt;
+  &lt;li&gt;c&lt;/li&gt;
+  &lt;li&gt;SQL&lt;/li&gt;
+  &lt;li&gt;Hibernate*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of these follow the pattern:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Simple things are cheap. Complex things are costly.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A note on &lt;em&gt;Hibernate&lt;/em&gt;, and many others: Complexity is treated here as a one-size-fits-all kind of thing. The reality, sadly, is much more complicated.
+If you were to focus on the \(\frac{cost}{complexity}\) of say, switching databases. Then an &lt;abbr title=&quot;object-relational mapping &quot;&gt;ORM&lt;/abbr&gt; like Hibernate makes a &lt;a href=&quot;#upfront&quot;&gt;upfront&lt;/a&gt; cost for simple things to have a better marginal cost when reaching the complex side of the spectrum.&lt;/p&gt;
+
+&lt;p&gt;But we are not here to talk about workhorses, but rather the odd ones out. So on to the more interesting ones!&lt;/p&gt;
+
+&lt;h3 id=&quot;debt&quot;&gt;Debt&lt;/h3&gt;
+&lt;p&gt;These are the most interesting to me. Technologies that promise you a very low barrier of entry.&lt;/p&gt;
+
+&lt;p&gt;Simple things can be done incredibly fast and easy, without hindering other non-functional aspects like security or speed. But, as in real life, these are not free. At some point in the complexity scale, things start to become hard. And way hard at that.&lt;/p&gt;
+
+&lt;p&gt;All those nice defaults start to work against your custom needs. You start to &lt;em&gt;fight&lt;/em&gt; the framework, find ways around checks and validations. Ways that deviate from the secure, fast, reliable path.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Debt&quot; src=&quot;/assets/cost-graphs-integrals/debt-90baa93278b2045adc96a2dc82a245896e90ea9a771cfa714ba3140d1f4336712fe0c9e4f896fe8c1d08171ea5495b1cc2f0ac1ffb799490405b2e2ed5e2b74b.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Examples of these are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Node’s ecosystem&lt;/li&gt;
+  &lt;li&gt;Ruby on Rails&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/No-code_development_platform&quot;&gt;no-code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And Ruby on Rails or Node.js fans might argue that that is not the case; that the cost does rarely increase. And that this reflects on my general lack of understanding of the deeper systems, or the metaprogramming machinery, or &lt;em&gt;yet another dependency&lt;/em&gt; that can be used both as an import, a CLI, or a bundler ⸮ . For which I will yield, that this is probably true. And that this is not a counterargument, but rather proof. At a certain point, the complexity of a problem intertwines with the complexity of the technology; compounding on the costs.&lt;/p&gt;
+
+&lt;p&gt;Thus, the exponentially of the matter. Remember that, the cost at the end of the complexity axis, &lt;strong&gt;must&lt;/strong&gt; always be greater than the ideal scenario. There is no, and will never be, a piece of technology that can beat the cruel reality that complexity carries costs.&lt;/p&gt;
+
+&lt;p&gt;But this is a good thing to learn from these: If you know that the complexity of a problem is capped, then these alternatives are just what you need.
+If you need a &lt;abbr title=&quot;Create, read, update and delete&quot;&gt;CRUD&lt;/abbr&gt; API, some web views with some forms, a little OAuth without much customization; then I &lt;em&gt;encourage&lt;/em&gt; the use of these sort of technologies.&lt;/p&gt;
+
+&lt;p&gt;Looking at the graph, there is a point where the ideal and the &lt;strong&gt;Debt&lt;/strong&gt; intersects. If you can be sure that the complexity will always be on the left-hand side; then using any other technology will be ill-advised. But, if the threshold does get crossed, then you are stuck between switching to another type of technology, and re-paying all the costs to get you to this point; or deal with an exorbitant \(\frac{cost}{complexity}\).&lt;/p&gt;
+
+&lt;h4 id=&quot;partial-payment&quot;&gt;Partial payment&lt;/h4&gt;
+&lt;p&gt;Be not mistaken, the cost difference before the &lt;strong&gt;Debt&lt;/strong&gt; curve and the &lt;strong&gt;Ideal&lt;/strong&gt; curve meet was paid by the designers of the technology. And we should be grateful that they allow us to offset a big chunk of our costs to their endeavors.&lt;/p&gt;
+
+&lt;h3 id=&quot;upfront&quot;&gt;Upfront&lt;/h3&gt;
+&lt;p&gt;Finally: &lt;strong&gt;Upfront&lt;/strong&gt;. These are a treat. You pay a steep cost upfront, but after some turning point, then the marginal cost is cheap. &lt;em&gt;Managing&lt;/em&gt; complexities. Composition, ways of meta-programing, having tools for code synthesis are all techniques that pay this cost upfront for future gains.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Upfront&quot; src=&quot;/assets/cost-graphs-integrals/upfront-76235fa95d9823b8f06e6284ae5e7439f103d79ff8274ad9c5d9558b451de50cd5fa6ad39217f7e45eecbf5dff3a59e70814c477279ac354829a856830a542e5.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some might call this approach &lt;em&gt;over engineering&lt;/em&gt;, and it is true; up until the point where failing to have done it, the cost is greater.
+In other words:&lt;/p&gt;
+
+\[overEngineered(complex) = \left\{
+     \begin{array}{ll}
+       \text{Yes}  &amp;amp;: payAsYouGo(complex) \leq upfront(complex) \\
+       \text{No}   &amp;amp;: \text{otherwise.} \\
+     \end{array}
+   \right.\]
+
+&lt;p&gt;Examples of these are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Haskell&lt;/li&gt;
+  &lt;li&gt;Lisp&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://haskellwingman.dev/&quot;&gt;Wingman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Macros&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Maybe you are one of the enlightened few to have partially-payed some of the costs and already know about β-reduction, monad composition&lt;sup id=&quot;fnref:monad_composition&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:monad_composition&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, or other techniques to manage complexity; but be not mistaken that that cost will be paid for every other person that has to deal with it in the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;No technology is better or worse in the abstract. It is a choice between good things, and bad things. In this blog post, I wanted to explore a different way of evaluating a piece of technology with just these two axes. And hopefully, give you a new tool to measure up prospects for your next undertaking.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Comparison&quot; src=&quot;/assets/cost-graphs-integrals/comparison-e73fa01027db34bb6e3478ec5ba0795c1b7436d8c8a58da5e34ac2e7d3a02b1ae4a29a9705926f681aab541d7c4dc0d23c086e168f0aa8def432a7db7209f086.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So I leave you with this final question to encapsulate all of these learnings:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Does either cost or complexity have a ceiling in this project?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And then, it is a matter of putting a horizontal or vertical line on the limit and seeing what strategy yields better results.&lt;/p&gt;
+
+&lt;p&gt;More often than not, one wants to minimize costs but complexity is set. Therefore the 1-picture-summary would be:&lt;/p&gt;
+
+\[f(complexity) = min( upfront(complexity), payAsYouGo(complexity), debt(complexity) )\]
+
+&lt;p&gt;&lt;img alt=&quot;Comparison&quot; src=&quot;/assets/cost-graphs-integrals/comparison-min-76c7a99f1abf57fd2185f02ac5d650011dea0d7d4cb2622d80c2abc5ac4073ee7a75f68a57192699d304d4654235e393c8348d642d6184527e92fbbf87acedc1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m not advocating on using a &lt;strong&gt;Debt&lt;/strong&gt; technology at the begging and then &lt;em&gt;switching&lt;/em&gt; mid-project; as the cost at the switching point will double; but rather a methodology of choosing the &lt;em&gt;correct&lt;/em&gt; shape to deal with the expected complexity of it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Nobody Gets Fired For Buying IBM&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’ll surrender that choosing a technology is an architectural decision done at the start of a project, and knowing how complex it will end up being is almost impossible. This is why, I think, &lt;strong&gt;pay as you go&lt;/strong&gt; technologies are so prevalent.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:graphs&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;The idea of a graph with no units, no scale, or raw data to replicate them irks me. If you are like me, think of these not like “graphs”, but rather pretty pictures 😊. &lt;a href=&quot;#fnref:graphs&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:pure&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;If you allow the idea of representing a program as data, and are Haskell inclined, then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pure :: IO ()&lt;/code&gt; would be what I refer to as a “trivial complexity”, as it &lt;em&gt;does&lt;/em&gt; nothing. It has no explanation on what it &lt;em&gt;does&lt;/em&gt;, and there is nothing that can be taken from it to reach a valid program; hence the lower bound on complexity. &lt;a href=&quot;#fnref:pure&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:NFL&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/No_free_lunch_theorem&quot;&gt;No free lunch&lt;/a&gt; theorem. &lt;a href=&quot;#fnref:NFL&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:monad_composition&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Or rather lack thereof. &lt;a href=&quot;#fnref:monad_composition&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="rambling" /><category term="coding" /><summary type="html">Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like “familiarity in the team” “interoperability with other pieces in the ecosystem” and “existing dependencies that we can leverage” the idea of how to deal with complexity came up.</summary></entry><entry><title type="html">Why Do I Write?</title><link href="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/" rel="alternate" type="text/html" title="Why Do I Write?" /><published>2021-05-28T14:54:00+00:00</published><updated>2021-05-28T14:54:00+00:00</updated><id>https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write</id><content type="html" xml:base="https://blog.florius.com.ar/rambling/2021/05/28/why-do-I-write/">&lt;blockquote&gt;
   &lt;p&gt;Why does this blog exist? Is it worth the carbon footprint to compile, host and serve this blog?&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -574,13 +765,13 @@ I highly recommend watching the video from Federico Donner where he goes in-dept
 Then proceed to split each pile by card name.
 Afterward go through the decklist in order and verify the quantity is correct.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-9d7f8882889fc561cdc2ea63d27c77304fe55e1c24b338f19aa646c87a0bc08e30a3fcf123fe5c9eab0d88287c0b087c60c05b7da101504d65fc9effb0f9f8ac.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-7c8ca0496adfe05e8fb8ca92e70c7dcd9b727e4614034efbaa6038fc5f2a6c6e8fbd1f0861ae5016d682eff8d646a3242e478317a1c4babd084dade4cd33bcbb.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2-mana-value-separation&quot;&gt;2. Mana value&lt;sup id=&quot;fnref:mana_value&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:mana_value&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; separation&lt;/h3&gt;
 &lt;p&gt;Split the deck into piles, categorized by mana value.
 Then go through the decklist and retrieve the cards with the required quantity from the appropriate pile.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by mana value&quot; src=&quot;/assets/52e2be-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by mana value&quot; src=&quot;/assets/52e2be-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This got me thinking, to perform a deck check, there are two &lt;strong&gt;critical&lt;/strong&gt; pieces of information that we need:&lt;/p&gt;
 
@@ -627,7 +818,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 &lt;h3 id=&quot;1-type-separation-tree&quot;&gt;1. Type separation tree&lt;/h3&gt;
 &lt;p&gt;Start with the whole deck.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-6281296e47325a1ccd6ab98fa425aab0f92fe2f501b34bf5b1c2011e2a6d3794b646195772358650ba4c972804d53e9cf262e36b16d364b0efda7662ac9d4bcf.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-25769395e2929aa39dff25cbb6670a5be382de95f018141d4c6b2f0ebedec2c1a4d38ef87b30f5845d219417f544dbfc37f89bd3f9c700cc2da411bbf2bbfa1c.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We’ll represent this deck, unclassified, like so:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card
@@ -650,7 +841,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;We know nothing about these cards yet. So we proceed by the deck into a lands and a non-lands pile.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-9d7f8882889fc561cdc2ea63d27c77304fe55e1c24b338f19aa646c87a0bc08e30a3fcf123fe5c9eab0d88287c0b087c60c05b7da101504d65fc9effb0f9f8ac.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;land / non-land&quot; src=&quot;/assets/f5327f-7c8ca0496adfe05e8fb8ca92e70c7dcd9b727e4614034efbaa6038fc5f2a6c6e8fbd1f0861ae5016d682eff8d646a3242e478317a1c4babd084dade4cd33bcbb.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──Non-Land
 │  │  Non-Land
@@ -673,7 +864,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;We now know more about each pile, but not enough to verify the deck. So we continue to split each pile by card name.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──┌──Non-Land   Primeval Titan
 │  │  │  Non-Land   Primeval Titan
@@ -700,7 +891,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 &lt;h3 id=&quot;2-type-separation-tree&quot;&gt;2. Type separation tree&lt;/h3&gt;
 &lt;p&gt;Again start with the whole deck.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-6281296e47325a1ccd6ab98fa425aab0f92fe2f501b34bf5b1c2011e2a6d3794b646195772358650ba4c972804d53e9cf262e36b16d364b0efda7662ac9d4bcf.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;no classification&quot; src=&quot;/assets/979e36-25769395e2929aa39dff25cbb6670a5be382de95f018141d4c6b2f0ebedec2c1a4d38ef87b30f5845d219417f544dbfc37f89bd3f9c700cc2da411bbf2bbfa1c.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And once more, the same text representation, with no information whatsoever:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──a card
@@ -723,7 +914,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;Afterward, split each pile by type.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by type&quot; src=&quot;/assets/21ad13-ea228e6907326fe9c9864a93c5b7cc2a35f8227e27749c2f76cdc01eb23e6419cdb4d051d0bb6f95b35b1733efff44975b73620a91736c3009aa7d3b0854882d.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by type&quot; src=&quot;/assets/21ad13-950d87e68c9857ad8535c988cab0a16bff13225cd0c70b9e509c81d73477632cbfc4221658b3a61345e386dc45e77968e4800966afe034f550766072733baa50.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──Creature
 │  │  Creature
@@ -747,7 +938,7 @@ This process is repeated until cards are &lt;strong&gt;classified&lt;/strong&gt;
 
 &lt;p&gt;And finally each by card name.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;by name&quot; src=&quot;/assets/b24d72-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png&quot; /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌──┌──┌──Creature   Primeval Titan
 │  │  │  Creature   Primeval Titan
@@ -1539,92 +1730,4 @@ Los usuarios deberían estar distribuidos 50%-50%; dado que hay un 50% de probab
   &lt;li&gt;Structural changes to the database stop being something to worry about. We are only storing events, and those don’t change often. Rolling back and replaying the history is the fabric of event sourcing.&lt;/li&gt;
   &lt;li&gt;The new state doesn’t need to be computed from the first initial state, along with all the events thereafter. We can periodically take “snapshots” of events, and compute newer events from that saved state.&lt;/li&gt;
   &lt;li&gt;The same stream of events can be used by many applications, each having their own projection to answer a wildly different set of questions.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="xpost" /><summary type="html">Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.</summary></entry><entry><title type="html">Cuándo intervenir en un juego</title><link href="https://blog.florius.com.ar/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego/" rel="alternate" type="text/html" title="Cuándo intervenir en un juego" /><published>2019-02-27T00:00:00+00:00</published><updated>2019-02-27T00:00:00+00:00</updated><id>https://blog.florius.com.ar/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego</id><content type="html" xml:base="https://blog.florius.com.ar/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego/">&lt;p&gt;&lt;em&gt;El post original se puede leer en el blog de &lt;a href=&quot;https://blogs.magicjudges.org/latam/2019/02/27/cuando-intervenir-en-un-juego-por-joaquin-azcarate/&quot;&gt;Jueces Hispanoamericanos&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Les quiero contar una pesadilla recurrente que tengo:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Estoy jueceando. Escucho dos jugadores, gritando, acusarse de tramposos. Corro a ver qué está pasando. En el camino entre las mesas, que parece interminable, veo a alguien enderezar sus tierras y su Dark Confidant, robar solo una carta y jugar una tierra.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy.  La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”.&lt;/p&gt;
-
-&lt;h2 id=&quot;depende-el-nivel-de-imposición-de-reglas&quot;&gt;Depende el nivel de imposición de reglas.&lt;/h2&gt;
-
-&lt;p&gt;En un torneo de donde el Nivel de Imposición de Reglas (NIR) es Normal, citando al documento de “Juzgando a Nivel de Imposición de Reglas Normal” (NIR):&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Deberías intervenir si ves que sucede algo ilegal en una partida, pero más allá de eso puedes &lt;strong&gt;usar tu criterio&lt;/strong&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;También debemos tener en cuenta el tenor propio del evento. Por suerte se explaya sobre qué criterio debería uno usar para decidir su criterio de intervenir.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Por ejemplo, que intervengas cuando un jugador olvida un disparo debería estar determinado por el tenor que le quieres dar al evento; podría ser apropiado dar un poco de ayuda adicional en un entorno más casual, pero no tanto si tu grupo de juego es más competitivo.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;No hay una mejor forma de ponerlo, y no hay una respuesta íntegramente incorrecta sobre cuándo intervenir. Tu eres quien mejor conoce a tus jugadores. Haz lo que te parezca más correcto en cada situación, y si los jugadores se sienten avasallados o dejados a la deriva, toma acciones correctivas en cualquiera de las dos direcciones. Siempre recordando que como jueces debemos ser árbitros neutrales y alentar una atmósfera cordial y una competencia amistosa.&lt;/p&gt;
-
-&lt;h2 id=&quot;y-en-competitivo&quot;&gt;¿Y en competitivo?&lt;/h2&gt;
-
-&lt;p&gt;Por suerte en torneos con un REL competitivo muchas de estas dicotomías están resueltas. La Guía de Procedimientos de Infracciones nos dice claramente en su segundo párrafos:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Un juez no debería intervenir en un juego a menos que crea que ocurrió una violación de reglas, un jugador con una pregunta o preocupación solicita asistencia, o el juez desea evitar que una situación empeore.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Las primera premisas es suficientemente fáciles de entender.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;… crea que ocurrió una violación de reglas…&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Para esto tenemos todo el compendio de reglas de Magic para ser quebrantadas. El próximo párrafo de la guía justamente vá sobre este tópico, siguiendo&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Los jueces no evitan que sucedan los errores de juego, sino que lidian con errores que ocurrieron, penalizan a aquellos que violan las reglas o políticas y promueven el juego limpio y la conducta deportiva con el ejemplo y la diplomacia.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Pero ya la segunda tiene su vericueto.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;… un jugador con una pregunta o preocupación solicita asistencia…&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;A lo lejos se escucha un árbol golpear contra una ventana, pero uno solo escucha “Juez!!”.&lt;/p&gt;
-
-&lt;p&gt;Pero, qué hay de esas veces en donde vemos un jugador a lo lejos con cara de confusión y desesperación. Todavía no llamó a un Juez, pero tal vez ni siquiera lo haga si no vé a ningún juez alrededor. ¿Debemos acercarnos? ¡Estaríamos entrometidos con la misma esencia del continuo espacio tiempo!… No. Esto es parte de brindar aquel elusivo “servicio al cliente”. Debemos ser vistos como personas neutrales, pero también tenemos que intentar brindar una experiencia grata a todos los jugadores. Lo que nos lleva a la tercera y ultima parte:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;…  el juez desea evitar que una situación empeore.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Lo que hay que entender, y las anotaciones de la Guía nos ayudan a esto, es que esta situación a empeorar es una “situación delicada como una discusión”, no un campo de batalla con 60 criaturas, o un stack con 7 hechizos contrarrestando entre ellos, si no cuando la situación podría bien encuadrar en la definición de conducta antideportiva.&lt;/p&gt;
-
-&lt;h2 id=&quot;algunas-situaciones&quot;&gt;Algunas situaciones&lt;/h2&gt;
-
-&lt;p&gt;Dos buenos amigos (Nick y Audrey) están jugando en un FNM. Audrey juega una criatura, en lo que Nick responde con un [Absorber] contrarrestando. La criatura va al cementerio y Audrey pasa su turno. Nick endereza sus tierras, y en ese momento se dá cuenta que se olvidó de ganar 3 vidas por el Absorber. Tu escuchas a Nick decir esto y te acercas a la mesa inconspicuamente.&lt;/p&gt;
-
-&lt;p&gt;Notas que el hechizo de Absorber no fue correctamente resuelto, pero los jugadores parecerían continuar jugando. ¿Intervienes? – ¡Si!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Deberías intervenir si ves que sucede algo &lt;strong&gt;ilegal&lt;/strong&gt; en una partida…&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Dándose cuenta de su error, los jugadores anotan que Nick ganó 3 vidas, y continúan jugando. ¿Intervienes? – ¡No! A lo sumo, de la manera menos intrusiva posible, puedes recordarles que jueguen con más cuidado.&lt;/p&gt;
-
-&lt;p&gt;Misma situación, pero los jugadores rápidamente anotan que Nick ganó 3 vidas convenciendose que si estuviesen en un Magic Fest, la habilidad disparada del Absor no podría perderse, porque pasaron menos de 3 turnos. Notas que la justificación por la cual corrigieron el estado del juego es errónea. ¿Intervienes? ¡Si!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Nuestras soluciones deberían focalizarse en &lt;strong&gt;educar&lt;/strong&gt; a los jugadores&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Observas a un jugador barajar su mazo al final del primer partido en un Grand Prix, y te percatas de que una criatura previamente exiliada está en la mesa y el jugador olvidó barajar dicha carta en su mazo. ¿Intervienes? ¡Si! Este ejemplo viene directo de la guía anotada. Lo importante a destacar de esta situación, es que el error se pudo detectar “fuera del juego”&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Los jueces pueden intervenir para prevenir o evitar errores que ocurren fuera de un juego.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Ese mismo jugador sus tierras solo 17,3 grados para producir maná.¿Intervienes? – ¡Si! Por suerte, la guía de infracciones aclara que como jueces, podemos  solicitar a los jugadores que aclaren la situación, incluso si los jugadores están jugando de manera clara para ellos. Si pudiese confundir a un observador externo.&lt;/p&gt;
-
-&lt;p&gt;Si llegaron a leer hasta acá; ignoren este último ejemplo. Muchísimas gracias y siganla rockeando.&lt;/p&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="mtg" /><summary type="html">Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy. La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Joaquin 'Florius' Azcarate</name></author><category term="xpost" /><summary type="html">Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.</summary></entry></feed>

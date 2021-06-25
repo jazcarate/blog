@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-689SEV7MTT"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-689SEV7MTT', { cookie_domain: 'blog.florius.com.ar', cookie_flags: 'SameSite=None;Secure' });</script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/site.webmanifest" />
+    <meta name="robots" content="all">
+    <meta name="author" content="florius">
+    
+    <meta name="keywords" content="rambling, coding">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>On costs, graphs and integrals | Florius’ Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="On costs, graphs and integrals" />
+<meta name="author" content="Joaquin 'Florius' Azcarate" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like “familiarity in the team” “interoperability with other pieces in the ecosystem” and “existing dependencies that we can leverage” the idea of how to deal with complexity came up." />
+<meta property="og:description" content="Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like “familiarity in the team” “interoperability with other pieces in the ecosystem” and “existing dependencies that we can leverage” the idea of how to deal with complexity came up." />
+<link rel="canonical" href="https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/" />
+<meta property="og:url" content="https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/" />
+<meta property="og:site_name" content="Florius’ Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-24T17:33:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="On costs, graphs and integrals" />
+<meta name="twitter:site" content="@FloriusWasTaken" />
+<meta name="twitter:creator" content="@FloriusWasTaken" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"description":"Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like “familiarity in the team” “interoperability with other pieces in the ecosystem” and “existing dependencies that we can leverage” the idea of how to deal with complexity came up.","url":"https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/","@type":"BlogPosting","headline":"On costs, graphs and integrals","dateModified":"2021-06-24T17:33:00+00:00","datePublished":"2021-06-24T17:33:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.florius.com.ar/rambling/coding/2021/06/24/costs-graphs-integrals/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202106251048" type="text/css">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
+    
+    <script src="//kit.fontawesome.com/88434a0a24.js" crossorigin="anonymous" async></script>
+    
+
+    <!-- MathJax -->
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script>
+      MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+      });
+    </script>
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-dab5ec8611a7268ba75066ca34c45c927b91f49dffc96ad3c9a05e20b59423a2e131cfbde8d34326bbd2e963a6dd3805d82e2db04aa1784961cd809baeac64b3.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-76b5d95f4f002b8e2c5500ccf862d185347eecfd08be1e9f50319ae3f9de5ca31da4ea623834f7bdf1570fc1f48ae9a94952222c55533c02de88a89444e9928a.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-098f66216ea35745a346d1ebeea203448626b3adacbe0816a41fd98054ad3f88dad9aa37961b52896f1b803b551824079e46606c3b7ef0263e86a8ab15491d9c.png"/>
+
+    <meta name="theme-color" content="#000000">
+
+    
+</head>
+
+<body class="site">
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Florius’ Blog</a>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">About</a>
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/categories/">Categories</a>
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/jazcarate"></a>
+    
+    
+      <a class="fa fa-gitlab" href="https://gitlab.com/jazcarate"></a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:j@florius.com.ar"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/joaquin-azcarate"></a>
+    
+    
+    <a class="fab fa-dev" href="https://dev.to/florius"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap animated fade-in-down" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>On costs, graphs and integrals</h1>
+  <span class="post-meta">Jun 24, 2021</span><br>
+  
+  <span class="post-meta small read-time">
+  
+    9 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like</p>
+
+<ul>
+  <li>“familiarity in the team”</li>
+  <li>“interoperability with other pieces in the ecosystem” and</li>
+  <li>“existing dependencies that we can leverage”</li>
+</ul>
+
+<p>the idea of how to deal with complexity came up.</p>
+
+<p>In this blog post I would like to explore an idea that I can so clearly see with graphs in my mind, but takes more than a quick chat to get across. So hopefully, next time I’m in a position to talk about languages or any other technology to tackle a problem, I can point to random graphs<sup id="fnref:graphs" role="doc-noteref"><a href="#fn:graphs" class="footnote" rel="footnote">1</a></sup> in this article and it will make more sense to my interlocutor.</p>
+
+<p><em>The graphs here were made with <a href="https://jazcarate.github.io/rough-graph/">jazcarate :: Rough Graph</a>.</em></p>
+
+<h2 id="limits">Limits</h2>
+<p>So, let’s start by setting the groundwork for the next graphs. Some axioms we’ll assume true for the sake of discussion:</p>
+
+<h3 id="complexity">Complexity</h3>
+
+<blockquote>
+  <p>There is an upper- and lower-bound on the complexity of any given system.</p>
+</blockquote>
+
+<p>The lower limit should be fairly easy to convince, there is such thing as a trivial program<sup id="fnref:pure" role="doc-noteref"><a href="#fn:pure" class="footnote" rel="footnote">2</a></sup>.
+On the other hand, the higher bound. And this is a bit more contentious. One can think of this limit as either:</p>
+
+<ul>
+  <li>The allowed limit of the universe. A sub-system can never be more complex than the system on which it is embedded.</li>
+  <li>Or, if <a href="https://en.wikipedia.org/wiki/Simulation_hypothesis">simulation theory</a> is too scary, the maximum capacity of the given team to tackle.</li>
+</ul>
+
+<p>Either way, complexity is be bounded for the sake of this thought experiment.</p>
+
+<h3 id="costs">Costs</h3>
+<p>There are many ways to measure <em>costs</em>. In this post, let’s not dwell much on what unit of measurement we chose. In other words, pick whichever is more relatable to you, and I think that my explorations would still make sense:</p>
+
+<ul>
+  <li>Lines of code</li>
+  <li>Number of entities in the ER model.</li>
+  <li>Human Hours</li>
+  <li>Money spent</li>
+  <li>Number of sticky notes in the “😟” column in the retrospective.</li>
+  <li><em>other</em></li>
+</ul>
+
+<p>But any of these will be, as complexity, bounded at both ends.
+These two parameters give us a neat 2-dimensional space to explore the <em>cost/complexity</em> of things. So, without further ado, I present you with the first graph.</p>
+
+<h2 id="types">Types</h2>
+<h3 id="absurd-scenario">Absurd scenario</h3>
+
+<p>No matter the complexity, the cost is constant.</p>
+
+<p><img alt="Absurd scenario" src="/assets/cost-graphs-integrals/absurd-85b8aa5a4abe03ee99b33a66fa4cf295448187dd1b91527f71d88833353eb445fae7ee28c76dfd5c42a1a679ab3b3f83097a4b90c2a0d55f248010d8b0a67f97.png" /></p>
+
+<p>With much grievances; I’ll tell you that there exists no technology that can deliver on this. Complexity will always carry with it a cost. There might be technologies that promise this kind of behavior. They don’t exist<sup id="fnref:NFL" role="doc-noteref"><a href="#fn:NFL" class="footnote" rel="footnote">3</a></sup>.</p>
+
+<h3 id="ideal-scenario">Ideal scenario</h3>
+<p>So a better notion is that there is a lower bound of how much complexity incurs in cost. I think it would not be unreasonable to propose that the marginal cost is proportional to the change of complexity.</p>
+
+<p>With this mindset, we can establish a “minimum” graph. Technologies might promise better ratios, but we should mistrust.</p>
+
+<p><img alt="Ideal scenario" src="/assets/cost-graphs-integrals/ideal-29c2b7cf352aa28431fd9e4cd8f1db05d87c31c8606e3787424f6aacfc1ddb3418680893813ca35f5a66504a73ad23e7ca2170e7f03e940d686f158cff2d67a8.png" /></p>
+
+<p>It is worth mentioning that in all these graphs, a given complexity in the horizontal axis is but the accumulation of costs to reach to that complexity level, as to reach a complexity level of \(n\), one must first cover \(n-\epsilon\) (where \(\epsilon \in \mathbb{R}_{&gt;0}\)). If we call \(f\) the function that we are plotting, then there exists a \(\Delta f \colon \mathbb{Complexity} \mapsto \mathbb{Cost}\) where \(f(complexity) = \int_{0}^{complexity} \Delta f(x) \,dx\)). A useful corollary from this fact, is that our graphs are monotonically non-decreasing. And those are fun! 😺.</p>
+
+<p>Now that we established a common ground to talk about complexity and cost, let’s dive into three distinct categories of technologies: <strong>Pay as you go</strong>, <strong>Debt</strong> and, <strong>Upfront</strong>.</p>
+
+<h3 id="pay-as-you-go">Pay as you go</h3>
+<p>Maybe the most alluring. The more complex a problem, the more it costs to solve. It is a sensible way of understanding technology. The many flavors of pay as you go differ from one another by their slope, or their initial cost. <code class="language-plaintext highlighter-rouge">c</code>-like languages fall squarely here.</p>
+
+<p><img alt="Pay as you go" src="/assets/cost-graphs-integrals/pay-as-you-go-f9279b87eede36920d95559a4497344dbe9c0c2c60bdb510d37eb58310984e73e773e9a8b76423a1942b9dfecb8addf485859ac11f8d833924d8c9ebb4bd5459.png" /></p>
+
+<p>Technologies here could be plotted with a slightly different slope or initial height. I don’t much care about the details comparing each of these technologies 😅. They are great all-around options. <em>Jack of all trades, master of none</em>. I see these technologies as the backbone of the software industry. Some have a steeper \(\Delta f\), where some have a costlier start; but on in all, they grow linearly. Never being able to have a slope less than the ideal scenario.</p>
+
+<p>Examples of these are:</p>
+<ul>
+  <li>Java</li>
+  <li>c</li>
+  <li>SQL</li>
+  <li>Hibernate*</li>
+</ul>
+
+<p>All of these follow the pattern:</p>
+
+<blockquote>
+  <p>Simple things are cheap. Complex things are costly.</p>
+</blockquote>
+
+<p>A note on <em>Hibernate</em>, and many others: Complexity is treated here as a one-size-fits-all kind of thing. The reality, sadly, is much more complicated.
+If you were to focus on the \(\frac{cost}{complexity}\) of say, switching databases. Then an <abbr title="object-relational mapping ">ORM</abbr> like Hibernate makes a <a href="#upfront">upfront</a> cost for simple things to have a better marginal cost when reaching the complex side of the spectrum.</p>
+
+<p>But we are not here to talk about workhorses, but rather the odd ones out. So on to the more interesting ones!</p>
+
+<h3 id="debt">Debt</h3>
+<p>These are the most interesting to me. Technologies that promise you a very low barrier of entry.</p>
+
+<p>Simple things can be done incredibly fast and easy, without hindering other non-functional aspects like security or speed. But, as in real life, these are not free. At some point in the complexity scale, things start to become hard. And way hard at that.</p>
+
+<p>All those nice defaults start to work against your custom needs. You start to <em>fight</em> the framework, find ways around checks and validations. Ways that deviate from the secure, fast, reliable path.</p>
+
+<p><img alt="Debt" src="/assets/cost-graphs-integrals/debt-90baa93278b2045adc96a2dc82a245896e90ea9a771cfa714ba3140d1f4336712fe0c9e4f896fe8c1d08171ea5495b1cc2f0ac1ffb799490405b2e2ed5e2b74b.png" /></p>
+
+<p>Examples of these are:</p>
+<ul>
+  <li>Node’s ecosystem</li>
+  <li>Ruby on Rails</li>
+  <li><a href="https://en.wikipedia.org/wiki/No-code_development_platform">no-code</a></li>
+</ul>
+
+<p>And Ruby on Rails or Node.js fans might argue that that is not the case; that the cost does rarely increase. And that this reflects on my general lack of understanding of the deeper systems, or the metaprogramming machinery, or <em>yet another dependency</em> that can be used both as an import, a CLI, or a bundler ⸮ . For which I will yield, that this is probably true. And that this is not a counterargument, but rather proof. At a certain point, the complexity of a problem intertwines with the complexity of the technology; compounding on the costs.</p>
+
+<p>Thus, the exponentially of the matter. Remember that, the cost at the end of the complexity axis, <strong>must</strong> always be greater than the ideal scenario. There is no, and will never be, a piece of technology that can beat the cruel reality that complexity carries costs.</p>
+
+<p>But this is a good thing to learn from these: If you know that the complexity of a problem is capped, then these alternatives are just what you need.
+If you need a <abbr title="Create, read, update and delete">CRUD</abbr> API, some web views with some forms, a little OAuth without much customization; then I <em>encourage</em> the use of these sort of technologies.</p>
+
+<p>Looking at the graph, there is a point where the ideal and the <strong>Debt</strong> intersects. If you can be sure that the complexity will always be on the left-hand side; then using any other technology will be ill-advised. But, if the threshold does get crossed, then you are stuck between switching to another type of technology, and re-paying all the costs to get you to this point; or deal with an exorbitant \(\frac{cost}{complexity}\).</p>
+
+<h4 id="partial-payment">Partial payment</h4>
+<p>Be not mistaken, the cost difference before the <strong>Debt</strong> curve and the <strong>Ideal</strong> curve meet was paid by the designers of the technology. And we should be grateful that they allow us to offset a big chunk of our costs to their endeavors.</p>
+
+<h3 id="upfront">Upfront</h3>
+<p>Finally: <strong>Upfront</strong>. These are a treat. You pay a steep cost upfront, but after some turning point, then the marginal cost is cheap. <em>Managing</em> complexities. Composition, ways of meta-programing, having tools for code synthesis are all techniques that pay this cost upfront for future gains.</p>
+
+<p><img alt="Upfront" src="/assets/cost-graphs-integrals/upfront-76235fa95d9823b8f06e6284ae5e7439f103d79ff8274ad9c5d9558b451de50cd5fa6ad39217f7e45eecbf5dff3a59e70814c477279ac354829a856830a542e5.png" /></p>
+
+<p>Some might call this approach <em>over engineering</em>, and it is true; up until the point where failing to have done it, the cost is greater.
+In other words:</p>
+
+\[overEngineered(complex) = \left\{
+     \begin{array}{ll}
+       \text{Yes}  &amp;: payAsYouGo(complex) \leq upfront(complex) \\
+       \text{No}   &amp;: \text{otherwise.} \\
+     \end{array}
+   \right.\]
+
+<p>Examples of these are:</p>
+<ul>
+  <li>Haskell</li>
+  <li>Lisp</li>
+  <li><a href="https://haskellwingman.dev/">Wingman</a></li>
+  <li>Macros</li>
+</ul>
+
+<p>Maybe you are one of the enlightened few to have partially-payed some of the costs and already know about β-reduction, monad composition<sup id="fnref:monad_composition" role="doc-noteref"><a href="#fn:monad_composition" class="footnote" rel="footnote">4</a></sup>, or other techniques to manage complexity; but be not mistaken that that cost will be paid for every other person that has to deal with it in the future.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>No technology is better or worse in the abstract. It is a choice between good things, and bad things. In this blog post, I wanted to explore a different way of evaluating a piece of technology with just these two axes. And hopefully, give you a new tool to measure up prospects for your next undertaking.</p>
+
+<p><img alt="Comparison" src="/assets/cost-graphs-integrals/comparison-e73fa01027db34bb6e3478ec5ba0795c1b7436d8c8a58da5e34ac2e7d3a02b1ae4a29a9705926f681aab541d7c4dc0d23c086e168f0aa8def432a7db7209f086.png" /></p>
+
+<p>So I leave you with this final question to encapsulate all of these learnings:</p>
+
+<blockquote>
+  <p>Does either cost or complexity have a ceiling in this project?</p>
+</blockquote>
+
+<p>And then, it is a matter of putting a horizontal or vertical line on the limit and seeing what strategy yields better results.</p>
+
+<p>More often than not, one wants to minimize costs but complexity is set. Therefore the 1-picture-summary would be:</p>
+
+\[f(complexity) = min( upfront(complexity), payAsYouGo(complexity), debt(complexity) )\]
+
+<p><img alt="Comparison" src="/assets/cost-graphs-integrals/comparison-min-76c7a99f1abf57fd2185f02ac5d650011dea0d7d4cb2622d80c2abc5ac4073ee7a75f68a57192699d304d4654235e393c8348d642d6184527e92fbbf87acedc1.png" /></p>
+
+<p>I’m not advocating on using a <strong>Debt</strong> technology at the begging and then <em>switching</em> mid-project; as the cost at the switching point will double; but rather a methodology of choosing the <em>correct</em> shape to deal with the expected complexity of it.</p>
+
+<blockquote>
+  <p>Nobody Gets Fired For Buying IBM</p>
+</blockquote>
+
+<p>I’ll surrender that choosing a technology is an architectural decision done at the start of a project, and knowing how complex it will end up being is almost impossible. This is why, I think, <strong>pay as you go</strong> technologies are so prevalent.</p>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:graphs" role="doc-endnote">
+      <p>The idea of a graph with no units, no scale, or raw data to replicate them irks me. If you are like me, think of these not like “graphs”, but rather pretty pictures 😊. <a href="#fnref:graphs" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:pure" role="doc-endnote">
+      <p>If you allow the idea of representing a program as data, and are Haskell inclined, then <code class="language-plaintext highlighter-rouge">pure :: IO ()</code> would be what I refer to as a “trivial complexity”, as it <em>does</em> nothing. It has no explanation on what it <em>does</em>, and there is nothing that can be taken from it to reach a valid program; hence the lower bound on complexity. <a href="#fnref:pure" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:NFL" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/No_free_lunch_theorem">No free lunch</a> theorem. <a href="#fnref:NFL" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:monad_composition" role="doc-endnote">
+      <p>Or rather lack thereof. <a href="#fnref:monad_composition" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</article>
+
+
+
+
+
+
+
+<div class="separator">
+  <img alt="Melian" src="/assets/cat-0fe72554239fb5bc68cc3b08063d5fb3d3984c6381e560b01fa8d5e35ed5a68e4741595a4929859029f18386c321ac391d55cccf60a51f08dd3148d38b5a44b7.png">
+</div>
+
+<h3 class="related-post-title">Random Posts</h3>
+
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2020/09/14/koncierge-una-libreria-para-segmentar-usuarios/" class="post-link">
+      <h4 class="post-title">koncierge Una librería para segmentar usuarios</h4>
+    </a>
+    <p class="post-summary">
+      La historia de una librería para evaluar variantes de tests AB, dado una definición de un experimento con un DSL parecido a Mongo y un contexto.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
+      <h4 class="post-title">Inspiraciones</h4>
+    </a>
+    <p class="post-summary">
+      ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/rambling/2021/05/28/why-do-I-write/" class="post-link">
+      <h4 class="post-title">Why Do I Write?</h4>
+    </a>
+    <p class="post-summary">
+      I have much room for improvement where it comes to communicating. A tool I think can help me with it is writing a blog entry every so often about things I care about. This blog is just that. A training ground. My training ground.
+      <span class="related-categories">
+      <a href="/categories#rambling">#rambling</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/raving/2021/05/01/carbn/" class="post-link">
+      <h4 class="post-title">carbn</h4>
+    </a>
+    <p class="post-summary">
+      <p>We are constantly trying to write code that easier for a human to comprehend. These high-level languages gave us the power of <strong>expression</strong>. And we like this!</p>
+
+<p>We want more expression, and safety in the code we write; but we also want code that humans can understand and reason about.
+So what if we re-think our current software stack? And have <strong>humans evaluate other human’s code</strong>.</p>
+
+<p><a href="https://carbn.florius.com.ar/"><code class="language-plaintext highlighter-rouge">carbn</code></a> is a Humans-as-a-Service, cutting edge technology that makes your code run in the distributed brains of our <em>agents</em>.</p>
+
+
+      <span class="related-categories">
+      <a href="/categories#raving">#raving</a>
+    </span>
+    </p>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme heavily inspired in <a href="http://johnotander.com">John Otander</a>' <a href="https://github.com/johno/pixyll">pixyll</a>.
+    </small>
+  </div>
+</footer>
+<!-- AnchorJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>
+
+</body>
+</html>

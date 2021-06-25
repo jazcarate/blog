@@ -43,7 +43,7 @@
 <!-- End Jekyll SEO tag -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202105282013" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202106251048" type="text/css">
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
@@ -53,8 +53,14 @@
 
     <!-- MathJax -->
     
-    <script type="text/javascript" async
-        src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script>
+      MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+      });
     </script>
     
 
@@ -64,9 +70,9 @@
 
     <!-- Icons -->
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-34b350f4a600260e30c048521addeba0f218b55c932d3fc34426224e82c4126f3acb7c5893bfa97a8d6d33c0f9e5ebc39d760b6c6d5644fd912387ac13e13c3b.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-20dd5d4bf92f192762f8364e9d5d1cd77d7c2c3077bb6acc3612583a41604e74cad8eb422cf617ca3939f6c2d165720ede69e2faff55f449eefd6ab535e191c1.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-1245384edbfb00534f9fac3eb918e27d2c08343b04fd0e83576196fedd7be8e66c5ec77af41a1e1503c72fc7f33d64862b7d340ed8b0122af4853002b8ab414a.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/ad1057-dab5ec8611a7268ba75066ca34c45c927b91f49dffc96ad3c9a05e20b59423a2e131cfbde8d34326bbd2e963a6dd3805d82e2db04aa1784961cd809baeac64b3.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/03f085-76b5d95f4f002b8e2c5500ccf862d185347eecfd08be1e9f50319ae3f9de5ca31da4ea623834f7bdf1570fc1f48ae9a94952222c55533c02de88a89444e9928a.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/7b553b-098f66216ea35745a346d1ebeea203448626b3adacbe0816a41fd98054ad3f88dad9aa37961b52896f1b803b551824079e46606c3b7ef0263e86a8ab15491d9c.png"/>
 
     <meta name="theme-color" content="#000000">
 
@@ -271,13 +277,13 @@ I highly recommend watching the video from Federico Donner where he goes in-dept
 Then proceed to split each pile by card name.
 Afterward go through the decklist in order and verify the quantity is correct.</p>
 
-<p><img alt="land / non-land" src="/assets/f5327f-9d7f8882889fc561cdc2ea63d27c77304fe55e1c24b338f19aa646c87a0bc08e30a3fcf123fe5c9eab0d88287c0b087c60c05b7da101504d65fc9effb0f9f8ac.png" /></p>
+<p><img alt="land / non-land" src="/assets/f5327f-7c8ca0496adfe05e8fb8ca92e70c7dcd9b727e4614034efbaa6038fc5f2a6c6e8fbd1f0861ae5016d682eff8d646a3242e478317a1c4babd084dade4cd33bcbb.png" /></p>
 
 <h3 id="2-mana-value-separation">2. Mana value<sup id="fnref:mana_value" role="doc-noteref"><a href="#fn:mana_value" class="footnote" rel="footnote">3</a></sup> separation</h3>
 <p>Split the deck into piles, categorized by mana value.
 Then go through the decklist and retrieve the cards with the required quantity from the appropriate pile.</p>
 
-<p><img alt="by mana value" src="/assets/52e2be-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png" /></p>
+<p><img alt="by mana value" src="/assets/52e2be-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png" /></p>
 
 <p>This got me thinking, to perform a deck check, there are two <strong>critical</strong> pieces of information that we need:</p>
 
@@ -324,7 +330,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 <h3 id="1-type-separation-tree">1. Type separation tree</h3>
 <p>Start with the whole deck.</p>
 
-<p><img alt="no classification" src="/assets/979e36-6281296e47325a1ccd6ab98fa425aab0f92fe2f501b34bf5b1c2011e2a6d3794b646195772358650ba4c972804d53e9cf262e36b16d364b0efda7662ac9d4bcf.png" /></p>
+<p><img alt="no classification" src="/assets/979e36-25769395e2929aa39dff25cbb6670a5be382de95f018141d4c6b2f0ebedec2c1a4d38ef87b30f5845d219417f544dbfc37f89bd3f9c700cc2da411bbf2bbfa1c.png" /></p>
 
 <p>We’ll represent this deck, unclassified, like so:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──a card
@@ -347,7 +353,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 
 <p>We know nothing about these cards yet. So we proceed by the deck into a lands and a non-lands pile.</p>
 
-<p><img alt="land / non-land" src="/assets/f5327f-9d7f8882889fc561cdc2ea63d27c77304fe55e1c24b338f19aa646c87a0bc08e30a3fcf123fe5c9eab0d88287c0b087c60c05b7da101504d65fc9effb0f9f8ac.png" /></p>
+<p><img alt="land / non-land" src="/assets/f5327f-7c8ca0496adfe05e8fb8ca92e70c7dcd9b727e4614034efbaa6038fc5f2a6c6e8fbd1f0861ae5016d682eff8d646a3242e478317a1c4babd084dade4cd33bcbb.png" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──┌──Non-Land
 │  │  Non-Land
@@ -370,7 +376,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 
 <p>We now know more about each pile, but not enough to verify the deck. So we continue to split each pile by card name.</p>
 
-<p><img alt="by name" src="/assets/b24d72-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png" /></p>
+<p><img alt="by name" src="/assets/b24d72-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──┌──┌──Non-Land   Primeval Titan
 │  │  │  Non-Land   Primeval Titan
@@ -397,7 +403,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 <h3 id="2-type-separation-tree">2. Type separation tree</h3>
 <p>Again start with the whole deck.</p>
 
-<p><img alt="no classification" src="/assets/979e36-6281296e47325a1ccd6ab98fa425aab0f92fe2f501b34bf5b1c2011e2a6d3794b646195772358650ba4c972804d53e9cf262e36b16d364b0efda7662ac9d4bcf.png" /></p>
+<p><img alt="no classification" src="/assets/979e36-25769395e2929aa39dff25cbb6670a5be382de95f018141d4c6b2f0ebedec2c1a4d38ef87b30f5845d219417f544dbfc37f89bd3f9c700cc2da411bbf2bbfa1c.png" /></p>
 
 <p>And once more, the same text representation, with no information whatsoever:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──a card
@@ -420,7 +426,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 
 <p>Afterward, split each pile by type.</p>
 
-<p><img alt="by type" src="/assets/21ad13-ea228e6907326fe9c9864a93c5b7cc2a35f8227e27749c2f76cdc01eb23e6419cdb4d051d0bb6f95b35b1733efff44975b73620a91736c3009aa7d3b0854882d.png" /></p>
+<p><img alt="by type" src="/assets/21ad13-950d87e68c9857ad8535c988cab0a16bff13225cd0c70b9e509c81d73477632cbfc4221658b3a61345e386dc45e77968e4800966afe034f550766072733baa50.png" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──┌──Creature
 │  │  Creature
@@ -444,7 +450,7 @@ This process is repeated until cards are <strong>classified</strong> by name. Fu
 
 <p>And finally each by card name.</p>
 
-<p><img alt="by name" src="/assets/b24d72-eae0c2345ce3f3c4225225ec776383c05d774f8aaebeb522c1556d38d06605261501597615d4db05e8d15bbc89c3d743c870374777baa3d0307246c409095377.png" /></p>
+<p><img alt="by name" src="/assets/b24d72-26d6aa6abf98e4c71435208b41022e89b7d598590be97efa44a155d6599ce37634d5299f704542600389fc62280dc86d2092c590bcaee0015735a20debf1d69e.png" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──┌──┌──Creature   Primeval Titan
 │  │  │  Creature   Primeval Titan
@@ -595,13 +601,24 @@ You can input any deck, and it will figure out all the possible ways of splittin
   
 
   <div class="post ml2 related">
-    <a href="/xpost/2018/08/14/limit-problem-space/" class="post-link">
-      <h4 class="post-title">Limit the Problem Space!</h4>
+    <a href="/rambling/coding/2021/06/24/costs-graphs-integrals/" class="post-link">
+      <h4 class="post-title">On costs, graphs and integrals</h4>
     </a>
     <p class="post-summary">
-      Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!
+      <p>Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like</p>
+
+<ul>
+  <li>“familiarity in the team”</li>
+  <li>“interoperability with other pieces in the ecosystem” and</li>
+  <li>“existing dependencies that we can leverage”</li>
+</ul>
+
+<p>the idea of how to deal with complexity came up.</p>
+
       <span class="related-categories">
-      <a href="/categories#xpost">#xpost</a>
+      <a href="/categories#rambling">#rambling</a>
+    
+      <a href="/categories#coding">#coding</a>
     </span>
     </p>
   </div>
@@ -629,13 +646,13 @@ You can input any deck, and it will figure out all the possible ways of splittin
   
 
   <div class="post ml2 related">
-    <a href="/rambling/2021/05/28/why-do-I-write/" class="post-link">
-      <h4 class="post-title">Why Do I Write?</h4>
+    <a href="/xpost/2020/12/03/haskell-para-mentes-imperativas/" class="post-link">
+      <h4 class="post-title">Haskell para mentes imperativas</h4>
     </a>
     <p class="post-summary">
-      I have much room for improvement where it comes to communicating. A tool I think can help me with it is writing a blog entry every so often about things I care about. This blog is just that. A training ground. My training ground.
+      En este post quiero explorar algunas cosas que creo que me hubiesen servido para aprender Haskell. Teniendo una base en algún lenguaje imperativo, usar esta para programar en Haskell.
       <span class="related-categories">
-      <a href="/categories#rambling">#rambling</a>
+      <a href="/categories#xpost">#xpost</a>
     </span>
     </p>
   </div>
