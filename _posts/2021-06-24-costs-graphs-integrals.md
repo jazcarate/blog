@@ -71,7 +71,7 @@ With this mindset, we can establish a “minimum” graph. Technologies might pr
 ![Ideal scenario](/assets/image/cost-graphs-integrals/ideal.png)
 
 
-It is worth mentioning that in all these graphs, a given complexity in the horizontal axis is but the accumulation of costs to reach to that complexity level, as to reach a complexity level of $$n$$, one must first cover $$n-\epsilon$$ (where $$\epsilon \in \mathbb{R}_{>0}$$). If we call $$f$$ the function that we are plotting, then there exists a $$\Delta f \colon \mathbb{Complexity} \mapsto \mathbb{Cost} $$ where $$ f(complexity) = \int_{0}^{complexity} \Delta f(x) \,dx $$). A useful corollary from this fact, is that our graphs are monotonically non-decreasing. And those are fun! 😺.
+It is worth mentioning that in all these graphs, a given complexity in the horizontal axis is but the accumulation of costs to reach to that complexity level, as to reach a complexity level of $$n$$, one must first cover $$n-\epsilon$$ (where $$\epsilon \in \mathbb{R}_{>0}$$). If we call $$f$$ the function that we are plotting, then there exists a $$\Delta f \colon \mathbb{Complexity} \mapsto \mathbb{Cost} $$ where $$ f(complexity) = \int_{0}^{complexity} \Delta f(x) \,dx $$. A useful corollary from this fact, is that our graphs are monotonically non-decreasing. And those are fun! 😺.
 
 Now that we established a common ground to talk about complexity and cost, let's dive into three distinct categories of technologies: **Pay as you go**, **Debt** and, **Upfront**.
 
