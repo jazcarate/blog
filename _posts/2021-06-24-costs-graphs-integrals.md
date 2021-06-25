@@ -7,7 +7,10 @@ enable_mathjax: true
 excerpt: >-
     Yet another tool to pick a technology. How does the cost of the choice evolve over the complexity? Is there a one-solution-fits-all? In this blog post, we’ll delve into some visualization to understand the difference between choosing Java, Haskell, Hibernate, Ruby on Rails, or drop programming altogether for a no-code approach.
     Let’s dive into the world of optimizations, integrals, and many many graphs!
-image: /assets/image/cost-graphs-integrals/comparison.png
+image:
+  path: /assets/image/cost-graphs-integrals/comparison.png
+  height: 800
+  width: 600
 ---
 
 Lately, and by mere coincidence, I was discussing programming language choices. When or why should you choose language X over Y. And apart from the usual suspects like
