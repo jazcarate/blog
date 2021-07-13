@@ -27,8 +27,8 @@
 <meta property="og:title" content="Implementing Google OAuth to use Google API in Cloudflare Workers" />
 <meta name="author" content="Joaquin 'Florius' Azcarate" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!" />
-<meta property="og:description" content="Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!" />
+<meta name="description" content="In this blog-post, we’ll go over the setup process and code required to implement a OAuth 2.0 flow, from the ground up, using Cloudflare Workers, their KV, and the Google API." />
+<meta property="og:description" content="In this blog-post, we’ll go over the setup process and code required to implement a OAuth 2.0 flow, from the ground up, using Cloudflare Workers, their KV, and the Google API." />
 <link rel="canonical" href="https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/" />
 <meta property="og:url" content="https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/" />
 <meta property="og:site_name" content="Florius’ Blog" />
@@ -41,11 +41,11 @@
 <meta name="twitter:site" content="@FloriusWasTaken" />
 <meta name="twitter:creator" content="@FloriusWasTaken" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/"},"description":"Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!","url":"https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/","@type":"BlogPosting","image":"https://blog.florius.com.ar/assets/image/avatar.jpg","headline":"Implementing Google OAuth to use Google API in Cloudflare Workers","dateModified":"2021-07-12T00:00:00+00:00","datePublished":"2021-07-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/"},"description":"In this blog-post, we’ll go over the setup process and code required to implement a OAuth 2.0 flow, from the ground up, using Cloudflare Workers, their KV, and the Google API.","url":"https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/","@type":"BlogPosting","image":"https://blog.florius.com.ar/assets/image/avatar.jpg","headline":"Implementing Google OAuth to use Google API in Cloudflare Workers","dateModified":"2021-07-12T00:00:00+00:00","datePublished":"2021-07-12T00:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?202107131412" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?202107131417" type="text/css">
 
     <!-- Fonts -->
     <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
@@ -255,6 +255,11 @@ But I failed to find anything that would play nicely with Cloudflare Web worker,
 
 <p>I choose Google’s Drive listing API as an excuse. Everything we’ll see from now on can be easily changed to use any of the <a href="https://developers.google.com/workspace/products">myriad of Google APIs</a>, as they all require roughly the same authentication and setup.</p>
 
+<h2 id="one-picture-summary">One picture summary</h2>
+<p><img src="/assets/image/google-oauth-in-cloudflare-workers/sequence_of_requests.svg" alt="Sequence of requests" /></p>
+
+<p>A more detail explanation of how Google Sign in should behave can be found in Google’s docs: <a href="https://developers.google.com/identity/protocols/oauth2/web-server">Using OAuth 2.0 for Web Server Applications</a>.</p>
+
 <h2 id="structure-and-systems">Structure and Systems</h2>
 <p>To decouple the logic from external sources *such as Google), the project is best understood as a slim entry point <code class="language-plaintext highlighter-rouge">index.ts</code>, the core business logic in the handling method (<code class="language-plaintext highlighter-rouge">handler.ts</code>), and every external dependency in the <code class="language-plaintext highlighter-rouge">lib/</code> folder.</p>
 
@@ -443,23 +448,6 @@ The query params has no errors</p>
   
 
   <div class="post ml2 related">
-    <a href="/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/" class="post-link">
-      <h4 class="post-title">Deckchecks, Heuristics, and Decision Trees</h4>
-    </a>
-    <p class="post-summary">
-      One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament, and routinely check them. Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques. I feel we under-use the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective. In this post, I would like to explore some techniques' inner workings. Propose a hypothesis on why they might work in some situations but not others. Consider unexplored alternatives. And build a heuristic on what method is better for each circumstance. Join me!
-      <span class="related-categories">
-      <a href="/categories#mtg">#mtg</a>
-    </span>
-    </p>
-  </div>
-
-  
-  
-
-  
-
-  <div class="post ml2 related">
     <a href="/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego/" class="post-link">
       <h4 class="post-title">Cuándo intervenir en un juego</h4>
     </a>
@@ -479,13 +467,13 @@ The query params has no errors</p>
   
 
   <div class="post ml2 related">
-    <a href="/rambling/2021/05/28/why-do-I-write/" class="post-link">
-      <h4 class="post-title">Why Do I Write?</h4>
+    <a href="/xpost/2021/04/15/discoverying-crystal/" class="post-link">
+      <h4 class="post-title">Discovering Crystal</h4>
     </a>
     <p class="post-summary">
-      I have much room for improvement where it comes to communicating. A tool I think can help me with it is writing a blog entry every so often about things I care about. This blog is just that. A training ground. My training ground.
+      I was working with Ruby on Rails on a project with other very skilled Ruby and Rails developers. As many others working with Ruby, we liked it’s syntax, it’s ease of use, it’s dependencies (gems) but had some issues with it. Every programming language does. As luck would have it, I was also in close contact with some very vociferous advocate of Crystal. You can imagine, with the tagline: “Fast as C, Slick as Ruby”, I was hooked.
       <span class="related-categories">
-      <a href="/categories#rambling">#rambling</a>
+      <a href="/categories#xpost">#xpost</a>
     </span>
     </p>
   </div>
@@ -496,13 +484,32 @@ The query params has no errors</p>
   
 
   <div class="post ml2 related">
-    <a href="/xpost/2019/07/10/the-essence-of-event-sourcing/" class="post-link">
-      <h4 class="post-title">The essence of Event Sourcing</h4>
+    <a href="/xpost/2018/08/14/limit-problem-space/" class="post-link">
+      <h4 class="post-title">Limit the Problem Space!</h4>
     </a>
     <p class="post-summary">
-      Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.
+      Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!
       <span class="related-categories">
       <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/rambling/coding/2021/05/12/desire-driven-development/" class="post-link">
+      <h4 class="post-title">Desire Driven Development</h4>
+    </a>
+    <p class="post-summary">
+      Long have I heard and reaped the benefits of Test Driven Development. But I'm starting to sense that much of the material written and explained about TDD is by fanatics. In this post I'll explore my own take on TDD, and the journey &rarr; Desire Driven Development.
+      <span class="related-categories">
+      <a href="/categories#rambling">#rambling</a>
+    
+      <a href="/categories#coding">#coding</a>
     </span>
     </p>
   </div>
