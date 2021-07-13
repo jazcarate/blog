@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-689SEV7MTT"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-689SEV7MTT', { cookie_domain: 'blog.florius.com.ar', cookie_flags: 'SameSite=None;Secure' });</script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/site.webmanifest" />
+    <meta name="robots" content="all">
+    <meta name="author" content="florius">
+    
+    <meta name="keywords" content="xpost">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Implementing Google OAuth to use Google API in Cloudflare Workers | Florius’ Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Implementing Google OAuth to use Google API in Cloudflare Workers" />
+<meta name="author" content="Joaquin 'Florius' Azcarate" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!" />
+<meta property="og:description" content="Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!" />
+<link rel="canonical" href="https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/" />
+<meta property="og:url" content="https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/" />
+<meta property="og:site_name" content="Florius’ Blog" />
+<meta property="og:image" content="https://blog.florius.com.ar/assets/image/avatar.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://blog.florius.com.ar/assets/image/avatar.jpg" />
+<meta property="twitter:title" content="Implementing Google OAuth to use Google API in Cloudflare Workers" />
+<meta name="twitter:site" content="@FloriusWasTaken" />
+<meta name="twitter:creator" content="@FloriusWasTaken" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/"},"description":"Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem. How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!","url":"https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/","@type":"BlogPosting","image":"https://blog.florius.com.ar/assets/image/avatar.jpg","headline":"Implementing Google OAuth to use Google API in Cloudflare Workers","dateModified":"2021-07-12T00:00:00+00:00","datePublished":"2021-07-12T00:00:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202107131412" type="text/css">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
+    
+    <script src="//kit.fontawesome.com/88434a0a24.js" crossorigin="anonymous" async></script>
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/image/favicon.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/image/favicon.png" />
+
+    <meta name="theme-color" content="#000000">
+
+    
+</head>
+
+<body class="site">
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Florius’ Blog</a>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">About</a>
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/categories/">Categories</a>
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/jazcarate"></a>
+    
+    
+      <a class="fa fa-gitlab" href="https://gitlab.com/jazcarate"></a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:j@florius.com.ar"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/joaquin-azcarate"></a>
+    
+    
+    <a class="fab fa-dev" href="https://dev.to/florius"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap animated fade-in-down" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Implementing Google OAuth to use Google API in Cloudflare Workers</h1>
+  <span class="post-meta">Jul 12, 2021</span><br>
+  
+  <span class="post-meta small read-time">
+  
+    7 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p><em>The original post can be found at <a href="https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/">Apiumhub :: Tech blog</a>.</em></p>
+
+<h1 id="implementing-google-oauth-to-use-google-api-in-cloudflare-workers">Implementing Google OAuth to use Google API in Cloudflare Workers</h1>
+<p>Recently I had the opportunity to build a small application that needed to authenticate and authorize a user using Google’s sign-in mechanism, and requests on their behalf data from a Google API.</p>
+
+<p>I choose to implement this as a Cloudflare Worker as a <a href="https://www.cloudflare.com/learning/serverless/what-is-serverless/">serverless compute service</a> leveraging <a href="https://developers.cloudflare.com/workers/learning/how-kv-works">Cloudflare key-value storage (KV)</a> for session storage. The tooling from Cloudflare (<a href="https://developers.cloudflare.com/workers/cli-wrangler"><code class="language-plaintext highlighter-rouge">wrangler</code></a>) has evolved nicely since my first attempt at Cloudflare Workers, so I thought it was a high time that I gave it another try.</p>
+
+<p>As any good software engineer would, I started searching for any repository I could use a template to wire up Google OAuth easily.
+But I failed to find anything that would play nicely with Cloudflare Web worker, or had some proper documentation/tests, or had a decent quality to it. So in this blog post (and in the companion GitHub repository <a href="https://github.com/jazcarate/cloudflare-worker-google-oauth">jazcarate/cloudflare-worker-google-oauth</a>), I want to document, explain and go over some interesting decisions so someone just like me would have this to springboard their development.</p>
+
+<p>That being said, feel free to <em>yoink</em> any or all of the code from the <a href="https://github.com/jazcarate/cloudflare-worker-google-oauth">repo</a>.</p>
+
+<h2 id="result">Result</h2>
+<p>First of all, this is what we’ll develop: An app that can display and filter a user’s Drive files; and provide a link to them.</p>
+
+<p><img src="/assets/image/google-oauth-in-cloudflare-workers/result.png" alt="Result — Design is my passion" /></p>
+
+<p>I choose Google’s Drive listing API as an excuse. Everything we’ll see from now on can be easily changed to use any of the <a href="https://developers.google.com/workspace/products">myriad of Google APIs</a>, as they all require roughly the same authentication and setup.</p>
+
+<h2 id="structure-and-systems">Structure and Systems</h2>
+<p>To decouple the logic from external sources *such as Google), the project is best understood as a slim entry point <code class="language-plaintext highlighter-rouge">index.ts</code>, the core business logic in the handling method (<code class="language-plaintext highlighter-rouge">handler.ts</code>), and every external dependency in the <code class="language-plaintext highlighter-rouge">lib/</code> folder.</p>
+
+<p>The main interface from <code class="language-plaintext highlighter-rouge">handler.ts</code> is a function that <a href="https://en.wikipedia.org/wiki/Dependency_injection">injects</a> all the systems</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="p">(</span>
+  <span class="nx">kv</span><span class="p">:</span> <span class="nx">KVSystem</span><span class="p">,</span>
+  <span class="nx">google</span><span class="p">:</span> <span class="nx">GoogleSystem</span><span class="p">,</span>
+  <span class="nx">env</span><span class="p">:</span> <span class="nx">EnvSystem</span><span class="p">,</span>
+  <span class="nx">crypto</span><span class="p">:</span> <span class="nx">CryptoSystem</span><span class="p">,</span>
+<span class="p">):</span> <span class="p">(</span><span class="nx">event</span><span class="p">:</span> <span class="nx">FetchEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">Response</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">remove</span><span class="p">,</span> <span class="kd">get</span><span class="p">,</span> <span class="nx">save</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">kv</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">tokenExchange</span><span class="p">,</span> <span class="nx">removeToken</span><span class="p">,</span> <span class="nx">listDriveFiles</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">google</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">isLocal</span><span class="p">,</span> <span class="nx">now</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">env</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">generateAuth</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">crypto</span>
+  <span class="c1">//...</span>
+
+</code></pre></div></div>
+
+<p>This not only helps separate concerns but allows us to mock external dependencies in the tests.</p>
+
+<h3 id="initial-request">Initial request</h3>
+<p>Once we have all systems initialized, we do match if the request is an <code class="language-plaintext highlighter-rouge">/auth</code> callback. We’ll come back to this section later.
+If the request is not a callback, then I check if the user is authenticated. There are several ways in which a user might not be.</p>
+
+<p>Like if they don’t present any cookies.</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">cookies</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">Cookie</span><span class="dl">'</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">cookies</span><span class="p">)</span> <span class="k">return</span> <span class="nx">login</span><span class="p">(</span><span class="nx">env</span><span class="p">,</span> <span class="nx">google</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Or if they have cookies, but not the one we care (<code class="language-plaintext highlighter-rouge">auth</code>)</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">auth</span> <span class="o">=</span> <span class="nx">findCookie</span><span class="p">(</span><span class="nx">AUTH_COOKIE</span><span class="p">,</span> <span class="nx">cookies</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">auth</span><span class="p">)</span> <span class="k">return</span> <span class="nx">login</span><span class="p">(</span><span class="nx">env</span><span class="p">,</span> <span class="nx">google</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Or the KV does not have an entry for that auth cookie (either because it has expired, or that the client is malicious and trying to guess)</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="k">await</span> <span class="kd">get</span><span class="p">(</span><span class="nx">auth</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">token</span><span class="p">)</span> <span class="k">return</span> <span class="nx">login</span><span class="p">(</span><span class="nx">env</span><span class="p">,</span> <span class="nx">google</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="authenticated">Authenticated</h3>
+<p>After this point, I know that the user is authenticated. This means I have access to their <code class="language-plaintext highlighter-rouge">token</code> to query Google API.</p>
+
+<p>So now I need to choose one of three paths:</p>
+<ol>
+  <li>If it is to the root (<code class="language-plaintext highlighter-rouge">/</code>)</li>
+  <li>If the request is to <code class="language-plaintext highlighter-rouge">/logout</code></li>
+  <li>or any other path.</li>
+</ol>
+
+<p>Of note, this is just the <code class="language-plaintext highlighter-rouge">pathname</code>, it does not include search params like <code class="language-plaintext highlighter-rouge">?q=foo</code>; so the URL <code class="language-plaintext highlighter-rouge">/?q=foo</code> <code class="language-plaintext highlighter-rouge">.pathname</code> is just <code class="language-plaintext highlighter-rouge">'/'</code></p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span> <span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">pathname</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">:</span>       <span class="c1">// ...</span>
+    <span class="k">case</span> <span class="dl">'</span><span class="s1">/logout</span><span class="dl">'</span><span class="p">:</span> <span class="c1">// ...</span>
+    <span class="k">default</span><span class="p">:</span>        <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="list-files">List files</h4>
+<p>If the request is to the root, then I query Google API with the <code class="language-plaintext highlighter-rouge">Authorization</code> token like the <a href="https://developers.google.com/drive/api/v2/search-files">API</a> expects</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">listDriveFiles</span><span class="p">(</span>
+  <span class="nx">accessToken</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span>
+  <span class="nx">query</span><span class="p">:</span> <span class="kr">string</span> <span class="o">|</span> <span class="kc">null</span><span class="p">,</span>
+<span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">DriveFiles</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://www.googleapis.com/drive/v2/files</span><span class="dl">'</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">query</span><span class="p">)</span> <span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">q</span><span class="dl">'</span><span class="p">,</span> <span class="s2">`title contains '</span><span class="p">${</span><span class="nx">query</span><span class="p">}</span><span class="s2">'`</span><span class="p">)</span>
+
+  <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span> <span class="p">{</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="na">Authorization</span><span class="p">:</span> <span class="s2">`Bearer </span><span class="p">${</span><span class="nx">accessToken</span><span class="p">}</span><span class="s2">`</span> <span class="p">},</span>
+  <span class="p">})</span>
+  <span class="c1">/// ...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If the <code class="language-plaintext highlighter-rouge">fetch</code> returns something, I check the body for errors and panic if needed</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">resp</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">error</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>Once Google answers a list of files, then it is just a matter of rendering them. I decided to keep the rendering simple, and inline the whole HTML; but this can be easily adapted to return a JSON, or use a proper template engine. I’ll leave this as an exercise for the reader.</p>
+
+<h4 id="logout">Logout</h4>
+<p>In the logout case, we revoke the token with google, we remove the auth from the KV and we reply to the client with a deleted cookie.</p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">event</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span><span class="nb">Promise</span><span class="p">.</span><span class="nx">allSettled</span><span class="p">([</span><span class="nx">removeToken</span><span class="p">(</span><span class="nx">token</span><span class="p">),</span> <span class="nx">remove</span><span class="p">(</span><span class="nx">auth</span><span class="p">)]))</span>
+        
+<span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="dl">'</span><span class="s1">Loged out</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="nx">setCookie</span><span class="p">(</span><span class="dl">'</span><span class="s1">deleted</span><span class="dl">'</span><span class="p">,</span> <span class="nx">EXPIRED</span><span class="p">),</span>
+<span class="p">})</span>
+</code></pre></div></div>
+<p>I leverage the <a href="https://developers.cloudflare.com/workers/learning/fetch-event-lifecycle#waituntil"><code class="language-plaintext highlighter-rouge">waitUntil</code></a> lifecycle to respond to the client immediately, and call google and remove the KV in the background. And I use <code class="language-plaintext highlighter-rouge">allSettled</code> as I don’t particularly care if the KV couldn’t be deleted, or if Google had trouble removing the token as there is not much more I would be able to do.</p>
+
+<h4 id="not-found">Not found</h4>
+<p>Otherwise, I simply return a status <code class="language-plaintext highlighter-rouge">404 Not Found</code>.</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="dl">'</span><span class="s1">Not found</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">status</span><span class="p">:</span> <span class="mi">404</span> <span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="callback">Callback</h3>
+<p>Going back to the <code class="language-plaintext highlighter-rouge">/auth</code> request; this needs no authentication (as we are in the process of creating it). So I just check for the contract that <a href="https://developers.google.com/identity/protocols/oauth2/web-server#sample-oauth-2.0-server-response">Google sign-in documents</a>. 
+The query params has no errors</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">error</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">error</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s2">`Google OAuth error: [</span><span class="p">${</span><span class="nx">error</span><span class="p">}</span><span class="s2">]`</span><span class="p">,</span> <span class="p">{</span> <span class="na">status</span><span class="p">:</span> <span class="mi">400</span> <span class="p">})</span>
+</code></pre></div></div>
+
+<p>And it has a <code class="language-plaintext highlighter-rouge">code</code></p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">code</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">code</span><span class="dl">'</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">code</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s2">`Bad auth callback (no 'code')`</span><span class="p">,</span> <span class="p">{</span> <span class="na">status</span><span class="p">:</span> <span class="mi">400</span> <span class="p">})</span>
+</code></pre></div></div>
+
+<p>If so, we can exchange the code for a proper <code class="language-plaintext highlighter-rouge">token</code> via another Google API</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://oauth2.googleapis.com/token</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">application/x-www-form-urlencoded</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="nx">body</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>and again check for errors</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">resp</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>With a valid Google <code class="language-plaintext highlighter-rouge">access_token</code> in hand, we generate a random string for the application’s authentication</p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">newAuth</span> <span class="o">=</span> <span class="nx">generateAuth</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>And store in the KV the way to translate from <code class="language-plaintext highlighter-rouge">newAuth</code> to <code class="language-plaintext highlighter-rouge">access_token</code></p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">await</span> <span class="nx">save</span><span class="p">(</span>
+    <span class="nx">newAuth</span><span class="p">,</span>
+    <span class="nx">tokenResponse</span><span class="p">.</span><span class="nx">access_token</span><span class="p">,</span>
+    <span class="c1">//...</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>Finally, we send the client back to wherever they came from, with their new authentication cookie.
+<em>We stored the original URL in the <code class="language-plaintext highlighter-rouge">state</code> param that Google OAuth allows us to send.</em></p>
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="nx">redirect</span><span class="p">(</span>
+    <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span> <span class="o">+</span> <span class="nb">decodeURIComponent</span><span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">state</span><span class="dl">'</span><span class="p">)</span> <span class="o">||</span> <span class="dl">''</span><span class="p">),</span>
+    <span class="nx">setCookie</span><span class="p">(</span><span class="nx">newAuth</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">expiration</span><span class="p">)),</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="other-systems">Other systems</h2>
+<p>The systems in the <code class="language-plaintext highlighter-rouge">lib/</code> folder are quite straightforward, and can be divided into two subgroups conceptually:</p>
+
+<h3 id="cloudflare-enhanced-dependencies">Cloudflare enhanced dependencies</h3>
+
+<p>As this application is running in Cloudflare Workers (both the real environment in the cloud and the dev environment generated by <code class="language-plaintext highlighter-rouge">npm run dev</code>), some variables are injected into the global scope. These variables are typed in the <code class="language-plaintext highlighter-rouge">bindings.d.ts</code> file; and are generated by steps 2 and 3 from <a href="https://github.com/jazcarate/cloudflare-worker-google-oauth#setup-wrangler">README.md#Setup wrangler</a>.</p>
+
+<ul>
+  <li><strong>KV</strong> module uses the global <code class="language-plaintext highlighter-rouge">authTokens</code> variable that Cloudflare Worker injects into the worker. More information about how KV work can be found <a href="https://developers.cloudflare.com/workers/learning/how-kv-works">here</a>.</li>
+  <li><strong>Env</strong> module keeps the environment injectable. Even though we could use the global variables <em>(<code class="language-plaintext highlighter-rouge">CLIENT_ID</code> and <code class="language-plaintext highlighter-rouge">CLIENT_SECRET</code>)</em> injected to the web worker, this approach allows me to test the <code class="language-plaintext highlighter-rouge">handler</code> without having to re-wire global variables; that is a pain.</li>
+</ul>
+
+<h3 id="utils">Utils</h3>
+<p>And some other systems that are not Cloudflare Worker dependant, but more like utility functions, grouped by their specific domain.</p>
+
+<ul>
+  <li><strong>http</strong> module has some utils to parse the Cookies header format and build a <code class="language-plaintext highlighter-rouge">302 Redirect</code> response.</li>
+  <li><strong>Google</strong> module has a types API using just <code class="language-plaintext highlighter-rouge">fetch</code>.</li>
+  <li><strong>Crypto</strong> module is a small utility to use the <code class="language-plaintext highlighter-rouge">crypto</code> API to generate a secure-random string.</li>
+</ul>
+
+</article>
+
+
+
+
+
+
+
+<div class="separator">
+  <img src="/assets/image/cat.png" alt="Melian" />
+</div>
+
+<h3 class="related-post-title">Random Posts</h3>
+
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/mtg/2021/04/11/deckchecks-heuristics-and-decision-trees/" class="post-link">
+      <h4 class="post-title">Deckchecks, Heuristics, and Decision Trees</h4>
+    </a>
+    <p class="post-summary">
+      One of the tools judges employ to thwart attempts to cheat is to require players to write down what cards they will be playing within a particular tournament, and routinely check them. Judges must perform these checks the fastest way possible to not delay the tournament. As such, they developed a myriad of techniques. I feel we under-use the availability of the decklist, so having a clear plan ahead of actually getting the deck in our hands can prove highly effective. In this post, I would like to explore some techniques' inner workings. Propose a hypothesis on why they might work in some situations but not others. Consider unexplored alternatives. And build a heuristic on what method is better for each circumstance. Join me!
+      <span class="related-categories">
+      <a href="/categories#mtg">#mtg</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/mtg/2019/02/27/cuando-intervenir-en-un-juego/" class="post-link">
+      <h4 class="post-title">Cuándo intervenir en un juego</h4>
+    </a>
+    <p class="post-summary">
+      Durante mucho de mi jueceo, tuve este conflicto interno de cuándo intervenir en un partido de Magic, o si siquiera hacerlo! Una persona mucho más inteligente que yo una vez me dijo: Si alguna vez no sabes algo, escribí un post al respecto. Así que aquí estoy.  La respuesta a la pregunta de si ¿Debo intervenir?, como muchas otras respuestas en la vida es “depende”.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    
+      <a href="/categories#mtg">#mtg</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/rambling/2021/05/28/why-do-I-write/" class="post-link">
+      <h4 class="post-title">Why Do I Write?</h4>
+    </a>
+    <p class="post-summary">
+      I have much room for improvement where it comes to communicating. A tool I think can help me with it is writing a blog entry every so often about things I care about. This blog is just that. A training ground. My training ground.
+      <span class="related-categories">
+      <a href="/categories#rambling">#rambling</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2019/07/10/the-essence-of-event-sourcing/" class="post-link">
+      <h4 class="post-title">The essence of Event Sourcing</h4>
+    </a>
+    <p class="post-summary">
+      Event Sourcing is a somewhat trending topic, and you can find a lot of blog posts on what event sourcing supposedly is. I’ll throw my wrench in the works and try to explain what I see as “Event Sourcing”.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme heavily inspired in <a href="http://johnotander.com">John Otander</a>' <a href="https://github.com/johno/pixyll">pixyll</a>.
+    </small>
+  </div>
+</footer>
+<!-- AnchorJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>
+
+</body>
+</html>
