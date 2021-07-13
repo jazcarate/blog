@@ -3,10 +3,9 @@ layout: post
 title: Implementing Google OAuth to use Google API in Cloudflare Workers
 date: 2021-07-12
 canonical_url: https://apiumhub.com/tech-blog-barcelona/implementing-google-oauth-google-api-cloudflare-workers/
-tag: design
+tag: copy-and-paste
 excerpt: >-
-    Simply put, the “problem space” is the entire spectrum of inputs that exists in the process of finding a solution to a problem.
-    How can we make our code less error-prone? In this post I explore some of the ways we can do so. Join me!
+    In this blog-post, we'll go over the setup process and code required to implement a OAuth 2.0 flow, from the ground up, using Cloudflare Workers, their KV, and the Google API.
 ---
 
 _The original post can be found at [Apiumhub :: Tech blog]({{ page.canonical_url }})._
@@ -27,6 +26,11 @@ First of all, this is what we'll develop: An app that can display and filter a u
 ![Result — Design is my passion](/assets/image/google-oauth-in-cloudflare-workers/result.png)
 
 I choose Google's Drive listing API as an excuse. Everything we'll see from now on can be easily changed to use any of the [myriad of Google APIs](https://developers.google.com/workspace/products), as they all require roughly the same authentication and setup.
+
+## One picture summary
+![Sequence of requests](/assets/image/google-oauth-in-cloudflare-workers/sequence_of_requests.svg)
+
+A more detail explanation of how Google Sign in should behave can be found in Google's docs: [Using OAuth 2.0 for Web Server Applications](https://developers.google.com/identity/protocols/oauth2/web-server).
 
 ## Structure and Systems
 To decouple the logic from external sources *such as Google), the project is best understood as a slim entry point `index.ts`, the core business logic in the handling method (`handler.ts`), and every external dependency in the `lib/` folder.
