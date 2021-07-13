@@ -10,7 +10,6 @@ excerpt: >-
 
 _The original post can be found at [Apiumhub :: Tech blog]({{ page.canonical_url }})._
 
-# Implementing Google OAuth to use Google API in Cloudflare Workers
 Recently I had the opportunity to build a small application that needed to authenticate and authorize a user using Google's sign-in mechanism, and requests on their behalf data from a Google API.
 
 I choose to implement this as a Cloudflare Worker as a [serverless compute service](https://www.cloudflare.com/learning/serverless/what-is-serverless/) leveraging [Cloudflare key-value storage (KV)](https://developers.cloudflare.com/workers/learning/how-kv-works) for session storage. The tooling from Cloudflare ([`wrangler`](https://developers.cloudflare.com/workers/cli-wrangler)) has evolved nicely since my first attempt at Cloudflare Workers, so I thought it was a high time that I gave it another try.
