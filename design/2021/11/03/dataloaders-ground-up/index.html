@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-689SEV7MTT"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-689SEV7MTT', { cookie_domain: 'blog.florius.com.ar', cookie_flags: 'SameSite=None;Secure' });</script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/site.webmanifest" />
+    <meta name="robots" content="all">
+    <meta name="author" content="florius">
+    
+    <meta name="keywords" content="design">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Florius’ Blog" href="/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Dataloader, from the ground up | Florius’ Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Dataloader, from the ground up" />
+<meta name="author" content="Joaquin 'Florius' Azcarate" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ever heard of “dataloader”? From the simplest implementation to a batching and caching design pattern. Let’s dive into a brief tour of understanding this useful device." />
+<meta property="og:description" content="Ever heard of “dataloader”? From the simplest implementation to a batching and caching design pattern. Let’s dive into a brief tour of understanding this useful device." />
+<link rel="canonical" href="https://blog.florius.com.ar/design/2021/11/03/dataloaders-ground-up/" />
+<meta property="og:url" content="https://blog.florius.com.ar/design/2021/11/03/dataloaders-ground-up/" />
+<meta property="og:site_name" content="Florius’ Blog" />
+<meta property="og:image" content="https://blog.florius.com.ar/assets/image/avatar.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-03T19:16:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://blog.florius.com.ar/assets/image/avatar.jpg" />
+<meta property="twitter:title" content="Dataloader, from the ground up" />
+<meta name="twitter:site" content="@FloriusWasTaken" />
+<meta name="twitter:creator" content="@FloriusWasTaken" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Joaquin 'Florius' Azcarate"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.florius.com.ar/design/2021/11/03/dataloaders-ground-up/"},"description":"Ever heard of “dataloader”? From the simplest implementation to a batching and caching design pattern. Let’s dive into a brief tour of understanding this useful device.","url":"https://blog.florius.com.ar/design/2021/11/03/dataloaders-ground-up/","@type":"BlogPosting","image":"https://blog.florius.com.ar/assets/image/avatar.jpg","headline":"Dataloader, from the ground up","dateModified":"2021-11-03T19:16:00+00:00","datePublished":"2021-11-03T19:16:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?202111112038" type="text/css">
+
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Karla|Montserrat&amp;display=swap" rel="stylesheet">
+    
+    <script src="//kit.fontawesome.com/88434a0a24.js" crossorigin="anonymous" async></script>
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/image/favicon.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/image/favicon.png" />
+
+    <meta name="theme-color" content="#000000">
+
+    
+</head>
+
+<body class="site">
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Florius’ Blog</a>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">About</a>
+    
+
+    
+
+    
+    
+    
+    
+        <a class="nav-link" href="/categories/">Categories</a>
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/jazcarate"></a>
+    
+    
+      <a class="fa fa-gitlab" href="https://gitlab.com/jazcarate"></a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:j@florius.com.ar"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/joaquin-azcarate"></a>
+    
+    
+    <a class="fab fa-dev" href="https://dev.to/florius"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap animated fade-in-down" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Dataloader, from the ground up</h1>
+  <span class="post-meta">Nov 3, 2021</span><br>
+  
+  <span class="post-meta small read-time">
+  
+    12 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>Ever heard of “dataloader”? From the simplest implementation to a batching and caching design pattern. Let’s dive into a brief tour of understanding this useful device.</p>
+
+<!--more-->
+<h2 id="background">Background</h2>
+<p>Feel free to skip this section if you feel you have a good grasp of what <code class="language-plaintext highlighter-rouge">DataLoader</code> is meant to solve.</p>
+
+<p>Recently, I had a very insightful talk with a colleague. Their team knew they wanted a GraphQL API, and they also wanted to develop the service in Java. So they were prototyping different ways to bootstrap the service with and without Spring. It was not long before they encountered the <code class="language-plaintext highlighter-rouge">N+1 query</code> problem. Talking about possible solutions, and the <em>shape</em> of them was interesting enough I wanted to write a blog post with some of the enlightening <em>pearls</em> we found along the way.</p>
+
+<p>Let’s start by talking a bit about GraphQL, although it is not very interesting for the bigger picture, it helps frame a concrete example of then the broader concepts can be applied.</p>
+
+<p>Implementing a GraphQL API means providing a way to <em>resolve</em> a piece of information. Like transforming a user id into a user entity that holds its name. For example:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">SingleUserDatabase</span><span class="p">(</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">repo</span><span class="p">:</span> <span class="nc">UserRepository</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">DataLoader</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">,</span> <span class="nc">User</span><span class="err">?</span><span class="p">&gt;()</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">load</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="nc">String</span><span class="p">):</span> <span class="nc">User</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">repo</span><span class="p">.</span><span class="nf">findById</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>How does the code above deal with fetching multiple users? <code class="language-plaintext highlighter-rouge">findById</code> goes from one <code class="language-plaintext highlighter-rouge">id</code> to one <code class="language-plaintext highlighter-rouge">User</code>. There is no other way than running the <code class="language-plaintext highlighter-rouge">SingleUserDatabase#load</code> method over and over, for each user we need to get.
+Probably the <code class="language-plaintext highlighter-rouge">UserRepository</code> already has a method to bundle more than one id and get multiple users. But <code class="language-plaintext highlighter-rouge">DataLoader&lt;KEY, VALUE&gt;</code>’s API is meant to be run once for each user that it encounters in the process of resolving the bigger query. So the library burdens us, the <em>resolver</em> writer on how to group (or not) these queries.
+And maybe you would be tempted to be angry at the library’s API. After all, this could have been done on <em>their</em> end and required the <code class="language-plaintext highlighter-rouge">DataLoader</code> to work with a collection, rather than a single one.</p>
+
+<p>I would argue that if that were the case; then I would be equally excited to implement a <code class="language-plaintext highlighter-rouge">DataLoader</code> that can be fed a method that works with the collection and de-batches them to single queries. There is just no <em>good</em> way that the GraphQL library can make a good decision on how or if it should group resolvers. So the onerous is on the application developer. You and I.</p>
+
+<p>And I would dare say that this pattern of different pieces of code, needing some information of the same kind; but are woefully unaware of one another is a design choice we should strive for. If we can abstract away the performance of batching and caching, and each piece of code assumes it can load whatever they need, and not need to coordinate with others, but also don’t incur a performance penalty with high latency.</p>
+
+<h2 id="a-life-of-collections">A life of collections</h2>
+<p>The first task in our journey to batch requests is to move from the single retrieving function to one that accepts a collection and returns a collection. DataLoader implementations will deal with errors in a much smarter and robust way, but in this blog post I’ll shrug off any and all error handling.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MultipleUserDatabase</span><span class="p">(</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">repo</span><span class="p">:</span> <span class="nc">UserRepository</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">loadMany</span><span class="p">(</span><span class="n">ids</span><span class="p">:</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">String</span><span class="p">&gt;)</span>
+    <span class="p">:</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">User</span><span class="err">?</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">repo</span><span class="p">.</span><span class="nf">findMay</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>But we need a way to transform this method going from <code class="language-plaintext highlighter-rouge">List&lt;String&gt; → List&lt;User?&gt;</code> to <code class="language-plaintext highlighter-rouge">String → User?</code> to feed the <code class="language-plaintext highlighter-rouge">DataLoader</code> API or any use case where we want to batch.</p>
+
+<h2 id="naïve">Naïve</h2>
+<p>I find that doing a naïve implementation helps understand the problem. So how would we make that transformation? Ignoring batching and caching.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Naive</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;(</span>
+    <span class="kd">val</span> <span class="py">inner</span><span class="p">:</span> <span class="p">(</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">&gt;)</span> <span class="p">-&gt;</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;,</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">DataLoader</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">load</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nc">KEY</span><span class="p">):</span> <span class="nc">VALUE</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">inner</span><span class="p">(</span><span class="nf">listOf</span><span class="p">(</span><span class="n">key</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">naive</span> <span class="p">=</span> <span class="nc">Naive</span><span class="p">(</span><span class="n">multipleUserDatabase</span><span class="o">::</span><span class="n">loadMany</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>With this code, <code class="language-plaintext highlighter-rouge">naive.load("foo")</code> would call the inner <code class="language-plaintext highlighter-rouge">MultipleUserDatabase::loadMany</code> with a list of one, and get the first element <em>(to reiterate: I’m not particularly concerned in handling errors)</em>.</p>
+
+<h3 id="and-then">And then?</h3>
+<p>Now that we have this simple implementation, one problem might become apparent. There is no way that whoever calls the <code class="language-plaintext highlighter-rouge">DataLoader::load</code> will be able to <em>wait</em>. The calls to the <code class="language-plaintext highlighter-rouge">inner</code> <em>listicle</em> <code class="language-plaintext highlighter-rouge">loadMany</code> happen immediately.</p>
+
+<p>Implementing a blocking-naive <code class="language-plaintext highlighter-rouge">DataLoader</code> wouldn’t be so difficult:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Blocking</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;(</span>
+    <span class="kd">val</span> <span class="py">inner</span><span class="p">:</span> <span class="p">(</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">&gt;)</span> <span class="p">-&gt;</span> <span class="nc">List</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">DataLoader</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;</span>  <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">lock</span><span class="p">:</span> <span class="nc">Object</span> <span class="p">=</span> <span class="nc">Object</span><span class="p">()</span>
+
+    <span class="k">fun</span> <span class="nf">load</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nc">KEY</span><span class="p">):</span> <span class="nc">VALUE</span><span class="p">?</span> <span class="p">{</span>
+        <span class="nf">synchronized</span><span class="p">(</span><span class="n">lock</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">lock</span><span class="p">.</span><span class="nf">wait</span><span class="p">()</span>
+            <span class="k">return</span> <span class="k">inner</span><span class="p">(</span><span class="nf">listOf</span><span class="p">(</span><span class="n">key</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>With this new blocking <code class="language-plaintext highlighter-rouge">DataLoader</code>, hopefully, it is apparent that we need a way to <em>un-wait</em>. A way to allow the execution to continue.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Blocking</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;(</span><span class="o">..</span><span class="p">.)</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="k">fun</span> <span class="nf">dispatch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">synchronized</span><span class="p">(</span><span class="n">lock</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">lock</span><span class="p">.</span><span class="nf">notifyAll</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>I don’t know about you, but writing locks, and <code class="language-plaintext highlighter-rouge">synchronized</code> I can never be sure that my code is correct. So let’s bit the bullet now, and implement the same logic, but with some other concurrency model. Rather than locking, let’s make explicit when things need to happen one after another. Rather than writing:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="py">user</span> <span class="p">=</span> <span class="n">naive</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nf">println</span><span class="p">(</span><span class="s">"The user name is: ${user.name}"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>let’s try to write something like this:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">naive</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="n">user</span> <span class="p">-&gt;</span>
+  <span class="nf">println</span><span class="p">(</span><span class="s">"The user name is: ${user.name}"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If this starts to look like <code class="language-plaintext highlighter-rouge">Promise</code> in JavaScript, or <code class="language-plaintext highlighter-rouge">Future</code> in Java or <code class="language-plaintext highlighter-rouge">flatMap</code> or <code class="language-plaintext highlighter-rouge">bind</code> or <code class="language-plaintext highlighter-rouge">&gt;&gt;=</code>; it is no coincidence. But in order to keep this entry concise, let’s implement our own <code class="language-plaintext highlighter-rouge">AndThenable</code> where:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">A</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;</span> <span class="nf">andThen</span><span class="p">(</span>
+        <span class="n">next</span><span class="p">:</span> <span class="p">(</span><span class="nc">A</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;</span>
+    <span class="p">):</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And again, let’s implement the most simple <code class="language-plaintext highlighter-rouge">AndThenable</code> possible:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Sync</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span>
+    <span class="kd">val</span> <span class="py">value</span><span class="p">:</span> <span class="nc">T</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;</span> <span class="nf">andThen</span><span class="p">(</span><span class="n">next</span><span class="p">:</span> <span class="p">(</span><span class="nc">T</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;):</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">next</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Sync</code> is created with a value, and calling <code class="language-plaintext highlighter-rouge">.andThen</code> with a function, would merely call that function with the provided value at creation.</p>
+
+<p>This way, our <code class="language-plaintext highlighter-rouge">DataLoader</code> and <code class="language-plaintext highlighter-rouge">Naive</code> would change to reflect this new interface return way:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Naive</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;(</span>
+    <span class="kd">val</span> <span class="py">inner</span><span class="p">:</span> <span class="p">(</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">&gt;)</span> <span class="p">-&gt;</span>
+        <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;,</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">DataLoader</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">load</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nc">KEY</span><span class="p">):</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">inner</span><span class="p">(</span><span class="nf">listOf</span><span class="p">(</span><span class="n">key</span><span class="p">)).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="nc">Sync</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">dispatch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// Do nothing interesting</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>At this point, we haven’t made much progress, as we are not “waiting”. We are worst off that when we started going for a blocking implementation. But it is easily fixable:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Deferred</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;(</span>
+    <span class="kd">val</span> <span class="py">inner</span><span class="p">:</span> <span class="p">(</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">&gt;)</span> <span class="p">-&gt;</span>
+        <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;,</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">DataLoader</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">queue</span><span class="p">:</span> <span class="nc">MutableList</span><span class="p">&lt;</span><span class="nc">Pair</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">,</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;&gt;</span> <span class="p">=</span> <span class="nf">mutableListOf</span><span class="p">()</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">load</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nc">KEY</span><span class="p">):</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">defer</span> <span class="p">=</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;()</span>
+        <span class="k">inner</span><span class="p">(</span><span class="nf">listOf</span><span class="p">(</span><span class="n">key</span><span class="p">)).</span><span class="nf">andAccept</span> <span class="p">{</span> <span class="n">queue</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="n">to</span> <span class="n">defer</span><span class="p">)</span> <span class="p">}</span>
+        <span class="k">return</span> <span class="n">defer</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">dispatch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">queue</span><span class="p">.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">defer</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">defer</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">}</span>
+        <span class="n">queue</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The <em>heavy lifting</em> here is being done by the idea of an <code class="language-plaintext highlighter-rouge">AndThenable</code> that can defer a computation (this <code class="language-plaintext highlighter-rouge">Defer</code>). Luckily, the code is not very long, but it is a bit dense:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="p">:</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">dependency</span><span class="p">:</span> <span class="p">(</span><span class="nc">T</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">Unit</span> <span class="p">=</span> <span class="p">{</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"WARN: There was nothing depending on this Defer"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">push</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nc">T</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">dependency</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;</span> <span class="nf">andThen</span><span class="p">(</span>
+        <span class="n">next</span><span class="p">:</span> <span class="p">(</span><span class="nc">T</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;</span>
+    <span class="p">):</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">defer</span> <span class="p">=</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">B</span><span class="p">&gt;()</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">dependency</span> <span class="p">=</span> <span class="p">{</span> <span class="n">t</span> <span class="p">-&gt;</span>
+            <span class="nf">next</span><span class="p">(</span><span class="n">t</span><span class="p">).</span><span class="nf">andThen</span><span class="p">(</span><span class="n">defer</span><span class="o">::</span><span class="n">push</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">defer</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>A <code class="language-plaintext highlighter-rouge">Defer</code>, unlike <code class="language-plaintext highlighter-rouge">Sync</code>, has no value on creation, rather a consumer of a value. It knows what to do when a new value comes along (called here a <em>dependency</em>). When such a value is then provided, via the <code class="language-plaintext highlighter-rouge">.push</code>, then the function passed on the <code class="language-plaintext highlighter-rouge">andThen(next)</code> gets called. With a handy warning if a value is pushed to a <code class="language-plaintext highlighter-rouge">Defer</code> that no one cares about<sup id="fnref:existance_conundrum" role="doc-noteref"><a href="#fn:existance_conundrum" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<p>When asked to load, we do the naive loading, but we return a <code class="language-plaintext highlighter-rouge">Defer</code> <code class="language-plaintext highlighter-rouge">AndThenable</code>. And on dispatch, we push a value onto each <code class="language-plaintext highlighter-rouge">Defer</code> we created and clean the queue. It is a bit silly to fetch a value with <code class="language-plaintext highlighter-rouge">inner(listOf(key))</code> and store it in a queue, and afterward (on the call to <code class="language-plaintext highlighter-rouge">.dispatch</code>) push the value on the deferred, but this implementation helps illustrate a problem that is very hard to spot. Did you spot it?
+Let’s take this example:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">loader</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="mi">6</span><span class="p">).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="n">user</span> <span class="p">-&gt;</span>
+    <span class="n">loader</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">invitedBy</span><span class="p">).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="n">invitedBy</span> <span class="p">-&gt;</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"${user.name} was invited by ${invitedBy.name}"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">loader</span><span class="p">.</span><span class="nf">dispatch</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Running this example has <em>two</em> problems:
+We would queue the first <code class="language-plaintext highlighter-rouge">load(6)</code> with the result, but not invoke the first <code class="language-plaintext highlighter-rouge">.andThen</code> until the <code class="language-plaintext highlighter-rouge">.dispatch()</code> call. Once we <code class="language-plaintext highlighter-rouge">dispatch</code>, the first <code class="language-plaintext highlighter-rouge">.load(6).andThen</code> would try to resolve, we would queue the <code class="language-plaintext highlighter-rouge">.load(user.invitedBy)</code>; and this triggers a handy exception that we have just mutated out <code class="language-plaintext highlighter-rouge">queue</code> list whilst doing a <code class="language-plaintext highlighter-rouge">.forEach</code>. To add insult to injury, that defers <em>(the second)</em> <code class="language-plaintext highlighter-rouge">.andThen</code> would never resolve, as no other <code class="language-plaintext highlighter-rouge">.dispatch</code> call will ever be made. So, given that resolution of data loaders, might trigger other loads, we need to call dispatch after resolving each known action. The base case of the recursion would be when no action is left in the queue; then no more <code class="language-plaintext highlighter-rouge">.dispatch</code>es will be called; so as to not enter an infinite loop.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">override</span> <span class="k">fun</span> <span class="nf">dispatch</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">val</span> <span class="py">cloneQueue</span> <span class="p">=</span> <span class="nc">ArrayList</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
+    <span class="n">queue</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
+    <span class="n">cloneQueue</span><span class="p">.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">defer</span><span class="p">)</span> <span class="p">-&gt;</span>
+        <span class="n">defer</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="nf">dispatch</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Cloning gets us out of the mutation whilst processing, and the successive <code class="language-plaintext highlighter-rouge">dispatch</code> <strong>after</strong> resolving the defer <code class="language-plaintext highlighter-rouge">.push</code> ensures that we run all of the <code class="language-plaintext highlighter-rouge">.andThen</code>, chained as they may be.</p>
+
+<h2 id="batch">Batch</h2>
+<p>At this point, looking at our naïve implementation, the one line of code that is dictating <em>when</em> the information is being fetched, and the one preventing batching is that we are doing</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">inner</span><span class="p">(</span><span class="nf">listOf</span><span class="p">(</span><span class="n">key</span><span class="p">)).</span><span class="nf">andThen</span> <span class="p">{</span>
+    <span class="n">queue</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="n">to</span> <span class="n">defer</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Rather than waiting, we are fetching the information and then waiting to <em>return</em> it to whatever dependency of the defer. That would yield a code like this:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Batch</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;(</span>
+    <span class="kd">val</span> <span class="py">inner</span><span class="p">:</span> <span class="p">(</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">&gt;)</span> <span class="p">-&gt;</span>
+        <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">DataLoader</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">queue</span><span class="p">:</span> <span class="nc">MutableMap</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;</span> <span class="p">=</span>
+        <span class="nf">mutableMapOf</span><span class="p">()</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">load</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nc">KEY</span><span class="p">):</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">defer</span> <span class="p">=</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;()</span>
+        <span class="n">queue</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="n">defer</span>
+        <span class="k">return</span> <span class="n">defer</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">dispatch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="nf">isEmpty</span><span class="p">())</span> <span class="k">return</span>
+        
+        <span class="k">inner</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="nf">toList</span><span class="p">()).</span><span class="nf">andAccept</span> <span class="p">{</span>
+            <span class="kd">val</span> <span class="py">results</span> <span class="p">=</span> <span class="nf">mapOf</span><span class="p">(</span>
+                <span class="p">*</span><span class="n">queue</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="nf">zip</span><span class="p">(</span><span class="n">it</span><span class="p">).</span><span class="nf">toTypedArray</span><span class="p">()</span>
+            <span class="p">)</span>
+
+            <span class="n">results</span><span class="p">.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="p">-&gt;</span>
+                <span class="n">queue</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">!!</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="p">}</span>
+            <span class="nf">dispatch</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>So now <code class="language-plaintext highlighter-rouge">.load</code> that very little, and is the <code class="language-plaintext highlighter-rouge">dispatch</code> that does the heavy lifting. So let’s look more in-depth at the <code class="language-plaintext highlighter-rouge">.dispatch</code>:
+First, the base case where there is nothing to dispatch, just <code class="language-plaintext highlighter-rouge">return</code>. Then, fetch every key in the queue we have collected. Once we have the result, there is some <em>magic</em> to find what result was for which key, and then push the result to the appropriate <code class="language-plaintext highlighter-rouge">Defer</code>. As we are cycling through the results, we don’t have the problem of mutation that needed a clone. So that’s good. And we are recursively calling <code class="language-plaintext highlighter-rouge">dispatch()</code> on the last line.</p>
+
+<p>We got very close! But there is a tiny wrinkle. We made the assumption that there would be just one <code class="language-plaintext highlighter-rouge">Defer</code> for every key we looked at. Therefore code like this would not work as we want. The first chain of <code class="language-plaintext highlighter-rouge">.andThen</code>s is utterly ignored.</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">loader</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="mi">6</span><span class="p">).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="n">user</span> <span class="p">-&gt;</span>
+    <span class="n">loader</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">invitedBy</span><span class="p">).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="n">invitedBy</span> <span class="p">-&gt;</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"1: ${user.name} was invited by ${invitedBy.name}"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">loader</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="mi">6</span><span class="p">).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="n">user</span> <span class="p">-&gt;</span>
+    <span class="n">loader</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">invitedBy</span><span class="p">).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="n">invitedBy</span> <span class="p">-&gt;</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"2: ${user.name} was invited by ${invitedBy.name}"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">loader</span><span class="p">.</span><span class="nf">dispatch</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>So, with the help of a small utility <code class="language-plaintext highlighter-rouge">MultiMap</code> (a map of multiple values for a single key), we can change the code ever so slightly to:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Batch</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;(</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">inner</span><span class="p">:</span> <span class="p">(</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">&gt;)</span> <span class="p">-&gt;</span>
+    <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">DataLoader</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">queue</span><span class="p">:</span> <span class="nc">MultiMap</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;</span> <span class="p">=</span>
+        <span class="nc">MultiMap</span><span class="p">()</span> <span class="c1">// Now a MultiMap</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">load</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="nc">KEY</span><span class="p">):</span> <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">defer</span> <span class="p">=</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;()</span>
+        <span class="n">queue</span><span class="p">.</span><span class="nf">addOne</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">defer</span><span class="p">)</span> <span class="c1">// was just a `.set`</span>
+        <span class="k">return</span> <span class="n">defer</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">dispatch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="nf">isEmpty</span><span class="p">())</span> <span class="k">return</span>
+
+        <span class="k">inner</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="nf">toList</span><span class="p">()).</span><span class="nf">andAccept</span> <span class="p">{</span>
+            <span class="kd">val</span> <span class="py">results</span> <span class="p">=</span> <span class="nf">mapOf</span><span class="p">(</span>
+                <span class="p">*</span><span class="n">queue</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="nf">zip</span><span class="p">(</span><span class="n">it</span><span class="p">).</span><span class="nf">toTypedArray</span><span class="p">()</span>
+            <span class="p">)</span>
+
+            <span class="n">results</span><span class="p">.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="p">-&gt;</span>
+                <span class="n">queue</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">!!</span>
+                    <span class="p">.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="n">defer</span> <span class="p">-&gt;</span>
+                        <span class="n">defer</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+                        <span class="c1">// was a single `.push`</span>
+                    <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="nf">dispatch</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="cache">Cache</h2>
+<p>We are so close! We have the ability to batch requests, but there is still one very minor inconvenience:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">loader</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nf">andThen</span> <span class="p">{</span> <span class="n">user</span> <span class="p">-&gt;</span>
+    <span class="n">loader</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nf">andAccept</span> <span class="p">{</span> <span class="n">user2</span> <span class="p">-&gt;</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"${user!!.name} == ${user2!!.name}"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Would fetch <code class="language-plaintext highlighter-rouge">5</code> <strong>twice</strong>. There is simply no way that we can batch fetches that are inside <code class="language-plaintext highlighter-rouge">andThen</code> with ones outside it. But not all hope is lost. We can, in some very specific circumstances, bypass the fetching altogether. If we had made the call to the <code class="language-plaintext highlighter-rouge">inner</code> before. So what if we, before calling <code class="language-plaintext highlighter-rouge">inner</code>, check a local cache if we already have the value, and just provide it:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BatchCache</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;(</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">inner</span><span class="p">:</span> <span class="p">(</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">&gt;)</span> <span class="p">-&gt;</span>
+        <span class="nc">AndThenable</span><span class="p">&lt;</span><span class="nc">List</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;</span>
+<span class="p">)</span> <span class="p">:</span> <span class="nc">DataLoader</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">queue</span><span class="p">:</span> <span class="nc">MultiMap</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">Defer</span><span class="p">&lt;</span><span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;&gt;</span> <span class="p">=</span> <span class="nc">MultiMap</span><span class="p">()</span>
+    <span class="k">private</span> <span class="kd">val</span> <span class="py">cache</span><span class="p">:</span> <span class="nc">MutableMap</span><span class="p">&lt;</span><span class="nc">KEY</span><span class="p">,</span> <span class="nc">VALUE</span><span class="err">?</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nf">mutableMapOf</span><span class="p">()</span>
+    
+    <span class="c1">// .load is the same</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">dispatch</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="nf">isEmpty</span><span class="p">())</span> <span class="k">return</span>
+
+        <span class="n">queue</span><span class="p">.</span><span class="nf">filterKeys</span><span class="p">(</span><span class="n">cache</span><span class="o">::</span><span class="n">containsKey</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="p">-&gt;</span>
+                <span class="n">queue</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="o">!!</span><span class="p">.</span><span class="nf">forEach</span> <span class="p">{</span>
+                    <span class="n">it</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="n">cache</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+        <span class="k">inner</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="nf">toList</span><span class="p">().</span><span class="nf">minus</span><span class="p">(</span><span class="n">cache</span><span class="p">.</span><span class="n">keys</span><span class="p">)).</span><span class="nf">andAccept</span> <span class="p">{</span>
+            <span class="n">cache</span><span class="p">.</span><span class="nf">putAll</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+            <span class="c1">// ... </span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This can even have the upshot that cached requests might enqueue even <em>more</em> new dependencies, and we would be bundling them all together in a single bigger request.</p>
+
+<h2 id="dont-use-this-code-on-production">Don’t use this code on production!!</h2>
+<p>I found it very enlightening trying to re-implement this pattern, and how I got to this solution. But as I stated, this code is very much not production-ready. It was never its intention. For a production application of a DataLoader in Java, there is <a href="https://github.com/graphql-java/java-dataloader">java-dataloader</a>, which deals with a lot of things, is very tested, and has a lot of useful comments. Or even going to the source: <a href="https://github.com/graphql/dataloader">dataloader</a>. The code is not that long to spelunk, and is gain tested and commented.</p>
+
+<p>All the code explained here, and some playgrounds can be found in this repo: <a href="https://github.com/jazcarate/simplest-data-loader">GitHub :: simplest-data-loader</a>.</p>
+
+<hr />
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:existance_conundrum" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/If_a_tree_falls_in_a_forest">If a tree falls in a forest…</a>. <a href="#fnref:existance_conundrum" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</article>
+
+
+
+
+
+
+
+<div class="separator">
+  <img src="/assets/image/cat.png" alt="Melian" />
+</div>
+
+<h3 class="related-post-title">Random Posts</h3>
+
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/xpost/2021/01/31/inspiraciones/" class="post-link">
+      <h4 class="post-title">Inspiraciones</h4>
+    </a>
+    <p class="post-summary">
+      ¿Te pasa de querer programar algo y no saber que? tengo un bloqueo de ideas hace tiempo, quiero hacer algo con xxx y no se me ocurre qué hacer.
+      <span class="related-categories">
+      <a href="/categories#xpost">#xpost</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/rambling/coding/2021/05/12/desire-driven-development/" class="post-link">
+      <h4 class="post-title">Desire Driven Development</h4>
+    </a>
+    <p class="post-summary">
+      Long have I heard and reaped the benefits of Test Driven Development. But I'm starting to sense that much of the material written and explained about TDD is by fanatics. In this post I'll explore my own take on TDD, and the journey &rarr; Desire Driven Development.
+      <span class="related-categories">
+      <a href="/categories#rambling">#rambling</a>
+    
+      <a href="/categories#coding">#coding</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/rambling/2021/05/28/why-do-I-write/" class="post-link">
+      <h4 class="post-title">Why Do I Write?</h4>
+    </a>
+    <p class="post-summary">
+      I have much room for improvement where it comes to communicating. A tool I think can help me with it is writing a blog entry every so often about things I care about. This blog is just that. A training ground. My training ground.
+      <span class="related-categories">
+      <a href="/categories#rambling">#rambling</a>
+    </span>
+    </p>
+  </div>
+
+  
+  
+
+  
+
+  <div class="post ml2 related">
+    <a href="/rambling/coding/2021/06/24/costs-graphs-integrals/" class="post-link">
+      <h4 class="post-title">On costs, graphs and integrals</h4>
+    </a>
+    <p class="post-summary">
+      Yet another tool to pick a technology. How does the cost of the choice evolve over the complexity? Is there a one-solution-fits-all? In this blog post, we’ll delve into some visualization to understand the difference between choosing Java, Haskell, Hibernate, Ruby on Rails, or drop programming altogether for a no-code approach. Let’s dive into the world of optimizations, integrals, and many many graphs!
+      <span class="related-categories">
+      <a href="/categories#rambling">#rambling</a>
+    
+      <a href="/categories#coding">#coding</a>
+    </span>
+    </p>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme heavily inspired in <a href="http://johnotander.com">John Otander</a>' <a href="https://github.com/johno/pixyll">pixyll</a>.
+    </small>
+  </div>
+</footer>
+<!-- AnchorJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    anchors.options.visible = 'touch';
+    anchors.add('article h2, article h3, article h4, article h5, article h6');
+</script>
+
+</body>
+</html>
